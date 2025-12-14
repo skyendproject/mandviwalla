@@ -1,6 +1,7 @@
 'use client'
 
 import AboveFooter from "@/components/AboveFooter";
+import Footer from "@/components/Footer";
 import AboutUs from "@/components/home/AboutUs";
 import BoardOfDirectors from "@/components/home/BoardOfDirectors";
 import Cards from "@/components/home/Cards";
@@ -24,6 +25,7 @@ export default function Home() {
       <ClientReviews />
       <RecentUpdates />
       <AboveFooter />
+      <Footer />
     </div>
   );
 }

@@ -36,7 +36,7 @@ export default function AboutUs() {
                                 36
                             </span>
 
-                            <div className="flex flex-col text-sm md:text-base uppercase tracking-wide leading-tight leading-none">
+                            <div className="flex flex-col text-sm md:text-base uppercase tracking-wide leading-tight">
                                 <span>Years</span>
                                 <span>of</span>
                                 <span>Experience</span>

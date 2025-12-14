@@ -1,0 +1,4 @@
+# Pages Directory
+
+This directory exists to prevent Next.js build errors. 
+We are using the App Router (app directory) for routing, not the Pages Router.

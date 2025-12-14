@@ -1,13 +1,22 @@
 import Link from "next/link";
 import { colors } from "@/lib/colors";
 
-export default function AboveFooter() {
+interface AboveFooterProps {
+    variant?: "blue" | "dark";
+}
+
+export default function AboveFooter({ variant = "blue" }: AboveFooterProps) {
+    const gradientBg = variant === "blue" 
+        ? 'linear-gradient(to right, #1338BE66 40%, #D9DEF1)'
+        : 'linear-gradient(to right, #333333 0%, #C4C4C4 30%)';
+    
+    const btnColor = variant === "blue" ? colors.primary.blue : '#F6BA18';
+    const btnHoverColor = variant === "blue" ? colors.orange.dark : colors.primary.blue;
+
     return (
         <section
             className="w-full py-16 md:py-20 lg:py-24 px-4 h-[252px]"
-            style={{
-                background: 'linear-gradient(to right, #1338BE66 40%, #D9DEF1)'
-            }}
+            style={{ background: gradientBg }}
         >
             <div className="container mx-auto max-w-6xl">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-6 text-center md:text-left">
@@ -27,9 +36,9 @@ export default function AboveFooter() {
                     <Link
                         href="/contact"
                         className="px-4 sm:px-6 py-2 sm:py-3 text-white font-semibold rounded transition flex items-center justify-center gap-2 text-sm md:text-base whitespace-nowrap self-center md:self-auto"
-                        style={{ backgroundColor: colors.primary.blue }}
-                        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.orange.dark}
-                        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = colors.primary.blue}
+                        style={{ backgroundColor: btnColor }}
+                        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = btnHoverColor}
+                        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = btnColor}
                     >
                         <svg
                             width="18"

@@ -57,7 +57,7 @@ export default function RecentUpdates() {
                     </div>
 
                     {/* View More Button */}
-                    <button 
+                    <button
                         className="flex items-center gap-2 px-5 py-2.5 rounded-md text-white
                          text-sm transition-colors whitespace-nowrap"
                         style={{ backgroundColor: colors.primary.blue }}
@@ -99,13 +99,6 @@ export default function RecentUpdates() {
                                 {/* Author */}
                                 <div className="flex items-center gap-2">
                                     <div className="w-9 h-9 rounded-full overflow-hidden bg-gray-100">
-                                        <Image
-                                            src={mainPost.author.avatar}
-                                            alt={mainPost.author.name}
-                                            width={36}
-                                            height={36}
-                                            className="w-full h-full object-cover"
-                                        />
                                     </div>
                                     <span className="text-xs font-medium" style={{ color: colors.gray.text }}>
                                         {mainPost.author.name}
@@ -121,7 +114,7 @@ export default function RecentUpdates() {
                                 </div>
 
                                 {/* Read More */}
-                                <button className="ml-auto text-xs md:text-sm font-bold" style={{ color: colors.orange.dark }}>
+                                <button className="ml-auto text-xs md:text-sm font-bold pb-1 border-b-2" style={{ color: colors.orange.dark, borderColor: colors.orange.dark }}>
                                     READ MORE
                                 </button>
                             </div>
@@ -133,7 +126,7 @@ export default function RecentUpdates() {
                         {sideBlogs.map((blog, index) => (
                             <div key={index} className="flex gap-4">
                                 {/* Image */}
-                                <div className="w-36 md:w-44 h-28 md:h-32 flex-shrink-0 rounded-md overflow-hidden bg-gray-100">
+                                <div className="w-36 md:w-44 h-28 md:h-32 shrink-0 rounded-md overflow-hidden bg-gray-100">
                                     <Image
                                         src={blog.image}
                                         alt={blog.title}
