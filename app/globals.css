@@ -76,7 +76,20 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
---yellow-custombg: rgb(242, 133, 0);
+  
+  /* Custom Color Scheme */
+  --color-blue-primary: #0A3D62;    /* Navigation bar, hero section background, major headings */
+  --color-blue-light: #1E5F9C;      /* Section dividers, hover states, accent backgrounds */
+  --color-orange-dark: #F39C12;     /* Buttons, hover effects, highlights, icons */
+  --color-orange-warm: #E67E22;     /* Secondary buttons or highlights in product sections */
+  --color-gray-text: #666666;       /* Body text */
+  --color-gray-light: #999999;      /* Secondary text */
+  --color-gray-border: #A7A7A7;     /* Borders and dividers */
+  --color-white: #FFFFFF;           /* Card backgrounds, clean spacing */
+  
+  /* Legacy support - keeping old variable for backwards compatibility */
+  --yellow-custombg: var(--color-orange-warm);
+  
   --font-sans: var(--font-lato);
   --font-heading: var(--font-maven);
 }

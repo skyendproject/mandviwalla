@@ -2,17 +2,32 @@ import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
 
-const eslintConfig = defineConfig([
+export default defineConfig([
   ...nextVitals,
   ...nextTs,
-  // Override default ignores of eslint-config-next.
+
+  // Global ignores
   globalIgnores([
-    // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",
     "build/**",
     "next-env.d.ts",
   ]),
-]);
 
-export default eslintConfig;
+  // Custom rule overrides
+  {
+    rules: {
+      // Disable unused vars warnings (TS + JS)
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": "off",
+
+      // Disable Tailwind CSS lint warnings
+      "tailwindcss/no-custom-classname": "off",
+      "tailwindcss/classnames-order": "off",
+      "tailwindcss/no-contradicting-classname": "off",
+
+      // Optional: silence React warnings Next already handles
+      "react/react-in-jsx-scope": "off",
+    },
+  },
+]);

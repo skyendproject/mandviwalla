@@ -1,25 +1,29 @@
 "use client";
 
 import Link from "next/link";
-import { Facebook, Instagram, Linkedin, Phone, Mail, MapPin, Youtube, ChevronDown } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Phone, Mail, MapPin, Youtube, ChevronDown, Menu } from "lucide-react";
 import Image from "next/image";
+import { colors } from "@/lib/colors";
+import { useState } from "react";
 
 export default function Header() {
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
     return (
-        <header className="w-full border-b">
+        <header className="w-full border-b relative z-50">
             {/* Top Strip */}
-            <div className="w-full bg-[var(--yellow-custombg)] text-white text-sm py-2 px-4 md:px-20">
-                <div className="container mx-auto flex justify-between items-center px-4">
-                    <p className="text-base">
+            <div className="w-full text-white text-sm py-2 px-4 md:px-20" style={{ backgroundColor: colors.orange.dark }}>
+                <div className="container mx-auto flex justify-between items-center">
+                    <p className="hidden md:block text-sm lg:text-base">
                         Welcome to <strong>Mandviwalla MAUSER</strong> Plastic Industries Limited company,
                         We're here to help you
                     </p>
-                    <div className="flex items-center justify-between gap-6">
-                        <div className="flex gap-6 pr-8 font-semibold">
-                            <Link href="#" className="hover:text-white/80 border-l pl-2">FAQ's</Link>
-                            <Link href="#" className="hover:text-white/80  border-l pl-2">Career</Link>
+                    <div className="flex items-center gap-4 md:gap-6 ml-auto md:ml-0">
+                        <div className="flex gap-4 md:gap-6 font-semibold">
+                            <Link href="#" className="hover:text-white/80 md:border-l md:pl-2">FAQ's</Link>
+                            <Link href="#" className="hover:text-white/80 border-l pl-2">Career</Link>
                         </div>
-                        <div className="flex gap-4">
+                        <div className="flex gap-3 md:gap-4">
 
                             {/* Facebook icon */}
                             <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -55,9 +59,9 @@ export default function Header() {
                             />
                         </Link>
 
-                        <div className="flex flex-col text-[22px]">
-                            <h2 className="font-bold">Mandviwalla <span className="text-[#F28500]">MAUSER</span></h2>
-                            <h3>Plastic Industries Limited</h3>
+                        <div className="flex flex-col text-base sm:text-lg lg:text-[22px]">
+                            <h2 className="font-bold">Mandviwalla <span style={{ color: colors.orange.dark }}>MAUSER</span></h2>
+                            <h3 className="text-sm sm:text-base lg:text-[22px]">Plastic Industries Limited</h3>
                         </div>
                     </div>
 
@@ -67,22 +71,22 @@ export default function Header() {
                         {/* Contact */}
                         <div className="flex items-start gap-3">
                             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path opacity="0.989" fillRule="evenodd" clipRule="evenodd" d="M6.37814 0.0119188C7.21512 -0.0645876 7.89252 0.227225 8.4104 0.88735C9.85061 2.84937 11.1012 4.93373 12.1622 7.14043C12.3347 7.56389 12.4494 8.00161 12.5062 8.45358C12.482 8.78656 12.3882 9.09921 12.2248 9.39154C11.5027 10.1762 10.721 10.8953 9.87987 11.5489C11.4082 15.7348 14.2638 18.6008 18.4466 20.1468C18.9255 19.6157 19.3944 19.0738 19.8535 18.521C20.2936 17.9521 20.8668 17.6186 21.5731 17.5205C22.5927 17.7181 23.5515 18.0828 24.4496 18.6148C26.0841 19.5622 27.6682 20.5836 29.2019 21.6788C30.0434 22.3886 30.2205 23.2327 29.7334 24.2113C28.8522 25.3844 27.8413 26.437 26.7007 27.3692C25.5109 28.3914 24.2187 29.2668 22.8237 29.9954C21.779 30.0284 20.7577 29.8825 19.7597 29.5577C17.2957 28.7634 15.003 27.6378 12.8813 26.1811C7.88745 22.7301 4.06267 18.2799 1.40694 12.8307C0.759163 11.3668 0.300606 9.84514 0.031267 8.26599C-0.0104223 7.91162 -0.0104223 7.55732 0.031267 7.20296C1.41542 4.6507 3.21839 2.43085 5.44018 0.543431C5.73845 0.332014 6.05111 0.154846 6.37814 0.0119188Z" fill="#F28500" />
+                                <path opacity="0.989" fillRule="evenodd" clipRule="evenodd" d="M6.37814 0.0119188C7.21512 -0.0645876 7.89252 0.227225 8.4104 0.88735C9.85061 2.84937 11.1012 4.93373 12.1622 7.14043C12.3347 7.56389 12.4494 8.00161 12.5062 8.45358C12.482 8.78656 12.3882 9.09921 12.2248 9.39154C11.5027 10.1762 10.721 10.8953 9.87987 11.5489C11.4082 15.7348 14.2638 18.6008 18.4466 20.1468C18.9255 19.6157 19.3944 19.0738 19.8535 18.521C20.2936 17.9521 20.8668 17.6186 21.5731 17.5205C22.5927 17.7181 23.5515 18.0828 24.4496 18.6148C26.0841 19.5622 27.6682 20.5836 29.2019 21.6788C30.0434 22.3886 30.2205 23.2327 29.7334 24.2113C28.8522 25.3844 27.8413 26.437 26.7007 27.3692C25.5109 28.3914 24.2187 29.2668 22.8237 29.9954C21.779 30.0284 20.7577 29.8825 19.7597 29.5577C17.2957 28.7634 15.003 27.6378 12.8813 26.1811C7.88745 22.7301 4.06267 18.2799 1.40694 12.8307C0.759163 11.3668 0.300606 9.84514 0.031267 8.26599C-0.0104223 7.91162 -0.0104223 7.55732 0.031267 7.20296C1.41542 4.6507 3.21839 2.43085 5.44018 0.543431C5.73845 0.332014 6.05111 0.154846 6.37814 0.0119188Z" fill={colors.orange.dark} />
                             </svg>
                             <div className="flex flex-col leading-tight">
-                                <span className="font-semibold text-lg">+92 21-32441116-9</span>
-                                <span className="text-[#999999] text-base">info@mandviwalla.net</span>
+                                <span className="font-semibold text-base lg:text-lg">+92 21-32441116-9</span>
+                                <span className="text-[#999999] text-sm lg:text-base">info@mandviwalla.net</span>
                             </div>
                         </div>
 
                         {/* Address */}
                         <div className="flex items-start gap-3">
                             <svg width="23" height="30" viewBox="0 0 23 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12.6715 29.3259C15.6851 25.5544 22.5584 16.4136 22.5584 11.2792C22.5584 5.05214 17.5062 0 11.2792 0C5.05214 0 0 5.05214 0 11.2792C0 16.4136 6.87326 25.5544 9.88691 29.3259C10.6095 30.2247 11.9489 30.2247 12.6715 29.3259ZM11.2792 7.51946C12.2763 7.51946 13.2326 7.91557 13.9377 8.62066C14.6428 9.32574 15.0389 10.282 15.0389 11.2792C15.0389 12.2763 14.6428 13.2326 13.9377 13.9377C13.2326 14.6428 12.2763 15.0389 11.2792 15.0389C10.282 15.0389 9.32574 14.6428 8.62066 13.9377C7.91557 13.2326 7.51946 12.2763 7.51946 11.2792C7.51946 10.282 7.91557 9.32574 8.62066 8.62066C9.32574 7.91557 10.282 7.51946 11.2792 7.51946Z" fill="#F28500" />
+                                <path d="M12.6715 29.3259C15.6851 25.5544 22.5584 16.4136 22.5584 11.2792C22.5584 5.05214 17.5062 0 11.2792 0C5.05214 0 0 5.05214 0 11.2792C0 16.4136 6.87326 25.5544 9.88691 29.3259C10.6095 30.2247 11.9489 30.2247 12.6715 29.3259ZM11.2792 7.51946C12.2763 7.51946 13.2326 7.91557 13.9377 8.62066C14.6428 9.32574 15.0389 10.282 15.0389 11.2792C15.0389 12.2763 14.6428 13.2326 13.9377 13.9377C13.2326 14.6428 12.2763 15.0389 11.2792 15.0389C10.282 15.0389 9.32574 14.6428 8.62066 13.9377C7.91557 13.2326 7.51946 12.2763 7.51946 11.2792C7.51946 10.282 7.91557 9.32574 8.62066 8.62066C9.32574 7.91557 10.282 7.51946 11.2792 7.51946Z" fill={colors.orange.dark} />
                             </svg>
                             <div className="flex flex-col leading-tight">
-                                <span className="font-semibold text-lg">Mandviwalla Building</span>
-                                <span className="text-[#999999] text-base">Old Queens Road, Karachi</span>
+                                <span className="font-semibold text-base lg:text-lg">Mandviwalla Building</span>
+                                <span className="text-[#999999] text-sm lg:text-base">Old Queens Road, Karachi</span>
                             </div>
                         </div>
 
@@ -92,125 +96,137 @@ export default function Header() {
             </div>
 
             {/* Navbar */}
-            <nav className="w-full py-3 bg-[#1338BE] relative">
-                <div className="container mx-auto flex items-center justify-center gap-10 px-4 md:px-20 font-medium text-white">
+            <nav className="w-full py-3 relative" style={{ backgroundColor: colors.primary.blue }}>
+                <div className="container mx-auto flex items-center justify-between md:justify-center gap-10 px-4 md:px-20 font-medium text-white">
 
-                    {/* HOME */}
-                    <Link href="/" className="hover:text-gray-200 uppercase">
-                        Home
-                    </Link>
+                    {/* Mobile Menu Icon */}
+                    <button
+                        className="md:hidden text-white"
+                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                    >
+                        <Menu size={24} />
+                    </button>
 
-                    {/* PROFILE (Dropdown) */}
-                    <div className="relative group z-50">
-                        <button className="flex items-center gap-1 hover:text-gray-200 uppercase">
-                            Profile
-                            <ChevronDown
-                                size={16}
-                                className="transition-transform duration-200 group-hover:rotate-180"
-                            />
-                        </button>
+                    {/* Desktop Navigation */}
+                    <div className="hidden md:flex items-center gap-10">
+                        {/* HOME */}
+                        <Link href="/" className="hover:text-gray-200 uppercase transition" onMouseEnter={(e) => e.currentTarget.style.color = colors.primary.orange} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>
+                            Home
+                        </Link>
 
-                        {/* Dropdown */}
-                        <div className="absolute left-0 mt-2 w-56 bg-[#1338BE] text-white shadow-lg rounded-md 
-        opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+                        {/* PROFILE (Dropdown) */}
+                        <div className="relative group z-50">
+                            <button className="flex items-center gap-1 uppercase transition" onMouseEnter={(e) => e.currentTarget.style.color = colors.primary.orange} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>
+                                Profile
+                                <ChevronDown
+                                    size={16}
+                                    className="transition-transform duration-200 group-hover:rotate-180"
+                                />
+                            </button>
 
-                            <Link href="/company-information" className="block px-4 py-2 hover:bg-blue-900">
-                                Company Information
-                            </Link>
-                            <Link href="/mission-vision" className="block px-4 py-2 hover:bg-blue-900">
-                                Mission & Vision
-                            </Link>
-                            <Link href="/code-of-conduct-policy" className="block px-4 py-2 hover:bg-blue-900">
-                                Code of Conduct Policy
-                            </Link>
+                            {/* Dropdown */}
+                            <div className="absolute left-0 mt-2 w-56 text-white shadow-lg rounded-md 
+        opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50" style={{ backgroundColor: colors.primary.blue }}>
+
+                                <Link href="/company-information" className="block px-4 py-2 transition" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                    Company Information
+                                </Link>
+                                <Link href="/mission-vision" className="block px-4 py-2 transition" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                    Mission & Vision
+                                </Link>
+                                <Link href="/code-of-conduct-policy" className="block px-4 py-2 transition" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                    Code of Conduct Policy
+                                </Link>
+                            </div>
                         </div>
+
+                        {/* CORPORATE (Dropdown with nested submenus) */}
+                        <div className="relative group z-50">
+                            <button className="flex items-center gap-1 uppercase transition" onMouseEnter={(e) => e.currentTarget.style.color = colors.primary.orange} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>
+                                Corporate
+                                <ChevronDown
+                                    size={16}
+                                    className="transition-transform duration-200 group-hover:rotate-180"
+                                />
+                            </button>
+
+                            {/* Dropdown → First level */}
+                            <ul className="absolute left-0 mt-2 w-56 text-white shadow-lg rounded-md 
+      opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50" style={{ backgroundColor: colors.primary.blue }}>
+
+                                {/* GOVERNANCE */}
+                                <li className="relative group/govern">
+                                    <Link href="/corporate/governance" className="flex justify-between items-center px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                        GOVERNANCE
+                                        <ChevronDown size={14} className="ml-2" />
+                                    </Link>
+
+                                    {/* Nested dropdown → Opens right */}
+                                    <ul className="absolute top-0 left-full mt-0 w-56 text-white shadow-lg rounded-md 
+          opacity-0 invisible group-hover/govern:opacity-100 group-hover/govern:visible transition-all" style={{ backgroundColor: colors.primary.blue }}>
+                                        <li>
+                                            <Link href="/corporate/governance/profile" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                Profile
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/corporate/governance/structure" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                Structure
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/corporate/governance/csr" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                CSR
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                {/* INVESTOR RELATION */}
+                                <li className="relative group/invest">
+                                    <Link href="/corporate/investor-relation" className="flex justify-between items-center px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                        INVESTOR RELATION
+                                        <ChevronDown size={14} className="ml-2" />
+                                    </Link>
+
+                                    {/* Nested dropdown → Opens right */}
+                                    <ul className="absolute top-0 left-full mt-0 w-56 text-white shadow-lg rounded-md 
+          opacity-0 invisible group-hover/invest:opacity-100 group-hover/invest:visible transition-all" style={{ backgroundColor: colors.primary.blue }}>
+                                        <li>
+                                            <Link href="/investor/financials" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                Financials
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/investor/reports" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                Reports
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/investor/announcements" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                Announcements
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                {/* ELECTION OF DIRECTOR */}
+                                <li>
+                                    <Link href="/corporate/election-of-director" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                        ELECTION OF DIRECTOR
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+
+                        {/* PRODUCTS */}
+                        <Link href="/products" className="uppercase transition" onMouseEnter={(e) => e.currentTarget.style.color = colors.primary.orange} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>
+                            Products
+                        </Link>
                     </div>
 
-                    {/* CORPORATE (Dropdown with nested submenus) */}
-                    <div className="relative group z-50">
-                        <button className="flex items-center gap-1 hover:text-gray-200 uppercase">
-                            Corporate
-                            <ChevronDown
-                                size={16}
-                                className="transition-transform duration-200 group-hover:rotate-180"
-                            />
-                        </button>
-
-                        {/* Dropdown → First level */}
-                        <ul className="absolute left-0 mt-2 w-56 bg-[#1338BE] text-white shadow-lg rounded-md 
-      opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
-
-                            {/* GOVERNANCE */}
-                            <li className="relative group/govern">
-                                <Link href="/corporate/governance" className="flex justify-between items-center px-4 py-2 hover:bg-blue-900 uppercase">
-                                    GOVERNANCE
-                                    <ChevronDown size={14} className="ml-2" />
-                                </Link>
-
-                                {/* Nested dropdown → Opens right */}
-                                <ul className="absolute top-0 left-full mt-0 w-56 bg-[#1338BE] text-white shadow-lg rounded-md 
-          opacity-0 invisible group-hover/govern:opacity-100 group-hover/govern:visible transition-all">
-                                    <li>
-                                        <Link href="/corporate/governance/profile" className="block px-4 py-2 hover:bg-blue-900 uppercase">
-                                            Profile
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/corporate/governance/structure" className="block px-4 py-2 hover:bg-blue-900 uppercase">
-                                            Structure
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/corporate/governance/csr" className="block px-4 py-2 hover:bg-blue-900 uppercase">
-                                            CSR
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            {/* INVESTOR RELATION */}
-                            <li className="relative group/invest">
-                                <Link href="/corporate/investor-relation" className="flex justify-between items-center px-4 py-2 hover:bg-blue-900 uppercase">
-                                    INVESTOR RELATION
-                                    <ChevronDown size={14} className="ml-2" />
-                                </Link>
-
-                                {/* Nested dropdown → Opens right */}
-                                <ul className="absolute top-0 left-full mt-0 w-56 bg-[#1338BE] text-white shadow-lg rounded-md 
-          opacity-0 invisible group-hover/invest:opacity-100 group-hover/invest:visible transition-all">
-                                    <li>
-                                        <Link href="/investor/financials" className="block px-4 py-2 hover:bg-blue-900 uppercase">
-                                            Financials
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/investor/reports" className="block px-4 py-2 hover:bg-blue-900 uppercase">
-                                            Reports
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/investor/announcements" className="block px-4 py-2 hover:bg-blue-900 uppercase">
-                                            Announcements
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            {/* ELECTION OF DIRECTOR */}
-                            <li>
-                                <Link href="/corporate/election-of-director" className="block px-4 py-2 hover:bg-blue-900 uppercase">
-                                    ELECTION OF DIRECTOR
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-
-                    {/* PRODUCTS */}
-                    <Link href="/products" className="hover:text-gray-200 uppercase">
-                        Products
-                    </Link>
-
-                    <Link href='/contact-us' className="absolute right-22 flex items-center gap-2 bg-[#F28500] text-[#1338BE] font-semibold px-4 py-2 hover:brightness-110 transition">
+                    {/* Contact Us Button - Always Visible */}
+                    <Link href='/contact-us' className="flex items-center gap-2 font-semibold px-4 py-2 transition" style={{ backgroundColor: colors.orange.dark, color: colors.primary.blue }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.orange.warm} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = colors.orange.dark}>
                         <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M8.75 10C7.42392 10 6.15215 9.47322 5.21447 8.53553C4.27678 7.59785 3.75 6.32608 3.75 5C3.75 3.67392 4.27678 2.40215 5.21447 1.46447C6.15215 0.526784 7.42392 0 8.75 0C10.0761 0 11.3479 0.526784 12.2855 1.46447C13.2232 2.40215 13.75 3.67392 13.75 5C13.75 6.32608 13.2232 7.59785 12.2855 8.53553C11.3479 9.47322 10.0761 10 8.75 10ZM8.16797 14.0312L7.44141 12.8203C7.19141 12.4023 7.49219 11.875 7.97656 11.875H8.75H9.51953C10.0039 11.875 10.3047 12.4062 10.0547 12.8203L9.32812 14.0312L10.6328 18.8711L12.0391 13.1328C12.1172 12.8164 12.4219 12.6094 12.7383 12.6914C15.4766 13.3789 17.5 15.8555 17.5 18.8008C17.5 19.4648 16.9609 20 16.3008 20H11.1523C11.0703 20 10.9961 19.9844 10.9258 19.957L10.9375 20H6.5625L6.57422 19.957C6.50391 19.9844 6.42578 20 6.34766 20H1.19922C0.539063 20 0 19.4609 0 18.8008C0 15.8516 2.02734 13.375 4.76172 12.6914C5.07812 12.6133 5.38281 12.8203 5.46094 13.1328L6.86719 18.8711L8.17188 14.0312H8.16797Z" fill="#1338BE" />
                         </svg>
@@ -218,6 +234,38 @@ export default function Header() {
                     </Link>
 
                 </div>
+
+                {/* Mobile Menu Dropdown */}
+                {mobileMenuOpen && (
+                    <div className="md:hidden absolute top-full left-0 w-full shadow-lg z-50" style={{ backgroundColor: colors.primary.blue }}>
+                        <div className="flex flex-col text-white">
+                            <Link href="/" className="block px-4 py-3 border-b border-white/10" onClick={() => setMobileMenuOpen(false)}>
+                                Home
+                            </Link>
+                            <Link href="/company-information" className="block px-4 py-3 border-b border-white/10" onClick={() => setMobileMenuOpen(false)}>
+                                Company Information
+                            </Link>
+                            <Link href="/mission-vision" className="block px-4 py-3 border-b border-white/10" onClick={() => setMobileMenuOpen(false)}>
+                                Mission & Vision
+                            </Link>
+                            <Link href="/code-of-conduct-policy" className="block px-4 py-3 border-b border-white/10" onClick={() => setMobileMenuOpen(false)}>
+                                Code of Conduct Policy
+                            </Link>
+                            <Link href="/corporate/governance" className="block px-4 py-3 border-b border-white/10" onClick={() => setMobileMenuOpen(false)}>
+                                Governance
+                            </Link>
+                            <Link href="/corporate/investor-relation" className="block px-4 py-3 border-b border-white/10" onClick={() => setMobileMenuOpen(false)}>
+                                Investor Relation
+                            </Link>
+                            <Link href="/corporate/election-of-director" className="block px-4 py-3 border-b border-white/10" onClick={() => setMobileMenuOpen(false)}>
+                                Election of Director
+                            </Link>
+                            <Link href="/products" className="block px-4 py-3" onClick={() => setMobileMenuOpen(false)}>
+                                Products
+                            </Link>
+                        </div>
+                    </div>
+                )}
             </nav>
 
         </header>
