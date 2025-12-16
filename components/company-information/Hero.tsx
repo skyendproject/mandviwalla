@@ -2,13 +2,14 @@ import Image from "next/image";
 import { colors } from "@/lib/colors";
 
 interface HeroProps {
+    path?: string
     imagePath: string;
     heading: string;
     breadcrumbPath: string;
     imageAlt?: string;
 }
 
-export default function Hero({ imagePath, heading, breadcrumbPath, imageAlt }: HeroProps) {
+export default function Hero({ imagePath, heading, breadcrumbPath, imageAlt, path }: HeroProps) {
     return (
         <section className="relative w-full h-48 md:h-[260px] overflow-hidden">
             {/* Background Image */}
@@ -28,13 +29,13 @@ export default function Hero({ imagePath, heading, breadcrumbPath, imageAlt }: H
 
 
                 {/* Heading */}
-                <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3">
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 uppercase">
                     {heading}
                 </h1>
                 {/* Breadcrumb */}
                 <div className="flex items-center gap-2 text-sm md:text-base ">
                     <span style={{ color: colors.orange.dark }} className="font-semibold">
-                        Profile
+                        {path}
                     </span>
                     <span>/</span>
                     <span>{breadcrumbPath}</span>

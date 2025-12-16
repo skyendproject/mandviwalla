@@ -10,10 +10,12 @@ import Footer from "@/components/Footer";
 export default function CompanyInformation() {
     return (
         <div>
-            <Hero 
+            <Hero
                 imagePath="/company-information.jpg"
                 heading="Company Information"
                 breadcrumbPath="Company Information"
+                path="Profile"
+
             />
             <CompanyInformationComponent />
             <Cards />

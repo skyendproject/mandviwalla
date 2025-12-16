@@ -15,11 +15,12 @@ export default function CompanyInformation() {
                 imagePath="/mission-vision.jpg"
                 heading="Mission & Vision"
                 breadcrumbPath="Mission & Vision"
+                path="Profile"
             />
             <MissionStatement />
             <VisionStatement />
             <StrategicGoals />
-            <CoreValues/>
+            <CoreValues />
             <AboveFooter variant="dark" />
             <Footer variant="dark" />
         </div>

@@ -30,7 +30,9 @@ export const colors = {
     gray: {
         text: '#666666',          // Body text
         light: '#999999',         // Secondary text
-        border: '#A7A7A7',        // Borders and dividers
+        border: '#A7A7A7',       // Borders and dividers
+        lightgraybg: '#F6F6F6',
+        tagColor: '#333333'
     },
 
     white: '#FFFFFF',           // Card backgrounds, clean spacing

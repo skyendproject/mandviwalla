@@ -165,18 +165,33 @@ export default function Header() {
                                     <ul className="absolute top-0 left-full mt-0 w-56 text-white shadow-lg rounded-md 
           opacity-0 invisible group-hover/govern:opacity-100 group-hover/govern:visible transition-all" style={{ backgroundColor: colors.primary.blue }}>
                                         <li>
-                                            <Link href="/corporate/governance/profile" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
-                                                Profile
+                                            <Link href="corporate-governance" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                Corporate Governance
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/corporate/governance/structure" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
-                                                Structure
+                                            <Link href="board-director" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                Board Of Director
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/corporate/governance/csr" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
-                                                CSR
+                                            <Link href="management-profile" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                Management Profile
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="share-holding-pattern" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                Share Holding Pattern
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="company-auditor" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                Auditor Of The Company
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="legal-advisor" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                Legal Advisor
                                             </Link>
                                         </li>
                                     </ul>
