@@ -1,133 +1,88 @@
 import Image from "next/image";
 import { colors } from "@/lib/colors";
-import { Facebook, Linkedin, Youtube } from "lucide-react";
 
-const directors = [
-    // First Row - 3 directors
+const auditCommittee = [
     {
-        name: "Mr. Abdul Qadir Shiwani",
-        title: "Chairman",
-        image: "/board-directors/qadir-shiwani-boardDir1.png",
+        name: "Mrs. Huma Darugar",
+        title: "Chairperson",
+        image: "/board-directors/huma-darugar-boardDir7.1.jpg",
         social: {
             facebook: "#",
-            linkedin: "#",
+            instagram: "#",
             youtube: "#"
         }
     },
     {
-        name: "Mr. Azeem H. Mandviwalla",
-        title: "Chief Executive Officer",
-        image: "/board-directors/azeem-mandviwalla-boardDir2.png",
+        name: "Mr. Abdul Qadir Shiwani",
+        title: "Member",
+        image: "/board-directors/qadir-shiwani-boardDir8.jpg",
         social: {
             facebook: "#",
-            linkedin: "#",
+            instagram: "#",
             youtube: "#"
         }
     },
     {
         name: "Mr. Shamim Ahmed Khan",
-        title: "Director",
-        image: "/board-directors/shamim-ahmed-boardDir3.png",
+        title: "Member",
+        image: "/board-directors/shamim-khan-boardDir9.jpg",
         social: {
             facebook: "#",
-            linkedin: "#",
-            youtube: "#"
-        }
-    },
-    // Second Row - 4 directors
-    {
-        name: "Mr. S. Asghar Ali",
-        title: "Director",
-        image: "/board-directors/asghar-ali-boardDir4.jpg",
-        social: {
-            facebook: "#",
-            linkedin: "#",
-            youtube: "#"
-        }
-    },
-    {
-        name: "Mr. Tariq Mehmood",
-        title: "Director",
-        image: "/board-directors/tariq-mehmood-boardDir5.jpg",
-        social: {
-            facebook: "#",
-            linkedin: "#",
-            youtube: "#"
-        }
-    },
-    {
-        name: "Mr. Naeem Ahmad",
-        title: "Director",
-        image: "/board-directors/naseer-ahmed-boardDir6.jpg",
-        social: {
-            facebook: "#",
-            linkedin: "#",
-            youtube: "#"
-        }
-    },
-    {
-        name: "Mrs. Huma Dinapur",
-        title: "Director",
-        image: "/board-directors/huma-darugar-boardDir7.jpg",
-        social: {
-            facebook: "#",
-            linkedin: "#",
+            instagram: "#",
             youtube: "#"
         }
     }
 ];
 
-export default function BoardDirectors() {
-    return (
-        <div className="w-full py-12 md:py-16 px-4 md:px-20">
-            <div className="container mx-auto max-w-7xl">
-                {/* Section Label */}
-                <div className="flex items-center justify-center gap-3 mb-3">
-                    <div className="w-0.5 h-8 md:h-6" style={{ backgroundColor: colors.primary.blue }}></div>
-                    <span className="text-base font-semibold" style={{ color: colors.gray.text }}>
-                        OUR DIRECTORS
-                    </span>
-                </div>
+const companySecretary = [
+    {
+        name: "Ms. Hina Ambreen",
+        title: "Company Secretary",
+        image: "/board-directors/hina-ambreen-boardDir10.jpg",
+        social: {
+            facebook: "#",
+            instagram: "#",
+            youtube: "#"
+        }
+    }
+];
 
-                {/* Heading */}
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black text-center mb-4">
-                    Board of Directors
+export default function Committee() {
+    return (
+        <div className="w-full bg-white py-12 md:py-16 px-4 md:px-20">
+            <div className="container mx-auto max-w-7xl">
+                {/* Audit Committee Section */}
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black text-center mb-10 md:mb-12">
+                    Audit Committee
                 </h2>
 
-                {/* Description */}
-                <p className="text-sm md:text-base text-center mb-10 md:mb-12 max-w-4xl mx-auto" style={{ color: colors.gray.text }}>
-                    At Mandviwalla Mauser Private Industries Limited, our leadership team drives innovation, sustainability, and long-term growth. Guided by deep industry and operational knowledge, the Board ensures that every decision reflects our values and stakeholders.
-                </p>
-
-                {/* Directors Grid */}
-                <div className="flex flex-col gap-8 md:gap-10">
-                    {/* First Row - 3 Directors */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                        {directors.slice(0, 3).map((director, idx) => (
+                <div className="flex justify-center mb-16 md:mb-20">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 max-w-5xl">
+                        {auditCommittee.map((member, idx) => (
                             <div key={idx} className="flex flex-col items-center">
-                                {/* Director Image */}
-                                <div className="w-full aspect-4/5 relative mb-4">
+                                {/* Member Image */}
+                                <div className="w-full aspect-3/4 relative mb-4">
                                     <Image
-                                        src={director.image}
-                                        alt={director.name}
+                                        src={member.image}
+                                        alt={member.name}
                                         fill
                                         className="object-cover"
                                     />
                                 </div>
 
-                                {/* Director Info */}
+                                {/* Member Info */}
                                 <div className="flex flex-col items-center gap-0.5">
                                     <h3 className="text-lg md:text-xl font-semibold text-black text-center">
-                                        {director.name}
+                                        {member.name}
                                     </h3>
                                     <p className="text-sm md:text-base text-center" style={{ color: colors.gray.text }}>
-                                        {director.title}
+                                        {member.title}
                                     </p>
 
                                     {/* Social Links */}
                                     <div className="flex items-center gap-3">
                                         <a
-                                            href={director.social.facebook}
+                                            href={member.social.facebook}
                                             className="p-2 rounded-full transition-colors hover:bg-gray-100"
                                             style={{ color: colors.primary.blue }}
                                         >
@@ -136,7 +91,7 @@ export default function BoardDirectors() {
                                             </svg>
                                         </a>
                                         <a
-                                            href={director.social.linkedin}
+                                            href={member.social.instagram}
                                             className="p-2 rounded-full transition-colors hover:bg-gray-100"
                                             style={{ color: colors.primary.blue }}
                                         >
@@ -145,7 +100,7 @@ export default function BoardDirectors() {
                                             </svg>
                                         </a>
                                         <a
-                                            href={director.social.youtube}
+                                            href={member.social.youtube}
                                             className="p-2 rounded-full transition-colors hover:bg-gray-100"
                                             style={{ color: colors.primary.blue }}
                                         >
@@ -158,34 +113,40 @@ export default function BoardDirectors() {
                             </div>
                         ))}
                     </div>
+                </div>
 
-                    {/* Second Row - 4 Directors */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-                        {directors.slice(3).map((director, idx) => (
+                {/* Company Secretary Section */}
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black text-center mb-10 md:mb-12">
+                    Company Secretary
+                </h2>
+
+                <div className="flex justify-center">
+                    <div className="max-w-xs">
+                        {companySecretary.map((member, idx) => (
                             <div key={idx} className="flex flex-col items-center">
-                                {/* Director Image */}
-                                <div className="w-full aspect-4/5 relative mb-4">
+                                {/* Member Image */}
+                                <div className="w-full aspect-3/4 relative mb-4">
                                     <Image
-                                        src={director.image}
-                                        alt={director.name}
+                                        src={member.image}
+                                        alt={member.name}
                                         fill
                                         className="object-cover"
                                     />
                                 </div>
 
-                                {/* Director Info */}
+                                {/* Member Info */}
                                 <div className="flex flex-col items-center gap-0.5">
                                     <h3 className="text-lg md:text-xl font-semibold text-black text-center">
-                                        {director.name}
+                                        {member.name}
                                     </h3>
                                     <p className="text-sm md:text-base text-center" style={{ color: colors.gray.text }}>
-                                        {director.title}
+                                        {member.title}
                                     </p>
 
                                     {/* Social Links */}
                                     <div className="flex items-center gap-3">
                                         <a
-                                            href={director.social.facebook}
+                                            href={member.social.facebook}
                                             className="p-2 rounded-full transition-colors hover:bg-gray-100"
                                             style={{ color: colors.primary.blue }}
                                         >
@@ -194,7 +155,7 @@ export default function BoardDirectors() {
                                             </svg>
                                         </a>
                                         <a
-                                            href={director.social.linkedin}
+                                            href={member.social.instagram}
                                             className="p-2 rounded-full transition-colors hover:bg-gray-100"
                                             style={{ color: colors.primary.blue }}
                                         >
@@ -203,7 +164,7 @@ export default function BoardDirectors() {
                                             </svg>
                                         </a>
                                         <a
-                                            href={director.social.youtube}
+                                            href={member.social.youtube}
                                             className="p-2 rounded-full transition-colors hover:bg-gray-100"
                                             style={{ color: colors.primary.blue }}
                                         >

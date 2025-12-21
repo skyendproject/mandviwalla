@@ -1,153 +1,108 @@
 import Image from "next/image";
 import { colors } from "@/lib/colors";
-import { Facebook, Linkedin, Youtube } from "lucide-react";
 
-const directors = [
-    // First Row - 3 directors
+const auditCommittee = [
     {
-        name: "Mr. Abdul Qadir Shiwani",
-        title: "Chairman",
-        image: "/board-directors/qadir-shiwani-boardDir1.png",
+        name: "Mrs. Huma Darugar",
+        title: "Chairperson",
+        image: "/board-directors/huma-darugar-boardDir7.1.jpg",
         social: {
             facebook: "#",
-            linkedin: "#",
+            instagram: "#",
             youtube: "#"
         }
     },
     {
-        name: "Mr. Azeem H. Mandviwalla",
-        title: "Chief Executive Officer",
-        image: "/board-directors/azeem-mandviwalla-boardDir2.png",
+        name: "Mr. Abdul Qadir Shiwani",
+        title: "Member",
+        image: "/board-directors/qadir-shiwani-boardDir8.jpg",
         social: {
             facebook: "#",
-            linkedin: "#",
+            instagram: "#",
             youtube: "#"
         }
     },
     {
         name: "Mr. Shamim Ahmed Khan",
-        title: "Director",
-        image: "/board-directors/shamim-ahmed-boardDir3.png",
+        title: "Member",
+        image: "/board-directors/shamim-khan-boardDir9.jpg",
         social: {
             facebook: "#",
-            linkedin: "#",
-            youtube: "#"
-        }
-    },
-    // Second Row - 4 directors
-    {
-        name: "Mr. S. Asghar Ali",
-        title: "Director",
-        image: "/board-directors/asghar-ali-boardDir4.jpg",
-        social: {
-            facebook: "#",
-            linkedin: "#",
-            youtube: "#"
-        }
-    },
-    {
-        name: "Mr. Tariq Mehmood",
-        title: "Director",
-        image: "/board-directors/tariq-mehmood-boardDir5.jpg",
-        social: {
-            facebook: "#",
-            linkedin: "#",
-            youtube: "#"
-        }
-    },
-    {
-        name: "Mr. Naeem Ahmad",
-        title: "Director",
-        image: "/board-directors/naseer-ahmed-boardDir6.jpg",
-        social: {
-            facebook: "#",
-            linkedin: "#",
-            youtube: "#"
-        }
-    },
-    {
-        name: "Mrs. Huma Dinapur",
-        title: "Director",
-        image: "/board-directors/huma-darugar-boardDir7.jpg",
-        social: {
-            facebook: "#",
-            linkedin: "#",
+            instagram: "#",
             youtube: "#"
         }
     }
 ];
 
-export default function BoardDirectors() {
-    return (
-        <div className="w-full py-12 md:py-16 px-4 md:px-20">
-            <div className="container mx-auto max-w-7xl">
-                {/* Section Label */}
-                <div className="flex items-center justify-center gap-3 mb-3">
-                    <div className="w-0.5 h-8 md:h-6" style={{ backgroundColor: colors.primary.blue }}></div>
-                    <span className="text-base font-semibold" style={{ color: colors.gray.text }}>
-                        OUR DIRECTORS
-                    </span>
-                </div>
+const companySecretary = [
+    {
+        name: "Ms. Hina Ambreen",
+        title: "Company Secretary",
+        image: "/board-directors/hina-ambreen-boardDir10.jpg",
+        social: {
+            facebook: "#",
+            instagram: "#",
+            youtube: "#"
+        }
+    }
+];
 
-                {/* Heading */}
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black text-center mb-4">
-                    Board of Directors
+export default function Committee() {
+    return (
+        <div className="w-full bg-white py-12 md:py-16 px-4 md:px-20">
+            <div className="container mx-auto max-w-7xl">
+                {/* Audit Committee Section */}
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black text-center mb-10 md:mb-12">
+                    Audit Committee
                 </h2>
 
-                {/* Description */}
-                <p className="text-sm md:text-base text-center mb-10 md:mb-12 max-w-4xl mx-auto" style={{ color: colors.gray.text }}>
-                    At Mandviwalla Mauser Private Industries Limited, our leadership team drives innovation, sustainability, and long-term growth. Guided by deep industry and operational knowledge, the Board ensures that every decision reflects our values and stakeholders.
-                </p>
-
-                {/* Directors Grid */}
-                <div className="flex flex-col gap-8 md:gap-10">
-                    {/* First Row - 3 Directors */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                        {directors.slice(0, 3).map((director, idx) => (
+                <div className="flex justify-center mb-16 md:mb-20">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 max-w-5xl">
+                        {auditCommittee.map((member, idx) => (
                             <div key={idx} className="flex flex-col items-center">
-                                {/* Director Image */}
-                                <div className="w-full aspect-4/5 relative mb-4">
+                                {/* Member Image */}
+                                <div className="w-full aspect-3/4 relative mb-4">
                                     <Image
-                                        src={director.image}
-                                        alt={director.name}
+                                        src={member.image}
+                                        alt={member.name}
                                         fill
                                         className="object-cover"
                                     />
                                 </div>
 
-                                {/* Director Info */}
-                                <div className="flex flex-col items-center gap-0.5">
+                                {/* Member Info */}
+                                <div className="flex flex-col items-center gap-1">
                                     <h3 className="text-lg md:text-xl font-semibold text-black text-center">
-                                        {director.name}
+                                        {member.name}
                                     </h3>
-                                    <p className="text-sm md:text-base text-center" style={{ color: colors.gray.text }}>
-                                        {director.title}
+                                    <p className="text-sm md:text-base text-center mb-2" style={{ color: colors.gray.text }}>
+                                        {member.title}
                                     </p>
 
                                     {/* Social Links */}
-                                    <div className="flex items-center gap-3">
+                                    <div className="flex items-center gap-2 mt-1">
                                         <a
-                                            href={director.social.facebook}
-                                            className="p-2 rounded-full transition-colors hover:bg-gray-100"
-                                            style={{ color: colors.primary.blue }}
+                                            href={member.social.facebook}
+                                            className="transition-opacity hover:opacity-70"
+                                            aria-label="Facebook"
                                         >
                                             <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M7.07447 0.00399317C6.24366 0.056743 5.47512 0.225982 4.73369 0.520502C3.02006 1.20112 1.61486 2.49203 0.787715 4.14485C-0.162514 6.04385 -0.257757 8.27912 0.527629 10.2602C0.844861 11.0609 1.2903 11.7855 1.87934 12.4588C1.9995 12.5965 2.36655 12.9658 2.50282 13.0859C3.17098 13.6772 3.88823 14.1241 4.69193 14.4494C5.06997 14.6018 5.47292 14.7278 5.86562 14.8142C5.99603 14.8435 6.28981 14.8985 6.31326 14.8985C6.32718 14.8985 6.32718 14.8692 6.32718 12.283V9.66747H4.42232V7.49154H6.32718V6.57354C6.32718 6.04385 6.33011 5.61159 6.3345 5.55005C6.40484 4.5207 6.82684 3.75289 7.56314 3.31478C7.89429 3.1177 8.2694 2.99754 8.73096 2.9404C8.85404 2.92575 8.8958 2.92428 9.2101 2.92428C9.56397 2.92428 9.68558 2.93014 10.0526 2.96458C10.2812 2.98582 10.7882 3.05029 10.8351 3.06348C10.8468 3.06715 10.8475 3.11623 10.8461 3.99173L10.8439 4.91632L10.2578 4.92071C9.61671 4.92511 9.62917 4.92438 9.45187 4.97127C9.25699 5.02255 9.11046 5.10461 8.98298 5.23135C8.79836 5.41524 8.69872 5.66361 8.67894 5.99036C8.67528 6.0563 8.67161 6.42115 8.67161 6.80066V7.49154H9.71196C10.6688 7.49154 10.7523 7.49227 10.7523 7.50326C10.7523 7.51351 10.438 9.57662 10.4263 9.64329L10.4219 9.66747H8.67161V12.283C8.67161 14.8289 8.67161 14.8985 8.68553 14.8985C8.71264 14.8985 8.99251 14.8457 9.13757 14.8135C10.6805 14.4699 12.0762 13.6427 13.1297 12.4478C14.5298 10.8595 15.1884 8.76779 14.9532 6.65267C14.7584 4.89434 13.9378 3.2547 12.641 2.0334C11.4337 0.894879 9.89145 0.193013 8.24302 0.0296354C8.17855 0.0237744 8.08477 0.0149827 8.03422 0.0105869C7.917 0.00106263 7.20488 -0.00406583 7.07447 0.00399317Z" fill="#1338BE" />
                                             </svg>
                                         </a>
                                         <a
-                                            href={director.social.linkedin}
-                                            className="p-2 rounded-full transition-colors hover:bg-gray-100"
-                                            style={{ color: colors.primary.blue }}
+                                            href={member.social.instagram}
+                                            className="transition-opacity hover:opacity-70"
+                                            aria-label="Instagram"
                                         >
                                             <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M7.50167 3.65337C5.3734 3.65337 3.65672 5.37005 3.65672 7.49833C3.65672 9.6266 5.3734 11.3433 7.50167 11.3433C9.62995 11.3433 11.3466 9.6266 11.3466 7.49833C11.3466 5.37005 9.62995 3.65337 7.50167 3.65337ZM7.50167 9.99805C6.12632 9.99805 5.00195 8.87702 5.00195 7.49833C5.00195 6.11963 6.12298 4.99861 7.50167 4.99861C8.88037 4.99861 10.0014 6.11963 10.0014 7.49833C10.0014 8.87702 8.87702 9.99805 7.50167 9.99805ZM12.4007 3.4961C12.4007 3.9947 11.9992 4.39292 11.5039 4.39292C11.0053 4.39292 10.6071 3.99136 10.6071 3.4961C10.6071 3.00084 11.0086 2.59927 11.5039 2.59927C11.9992 2.59927 12.4007 3.00084 12.4007 3.4961ZM14.9473 4.4063C14.8904 3.20496 14.616 2.14083 13.7359 1.26408C12.8592 0.38734 11.795 0.112939 10.5937 0.052705C9.35555 -0.0175683 5.64445 -0.0175683 4.4063 0.052705C3.20831 0.109593 2.14417 0.383993 1.26408 1.26074C0.383993 2.13748 0.112939 3.20162 0.052705 4.40296C-0.0175683 5.6411 -0.0175683 9.3522 0.052705 10.5904C0.109593 11.7917 0.383993 12.8558 1.26408 13.7326C2.14417 14.6093 3.20496 14.8837 4.4063 14.9439C5.64445 15.0142 9.35555 15.0142 10.5937 14.9439C11.795 14.8871 12.8592 14.6127 13.7359 13.7326C14.6127 12.8558 14.8871 11.7917 14.9473 10.5904C15.0176 9.3522 15.0176 5.64445 14.9473 4.4063ZM13.3477 11.9189C13.0867 12.5747 12.5814 13.08 11.9222 13.3444C10.935 13.7359 8.59258 13.6456 7.50167 13.6456C6.41076 13.6456 4.06497 13.7326 3.08115 13.3444C2.42526 13.0834 1.91997 12.5781 1.65561 11.9189C1.26408 10.9317 1.35443 8.58924 1.35443 7.49833C1.35443 6.40742 1.26743 4.06163 1.65561 3.0778C1.91662 2.42192 2.42192 1.91662 3.08115 1.65226C4.06832 1.26074 6.41076 1.35109 7.50167 1.35109C8.59258 1.35109 10.9384 1.26408 11.9222 1.65226C12.5781 1.91327 13.0834 2.41857 13.3477 3.0778C13.7393 4.06497 13.6489 6.40742 13.6489 7.49833C13.6489 8.58924 13.7393 10.935 13.3477 11.9189Z" fill="#1338BE" />
                                             </svg>
                                         </a>
                                         <a
-                                            href={director.social.youtube}
-                                            className="p-2 rounded-full transition-colors hover:bg-gray-100"
-                                            style={{ color: colors.primary.blue }}
+                                            href={member.social.youtube}
+                                            className="transition-opacity hover:opacity-70"
+                                            aria-label="YouTube"
                                         >
                                             <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M14.6866 1.65023C14.514 1.00066 14.0058 0.489083 13.3604 0.315472C12.1906 0 7.5 0 7.5 0C7.5 0 2.80939 0 1.6396 0.315472C0.994234 0.489111 0.485952 1.00066 0.31344 1.65023C0 2.8276 0 5.28409 0 5.28409C0 5.28409 0 7.74057 0.31344 8.91795C0.485952 9.56751 0.994234 10.0578 1.6396 10.2314C2.80939 10.5469 7.5 10.5469 7.5 10.5469C7.5 10.5469 12.1906 10.5469 13.3604 10.2314C14.0058 10.0578 14.514 9.56751 14.6866 8.91795C15 7.74057 15 5.28409 15 5.28409C15 5.28409 15 2.8276 14.6866 1.65023ZM5.9659 7.51439V3.05378L9.88634 5.28414L5.9659 7.51439Z" fill="#1338BE" />
@@ -158,54 +113,60 @@ export default function BoardDirectors() {
                             </div>
                         ))}
                     </div>
+                </div>
 
-                    {/* Second Row - 4 Directors */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-                        {directors.slice(3).map((director, idx) => (
+                {/* Company Secretary Section */}
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black text-center mb-10 md:mb-12">
+                    Company Secretary
+                </h2>
+
+                <div className="flex justify-center">
+                    <div className="max-w-xs">
+                        {companySecretary.map((member, idx) => (
                             <div key={idx} className="flex flex-col items-center">
-                                {/* Director Image */}
-                                <div className="w-full aspect-4/5 relative mb-4">
+                                {/* Member Image */}
+                                <div className="w-full aspect-3/4 relative mb-4">
                                     <Image
-                                        src={director.image}
-                                        alt={director.name}
+                                        src={member.image}
+                                        alt={member.name}
                                         fill
                                         className="object-cover"
                                     />
                                 </div>
 
-                                {/* Director Info */}
-                                <div className="flex flex-col items-center gap-0.5">
+                                {/* Member Info */}
+                                <div className="flex flex-col items-center gap-1">
                                     <h3 className="text-lg md:text-xl font-semibold text-black text-center">
-                                        {director.name}
+                                        {member.name}
                                     </h3>
-                                    <p className="text-sm md:text-base text-center" style={{ color: colors.gray.text }}>
-                                        {director.title}
+                                    <p className="text-sm md:text-base text-center mb-2" style={{ color: colors.gray.text }}>
+                                        {member.title}
                                     </p>
 
                                     {/* Social Links */}
-                                    <div className="flex items-center gap-3">
+                                    <div className="flex items-center gap-2 mt-1">
                                         <a
-                                            href={director.social.facebook}
-                                            className="p-2 rounded-full transition-colors hover:bg-gray-100"
-                                            style={{ color: colors.primary.blue }}
+                                            href={member.social.facebook}
+                                            className="transition-opacity hover:opacity-70"
+                                            aria-label="Facebook"
                                         >
                                             <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M7.07447 0.00399317C6.24366 0.056743 5.47512 0.225982 4.73369 0.520502C3.02006 1.20112 1.61486 2.49203 0.787715 4.14485C-0.162514 6.04385 -0.257757 8.27912 0.527629 10.2602C0.844861 11.0609 1.2903 11.7855 1.87934 12.4588C1.9995 12.5965 2.36655 12.9658 2.50282 13.0859C3.17098 13.6772 3.88823 14.1241 4.69193 14.4494C5.06997 14.6018 5.47292 14.7278 5.86562 14.8142C5.99603 14.8435 6.28981 14.8985 6.31326 14.8985C6.32718 14.8985 6.32718 14.8692 6.32718 12.283V9.66747H4.42232V7.49154H6.32718V6.57354C6.32718 6.04385 6.33011 5.61159 6.3345 5.55005C6.40484 4.5207 6.82684 3.75289 7.56314 3.31478C7.89429 3.1177 8.2694 2.99754 8.73096 2.9404C8.85404 2.92575 8.8958 2.92428 9.2101 2.92428C9.56397 2.92428 9.68558 2.93014 10.0526 2.96458C10.2812 2.98582 10.7882 3.05029 10.8351 3.06348C10.8468 3.06715 10.8475 3.11623 10.8461 3.99173L10.8439 4.91632L10.2578 4.92071C9.61671 4.92511 9.62917 4.92438 9.45187 4.97127C9.25699 5.02255 9.11046 5.10461 8.98298 5.23135C8.79836 5.41524 8.69872 5.66361 8.67894 5.99036C8.67528 6.0563 8.67161 6.42115 8.67161 6.80066V7.49154H9.71196C10.6688 7.49154 10.7523 7.49227 10.7523 7.50326C10.7523 7.51351 10.438 9.57662 10.4263 9.64329L10.4219 9.66747H8.67161V12.283C8.67161 14.8289 8.67161 14.8985 8.68553 14.8985C8.71264 14.8985 8.99251 14.8457 9.13757 14.8135C10.6805 14.4699 12.0762 13.6427 13.1297 12.4478C14.5298 10.8595 15.1884 8.76779 14.9532 6.65267C14.7584 4.89434 13.9378 3.2547 12.641 2.0334C11.4337 0.894879 9.89145 0.193013 8.24302 0.0296354C8.17855 0.0237744 8.08477 0.0149827 8.03422 0.0105869C7.917 0.00106263 7.20488 -0.00406583 7.07447 0.00399317Z" fill="#1338BE" />
                                             </svg>
                                         </a>
                                         <a
-                                            href={director.social.linkedin}
-                                            className="p-2 rounded-full transition-colors hover:bg-gray-100"
-                                            style={{ color: colors.primary.blue }}
+                                            href={member.social.instagram}
+                                            className="transition-opacity hover:opacity-70"
+                                            aria-label="Instagram"
                                         >
                                             <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M7.50167 3.65337C5.3734 3.65337 3.65672 5.37005 3.65672 7.49833C3.65672 9.6266 5.3734 11.3433 7.50167 11.3433C9.62995 11.3433 11.3466 9.6266 11.3466 7.49833C11.3466 5.37005 9.62995 3.65337 7.50167 3.65337ZM7.50167 9.99805C6.12632 9.99805 5.00195 8.87702 5.00195 7.49833C5.00195 6.11963 6.12298 4.99861 7.50167 4.99861C8.88037 4.99861 10.0014 6.11963 10.0014 7.49833C10.0014 8.87702 8.87702 9.99805 7.50167 9.99805ZM12.4007 3.4961C12.4007 3.9947 11.9992 4.39292 11.5039 4.39292C11.0053 4.39292 10.6071 3.99136 10.6071 3.4961C10.6071 3.00084 11.0086 2.59927 11.5039 2.59927C11.9992 2.59927 12.4007 3.00084 12.4007 3.4961ZM14.9473 4.4063C14.8904 3.20496 14.616 2.14083 13.7359 1.26408C12.8592 0.38734 11.795 0.112939 10.5937 0.052705C9.35555 -0.0175683 5.64445 -0.0175683 4.4063 0.052705C3.20831 0.109593 2.14417 0.383993 1.26408 1.26074C0.383993 2.13748 0.112939 3.20162 0.052705 4.40296C-0.0175683 5.6411 -0.0175683 9.3522 0.052705 10.5904C0.109593 11.7917 0.383993 12.8558 1.26408 13.7326C2.14417 14.6093 3.20496 14.8837 4.4063 14.9439C5.64445 15.0142 9.35555 15.0142 10.5937 14.9439C11.795 14.8871 12.8592 14.6127 13.7359 13.7326C14.6127 12.8558 14.8871 11.7917 14.9473 10.5904C15.0176 9.3522 15.0176 5.64445 14.9473 4.4063ZM13.3477 11.9189C13.0867 12.5747 12.5814 13.08 11.9222 13.3444C10.935 13.7359 8.59258 13.6456 7.50167 13.6456C6.41076 13.6456 4.06497 13.7326 3.08115 13.3444C2.42526 13.0834 1.91997 12.5781 1.65561 11.9189C1.26408 10.9317 1.35443 8.58924 1.35443 7.49833C1.35443 6.40742 1.26743 4.06163 1.65561 3.0778C1.91662 2.42192 2.42192 1.91662 3.08115 1.65226C4.06832 1.26074 6.41076 1.35109 7.50167 1.35109C8.59258 1.35109 10.9384 1.26408 11.9222 1.65226C12.5781 1.91327 13.0834 2.41857 13.3477 3.0778C13.7393 4.06497 13.6489 6.40742 13.6489 7.49833C13.6489 8.58924 13.7393 10.935 13.3477 11.9189Z" fill="#1338BE" />
                                             </svg>
                                         </a>
                                         <a
-                                            href={director.social.youtube}
-                                            className="p-2 rounded-full transition-colors hover:bg-gray-100"
-                                            style={{ color: colors.primary.blue }}
+                                            href={member.social.youtube}
+                                            className="transition-opacity hover:opacity-70"
+                                            aria-label="YouTube"
                                         >
                                             <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M14.6866 1.65023C14.514 1.00066 14.0058 0.489083 13.3604 0.315472C12.1906 0 7.5 0 7.5 0C7.5 0 2.80939 0 1.6396 0.315472C0.994234 0.489111 0.485952 1.00066 0.31344 1.65023C0 2.8276 0 5.28409 0 5.28409C0 5.28409 0 7.74057 0.31344 8.91795C0.485952 9.56751 0.994234 10.0578 1.6396 10.2314C2.80939 10.5469 7.5 10.5469 7.5 10.5469C7.5 10.5469 12.1906 10.5469 13.3604 10.2314C14.0058 10.0578 14.514 9.56751 14.6866 8.91795C15 7.74057 15 5.28409 15 5.28409C15 5.28409 15 2.8276 14.6866 1.65023ZM5.9659 7.51439V3.05378L9.88634 5.28414L5.9659 7.51439Z" fill="#1338BE" />
