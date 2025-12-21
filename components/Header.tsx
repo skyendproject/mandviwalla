@@ -180,7 +180,7 @@ export default function Header() {
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="share-holding-pattern" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                            <Link href="share-holding" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
                                                 Share Holding Pattern
                                             </Link>
                                         </li>
@@ -199,7 +199,7 @@ export default function Header() {
 
                                 {/* INVESTOR RELATION */}
                                 <li className="relative group/invest">
-                                    <Link href="/corporate/investor-relation" className="flex justify-between items-center px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                    <Link href="/investor-relation" className="flex justify-between items-center px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
                                         INVESTOR RELATION
                                         <ChevronDown size={14} className="ml-2" />
                                     </Link>
@@ -208,18 +208,33 @@ export default function Header() {
                                     <ul className="absolute top-0 left-full mt-0 w-56 text-white shadow-lg rounded-md 
           opacity-0 invisible group-hover/invest:opacity-100 group-hover/invest:visible transition-all" style={{ backgroundColor: colors.primary.blue }}>
                                         <li>
-                                            <Link href="/investor/financials" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
-                                                Financials
+                                            <Link href="/investor-relation" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                INVESTOR RELATION
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/investor/reports" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
-                                                Reports
+                                            <Link href="/investor-information" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                INVESTOR INFORMATION
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/investor/announcements" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
-                                                Announcements
+                                            <Link href="/financial-reports" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                FINANCIAL REPORTS
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/financial-results" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                FINANCIAL RESULTS
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/investor-disclosure" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                GENDER PAY GAP DISCLOSURE
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/investor-notices" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                NOTICES
                                             </Link>
                                         </li>
                                     </ul>
@@ -227,7 +242,7 @@ export default function Header() {
 
                                 {/* ELECTION OF DIRECTOR */}
                                 <li>
-                                    <Link href="/corporate/election-of-director" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                    <Link href="/election-director" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
                                         ELECTION OF DIRECTOR
                                     </Link>
                                 </li>
