@@ -39,7 +39,7 @@ export default function ClientReviews() {
                         className="border-l-4 pl-4"
                         style={{ borderColor: colors.primary.blue }}
                     >
-                        <p className="text-sm font-semibold uppercase tracking-wide">
+                        <p className="text-sm md:text-base 2xl:text-lg font-semibold uppercase tracking-wide" style={{ color: colors.gray.tagColor}}>
                             WHAT CLIENTS SAY?
                         </p>
                     </div>

@@ -22,7 +22,7 @@ export default function AboutUs() {
                     <div
                         className="
         absolute 
-        bottom-[-3%] sm:bottom-[-5%] right-[-2%] sm:right-[-3%] 
+        bottom-[-23%] sm:bottom-[-17%] right-[-2%] sm:right-[-10%] 
         text-white 
         p-3 sm:p-4 
         shadow-xl 
@@ -49,11 +49,11 @@ export default function AboutUs() {
 
                 {/* Right Content */}
                 <div className="relative">
-                    <h4 className="text-xs sm:text-sm md:text-base tracking-widest border-l-2 pl-2 mb-2" style={{ borderColor: colors.orange.dark, fontFamily: 'var(--font-lato)' }}>
+                    <h4 className="text-sm md:text-base 2xl:text-lg tracking-widest border-l-2 pl-2 mb-2 font-semibold" style={{ borderColor: colors.orange.dark, fontFamily: 'var(--font-lato)', color: colors.gray.tagColor }}>
                         About Us Section
                     </h4>
 
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-semibold mb-3 md:mb-4 leading-snug">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl 2xl:text-[42px] font-semibold mb-3 md:mb-4 leading-snug">
                         Who We Are
                     </h2>
 

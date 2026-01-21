@@ -61,7 +61,7 @@ const Cards = () => {
                         {/* Content with limited width */}
                         <div className="flex flex-col flex-1">
                             <h2 className="text-lg md:text-xl font-semibold">{card.title}</h2>
-                            <p className="text-xs sm:text-sm text-[#666666] mt-1 md:mt-2">{card.text}</p>
+                            <p className="text-xs sm:text-sm md:text-base text-[#666666] mt-1 md:mt-2">{card.text}</p>
                         </div>
                     </div>
                 ))}

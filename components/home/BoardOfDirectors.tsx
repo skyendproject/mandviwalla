@@ -34,18 +34,18 @@ export default function BoardOfDirectors() {
 
                     {/* Label */}
                     <div className="border-l-4 pl-4" style={{ borderColor: colors.orange.dark }}>
-                        <p className="text-sm md:text-base lg:text-lg font-semibold text-gray-600 uppercase">
+                        <p className="text-sm md:text-base 2xl:text-lg font-semibold " style={{ color: colors.gray.tagColor }}>
                             OUR Management / Leadership
                         </p>
                     </div>
 
                     {/* Heading */}
-                    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[42px] font-semibold text-black">
+                    <h2 className="text-2xl md:text-3xl xl:text-4xl 2xl:text-[42px] font-semibold text-black">
                         Meet Our Board Of Director
                     </h2>
 
                     {/* Description */}
-                    <p className="text-xs sm:text-sm md:text-base leading-relaxed" style={{ color: colors.gray.text }}>
+                    <p className="text-xs sm:text-sm md:text-base leading-relaxed -mt-3 md:mt-0" style={{ color: colors.gray.text }}>
                         Profiles of Directors / CEO / Board Of Director
                     </p>
                 </div>
@@ -59,20 +59,21 @@ export default function BoardOfDirectors() {
                             style={{ border: '1px solid #E5E5E5' }}
                         >
                             <div className="flex flex-col sm:flex-row">
+
                                 {/* Left Side - Text and Social Icons */}
-                                <div className="flex flex-col justify-center items-center p-6 sm:w-1/2 gap-6">
+                                <div className="flex flex-col justify-center items-center p-4 sm:p-6 sm:w-1/2 gap-0 lg:gap-6">
                                     <div className="text-center">
-                                        <h3 className="text-lg md:text-xl lg:text-2xl font-semibold text-black mb-2">
+                                        <h3 className="text-lg md:text-xl xl:text-xl 2xl:text-2xl font-semibold text-black mb-1 sm:mb-2">
                                             {director.name}
                                         </h3>
-                                        <p className="text-xs sm:text-sm md:text-base mb-6" style={{ color: colors.gray.text }}>
+                                        <p className="text-xs sm:text-sm md:text-base mb-3 sm:mb-6" style={{ color: colors.gray.light }}>
                                             {director.role}
                                         </p>
                                     </div>
 
                                     {/* Social Media Icons */}
                                     <div className="flex justify-center">
-                                        <div className="inline-flex gap-6 p-2 rounded-full w-fit" style={{ boxShadow: 'inset 0 2px 3px rgba(255, 255, 255, 0.15)' }}>
+                                        <div className="inline-flex gap-4 sm:gap-6 p-2 rounded-full w-fit" style={{ boxShadow: 'inset 0 2px 3px rgba(255, 255, 255, 0.15)' }}>
                                             {/* Instagram */}
                                             <a href="#" className="w-8 h-8 flex items-center justify-center">
                                                 <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -97,8 +98,9 @@ export default function BoardOfDirectors() {
                                     </div>
                                 </div>
 
+
                                 {/* Right Side - Image */}
-                                <div className="sm:w-1/2 h-64 sm:h-auto p-4">
+                                < div className="sm:w-1/2 h-64 sm:h-auto p-4" >
                                     <Image
                                         src={director.image}
                                         alt={director.name}
@@ -109,9 +111,10 @@ export default function BoardOfDirectors() {
                                 </div>
                             </div>
                         </div>
-                    ))}
-                </div>
-            </div>
-        </section>
+                    ))
+                    }
+                </div >
+            </div >
+        </section >
     );
 }

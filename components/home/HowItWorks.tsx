@@ -5,7 +5,24 @@ export default function HowItWorks() {
     return (
         <section className="w-full py-12 md:py-16 lg:py-20 px-4 md:px-20">
             <div className="container mx-auto">
+                    {/* Step by Step Label */}
+                    <div className="border-l-4 pl-4 text-left" style={{ borderColor: colors.primary.blue }}>
+                        <p className="mb-3 block md:hidden text-sm md:text-base 2xl:text-lg font-semibold uppercase" style={{ color: colors.gray.tagColor }}>
+                            STEP BY STEP
+                        </p>
+                    </div>
+
+                    {/* Heading */}
+                    <h2 className="mb-3 block md:hidden text-left text-2xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-[42px] font-semibold text-black">
+                        How it Works
+                    </h2>
+
+                    {/* Description */}
+                    <p className="mb-4 block md:hidden text-left text-sm md:text-base leading-relaxed" style={{ color: colors.gray.text }}>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+                    </p>
                 <div className="flex flex-col md:flex-row gap-0 md:gap-0 lg:gap-0 items-center">
+
 
                     {/* Left Side - Image */}
                     <div className="w-full md:w-1/2 relative">
@@ -16,9 +33,9 @@ export default function HowItWorks() {
                             height={6045}
                             className="w-full h-auto max-w-[360px] md:max-w-[360px] lg:max-w-[400px] mx-auto mr-12 relative z-10"
                         />
-                        
+
                         {/* Decorative Dot Grid - Bottom Left */}
-                        <div className="absolute -bottom-10 left-12 grid grid-cols-6 gap-3.5 p-2 z-0">
+                        <div className="hidden absolute -bottom-10 left-12 md:grid grid-cols-6 gap-3.5 p-2 z-0">
                             {Array.from({ length: 36 }).map((_, index) => (
                                 <div
                                     key={index}
@@ -34,18 +51,18 @@ export default function HowItWorks() {
 
                         {/* Step by Step Label */}
                         <div className="border-l-4 pl-4" style={{ borderColor: colors.primary.blue }}>
-                            <p className="text-sm md:text-base lg:text-lg font-semibold text-gray-600 uppercase">
+                            <p className="hidden md:block text-sm md:text-base 2xl:text-lg font-semibold uppercase" style={{ color: colors.gray.tagColor }}>
                                 STEP BY STEP
                             </p>
                         </div>
 
                         {/* Heading */}
-                        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[42px] font-semibold text-black">
+                        <h2 className="hidden md:block text-xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-[42px] font-semibold text-black">
                             How it Works
                         </h2>
 
                         {/* Description */}
-                        <p className="text-xs sm:text-sm md:text-base leading-relaxed" style={{ color: colors.gray.text }}>
+                        <p className="hidden md:block text-xs sm:text-sm md:text-base leading-relaxed" style={{ color: colors.gray.text }}>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
                         </p>
 
@@ -60,10 +77,10 @@ export default function HowItWorks() {
                                     </svg>
                                 </div>
                                 <div className="flex-1">
-                                    <h3 className="text-base md:text-lg lg:text-xl font-bold mb-1 md:mb-2 text-black">
+                                    <h3 className="-lg lg:text-xl 2xl:text-2xl font-bold mb-1 md:mb-2 text-black">
                                         Product Design & Development
                                     </h3>
-                                    <p className="text-xs sm:text-sm md:text-base" style={{ color: colors.gray.text }}>
+                                    <p className="text-sm md:text-base" style={{ color: colors.gray.text }}>
                                         Built with German expertise & R&D focus.
                                     </p>
                                 </div>
@@ -80,11 +97,11 @@ export default function HowItWorks() {
 
                                 </div>
                                 <div className="flex-1">
-                                    <h3 className="text-base md:text-lg lg:text-xl font-bold mb-1 md:mb-2 text-black">
-                                        Product Design & Development
+                                    <h3 className="text-lg lg:text-xl 2xl:text-2xl font-bold mb-1 md:mb-2 text-black">
+                                        Manufacturing
                                     </h3>
-                                    <p className="text-xs sm:text-sm md:text-base" style={{ color: colors.gray.text }}>
-                                        Built with German expertise & R&D focus.
+                                    <p className="text-sm md:text-base" style={{ color: colors.gray.text }}>
+                                        State-of-the-art injection & blow moulding facilities.
                                     </p>
                                 </div>
                             </div>
@@ -98,11 +115,11 @@ export default function HowItWorks() {
 
                                 </div>
                                 <div className="flex-1">
-                                    <h3 className="text-base md:text-lg lg:text-xl font-bold mb-1 md:mb-2 text-black">
-                                        Product Design & Development
+                                    <h3 className="text-lg lg:text-xl 2xl:text-2xl font-bold mb-1 md:mb-2 text-black">
+                                        Delivery & Support
                                     </h3>
-                                    <p className="text-xs sm:text-sm md:text-base" style={{ color: colors.gray.text }}>
-                                        Built with German expertise & R&D focus.
+                                    <p className="text-sm md:text-base" style={{ color: colors.gray.text }}>
+                                        On-time delivery with complete after-sales service.
                                     </p>
                                 </div>
                             </div>

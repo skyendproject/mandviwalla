@@ -7,17 +7,17 @@ export default function Hero() {
     return (
         <section className="relative w-full h-[80vh] md:h-[90vh] mb-24">
             {/* Background Image with bottom curve */}
-            <div
-                className="absolute inset-0 bg-cover bg-center"
+            <div 
+                className="absolute inset-0 bg-cover bg-center hero-image-clip"
                 style={{
                     backgroundImage: "url('/assets/home-banner.jpg')",
-                    clipPath: "polygon(0 0, 100% 0, 100% 88%, 0 100%)",
+                    clipPath: "md:polygon(0 0, 100% 0, 100% 88%, 0 100%)",
                 }}
             />
 
             {/* Dark overlay (optional, only over image, not over orange) */}
             <div
-                className="absolute inset-0"
+                className="absolute inset-0 hero-image-clip"
                 style={{ backgroundColor: "rgba(0,0,0,0.4)", clipPath: "polygon(0 0, 100% 0, 100% 88%, 0 100%)" }}
             />
 
@@ -26,13 +26,13 @@ export default function Hero() {
 
             {/* Content */}
             <div className="relative z-10 flex flex-col justify-center h-full max-w-6xl mx-auto px-4 sm:px-6 md:px-12 text-white">
-                <span className="uppercase text-xs sm:text-sm md:text-lg tracking-widest mb-2 border-l-2 pl-2" style={{ borderColor: colors.orange.dark }}>
+                <span className="uppercase text-sm md:text-lg tracking-widest mb-2 border-l-2 pl-2" style={{ borderColor: colors.orange.dark }}>
                     PROTECT YOUR LIFE
                 </span>
-                <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold leading-tight mb-3 md:mb-4">
+                <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold leading-tight mb-3 md:mb-4">
                     Shaping the Future with Quality Plastic Solutions
                 </h1>
-                <p className="text-xs sm:text-sm md:text-base max-w-3xl mb-4 md:mb-6">
+                <p className="text-sm md:text-base max-w-3xl mb-4 md:mb-6 leading-normal">
                     Since 1988, Mandviwalla Mauser Plastic Industries Limited has been delivering world-class
                     injection and blow-moulded plastic products in Pakistan. Powered by German technology and
                     decades of expertise, we are the pioneers of 210-liter industrial drums and premium plastic
@@ -40,7 +40,7 @@ export default function Hero() {
                 </p>
 
                 {/* Buttons */}
-                <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
+                <div className="flex flex-row gap-3 md:gap-4">
                     <Link
                         href="/products"
                         className="px-4 sm:px-6 py-2 sm:py-3 text-white font-semibold rounded transition flex items-center justify-center gap-2 text-sm md:text-base"
@@ -87,16 +87,36 @@ export default function Hero() {
                 </div>
             </div>
 
-<style jsx>{`
+            <style jsx>{`
+/* DEFAULT (mobile & small tablets) — softer clip */
+.hero-image-clip {
+  clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+}
+
 .clip-path-orange {
   clip-path: polygon(
-    100% 62%,
-    33% 90%,
-    100% 100%
+    100% 68%,
+    30% 90%,
+    100% 90%
   );
 }
 
+/* md+ screens — EXACT current behavior */
+@media (min-width: 768px) {
+  .hero-image-clip {
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+  }
+
+  .clip-path-orange {
+    clip-path: polygon(
+      100% 62%,
+      33% 90%,
+      100% 100%
+    );
+  }
+}
 `}</style>
+
 
         </section>
     );
