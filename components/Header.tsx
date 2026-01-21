@@ -1,20 +1,22 @@
+
 "use client";
 
 import Link from "next/link";
 import { Facebook, Instagram, Linkedin, Phone, Mail, MapPin, Youtube, ChevronDown, Menu } from "lucide-react";
 import Image from "next/image";
 import { colors } from "@/lib/colors";
-import { useState } from "react";
+import React, { useState, useState as useLocalState } from "react";
+import MobileHeader from "./header/MobileHeader";
 
 export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return (
         <header className="w-full border-b relative z-50">
-            {/* Top Strip */}
-            <div className="w-full text-white text-sm py-2 px-4 md:px-20" style={{ backgroundColor: colors.orange.dark }}>
+            {/* Top Strip (hidden on mobile) */}
+            <div className="hidden md:block w-full text-white text-sm py-2 px-4 md:px-20" style={{ backgroundColor: colors.orange.dark }}>
                 <div className="container mx-auto flex justify-between items-center">
-                    <p className="hidden md:block text-sm lg:text-base">
+                    <p className="text-sm lg:text-base">
                         Welcome to <strong>Mandviwalla MAUSER</strong> Plastic Industries Limited company,
                         We're here to help you
                     </p>
@@ -24,17 +26,14 @@ export default function Header() {
                             <Link href="#" className="hover:text-white/80 border-l pl-2">Career</Link>
                         </div>
                         <div className="flex gap-3 md:gap-4">
-
                             {/* Facebook icon */}
                             <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M9.44877 0.00531635C8.33913 0.0755454 7.31266 0.300864 6.3224 0.692976C4.03364 1.59913 2.15684 3.31779 1.05209 5.5183C-0.217056 8.04654 -0.344264 11.0225 0.70471 13.66C1.12841 14.7261 1.72335 15.6908 2.51008 16.5872C2.67056 16.7705 3.1608 17.2622 3.3428 17.4221C4.23521 18.2093 5.19318 18.8043 6.26662 19.2373C6.77154 19.4402 7.30973 19.608 7.83421 19.7231C8.00839 19.7621 8.40078 19.8353 8.43209 19.8353C8.45068 19.8353 8.45068 19.7962 8.45068 16.3531V12.8709H5.90653V9.97394H8.45068V8.75176C8.45068 8.04654 8.45459 7.47105 8.46047 7.38912C8.5544 6.01868 9.11803 4.99646 10.1014 4.41316C10.5437 4.15078 11.0447 3.99081 11.6612 3.91473C11.8256 3.89522 11.8814 3.89327 12.3012 3.89327C12.7738 3.89327 12.9362 3.90108 13.4265 3.94692C13.7318 3.97521 14.4089 4.06104 14.4715 4.0786C14.4872 4.08348 14.4882 4.14883 14.4862 5.31444L14.4833 6.5454L13.7004 6.55125C12.8442 6.5571 12.8609 6.55612 12.6241 6.61855C12.3638 6.68683 12.1681 6.79607 11.9978 6.96482C11.7512 7.20964 11.6182 7.54031 11.5917 7.97534C11.5868 8.06312 11.5819 8.54887 11.5819 9.05413V9.97394H12.9714C14.2494 9.97394 14.3609 9.97491 14.3609 9.98954C14.3609 10.0032 13.9412 12.7499 13.9255 12.8387L13.9196 12.8709H11.5819V16.3531C11.5819 19.7426 11.5819 19.8353 11.6005 19.8353C11.6367 19.8353 12.0105 19.765 12.2043 19.7221C14.2651 19.2647 16.1291 18.1634 17.5362 16.5725C19.4062 14.4579 20.2859 11.6731 19.9718 8.8571C19.7115 6.51613 18.6156 4.33318 16.8836 2.70718C15.271 1.19141 13.2112 0.25697 11.0095 0.0394555C10.9234 0.0316522 10.7982 0.0199474 10.7306 0.014095C10.5741 0.00141474 9.62295 -0.00541308 9.44877 0.00531635Z" fill="white" />
                             </svg>
-
                             {/* Instagram icon */}
                             <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M10.0194 4.86396C7.1768 4.86396 4.88397 7.14948 4.88397 9.98298C4.88397 12.8165 7.1768 15.102 10.0194 15.102C12.8619 15.102 15.1547 12.8165 15.1547 9.98298C15.1547 7.14948 12.8619 4.86396 10.0194 4.86396ZM10.0194 13.311C8.18242 13.311 6.68069 11.8185 6.68069 9.98298C6.68069 8.14744 8.17795 6.65495 10.0194 6.65495C11.8608 6.65495 13.358 8.14744 13.358 9.98298C13.358 11.8185 11.8563 13.311 10.0194 13.311ZM16.5626 4.65457C16.5626 5.31839 16.0263 5.84856 15.3648 5.84856C14.6989 5.84856 14.167 5.31393 14.167 4.65457C14.167 3.9952 14.7033 3.46057 15.3648 3.46057C16.0263 3.46057 16.5626 3.9952 16.5626 4.65457ZM19.9638 5.86638C19.8879 4.26696 19.5214 2.85021 18.3459 1.68295C17.1749 0.515689 15.7536 0.150363 14.1491 0.0701693C12.4954 -0.0233898 7.53882 -0.0233898 5.88513 0.0701693C4.28507 0.145908 2.86379 0.511234 1.68833 1.67849C0.512868 2.84576 0.150843 4.26251 0.0703936 5.86192C-0.0234645 7.51035 -0.0234645 12.4512 0.0703936 14.0996C0.146374 15.699 0.512868 17.1157 1.68833 18.283C2.86379 19.4503 4.2806 19.8156 5.88513 19.8958C7.53882 19.9893 12.4954 19.9893 14.1491 19.8958C15.7536 19.82 17.1749 19.4547 18.3459 18.283C19.5169 17.1157 19.8834 15.699 19.9638 14.0996C20.0577 12.4512 20.0577 7.5148 19.9638 5.86638ZM17.8275 15.8683C17.4788 16.7415 16.804 17.4142 15.9235 17.7662C14.605 18.2875 11.4764 18.1672 10.0194 18.1672C8.56232 18.1672 5.42925 18.283 4.11523 17.7662C3.23922 17.4187 2.56434 16.746 2.21125 15.8683C1.68833 14.554 1.809 11.4354 1.809 9.98298C1.809 8.53059 1.6928 5.40749 2.21125 4.09767C2.55987 3.22445 3.23475 2.55171 4.11523 2.19975C5.43371 1.67849 8.56232 1.79878 10.0194 1.79878C11.4764 1.79878 14.6095 1.68295 15.9235 2.19975C16.7995 2.54726 17.4744 3.21999 17.8275 4.09767C18.3504 5.41195 18.2297 8.53059 18.2297 9.98298C18.2297 11.4354 18.3504 14.5585 17.8275 15.8683Z" fill="white" />
                             </svg>
-
                             {/* Youtube icon */}
                             <svg width="29" height="20" viewBox="0 0 29 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M27.8978 3.12469C27.5701 1.89474 26.6046 0.926076 25.3787 0.597344C23.1567 0 14.2466 0 14.2466 0C14.2466 0 5.33657 0 3.11449 0.597344C1.88859 0.926128 0.923088 1.89474 0.595393 3.12469C0 5.35405 0 10.0054 0 10.0054C0 10.0054 0 14.6567 0.595393 16.8861C0.923088 18.116 1.88859 19.0443 3.11449 19.3731C5.33657 19.9704 14.2466 19.9704 14.2466 19.9704C14.2466 19.9704 23.1566 19.9704 25.3787 19.3731C26.6046 19.0443 27.5701 18.116 27.8978 16.8861C28.4932 14.6567 28.4932 10.0054 28.4932 10.0054C28.4932 10.0054 28.4932 5.35405 27.8978 3.12469ZM11.3325 14.2285V5.78232L18.7795 10.0055L11.3325 14.2285Z" fill="white" />
@@ -44,10 +43,9 @@ export default function Header() {
                 </div>
             </div>
 
-            {/* Middle Logo + Details */}
-            <div className="w-full py-1 bg-white border-b px-4 md:px-20">
+            {/* Middle Logo + Details (hidden on mobile) */}
+            <div className="hidden md:block w-full py-1 bg-white border-b px-4 md:px-20">
                 <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-
                     {/* Left Section: Logo + Company Name */}
                     <div className="flex items-center gap-4">
                         <Link href="/" className="flex items-center">
@@ -58,16 +56,13 @@ export default function Header() {
                                 alt="Mandviwalla-logo"
                             />
                         </Link>
-
                         <div className="flex flex-col text-base sm:text-lg lg:text-[22px]">
                             <h2 className="font-bold">Mandviwalla <span style={{ color: colors.orange.dark }}>MAUSER</span></h2>
                             <h3 className="text-sm sm:text-base lg:text-[22px]">Plastic Industries Limited</h3>
                         </div>
                     </div>
-
                     {/* Right Section: Contact + Address */}
                     <div className="flex flex-col sm:flex-row gap-8 text-gray-700 text-sm">
-
                         {/* Contact */}
                         <div className="flex items-start gap-3">
                             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -78,7 +73,6 @@ export default function Header() {
                                 <span className="text-[#999999] text-sm lg:text-base">info@mandviwalla.net</span>
                             </div>
                         </div>
-
                         {/* Address */}
                         <div className="flex items-start gap-3">
                             <svg width="23" height="30" viewBox="0 0 23 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -89,213 +83,184 @@ export default function Header() {
                                 <span className="text-[#999999] text-sm lg:text-base">Old Queens Road, Karachi</span>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
             </div>
 
             {/* Navbar */}
-            <nav className="w-full py-3 relative" style={{ backgroundColor: colors.primary.blue }}>
-                <div className="container mx-auto flex items-center justify-between md:justify-center gap-10 px-4 md:px-20 font-medium text-white">
+            <nav className="w-full relative" style={{ backgroundColor: colors.primary.blue }}>
+                <div className="flex container mx-auto px-2 md:px-20">
+                    <div className="container mx-auto flex items-center justify-between md:justify-center gap-10 px-4 md:px-20 font-medium text-white">
 
-                    {/* Mobile Menu Icon */}
-                    <button
-                        className="md:hidden text-white"
-                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                    >
-                        <Menu size={24} />
-                    </button>
-
-                    {/* Desktop Navigation */}
-                    <div className="hidden md:flex items-center gap-10">
-                        {/* HOME */}
-                        <Link href="/" className="hover:text-gray-200 uppercase transition" onMouseEnter={(e) => e.currentTarget.style.color = colors.primary.orange} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>
-                            Home
-                        </Link>
-
-                        {/* PROFILE (Dropdown) */}
-                        <div className="relative group z-50">
-                            <button className="flex items-center gap-1 uppercase transition" onMouseEnter={(e) => e.currentTarget.style.color = colors.primary.orange} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>
-                                Profile
-                                <ChevronDown
-                                    size={16}
-                                    className="transition-transform duration-200 group-hover:rotate-180"
-                                />
-                            </button>
-
-                            {/* Dropdown */}
-                            <div className="absolute left-0 mt-2 w-56 text-white shadow-lg rounded-md 
-        opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50" style={{ backgroundColor: colors.primary.blue }}>
-
-                                <Link href="/company-information" className="block px-4 py-2 transition" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
-                                    Company Information
-                                </Link>
-                                <Link href="/mission-vision" className="block px-4 py-2 transition" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
-                                    Mission & Vision
-                                </Link>
-                                <Link href="/code-of-conduct-policy" className="block px-4 py-2 transition" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
-                                    Code of Conduct Policy
-                                </Link>
-                            </div>
-                        </div>
-
-                        {/* CORPORATE (Dropdown with nested submenus) */}
-                        <div className="relative group z-50">
-                            <button className="flex items-center gap-1 uppercase transition" onMouseEnter={(e) => e.currentTarget.style.color = colors.primary.orange} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>
-                                Corporate
-                                <ChevronDown
-                                    size={16}
-                                    className="transition-transform duration-200 group-hover:rotate-180"
-                                />
-                            </button>
-
-                            {/* Dropdown → First level */}
-                            <ul className="absolute left-0 mt-2 w-56 text-white shadow-lg rounded-md 
-      opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50" style={{ backgroundColor: colors.primary.blue }}>
-
-                                {/* GOVERNANCE */}
-                                <li className="relative group/govern">
-                                    <Link href="/corporate/governance" className="flex justify-between items-center px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
-                                        GOVERNANCE
-                                        <ChevronDown size={14} className="ml-2" />
-                                    </Link>
-
-                                    {/* Nested dropdown → Opens right */}
-                                    <ul className="absolute top-0 left-full mt-0 w-56 text-white shadow-lg rounded-md 
-          opacity-0 invisible group-hover/govern:opacity-100 group-hover/govern:visible transition-all" style={{ backgroundColor: colors.primary.blue }}>
-                                        <li>
-                                            <Link href="corporate-governance" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
-                                                Corporate Governance
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="board-director" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
-                                                Board Of Director
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="management-profile" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
-                                                Management Profile
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="share-holding" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
-                                                Share Holding Pattern
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="company-auditor" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
-                                                Auditor Of The Company
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="legal-advisor" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
-                                                Legal Advisor
-                                            </Link>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                {/* INVESTOR RELATION */}
-                                <li className="relative group/invest">
-                                    <Link href="/investor-relation" className="flex justify-between items-center px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
-                                        INVESTOR RELATION
-                                        <ChevronDown size={14} className="ml-2" />
-                                    </Link>
-
-                                    {/* Nested dropdown → Opens right */}
-                                    <ul className="absolute top-0 left-full mt-0 w-56 text-white shadow-lg rounded-md 
-          opacity-0 invisible group-hover/invest:opacity-100 group-hover/invest:visible transition-all" style={{ backgroundColor: colors.primary.blue }}>
-                                        <li>
-                                            <Link href="/investor-relation" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
-                                                INVESTOR RELATION
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/investor-information" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
-                                                INVESTOR INFORMATION
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/financial-reports" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
-                                                FINANCIAL REPORTS
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/financial-results" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
-                                                FINANCIAL RESULTS
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/investor-disclosure" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
-                                                GENDER PAY GAP DISCLOSURE
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/investor-notices" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
-                                                NOTICES
-                                            </Link>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                {/* ELECTION OF DIRECTOR */}
-                                <li>
-                                    <Link href="/election-director" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.light} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
-                                        ELECTION OF DIRECTOR
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
-
-                        {/* PRODUCTS */}
-                        <Link href="/products" className="uppercase transition" onMouseEnter={(e) => e.currentTarget.style.color = colors.primary.orange} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>
-                            Products
-                        </Link>
-                    </div>
-
-                    {/* Contact Us Button - Always Visible */}
-                    <Link href='/contact-us' className="flex items-center gap-2 font-semibold px-4 py-2 transition" style={{ backgroundColor: colors.orange.dark, color: colors.primary.blue }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.orange.warm} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = colors.orange.dark}>
-                        <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8.75 10C7.42392 10 6.15215 9.47322 5.21447 8.53553C4.27678 7.59785 3.75 6.32608 3.75 5C3.75 3.67392 4.27678 2.40215 5.21447 1.46447C6.15215 0.526784 7.42392 0 8.75 0C10.0761 0 11.3479 0.526784 12.2855 1.46447C13.2232 2.40215 13.75 3.67392 13.75 5C13.75 6.32608 13.2232 7.59785 12.2855 8.53553C11.3479 9.47322 10.0761 10 8.75 10ZM8.16797 14.0312L7.44141 12.8203C7.19141 12.4023 7.49219 11.875 7.97656 11.875H8.75H9.51953C10.0039 11.875 10.3047 12.4062 10.0547 12.8203L9.32812 14.0312L10.6328 18.8711L12.0391 13.1328C12.1172 12.8164 12.4219 12.6094 12.7383 12.6914C15.4766 13.3789 17.5 15.8555 17.5 18.8008C17.5 19.4648 16.9609 20 16.3008 20H11.1523C11.0703 20 10.9961 19.9844 10.9258 19.957L10.9375 20H6.5625L6.57422 19.957C6.50391 19.9844 6.42578 20 6.34766 20H1.19922C0.539063 20 0 19.4609 0 18.8008C0 15.8516 2.02734 13.375 4.76172 12.6914C5.07812 12.6133 5.38281 12.8203 5.46094 13.1328L6.86719 18.8711L8.17188 14.0312H8.16797Z" fill="#1338BE" />
-                        </svg>
-                        CONTACT US
-                    </Link>
-
-                </div>
-
-                {/* Mobile Menu Dropdown */}
-                {mobileMenuOpen && (
-                    <div className="md:hidden absolute top-full left-0 w-full shadow-lg z-50" style={{ backgroundColor: colors.primary.blue }}>
-                        <div className="flex flex-col text-white">
-                            <Link href="/" className="block px-4 py-3 border-b border-white/10" onClick={() => setMobileMenuOpen(false)}>
+                        {/* Desktop Navigation */}
+                        <div className="hidden md:flex items-center gap-10 py-4">
+                            {/* HOME */}
+                            <Link href="/" className="hover:text-gray-200 uppercase transition" onMouseEnter={(e) => e.currentTarget.style.color = colors.primary.orange} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>
                                 Home
                             </Link>
-                            <Link href="/company-information" className="block px-4 py-3 border-b border-white/10" onClick={() => setMobileMenuOpen(false)}>
-                                Company Information
-                            </Link>
-                            <Link href="/mission-vision" className="block px-4 py-3 border-b border-white/10" onClick={() => setMobileMenuOpen(false)}>
-                                Mission & Vision
-                            </Link>
-                            <Link href="/code-of-conduct-policy" className="block px-4 py-3 border-b border-white/10" onClick={() => setMobileMenuOpen(false)}>
-                                Code of Conduct Policy
-                            </Link>
-                            <Link href="/corporate/governance" className="block px-4 py-3 border-b border-white/10" onClick={() => setMobileMenuOpen(false)}>
-                                Governance
-                            </Link>
-                            <Link href="/corporate/investor-relation" className="block px-4 py-3 border-b border-white/10" onClick={() => setMobileMenuOpen(false)}>
-                                Investor Relation
-                            </Link>
-                            <Link href="/corporate/election-of-director" className="block px-4 py-3 border-b border-white/10" onClick={() => setMobileMenuOpen(false)}>
-                                Election of Director
-                            </Link>
-                            <Link href="/products" className="block px-4 py-3" onClick={() => setMobileMenuOpen(false)}>
+
+                            {/* PROFILE (Dropdown) */}
+                            <div className="relative group z-50">
+                                <button className="flex items-center gap-1 uppercase transition" onMouseEnter={(e) => e.currentTarget.style.color = colors.primary.orange} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>
+                                    Profile
+                                    <ChevronDown
+                                        size={16}
+                                        className="transition-transform duration-200 group-hover:rotate-180"
+                                    />
+                                </button>
+
+                                {/* Dropdown */}
+                                <div className="absolute left-0 mt-2 w-64 text-white shadow-lg rounded-md uppercase 
+        opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50" style={{ backgroundColor: colors.primary.blue }}>
+
+                                    <Link href="/company-information" className="block px-4 py-2 transition" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                        Company Information
+                                    </Link>
+                                    <Link href="/mission-vision" className="block px-4 py-2 transition" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                        Mission & Vision
+                                    </Link>
+                                    <Link href="/code-of-conduct-policy" className="block px-4 py-2 transition" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                        Code of Conduct Policy
+                                    </Link>
+                                </div>
+                            </div>
+
+                            {/* CORPORATE (Dropdown with nested submenus) */}
+                            <div className="relative group z-50">
+                                <button className="flex items-center gap-1 uppercase transition" onMouseEnter={(e) => e.currentTarget.style.color = colors.primary.orange} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>
+                                    Corporate
+                                    <ChevronDown
+                                        size={16}
+                                        className="transition-transform duration-200 group-hover:rotate-180"
+                                    />
+                                </button>
+
+                                {/* Dropdown → First level */}
+                                <ul className="absolute left-0 mt-2 w-56 text-white shadow-lg rounded-md 
+      opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50" style={{ backgroundColor: colors.primary.blue }}>
+
+                                    {/* GOVERNANCE */}
+                                    <li className="relative group/govern">
+                                        <Link href="/corporate/governance" className="flex justify-between items-center px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                            GOVERNANCE
+                                            <ChevronDown size={14} className="ml-2" />
+                                        </Link>
+
+                                        {/* Nested dropdown → Opens right */}
+                                        <ul className="absolute top-0 left-full mt-0 w-72 text-white shadow-lg rounded-md 
+          opacity-0 invisible group-hover/govern:opacity-100 group-hover/govern:visible transition-all" style={{ backgroundColor: colors.primary.blue }}>
+                                            <li>
+                                                <Link href="corporate-governance" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                    Corporate Governance
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link href="board-director" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                    Board Of Director
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link href="management-profile" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                    Management Profile
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link href="share-holding" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                    Share Holding Pattern
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link href="company-auditor" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                    Auditor Of The Company
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link href="legal-advisor" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                    Legal Advisor
+                                                </Link>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    {/* INVESTOR RELATION */}
+                                    <li className="relative group/invest">
+                                        <Link href="/investor-relation" className="flex justify-between items-center px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                            INVESTOR RELATION
+                                            <ChevronDown size={14} className="ml-2" />
+                                        </Link>
+
+                                        {/* Nested dropdown → Opens right */}
+                                        <ul className="absolute top-0 left-full mt-0 w-72 text-white shadow-lg rounded-md 
+          opacity-0 invisible group-hover/invest:opacity-100 group-hover/invest:visible transition-all" style={{ backgroundColor: colors.primary.blue }}>
+                                            <li>
+                                                <Link href="/investor-relation" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                    INVESTOR RELATION
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link href="/investor-information" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                    INVESTOR INFORMATION
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link href="/financial-reports" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                    FINANCIAL REPORTS
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link href="/financial-results" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                    FINANCIAL RESULTS
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link href="/investor-disclosure" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                    GENDER PAY GAP DISCLOSURE
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link href="/investor-notices" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                    NOTICES
+                                                </Link>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    {/* ELECTION OF DIRECTOR */}
+                                    <li>
+                                        <Link href="/election-director" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                            ELECTION OF DIRECTOR
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            {/* PRODUCTS */}
+                            <Link href="/products" className="uppercase transition" onMouseEnter={(e) => e.currentTarget.style.color = colors.primary.orange} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>
                                 Products
                             </Link>
                         </div>
+
                     </div>
-                )}
+                    {/* Contact Us Button - Always Visible */}
+                    <Link
+                        href='/contact-us'
+                        className="hidden md:block  items-center gap-2 font-semibold px-3 py-2 transition min-w-[180px] max-w-[280px] justify-center"
+                        style={{ backgroundColor: colors.orange.dark, color: colors.primary.blue }}
+                        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.orange.warm}
+                        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = colors.orange.dark}
+                    >
+                        <span className="flex items-center gap-2 w-full justify-center">
+                            <svg width="18" height="18" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: 'inline-block', verticalAlign: 'middle' }}>
+                                <path d="M8.75 10C7.42392 10 6.15215 9.47322 5.21447 8.53553C4.27678 7.59785 3.75 6.32608 3.75 5C3.75 3.67392 4.27678 2.40215 5.21447 1.46447C6.15215 0.526784 7.42392 0 8.75 0C10.0761 0 11.3479 0.526784 12.2855 1.46447C13.2232 2.40215 13.75 3.67392 13.75 5C13.75 6.32608 13.2232 7.59785 12.2855 8.53553C11.3479 9.47322 10.0761 10 8.75 10ZM8.16797 14.0312L7.44141 12.8203C7.19141 12.4023 7.49219 11.875 7.97656 11.875H8.75H9.51953C10.0039 11.875 10.3047 12.4062 10.0547 12.8203L9.32812 14.0312L10.6328 18.8711L12.0391 13.1328C12.1172 12.8164 12.4219 12.6094 12.7383 12.6914C15.4766 13.3789 17.5 15.8555 17.5 18.8008C17.5 19.4648 16.9609 20 16.3008 20H11.1523C11.0703 20 10.9961 19.9844 10.9258 19.957L10.9375 20H6.5625L6.57422 19.957C6.50391 19.9844 6.42578 20 6.34766 20H1.19922C0.539063 20 0 19.4609 0 18.8008C0 15.8516 2.02734 13.375 4.76172 12.6914C5.07812 12.6133 5.38281 12.8203 5.46094 13.1328L6.86719 18.8711L8.17188 14.0312H8.16797Z" fill="#1338BE" />
+                            </svg>
+                            <span className="whitespace-nowrap">CONTACT US</span>
+                        </span>
+                    </Link>
+                </div>
+
+
+                {/* Mobile Menu Dropdown */}
+                <MobileHeader setMobileMenuOpen={setMobileMenuOpen} mobileMenuOpen={mobileMenuOpen} />
             </nav>
 
         </header>

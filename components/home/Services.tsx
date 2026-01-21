@@ -1,10 +1,23 @@
 import React from "react";
 import Image from "next/image";
 import { colors } from "@/lib/colors";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from "react";
+
 
 export default function ServiceSection() {
     const leftTilts = ["10deg", "-45deg", "40deg"];
     const rightTilts = ["-10deg", "45deg", "-40deg"];
+    const [activeIndex, setActiveIndex] = useState(0);
+
+    const prevCard = () => {
+        setActiveIndex((prev) => (prev === 0 ? cards.length - 1 : prev - 1));
+    };
+
+    const nextCard = () => {
+        setActiveIndex((prev) => (prev === cards.length - 1 ? 0 : prev + 1));
+    };
+
 
     const cards = [
         {
@@ -72,23 +85,23 @@ export default function ServiceSection() {
 
                 {/* Heading */}
                 <div className="text-center mb-8 md:mb-12 relative z-10">
-                    <p className="text-white/80 text-xs sm:text-sm md:text-base">
+                    <p className="text-white text-sm md:text-base 2xl:text-lg font-semibold">
                         <span className="border-l-2 pl-2 inline-block" style={{ borderColor: colors.orange.dark }}>
                             Our Services / Products
                         </span>
                     </p>
 
-                    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mt-2">
+                    <h2 className="text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl font-bold text-white mt-2">
                         We Ensure High-Quality Plastic Manufacturing
                     </h2>
 
-                    <p className="text-white/80 text-sm md:text-sm mt-3 text-center whitespace-normal max-w-2xl mx-auto">
+                    <p className="text-white/60 text-sm md:text-sm mt-3 text-center whitespace-normal max-w-2xl mx-auto">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
                     </p>
                 </div>
 
                 {/* Left Containers - absolute */}
-                <div className="absolute top-0 left-0 flex flex-col gap-12 z-10">
+                <div className="absolute top-0 left-0 flex flex-col gap-12 z-0 opacity-60 md:opacity-100 pointer-events-none">
                     {[0, 1, 2].map((idx) => (
                         <div
                             key={idx}
@@ -106,8 +119,9 @@ export default function ServiceSection() {
                     ))}
                 </div>
 
+
                 {/* Right Containers - absolute */}
-                <div className="absolute top-0 right-0 flex flex-col gap-12 z-10">
+                <div className="absolute top-0 right-0 flex flex-col gap-12 z-0 opacity-60 md:opacity-100 pointer-events-none">
                     {[0, 1, 2].map((idx) => (
                         <div
                             key={idx}
@@ -125,35 +139,78 @@ export default function ServiceSection() {
                     ))}
                 </div>
 
-                {/* Cards */}
-                <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-6 mt-12 md:mt-16 relative z-10">
-                    {cards.map((card, idx) => {
-                        const isMiddle = idx === 1;
-                        const cardBg = isMiddle ? colors.orange.dark : colors.white;
-                        const iconBorder = isMiddle ? colors.orange.dark : colors.white;
-                        const iconBg = colors.neutral.darkGray;
-                        const textColor = isMiddle ? "text-white" : "text-gray-600";
 
-                        return (
-                            <div
-                                key={idx}
-                                className="relative rounded-lg pt-14 px-4 pb-6 flex flex-col items-center text-center shadow-md w-full max-w-[280px] md:max-w-[220px]"
-                                style={{ backgroundColor: cardBg }}
-                            >
+                {/* Cards */}
+                <div className="relative z-10 mt-12 md:mt-16">
+
+                    {/* Chevron controls – SM only */}
+                    <div className="relative flex justify-center gap-8 md:gap-6 md:flex-row">
+                        {/* Left Chevron */}
+                        <button
+                            onClick={prevCard}
+                            className="absolute left-0 md:hidden
+               p-2 rounded-full bg-white/20 text-white z-20 mt-20"
+                        >
+                            <ChevronLeft />
+                        </button>
+
+                        {/* Right Chevron */}
+                        <button
+                            onClick={nextCard}
+                            className="absolute right-0  md:hidden
+               p-2 rounded-full bg-white/20 text-white z-20 mt-20"
+                        >
+                            <ChevronRight />
+                        </button>
+
+                    </div>
+
+
+                    {/* SM: single card | MD+: all cards */}
+                    <div className="flex justify-center gap-8 md:gap-6 md:flex-row">
+                        {cards.map((card, idx) => {
+                            const isMiddle = idx === 1;
+                            const cardBg = isMiddle ? colors.orange.dark : colors.white;
+                            const iconBorder = isMiddle ? colors.orange.dark : colors.white;
+                            const iconBg = colors.neutral.darkGray;
+                            const textColor = isMiddle ? "text-white" : "text-gray-600";
+                            const isActiveOnMobile = idx === activeIndex;
+
+                            return (
                                 <div
-                                    className="absolute -top-10 rounded-full p-3 flex items-center justify-center"
-                                    style={{ border: `2px solid ${iconBorder}`, backgroundColor: iconBg }}
+                                    key={idx}
+                                    className={`
+        relative rounded-lg
+        pt-14 px-4 pb-4
+        flex flex-col items-center text-center shadow-md
+        w-full max-w-[280px]
+        h-[200px]
+        md:h-[280px] md:min-h-[280px] md:max-h-[340px]
+        ${isActiveOnMobile ? "block" : "hidden md:flex"}
+    `}
+                                    style={{ backgroundColor: cardBg }}
                                 >
-                                    {card.icon}
+
+                                    <div
+                                        className="absolute -top-10 rounded-full p-3 flex items-center justify-center"
+                                        style={{ border: `2px solid ${iconBorder}`, backgroundColor: iconBg }}
+                                    >
+                                        {card.icon}
+                                    </div>
+
+                                    <h4 className={`text-lg md:text-xl font-semibold mb-2 ${isMiddle ? 'text-white' : ''}`}>
+                                        {card.title}
+                                    </h4>
+
+                                    <p className={`${textColor} text-sm md:text-base leading-snug`}>
+                                        {card.description}
+                                    </p>
                                 </div>
-                                <h4 className={`text-lg md:text-xl font-semibold mb-2 ${isMiddle ? 'text-white' : ''}`}>{card.title}</h4>
-                                <p className={`${textColor} text-sm md:text-base leading-snug`}>
-                                    {card.description}
-                                </p>
-                            </div>
-                        );
-                    })}
+                            );
+                        })}
+                    </div>
                 </div>
+
 
             </div>
         </section>

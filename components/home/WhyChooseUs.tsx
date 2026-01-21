@@ -10,15 +10,15 @@ export default function WhyChooseUs() {
 
                 {/* Heading */}
                 <div className="text-center mb-16">
-                    <p className="text-sm mb-2" style={{ fontFamily: "var(--font-lato)" }}>
+                    <p className="text-sm md:text-base 2xl:text-lg mb-2 font-semibold" style={{ fontFamily: "var(--font-lato)" }}>
                         <span
                             className="inline-block border-l-2 pl-2"
-                            style={{ borderColor: colors.primary.orange }}
+                            style={{ borderColor: colors.primary.orange ,color: colors.gray.tagColor }}
                         >
                             Why Choose Us?
                         </span>
                     </p>
-                    <h2 className="text-3xl md:text-4xl font-bold" style={{ fontFamily: "var(--font-maven)" }}>
+                    <h2 className="text-2xl md:text-4xl font-bold 2xl:text-[42px]" style={{ fontFamily: "var(--font-maven)" }}>
                         Why Partner With Us?
                     </h2>
                 </div>
@@ -29,14 +29,14 @@ export default function WhyChooseUs() {
                     {/* LEFT CONTENT - Desktop */}
                     <div className="hidden md:flex flex-col justify-between text-right w-1/3 pr-8 lg:pr-16 h-[460px]">
                         <div className="pt-10">
-                            <h3 className="text-lg font-semibold mb-1">Sustainable Practices</h3>
+                            <h3 className="text-lg lg:text-xl 2xl:text-2xl font-semibold mb-1">Sustainable Practices</h3>
                             <p className="text-sm text-gray-600">
                                 Reusable, eco-friendly packaging solutions.
                             </p>
                         </div>
 
                         <div className="pb-10">
-                            <h3 className="text-lg font-semibold mb-1">Customer Commitment</h3>
+                            <h3 className="text-lg lg:text-xl 2xl:text-2xl font-semibold mb-1">Customer Commitment</h3>
                             <p className="text-sm text-gray-600">
                                 On-time delivery & after-sales support.
                             </p>
@@ -131,14 +131,14 @@ export default function WhyChooseUs() {
                     {/* RIGHT CONTENT - Desktop */}
                     <div className="hidden md:flex flex-col justify-between text-left w-1/3 pl-8 lg:pl-16 h-[460px]">
                         <div className="pt-10">
-                            <h3 className="text-lg font-semibold mb-1">Certified Quality</h3>
+                            <h3 className="text-lg lg:text-xl 2xl:text-2xl font-semibold mb-1">Certified Quality</h3>
                             <p className="text-sm text-gray-600">
                                 UN-approved and internationally tested packaging.
                             </p>
                         </div>
 
                         <div className="pb-10">
-                            <h3 className="text-lg font-semibold mb-1">35+ Years Experience</h3>
+                            <h3 className="text-lg lg:text-xl 2xl:text-2xl font-semibold mb-1">35+ Years Experience</h3>
                             <p className="text-sm text-gray-600">
                                 Trusted heritage since 1988.
                             </p>

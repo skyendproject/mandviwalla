@@ -66,7 +66,7 @@ const Cards = () => {
 
             {/* Cards Grid */}
             <div className="flex justify-center">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6 max-w-7xl">
+                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6 max-w-7xl">
                     {CardData.map((card, idx) => (
                         <div key={idx} className="flex flex-col items-center text-center gap-4">
                             {/* Icon with blue background */}

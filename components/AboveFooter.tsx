@@ -22,12 +22,12 @@ export default function AboveFooter({ variant = "blue" }: AboveFooterProps) {
                 <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-6 text-center md:text-left">
                     <div className="flex flex-col gap-2">
                         {/* Heading */}
-                        <h2 className="text-3xl md:text-4xl lg:text-[42px] font-semibold" style={{ color: '#FFFFFF' }}>
+                        <h2 className="text-2xl md:text-4xl 2xl:text-[42px] font-semibold" style={{ color: '#FFFFFF' }}>
                             Pakistan's Trusted Plastic Manufacturer
                         </h2>
 
                         {/* Description */}
-                        <p className="text-base font-normal md:text-md lg:text-md" style={{ color: '#FFFFFF' }}>
+                        <p className="text-sm font-normal md:text-md lg:text-md" style={{ color: '#FFFFFF' }}>
                             Get durable, innovative, and high-quality plastic solutions with MMPL.
                         </p>
                     </div>

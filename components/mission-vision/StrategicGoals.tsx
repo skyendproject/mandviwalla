@@ -55,15 +55,15 @@ export default function StrategicGoals() {
         <section className="w-full py-12 md:py-16 px-4 md:px-20 bg-gray-50">
             <div className="container mx-auto max-w-6xl">
                 {/* Label with blue line */}
-                <div className="flex items-center justify-center gap-3 mb-2">
+                <div className="flex items-center justify-start md:justify-center gap-3 mb-2">
                     <div className="w-0.5 h-8 md:h-6" style={{ backgroundColor: colors.primary.blue }}></div>
-                    <span className="text-base md:text-lg" style={{ color: colors.gray.text }}>
+                    <span className="text-sm md:text-base 2xl:text-lg" style={{ color: colors.gray.tagColor }}>
                         Strategic Goals
                     </span>
                 </div>
 
                 {/* Heading */}
-                <h2 className="text-3xl md:text-4xl lg:text-[42px] font-semibold text-black text-center mb-12 md:mb-16">
+                <h2 className="text-2xl md:text-4xl 2xl:text-[42px] font-semibold text-black text-left md:text-center mb-12 md:mb-16">
                     Strategic Goals
                 </h2>
 

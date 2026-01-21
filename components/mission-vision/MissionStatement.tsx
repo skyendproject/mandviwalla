@@ -21,14 +21,14 @@ export default function MissionStatement() {
                     <div className="flex flex-col gap-6 lg:py-8">
                         {/* Label with blue line */}
                         <div className="flex items-center gap-3">
-                            <div className="w-0.5 h-8 md:h-8" style={{ backgroundColor: colors.primary.blue }}></div>
-                            <span className="text-base md:text-lg" style={{ color: colors.gray.text }}>
+                            <div className="w-0.5 h-8 md:h-6" style={{ backgroundColor: colors.primary.blue }}></div>
+                            <span className="text-sm md:text-base 2xl:text-lg" style={{ color: colors.gray.tagColor }}>
                                 Mission Statement
                             </span>
                         </div>
 
                         {/* Heading */}
-                        <h2 className="text-3xl md:text-4xl lg:text-[42px] font-semibold text-black">
+                        <h2 className="text-2xl md:text-4xl 2xl:text-[42px] font-semibold text-black">
                             Mission Statement
                         </h2>
 

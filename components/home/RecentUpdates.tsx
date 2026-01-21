@@ -45,13 +45,13 @@ export default function RecentUpdates() {
                     <div className="flex flex-col gap-2">
                         {/* Label */}
                         <div className="border-l-4 pl-3" style={{ borderColor: colors.primary.blue }}>
-                            <p className="text-xs md:text-sm font-semibold" style={{ color: colors.gray.text }}>
+                            <p className="text-sm md:text-base 2xl:text-lg font-semibold" style={{ color: colors.gray.tagColor }}>
                                 Our News and Blogs
                             </p>
                         </div>
 
                         {/* Heading */}
-                        <h2 className="text-3xl md:text-4xl lg:text-[42px] font-semibold text-black">
+                        <h2 className="text-2xl md:text-3xl xl:text-4xl 2xl:text-[42px] font-semibold text-black">
                             Recently Updated
                         </h2>
                     </div>
@@ -86,11 +86,11 @@ export default function RecentUpdates() {
 
                         {/* Content */}
                         <div className="flex flex-col gap-3">
-                            <h3 className="text-sm md:text-base lg:text-lg font-bold text-black leading-snug">
+                            <h3 className="text-lg xl:text-xl 2xl:text-2xl font-bold text-black leading-snug">
                                 {mainPost.title}
                             </h3>
 
-                            <p className="text-xs md:text-sm leading-relaxed" style={{ color: colors.gray.text }}>
+                            <p className="text-sm md:text-base 2xl:text-lg leading-relaxed" style={{ color: colors.gray.border }}>
                                 {mainPost.description}
                             </p>
 
@@ -100,15 +100,15 @@ export default function RecentUpdates() {
                                 <div className="flex items-center gap-2">
                                     <div className="w-9 h-9 rounded-full overflow-hidden bg-gray-100">
                                     </div>
-                                    <span className="text-xs font-medium" style={{ color: colors.gray.text }}>
+                                    <span className="text-xs font-medium" style={{ color: colors.gray.border }}>
                                         {mainPost.author.name}
                                     </span>
                                 </div>
 
                                 {/* Date */}
                                 <div className="flex items-center gap-1.5">
-                                    <Calendar size={14} style={{ color: colors.gray.text }} />
-                                    <span className="text-xs" style={{ color: colors.gray.text }}>
+                                    <Calendar size={14} style={{ color: colors.gray.border }} />
+                                    <span className="text-xs" style={{ color: colors.gray.border }}>
                                         {mainPost.date}
                                     </span>
                                 </div>
