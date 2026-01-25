@@ -8,8 +8,8 @@ export default function CompanyAuditor() {
         <section className="w-full py-8 md:py-12 lg:py-16 bg-white px-4 md:px-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
                 <div className="text-center mb-8">
-                    <div className="text-sm text-gray-600 mb-1 border-l-2 border-blue-700 inline-block pl-2">Auditors of the Company</div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Independent Audit & Financial Transparency</h2>
+                    <div className="text-sm md:text-base 2xl:text-lg  mb-1 border-l-2 border-blue-700 inline-block pl-2" style={{ color: colors.gray.tagColor}}>Auditors of the Company</div>
+                    <h2 className="text-2xl md:text-3xl xl:text-4xl 2xl:text-[42px] font-bold text-gray-900 mb-4">Independent Audit & Financial Transparency</h2>
                     <p className=" mx-auto text-base md:text-base" style={{ color: colors.gray.text }}>
                         Mandviwalla Mauser Plastic Industries Limited (MMPL) is committed to maintaining the highest standards of financial transparency, accountability, and regulatory compliance. To ensure the integrity and accuracy of our financial reporting, the company appoints independent external auditors who conduct annual audits in accordance with the applicable auditing and accounting standards.
                     </p>

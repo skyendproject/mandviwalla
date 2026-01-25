@@ -29,8 +29,8 @@ export default function InvestorRelationCards() {
     return (
         <div className="w-full py-8 md:py-12 lg:py-16 bg-white px-4 md:px-20">
             <div className="text-center mb-16">
-                <div className="text-sm text-gray-600 mb-1 border-l-2 border-blue-700 inline-block pl-2">Pay Gap Statement (Half Year Ended: December 31, 2024)</div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Transparent. Compliant. Accessible.</h2>
+                <div className="text-sm md:text-base 2xl:text-lg mb-1 inline-block border-l-2 pl-2" style={{ color: colors.gray.tagColor, borderColor: colors.primary.blue}}>Pay Gap Statement (Half Year Ended: December 31, 2024)</div>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl 2xl:text-[42px] font-bold text-gray-900 mb-4">Transparent. Compliant. Accessible.</h2>
                 <p className=" mx-auto text-base md:text-base" style={{ color: colors.gray.text }}>
                     Mandviwalla MAUSER Plastic Industries Limited (MMPL) is committed to delivering timely, accurate, and transparent information to its shareholders, analysts, and the investment community. We ensure full compliance with PSX and SECP disclosure requirements.
                 </p>

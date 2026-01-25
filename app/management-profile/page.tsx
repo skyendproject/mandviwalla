@@ -15,8 +15,8 @@ export default function ManagementProfile() {
                 path="Governance"
             />
             <OurDirectors />
-            <AboveFooter variant="dark" />
-            <Footer variant="dark" />
+            <AboveFooter />
+            <Footer />
         </div>
     );
 }

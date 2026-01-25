@@ -26,8 +26,8 @@ export default function AnnualReports() {
                     />
                 </div>
                 <div className="flex-1 flex flex-col justify-center items-start max-w-xl">
-                    <div className="text-md text-gray-600 mb-1 border-l-2 border-blue-700 pl-2">Annual Reports</div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Annual Reports</h2>
+                    <div className="text-sm md:text-base 2xl:text-lg mb-1 border-l-2 pl-2" style={{ color: colors.gray.tagColor, borderColor: colors.primary.blue }}>Annual Reports</div>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl 2xl:text-[42px] font-bold text-gray-900 mb-2">Annual Reports</h2>
                     <p className="text-gray-700 mb-4 text-base md:text-base">
                         Access complete annual performance reports, audited financial statements, and director reports.<br />
                         <span className="font-semibold">Available Years:</span>
@@ -46,14 +46,14 @@ export default function AnnualReports() {
             <div className="container mx-auto max-w-5xl mt-20">
                 {/* Section Label */}
                 <div className="flex items-center justify-center gap-3 mb-3">
-                    <div className="w-0.5 h-8 md:h-8" style={{ backgroundColor: colors.primary.blue }}></div>
-                    <span className="text-base md:text-lg" style={{ color: colors.gray.tagColor }}>
+                    <div className="w-0.5 h-6 md:h-6" style={{ backgroundColor: colors.primary.blue }}></div>
+                    <span className="text-sm md:text-base 2xl:text-lgext-lg" style={{ color: colors.gray.tagColor }}>
                         Key Investor Documents
                     </span>
                 </div>
 
                 {/* Heading */}
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-black text-center mb-10 md:mb-8">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl 2xl:text-[42px] font-semibold text-black text-center mb-10 md:mb-8">
                     Key Investor Documents
                 </h2>
 

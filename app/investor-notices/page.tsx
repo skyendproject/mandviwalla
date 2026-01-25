@@ -15,8 +15,8 @@ export default function CompanyInformation() {
                 path="Investor Relation"
             />
             <NoticesGrid />
-            <AboveFooter variant="dark" />
-            <Footer variant="dark" />
+            <AboveFooter />
+            <Footer />
         </div>
     );
 }

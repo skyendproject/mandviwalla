@@ -18,8 +18,8 @@ export default function CompanyInformation() {
 
             />
             <InvestorRelationCards />
-            <AboveFooter variant="dark" />
-            <Footer variant="dark" />
+            <AboveFooter />
+            <Footer />
         </div>
     );
 }

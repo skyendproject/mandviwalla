@@ -2,9 +2,9 @@ import { colors } from "@/lib/colors";
 
 export default function About() {
     return (
-        <div className="w-full bg-gray-50 py-12 md:py-16 lg:py-20 px-4 md:px-20">
+        <div className="w-full bg-gray-50 py-12 md:pt-16 lg:pt-20 px-4 md:px-20">
             <div className="container mx-auto max-w-5xl text-center flex flex-col gap-6">
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black">
+                <h1 className="text-2xl md:text-3xl xl:text-4xl 2xl:text-[42px] font-bold text-black">
                     Strong Governance. Ethical Leadership. Sustainable Growth.
                 </h1>
                 

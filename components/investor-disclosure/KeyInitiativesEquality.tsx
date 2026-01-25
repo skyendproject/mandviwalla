@@ -17,11 +17,11 @@ export default function KeyInitiativesEquality() {
             <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
                 {/* Left Content */}
                 <div className="flex-1 flex flex-col items-start justify-center max-w-xl">
-                    <div className="text-sm text-gray-600 mb-1 border-l-2 border-blue-700 pl-2 font-semibold uppercase">Why Choose Us</div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Key Initiatives Driving Equality</h2>
+                    <div className="text-sm md:text-base 2xl:text-lgmb-1 border-l-2 pl-2 font-semibold" style={{ color: colors.gray.tagColor, borderColor: colors.primary.blue }}>Why Choose Us</div>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl 2xl:text-[42px] font-bold text-gray-900 mb-4">Key Initiatives Driving Equality</h2>
                     <ul className="mb-8 space-y-3">
                         {initiatives.map((item, idx) => (
-                            <li key={idx} className="flex items-center gap-3 text-lg text-gray-900">
+                            <li key={idx} className="flex items-center gap-3 text-sm lg:text-base 2xl:text-lg text-gray-900">
                                 <Check style={{ color: colors.blue.secondary }} />
                                 {item}
                             </li>
@@ -51,7 +51,7 @@ export default function KeyInitiativesEquality() {
                     </div>
                     {/* Right (Illustration) Image, overlapping and above, starts at 70% of 1st image */}
                     <div
-                        className="absolute top-[120px] z-20 w-[340px] h-[260px]"
+                        className="hidden lg:flex absolute top-[120px] z-20 w-[340px] h-[260px]"
                         style={{ left: '259px' }} // 70% of 370px (first image width)
                     >
                         <Image
@@ -65,7 +65,7 @@ export default function KeyInitiativesEquality() {
                 </div>
             </div>
             <div className="text-center mt-24">
-                <div className="text-md text-gray-900 border-l-2 inline-block pl-2 mb-2" style={{ borderColor: colors.primary.blue }}>
+                <div className="text-sm md:text-base 2xl:text-lg border-l-2 inline-block pl-2 mb-2 font-semibold" style={{ borderColor: colors.primary.blue, color:colors.gray.tagColor }}>
                     Our Commitment
                 </div>
                 <p className="mx-auto text-base max-w-2xl text-gray-600">

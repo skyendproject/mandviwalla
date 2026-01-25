@@ -16,8 +16,8 @@ export default function GovernanceResources() {
             <div className="container mx-auto max-w-5xl">
                 {/* Section Label */}
                 <div className="flex items-center justify-center gap-3 mb-3">
-                    <div className="w-0.5 h-8 md:h-8" style={{ backgroundColor: colors.primary.blue }}></div>
-                    <span className="text-base md:text-lg" style={{ color: colors.gray.tagColor }}>
+                    <div className="w-0.5 h-8 md:h-6" style={{ backgroundColor: colors.primary.blue }}></div>
+                    <span className="text-sm md:text-base 2xl:text-lg" style={{ color: colors.gray.tagColor }}>
                         Governance Documents
                     </span>
                 </div>

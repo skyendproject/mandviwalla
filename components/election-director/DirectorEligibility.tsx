@@ -17,7 +17,7 @@ export default function DirectorEligibility() {
 
                 {/* Left Image */}
                 <div className="flex-1 flex items-center justify-center">
-                    <div className="relative w-[340px] h-[380px]">
+                    <div className="relative w-[340px] h-[440px]">
 
                         {/* Image Wrapper */}
                         <div className="relative w-full h-full rounded-lg overflow-hidden z-10">
@@ -45,19 +45,19 @@ export default function DirectorEligibility() {
                 </div>
 
                 {/* Right Content */}
-                <div className="flex-1 flex flex-col justify-center px-0 md:px-8 md:pl-0">
+                <div className="flex-1 flex flex-col justify-center px-0 md:px-8 md:pl-0 mt-20 md:mt-0">
                     <div
-                        className="text-xs text-gray-500 mb-1 border-l-2 pl-2 font-semibold uppercase"
+                        className="text-sm md:text-base 2xl:text-lg text-gray-500 mb-1 border-l-2 pl-2 font-semibold"
                         style={{ borderColor: colors.primary.blue }}
                     >
                         STEP BY STEP
                     </div>
 
-                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl 2xl:text-[42px] font-bold text-gray-900 mb-2">
                         Eligibility Criteria for Directors
                     </h2>
 
-                    <div className="text-xs text-gray-500 mb-4">
+                    <div className="text-sm md:text-base 2xl:text-lg text-gray-500 mb-4">
                         As per the Companies Act, 2017, a person is eligible to become a director if:
                     </div>
 
@@ -83,10 +83,10 @@ export default function DirectorEligibility() {
             </div>
 
             <div className="max-w-4xl mx-auto flex flex-col items-left gap-0 mt-24">
-                <h2 className="text-2xl md:text-3xl font-bold mb-2 text-left" style={{ color: colors.gray.tagColor }}>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl 2xl:text-[42px] font-bold mb-2 text-left" style={{ color: colors.gray.tagColor }}>
                     Current Election Notice
                 </h2>
-                <p style={{ color: colors.gray.text }}>Mandviwalla Mauser Plastic Industries Limited announces the election of directors scheduled on [Date] at the Annual General Meeting (AGM).
+                <p className="text-sm md:text-base 2xl:text-lg" style={{ color: colors.gray.text }}>Mandviwalla Mauser Plastic Industries Limited announces the election of directors scheduled on [Date] at the Annual General Meeting (AGM).
                     Interested candidates may submit their nominations to the Company Secretary at least 14 days before the AGM.
                 </p>
             </div>

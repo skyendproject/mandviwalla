@@ -15,8 +15,8 @@ export default function CompanyInformation() {
                 path="Profile"
             />
             <CodeOfConductContent />
-            <AboveFooter variant="dark" />
-            <Footer variant="dark" />
+            <AboveFooter />
+            <Footer />
         </div>
     );
 }

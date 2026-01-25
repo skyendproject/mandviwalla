@@ -29,7 +29,7 @@ export default function ElectionProcessOverview() {
     return (
         <section className="w-full py-12 px-4 md:px-0">
             <div className="max-w-3xl mx-auto">
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Election Process Overview</h2>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl 2xl:text-[42px] font-bold mb-8">Election Process Overview</h2>
                 <ol className="relative">
                     {steps.map((step, idx) => (
                         <li key={idx} className="ml-4 flex items-start">

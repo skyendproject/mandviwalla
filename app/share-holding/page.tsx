@@ -15,8 +15,8 @@ export default function CompanyInformation() {
                 path="Governance"
             />
             <ShareholdingStructure />
-            <AboveFooter variant="dark" />
-            <Footer variant="dark" />
+            <AboveFooter />
+            <Footer />
         </div>
     );
 }

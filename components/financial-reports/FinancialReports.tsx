@@ -46,10 +46,10 @@ export default function FinancialReports() {
         <section className="w-full py-8 pt-2 px-4 md:px-0 bg-white">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-10">
-                    <div className="text-md text-gray-600 mb-1 mt-12 border-l-2 inline-block pl-2" style={{ borderColor: colors.primary.blue }}>
+                    <div className="text-sm md:text-base 2xl:text-lg mb-1 mt-12 border-l-2 inline-block pl-2 font-semibold" style={{ borderColor: colors.primary.blue, color: colors.gray.tagColor }}>
                         Financial Reports
                     </div>
-                    <h2 className="text-4xl md:text-4xl font-bold text-gray-900 mb-2">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl 2xl:text-[42px]  font-bold text-gray-900 mb-2">
                         Transparent, accurate, and timely financial disclosures.
                     </h2>
                     <p className="mx-auto text-base md:text-base max-w-3xl" style={{ color: colors.gray.text }}>

@@ -21,8 +21,8 @@ export default function CompanyInformation() {
             <InvestorDisclosure />
             <KeyInitiativesEquality />
             <EqualityPolicyDetails />
-            <AboveFooter variant="dark" />
-            <Footer variant="dark" />
+            <AboveFooter />
+            <Footer />
         </div>
     );
 }

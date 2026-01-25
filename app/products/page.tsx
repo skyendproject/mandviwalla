@@ -15,8 +15,8 @@ export default function CompanyInformation() {
                 path="Home"
             />
             <ProductOverview />
-            <AboveFooter variant="dark" />
-            <Footer variant="dark" />
+            <AboveFooter />
+            <Footer />
         </div>
     );
 }

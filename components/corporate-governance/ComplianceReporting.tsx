@@ -29,9 +29,9 @@ export default function ComplianceReporting() {
                     {/* Right - Content */}
                     <div className="flex flex-col gap-4">
                         {/* Section Label */}
-                        <div className="flex items-center justify-start gap-3 mb-3">
+                        <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
                             <div className="w-0.5 h-8 md:h-8" style={{ backgroundColor: colors.primary.blue }}></div>
-                            <span className="text-base md:text-lg" style={{ color: colors.gray.tagColor }}>
+                            <span className="text-sm md:text-base 2xl:text-lg" style={{ color: colors.gray.tagColor }}>
                                 Compliance & Reporting
                             </span>
                         </div>

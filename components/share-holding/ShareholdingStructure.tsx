@@ -10,11 +10,11 @@ const ShareholdingStructure = () => {
                 <div className="text-center mb-8">
                     <div className="flex items-center justify-center gap-2 mb-2">
                         <div className="w-0.5 h-5" style={{ backgroundColor: colors.primary.blue }}></div>
-                        <p className="text-base font-semibold" style={{ color: colors.gray.text }}>
+                        <p className="text-sm md:text-base 2xl:text-lg  font-semibold" style={{ color: colors.gray.tagColor }}>
                             Shareholding Structure
                         </p>
                     </div>
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">
+                    <h2 className="text-2xl md:text-3xl xl:text-4xl 2xl:text-[42px] font-bold mb-4 text-black">
                         Transparent Shareholding Structure
                     </h2>
                     <p className="text-base max-w-5xl mx-auto leading-snug" style={{ color: colors.gray.text }}>
@@ -26,11 +26,11 @@ const ShareholdingStructure = () => {
                 <div className="text-center mb-6">
                     <div className="flex items-center justify-center gap-2 mb-2">
                         <div className="w-0.5 h-5" style={{ backgroundColor: colors.primary.blue }}></div>
-                        <p className="text-base font-semibold" style={{ color: colors.gray.text }}>
+                        <p className="text-sm md:text-base 2xl:text-lg  font-semibold" style={{ color: colors.gray.tagColor }}>
                             Shareholding Disclosure Based on Share Ranges
                         </p>
                     </div>
-                    <h3 className="text-2xl md:text-3xl font-bold mb-3 text-black">
+                    <h3 className="text-2xl md:text-3xl xl:text-4xl 2xl:text-[42px] font-bold mb-4 text-black">
                         Shareholding Pattern by Number of Shares Held
                     </h3>
                     <p className="text-sm max-w-4xl mx-auto" style={{ color: colors.gray.text }}>

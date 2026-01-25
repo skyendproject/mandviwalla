@@ -83,8 +83,8 @@ export default function BoardDirectors() {
             <div className="container mx-auto max-w-7xl">
                 {/* Section Label */}
                 <div className="flex items-center justify-center gap-3 mb-3">
-                    <div className="w-0.5 h-8 md:h-6" style={{ backgroundColor: colors.primary.blue }}></div>
-                    <span className="text-base font-semibold" style={{ color: colors.gray.text }}>
+                    <div className="w-0.5 h-6 md:h-6" style={{ backgroundColor: colors.primary.blue }}></div>
+                    <span className="text-sm md:text-base 2xl:text-lg  font-semibold" style={{ color: colors.gray.tagColor }}>
                         OUR DIRECTORS
                     </span>
                 </div>

@@ -20,8 +20,8 @@ export default function CompanyInformation() {
             <BoardDirectors />
             <Committee />
             <OurBankers />
-            <AboveFooter variant="dark" />
-            <Footer variant="dark" />
+            <AboveFooter />
+            <Footer />
         </div>
     );
 }

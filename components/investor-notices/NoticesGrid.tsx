@@ -48,9 +48,9 @@ export default function NoticesGrid() {
     <section className="w-full py-12 px-4 md:px-0 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-10">
-          <div className="text-sm text-gray-600 mb-1 border-l-2 border-blue-700 inline-block pl-2">Notices</div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Notices & Announcements</h2>
-          <p className="mx-auto text-base md:text-base max-w-2xl" style={{ color: colors.gray.text }}>
+          <div className="text-sm md:text-base 2xl:text-lg mb-1 border-l-2 inline-block pl-2" style={{ color: colors.gray.tagColor, borderColor: colors.primary.blue }}>Notices</div>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl 2xl:text-[42px] font-bold mb-2">Notices & Announcements</h2>
+          <p className="mx-auto text-sm md:text-base max-w-4xl" style={{ color: colors.gray.text }}>
             Timely corporate notices, regulatory disclosures and shareholder announcements.<br />
             Short links: Mandviwalla MAUSER Plastic Industries Limited posts all statutory notices, AGM/EGM invitations, corporate briefings and other regulatory announcements here. Use the filters to find notices by news type or status.
           </p>

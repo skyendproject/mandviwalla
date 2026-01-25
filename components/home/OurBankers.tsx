@@ -21,7 +21,7 @@ const OurBankers = () => {
   ];
 
   return (
-    <section className="py-16 px-4 md:px-8">
+    <section className="py-16 px-4 md:px-8 pt-4">
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <h2 className="text-4xl font-bold text-center mb-12" style={{ color: colors.neutral.darkGray }}>

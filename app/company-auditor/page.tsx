@@ -21,8 +21,8 @@ export default function CompanyInformation() {
             />
             <CompanyAuditor />
             <AuditorResponsibilities />
-            <AboveFooter variant="dark" />
-            <Footer variant="dark" />
+            <AboveFooter />
+            <Footer/>
         </div>
     );
 }

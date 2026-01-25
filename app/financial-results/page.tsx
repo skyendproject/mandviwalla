@@ -16,8 +16,8 @@ export default function CompanyInformation() {
 
             />
             <FinancialResultsChart />
-            <AboveFooter variant="dark" />
-            <Footer variant="dark" />
+            <AboveFooter />
+            <Footer />
         </div>
     );
 }

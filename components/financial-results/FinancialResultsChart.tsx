@@ -38,18 +38,18 @@ export default function FinancialResultsChart() {
         <section className="w-full py-12 px-4 md:px-0 bg-white">
             <div className="max-w-5xl mx-auto">
                 <div className="text-center mb-8">
-                    <div className="text-sm text-gray-600 mb-1 border-l-2 border-blue-700 inline-block pl-2">Financial Results</div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Financial Results</h2>
-                    <p className="mx-auto text-base md:text-base max-w-2xl" style={{ color: colors.gray.text }}>
+                    <div className="text-sm md:text-base 2xl:text-lg mb-1 border-l-2 inline-block pl-2 font-semibold" style={{ color: colors.gray.tagColor, borderColor: colors.primary.blue }}>Financial Results</div>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl 2xl:text-[42px] font-bold text-gray-900 mb-2">Financial Results</h2>
+                    <p className="mx-auto text-base md:text-base max-w-4xl" style={{ color: colors.gray.text }}>
                         Performance snapshots, key indicators, and year-wise financial highlights of Mandviwalla MAUSER Plastic Industries Limited.<br />
                         These results provide stakeholders a clear overview of the Company’s profitability, liquidity, and operational strength.
                     </p>
                 </div>
-                <div className="bg-white rounded-md border border-[#8F8F8F91] mx-auto" style={{ maxWidth: 900 }}>
+                <div className="bg-white rounded-md border border-[#8F8F8F91] mx-auto max-w-5xl">
                     <div className="flex items-start justify-between px-8 pt-8 pb-4">
                         <div>
-                            <div className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">FY 2023–2024 (Latest)</div>
-                            <div className="text-3xl font-semibold" style={{ color: colors.primary.blue }}>5.987,37</div>
+                            <div className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl 2xl:text-[42px] font-bold mb-2">FY 2023–2024 (Latest)</div>
+                            <div className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl 2xl:text-[42px] font-semibold" style={{ color: colors.primary.blue }}>5.987,37</div>
                         </div>
                         <div className="mt-2">
                             <Info size={22} className="text-gray-400" />
@@ -89,14 +89,14 @@ export default function FinancialResultsChart() {
             <div className="container mx-auto max-w-5xl mt-20">
                 {/* Section Label */}
                 <div className="flex items-center justify-center gap-3 mb-3">
-                    <div className="w-0.5 h-8 md:h-8" style={{ backgroundColor: colors.primary.blue }}></div>
-                    <span className="text-base md:text-lg" style={{ color: colors.gray.tagColor }}>
+                    <div className="w-0.5 h-6 md:h-6" style={{ backgroundColor: colors.primary.blue }}></div>
+                    <span className="text-sm md:text-base 2xl:text-lg font-semibold" style={{ color: colors.gray.tagColor }}>
                         Legal Documents (Downloads / Resources)
                     </span>
                 </div>
 
                 {/* Heading */}
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-black text-center mb-10 md:mb-8">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl 2xl:text-[42px]font-semibold text-black text-center mb-10 md:mb-8">
                     Legal & Governance Documents
                 </h2>
 

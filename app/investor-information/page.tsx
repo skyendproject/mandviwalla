@@ -18,8 +18,8 @@ export default function CompanyInformation() {
             />
             <InvestorFAQ />
             <AnnualReports />
-            <AboveFooter variant="dark" />
-            <Footer variant="dark" />
+            <AboveFooter />
+            <Footer />
         </div>
     );
 }

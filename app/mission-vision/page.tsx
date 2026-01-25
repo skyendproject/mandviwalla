@@ -21,8 +21,8 @@ export default function CompanyInformation() {
             <VisionStatement />
             <StrategicGoals />
             <CoreValues />
-            <AboveFooter variant="dark" />
-            <Footer variant="dark" />
+            <AboveFooter />
+            <Footer  />
         </div>
     );
 }

@@ -20,8 +20,8 @@ export default function CompanyInformation() {
             <CompanyInformationComponent />
             <Cards />
             <CoreValues />
-            <AboveFooter variant="dark" />
-            <Footer variant="dark" />
+            <AboveFooter/>
+            <Footer/>
         </div>
     );
 }

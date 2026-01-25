@@ -35,11 +35,11 @@ export default function InvestorDisclosure() {
         <section className="w-full py-12 px-4 md:px-0 bg-white">
             <div className="max-w-5xl mx-auto">
                 <div className="text-center mb-6">
-                    <h2 className="text-4xl font-bold text-gray-900 mb-2">Gender Pay Gap Disclosure</h2>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl 2xl:text-[42px] font-bold mb-2">Gender Pay Gap Disclosure</h2>
                     <p className="mx-auto text-base max-w-5xl text-gray-600 mb-2">
                         At Mandviwalla Mauser Plastic Industries Limited (MMPL), we are deeply committed to gender equality and women’s empowerment, in alignment with Sustainable Development Goal (SDG) 5. We foster a workplace culture built on dignity, respect, and fairness for all employees.
                     </p>
-                    <div className="text-md text-gray-900 border-l-2 inline-block pl-2 mb-2" style={{ borderColor: '#0A84FF' }}>
+                    <div className="text-md 2xl:text-lg text-gray-900 border-l-2 inline-block pl-2 mb-2" style={{ borderColor: '#0A84FF' }}>
                         Pay Gap Statement (Half Year Ended: December 31, 2024)
                     </div>
                 </div>

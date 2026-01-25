@@ -21,8 +21,8 @@ export default function CompanyInformation() {
             <GovernanceFramework/>
             <ComplianceReporting />
             <GovernanceResources />
-            <AboveFooter variant="dark" />
-            <Footer variant="dark" />
+            <AboveFooter/>
+            <Footer/>
         </div>
     );
 }

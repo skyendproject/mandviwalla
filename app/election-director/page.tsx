@@ -20,7 +20,7 @@ export default function CompanyInformation() {
             <RegulatoryCompliance />
             <ElectionProcessOverview />
             <DirectorEligibility />
-            <Footer variant="dark" />
+            <Footer/>
         </div>
     );
 }

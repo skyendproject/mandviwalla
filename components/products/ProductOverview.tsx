@@ -42,7 +42,7 @@ export default function ProductOverview() {
             </div>
 
             {/* Product Grid */}
-            <h2 className="text-center text-[15px] font-semibold mb-2">Reliable, Durable, Certified Products</h2>
+            <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-4xl 2xl:text-[42px] my-8 font-semibold">Reliable, Durable, Certified Products</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-6">
                 {products.map((product) => (
                     <div key={product.key} className="flex flex-col items-center bg-white rounded-lg shadow p-2 pt-4 pb-4">
