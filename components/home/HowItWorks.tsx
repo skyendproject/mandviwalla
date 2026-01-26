@@ -35,7 +35,7 @@ export default function HowItWorks() {
                         />
 
                         {/* Decorative Dot Grid - Bottom Left */}
-                        <div className="hidden absolute -bottom-10 left-12 md:grid grid-cols-6 gap-3.5 p-2 z-0">
+                        <div className="hidden absolute -bottom-10 left-12 md:grid grid-cols-6 gap-3.5 p-2 z-0 2xl:left-66">
                             {Array.from({ length: 36 }).map((_, index) => (
                                 <div
                                     key={index}
