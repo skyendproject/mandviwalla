@@ -6,22 +6,22 @@ export default function BoardOfDirectors() {
         {
             name: "Azeem Mandviwalla",
             role: "Chief Executive / Director",
-            image: "/azeem-mandviwalla.png"
+            image: "/azeem-mandviwalla.webp"
         },
         {
             name: "Mr. Abdul Qadir Shiwani",
             role: "Chief Executive / Director",
-            image: "/qadir-shiwani.png"
+            image: "/qadir-shiwani.webp"
         },
         {
             name: "Mariron Hon",
             role: "Chief Executive / Director",
-            image: "/mariron-hon.png"
+            image: "/mariron-hon.webp"
         },
         {
             name: "Azeem Mandviwalla",
             role: "Chief Executive / Director",
-            image: "/azeem-mandviwalla2.png"
+            image: "/azeem-mandviwalla2.webp"
         }
     ];
 

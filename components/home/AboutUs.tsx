@@ -12,7 +12,7 @@ export default function AboutUs() {
                 {/* Left Image */}
                 <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[430px] rounded-xl shadow-lg">
                     <Image
-                        src="/assets/home-about.png"
+                        src="/assets/home-about.webp"
                         alt="About Us Image"
                         fill
                         className="object-cover rounded-xl"

@@ -46,7 +46,7 @@ export default function WhyChooseUs() {
                     {/* CENTER IMAGE */}
                     <div className="relative w-[280px] h-[380px] sm:w-[320px] sm:h-[420px] md:w-[360px] md:h-[460px] flex-shrink-0">
                         <Image
-                            src="/why-choose-us.jpg"
+                            src="/why-choose-us.webp"
                             alt="Partnership"
                             fill
                             className="object-cover"

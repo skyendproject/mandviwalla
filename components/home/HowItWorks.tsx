@@ -27,7 +27,7 @@ export default function HowItWorks() {
                     {/* Left Side - Image */}
                     <div className="w-full md:w-1/2 relative">
                         <Image
-                            src="/how-it-works.png"
+                            src="/how-it-works.webp"
                             alt="How it Works"
                             width={570}
                             height={6045}

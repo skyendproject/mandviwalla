@@ -56,10 +56,10 @@ const Card = ({ review, isCenter = false }: CardProps) => (
 
 export default function ClientReviews() {
     const reviews = [
-        { name: "Hannah Schmitt", role: "Businessman", image: "/hannah1.jpg", review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim " },
-        { name: "John Doe", role: "Designer", image: "/hannah2.jpg", review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim " },
-        { name: "Alice Smith", role: "Developer", image: "/hannah3.jpg", review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim " },
-        { name: "Bob Lee", role: "Manager", image: "/hannah1.jpg", review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim " },
+        { name: "Hannah Schmitt", role: "Businessman", image: "/hannah1.webp", review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim " },
+        { name: "John Doe", role: "Designer", image: "/hannah2.webp", review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim " },
+        { name: "Alice Smith", role: "Developer", image: "/hannah3.webp", review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim " },
+        { name: "Bob Lee", role: "Manager", image: "/hannah1.webp", review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim " },
         // { name: "Jane Doe", role: "Entrepreneur", image: "/hannah2.jpg", review: "Faucibus venenatis felis id augue sit cursus." },
     ];
 

@@ -74,7 +74,7 @@ export default function ServiceSection() {
             {/* Background overlay */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full z-0 opacity-100 pointer-events-none">
                 <Image
-                    src="/assets/circle-lines.png"
+                    src="/assets/circle-lines.webp"
                     alt="Compress Line"
                     fill
                     style={{ objectFit: "cover" }}
@@ -109,7 +109,7 @@ export default function ServiceSection() {
                             style={{ transform: `rotate(${leftTilts[idx]})` }}
                         >
                             <Image
-                                src="/assets/services-container.png"
+                                src="/assets/services-container.webp"
                                 alt={`Container ${idx + 1}`}
                                 width={70}
                                 height={70}
@@ -129,7 +129,7 @@ export default function ServiceSection() {
                             style={{ transform: `rotate(${rightTilts[idx]})` }}
                         >
                             <Image
-                                src="/assets/services-container.png"
+                                src="/assets/services-container.webp"
                                 alt={`Container ${idx + 4}`}
                                 width={70}
                                 height={70}

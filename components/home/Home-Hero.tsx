@@ -1,15 +1,16 @@
 "use client";
 
 import Head from "next/head";
+import NextImage from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { colors } from "@/lib/colors";
 
 export default function Hero() {
     const images = [
-        "/assets/home-banner.jpg",
-        "/assets/home-banner2.jpg",
-        "/assets/home-banner3.jpg",
+        "/assets/home-banner.webp",
+        "/assets/home-banner2.webp",
+        "/assets/home-banner3.webp",
     ];
 
     const [activeImage, setActiveImage] = useState(0);
@@ -29,11 +30,30 @@ export default function Hero() {
     }, []);
 
     useEffect(() => {
-        images.forEach((src) => {
-            const img = new Image();
-            img.src = src;
-        });
-    }, [images]);
+        if (images.length <= 1) return;
+        const nextIndex = (activeImage + 1) % images.length;
+        const preload = () => {
+            const img = new window.Image();
+            img.src = images[nextIndex];
+        };
+
+        const win = window as Window & {
+            requestIdleCallback?: (cb: () => void) => number;
+            cancelIdleCallback?: (id: number) => void;
+        };
+
+        if ("requestIdleCallback" in win) {
+            const id = win.requestIdleCallback?.(preload);
+            return () => {
+                if (id && "cancelIdleCallback" in win) {
+                    win.cancelIdleCallback?.(id);
+                }
+            };
+        }
+
+        const timeoutId = window.setTimeout(preload, 1500);
+        return () => window.clearTimeout(timeoutId);
+    }, [activeImage, images]);
 
     useEffect(() => {
         setFadeIn(false);
@@ -43,26 +63,35 @@ export default function Hero() {
 
     return (
         <section className="relative w-full h-[80vh] md:h-[90vh] mb-24">
-            <Head>
-                <link rel="preload" as="image" href={images[0]} fetchPriority="high" />
-            </Head>
-            {/* Background Image with bottom curve */}
             <div
-                className="absolute inset-0 bg-cover bg-center hero-image-clip"
+                className="absolute inset-0 hero-image-clip"
                 style={{
-                    backgroundImage: `url('${images[prevImage]}')`,
                     backgroundColor: "#0b0f1a",
                     clipPath: "md:polygon(0 0, 100% 0, 100% 88%, 0 100%)",
                 }}
             />
-            <div
-                className={`absolute inset-0 bg-cover bg-center hero-image-clip transition-opacity duration-500 ${fadeIn ? "opacity-100" : "opacity-0"}`}
-                style={{
-                    backgroundImage: `url('${images[activeImage]}')`,
-                    backgroundColor: "#0b0f1a",
-                    clipPath: "md:polygon(0 0, 100% 0, 100% 88%, 0 100%)",
-                }}
-            />
+            <div className="absolute inset-0 hero-image-clip">
+                <NextImage
+                    src={images[prevImage]}
+                    alt=""
+                    fill
+                    sizes="100vw"
+                    priority={prevImage === 0}
+                    fetchPriority={prevImage === 0 ? "high" : "auto"}
+                    className="object-cover object-center"
+                />
+            </div>
+            <div className={`absolute inset-0 hero-image-clip transition-opacity duration-500 ${fadeIn ? "opacity-100" : "opacity-0"}`}>
+                <NextImage
+                    src={images[activeImage]}
+                    alt=""
+                    fill
+                    sizes="100vw"
+                    priority={activeImage === 0}
+                    fetchPriority={activeImage === 0 ? "high" : "auto"}
+                    className="object-cover object-center"
+                />
+            </div>
 
             {/* Dark overlay (optional, only over image, not over orange) */}
             <div
