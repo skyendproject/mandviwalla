@@ -100,14 +100,16 @@ export default function BoardOfDirectors() {
 
 
                                 {/* Right Side - Image */}
-                                < div className="sm:w-1/2 h-64 sm:h-auto p-4" >
-                                    <Image
-                                        src={director.image}
-                                        alt={director.name}
-                                        width={400}
-                                        height={400}
-                                        className="w-full h-full object-cover md:w-[241.83px] md:h-[259.51px]"
-                                    />
+                                <div className="sm:w-1/2 p-4">
+                                    <div className="relative w-full aspect-[3/4] md:aspect-auto md:w-[241.83px] md:h-[259.51px]">
+                                        <Image
+                                            src={director.image}
+                                            alt={director.name}
+                                            fill
+                                            sizes="(max-width: 767px) 100vw, 242px"
+                                            className="object-cover"
+                                        />
+                                    </div>
                                 </div>
                             </div>
                         </div>
