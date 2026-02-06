@@ -20,8 +20,9 @@ interface CardProps {
 
 const Card = ({ review, isCenter = false }: CardProps) => (
     <div
-        className={`flex flex-col items-center justify-end transition-transform duration-300 ${isCenter ? "z-20 scale-120" : "z-10 scale-95"
-            } overflow-hidden`}
+        className={`flex flex-col items-center justify-end transition-transform duration-300 ${
+            isCenter ? "z-20 scale-105" : "z-10 scale-95"
+        } overflow-hidden w-full max-w-[400px] md:max-w-none`}
         style={{ width: isCenter ? 400 : 350, minHeight: 390 }}
     >
         <div className="relative z-10 py-10 px-7 flex flex-col items-center text-center min-h-[335px]">
@@ -64,6 +65,14 @@ export default function ClientReviews() {
 
     const [active, setActive] = useState(0);
 
+    const goPrev = () => {
+        setActive((prev) => (prev - 1 + reviews.length) % reviews.length);
+    };
+
+    const goNext = () => {
+        setActive((prev) => (prev + 1) % reviews.length);
+    };
+
     const visible = () => {
         const len = reviews.length;
         const prev = (active - 1 + len) % len;
@@ -93,17 +102,35 @@ export default function ClientReviews() {
 
                 {/* CAROUSEL */}
                 <div className="relative flex items-center">
-                    <button className="absolute left-0 top-1/2 -translate-y-1/2 z-20" onClick={() => setActive((prev) => (prev - 1 + reviews.length) % reviews.length)}>
+                    <button
+                        type="button"
+                        aria-label="Previous review"
+                        className="absolute left-0 top-1/2 -translate-y-1/2 z-30 p-2 rounded-full bg-white/80 shadow-md hover:bg-white transition pointer-events-auto"
+                        onClick={goPrev}
+                    >
                         <ChevronLeft size={36} color="#444" />
                     </button>
-                    <button className="absolute right-0 top-1/2 -translate-y-1/2 z-20" onClick={() => setActive((prev) => (prev + 1) % reviews.length)}>
+                    <button
+                        type="button"
+                        aria-label="Next review"
+                        className="absolute right-0 top-1/2 -translate-y-1/2 z-30 p-2 rounded-full bg-white/80 shadow-md hover:bg-white transition pointer-events-auto"
+                        onClick={goNext}
+                    >
                         <ChevronRight size={36} color="#444" />
                     </button>
 
                     <div className="flex justify-center items-stretch w-full gap-x-7">
-                        {visible().map(({ review, isCenter }, idx) => (
-                            <Card key={idx} review={review} isCenter={isCenter} />
-                        ))}
+                        {/* Mobile: single card */}
+                        <div className="flex w-full justify-center md:hidden">
+                            <Card review={reviews[active]} isCenter />
+                        </div>
+
+                        {/* Desktop: three-card carousel */}
+                        <div className="hidden md:flex w-full justify-center items-stretch gap-x-7">
+                            {visible().map(({ review, isCenter }, idx) => (
+                                <Card key={idx} review={review} isCenter={isCenter} />
+                            ))}
+                        </div>
                     </div>
                 </div>
 
