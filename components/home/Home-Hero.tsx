@@ -1,16 +1,65 @@
 "use client";
 
+import Head from "next/head";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { colors } from "@/lib/colors";
 
 export default function Hero() {
+    const images = [
+        "/assets/home-banner.jpg",
+        "/assets/home-banner2.jpg",
+        "/assets/home-banner3.jpg",
+    ];
+
+    const [activeImage, setActiveImage] = useState(0);
+    const [prevImage, setPrevImage] = useState(0);
+    const [fadeIn, setFadeIn] = useState(true);
+
+    useEffect(() => {
+        if (images.length <= 1) return;
+        const id = setInterval(() => {
+            setActiveImage((prev) => {
+                setPrevImage(prev);
+                return (prev + 1) % images.length;
+            });
+        }, 3000);
+
+        return () => clearInterval(id);
+    }, []);
+
+    useEffect(() => {
+        images.forEach((src) => {
+            const img = new Image();
+            img.src = src;
+        });
+    }, [images]);
+
+    useEffect(() => {
+        setFadeIn(false);
+        const raf = requestAnimationFrame(() => setFadeIn(true));
+        return () => cancelAnimationFrame(raf);
+    }, [activeImage]);
+
     return (
         <section className="relative w-full h-[80vh] md:h-[90vh] mb-24">
+            <Head>
+                <link rel="preload" as="image" href={images[0]} fetchPriority="high" />
+            </Head>
             {/* Background Image with bottom curve */}
-            <div 
+            <div
                 className="absolute inset-0 bg-cover bg-center hero-image-clip"
                 style={{
-                    backgroundImage: "url('/assets/home-banner.jpg')",
+                    backgroundImage: `url('${images[prevImage]}')`,
+                    backgroundColor: "#0b0f1a",
+                    clipPath: "md:polygon(0 0, 100% 0, 100% 88%, 0 100%)",
+                }}
+            />
+            <div
+                className={`absolute inset-0 bg-cover bg-center hero-image-clip transition-opacity duration-500 ${fadeIn ? "opacity-100" : "opacity-0"}`}
+                style={{
+                    backgroundImage: `url('${images[activeImage]}')`,
+                    backgroundColor: "#0b0f1a",
                     clipPath: "md:polygon(0 0, 100% 0, 100% 88%, 0 100%)",
                 }}
             />
