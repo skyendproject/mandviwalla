@@ -13,13 +13,13 @@ export default function ProductOverview() {
             label: "OPEN TOP PLASTIC DRUMS"
         },
         {
-            src: "/products/product-filter-2.png",
+            src: "/products/product-filter-3.png",
             label: "CLOSE TOP PLASTIC DRUMS"
         },
-        {
-            src: "/products/product-filter-3.png",
-            label: "JERRYCANS"
-        },
+        // {
+        //     src: "/products/product-filter-3.png",
+        //     label: "JERRYCANS"
+        // },
     ];
     // Generate 20 products in random order for the grid
     // Generate 20 products in a deterministic, repeating order for the grid
