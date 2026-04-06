@@ -8,10 +8,10 @@ import { colors } from "@/lib/colors";
 
 export default function Hero() {
     const images = [
-        "/assets/factory-drone.jpg",
-        "/assets/blue-greem-drone.jpg",
-        "/assets/green-drone.jpg",
-        "/assets/blue-drone.jpg",
+        "/assets/factory-drone.JPG",
+        "/assets/blue-greem-drone.JPG",
+        "/assets/green-drone.JPG",
+        "/assets/blue-drone.JPG",
     ];
 
     const [activeImage, setActiveImage] = useState(0);
