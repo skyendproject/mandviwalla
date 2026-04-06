@@ -8,21 +8,21 @@ export default function BoardOfDirectors() {
             role: "Chief Executive / Director",
             image: "/azeem-mandviwalla.webp"
         },
-        {
-            name: "Mr. Abdul Qadir Shiwani",
-            role: "Chief Executive / Director",
-            image: "/qadir-shiwani.webp"
-        },
-        {
-            name: "Mariron Hon",
-            role: "Chief Executive / Director",
-            image: "/mariron-hon.webp"
-        },
-        {
-            name: "Azeem Mandviwalla",
-            role: "Chief Executive / Director",
-            image: "/azeem-mandviwalla2.webp"
-        }
+        // {
+        //     name: "Mr. Abdul Qadir Shiwani",
+        //     role: "Chief Executive / Director",
+        //     image: "/qadir-shiwani.webp"
+        // },
+        // {
+        //     name: "Mariron Hon",
+        //     role: "Chief Executive / Director",
+        //     image: "/mariron-hon.webp"
+        // },
+        // {
+        //     name: "Azeem Mandviwalla",
+        //     role: "Chief Executive / Director",
+        //     image: "/azeem-mandviwalla2.webp"
+        // }
     ];
 
     return (
@@ -34,34 +34,33 @@ export default function BoardOfDirectors() {
 
                     {/* Label */}
                     <div className="border-l-4 pl-4" style={{ borderColor: colors.orange.dark }}>
-                        <p className="text-sm md:text-base 2xl:text-lg font-semibold " style={{ color: colors.gray.tagColor }}>
-                            OUR Management / Leadership
+                        <p className="text-sm md:text-base 2xl:text-lg font-semibold uppercase" style={{ color: colors.gray.tagColor }}>
+                            OUR Leadership
                         </p>
                     </div>
 
                     {/* Heading */}
                     <h2 className="text-2xl md:text-3xl xl:text-4xl 2xl:text-[42px] font-semibold text-black">
-                        Meet Our Board Of Director
+                        Meet Our Cheif Executive Officer
                     </h2>
 
                     {/* Description */}
                     <p className="text-xs sm:text-sm md:text-base leading-relaxed -mt-3 md:mt-0" style={{ color: colors.gray.text }}>
-                        Profiles of Directors / CEO / Board Of Director
+                        Profile of CEO
                     </p>
                 </div>
 
                 {/* Directors Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-10">
+                <div className="grid grid-cols-1 gap-6 md:gap-8 lg:gap-10">
                     {directors.map((director, index) => (
                         <div
                             key={index}
                             className="bg-white rounded-lg overflow-hidden"
                             style={{ border: '1px solid #E5E5E5' }}
                         >
-                            <div className="flex flex-col sm:flex-row">
-
+                            <div className="flex flex-col sm:flex-row justify-center gap-20">
                                 {/* Left Side - Text and Social Icons */}
-                                <div className="flex flex-col justify-center items-center p-4 sm:p-6 sm:w-1/2 gap-0 lg:gap-6">
+                                <div className="flex flex-col justify-center items-center p-4 sm:p-6 gap-0 lg:gap-6">
                                     <div className="text-center">
                                         <h3 className="text-lg md:text-xl xl:text-xl 2xl:text-2xl font-semibold text-black mb-1 sm:mb-2">
                                             {director.name}
@@ -100,14 +99,14 @@ export default function BoardOfDirectors() {
 
 
                                 {/* Right Side - Image */}
-                                <div className="sm:w-1/2 p-4">
-                                    <div className="relative w-full aspect-[3/4] md:aspect-auto md:w-[241.83px] md:h-[259.51px]">
+                                <div className="p-4">
+                                    <div className="relative w-full aspect-[3/4] md:aspect-auto md:w-[241.83px] md:h-[259.51px] lg:h-[300px] ">
                                         <Image
                                             src={director.image}
                                             alt={director.name}
                                             fill
                                             sizes="(max-width: 767px) 100vw, 242px"
-                                            className="object-cover"
+                                            className="object-cover rounded-md"
                                         />
                                     </div>
                                 </div>

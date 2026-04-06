@@ -8,9 +8,10 @@ import { colors } from "@/lib/colors";
 
 export default function Hero() {
     const images = [
-        "/assets/home-banner.webp",
-        "/assets/home-banner2.webp",
-        "/assets/home-banner3.webp",
+        "/assets/factory-drone.jpg",
+        "/assets/blue-greem-drone.jpg",
+        "/assets/green-drone.jpg",
+        "/assets/blue-drone.jpg",
     ];
 
     const [activeImage, setActiveImage] = useState(0);
