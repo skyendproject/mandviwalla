@@ -50,7 +50,7 @@ export default function AboutUs() {
                 {/* Right Content */}
                 <div className="relative">
                     <h4 className="text-sm md:text-base 2xl:text-lg tracking-widest border-l-2 pl-2 mb-2 font-semibold" style={{ borderColor: colors.orange.dark, fontFamily: 'var(--font-lato)', color: colors.gray.tagColor }}>
-                        About Us Section
+                        About Us
                     </h4>
 
                     <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl 2xl:text-[42px] font-semibold mb-3 md:mb-4 leading-snug">

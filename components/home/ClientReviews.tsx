@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 // COLORS
@@ -9,86 +9,51 @@ const PRIMARY_BLUE = "#1338BE";
 const GRAY_TAG = "#727272";
 const GRAY_TEXT = "#636363";
 
-
-
-
-// Generic Card Component
-interface CardProps {
-    review: any;
-    isCenter?: boolean;
-}
-
-const Card = ({ review, isCenter = false }: CardProps) => (
-    <div
-        className={`flex flex-col items-center justify-end transition-transform duration-300 ${
-            isCenter ? "z-20 scale-105" : "z-10 scale-95"
-        } overflow-hidden w-full max-w-[400px] md:max-w-none`}
-        style={{ width: isCenter ? 400 : 350, minHeight: 390 }}
-    >
-        <div className="relative z-10 py-10 px-7 flex flex-col items-center text-center min-h-[335px]">
-            <div className="absolute left-1/2 -top-11 -translate-x-1/2 z-20">
-                <div className="w-[72px] h-[72px] rounded-full overflow-hidden">
-                    <Image
-                        src={review.image}
-                        alt={review.name}
-                        width={72}
-                        height={72}
-                        className="w-full h-full rounded-full object-cover object-center"
-                    />
-                </div>
-            </div>
-
-
-            {/* Card Content */}
-            <div className="rounded-md ml-4 pb-8 z-40">
-                <h3 className="text-lg font-semibold mb-0.5">{review.name}</h3>
-                <p className="text-xs mb-2" style={{ color: GRAY_TEXT }}>
-                    {review.role}
-                </p>
-                <p className="text-xs leading-relaxed md:text-sm" style={{ color: GRAY_TEXT }}>
-                    {review.review}
-                </p>
-            </div>
-        </div>
-    </div>
-);
-
+const BRAND_LOGOS = [
+    { name: "Reliance", src: "/assets/brand-logo/reliance.jpg" },
+    { name: "Hascol", src: "/assets/brand-logo/hascol-logo.jpg" },
+    { name: "Act Polymers", src: "/assets/brand-logo/act-logo.jpg" },
+    { name: "Matco Foods", src: "/assets/brand-logo/matco-logo.jpg" },
+    { name: "Habib", src: "/assets/brand-logo/habib-logo.jpg" },
+    { name: "IMG 1346 ARPL", src: "/assets/brand-logo/IMG1346ARPL.jpg" },
+    { name: "OG", src: "/assets/brand-logo/og-logo.jpg" },
+    { name: "Oleo", src: "/assets/brand-logo/oleo-logo.jpg" },
+    { name: "PG", src: "/assets/brand-logo/pg-logo.jpg" },
+    { name: "Prime", src: "/assets/brand-logo/prime-logo.jpg" },
+    { name: "Tufail", src: "/assets/brand-logo/tufail-logo.jpg" },
+];
 
 export default function ClientReviews() {
-    const reviews = [
-        { name: "Hannah Schmitt", role: "Businessman", image: "/hannah1.webp", review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim " },
-        { name: "John Doe", role: "Designer", image: "/hannah2.webp", review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim " },
-        { name: "Alice Smith", role: "Developer", image: "/hannah3.webp", review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim " },
-        { name: "Bob Lee", role: "Manager", image: "/hannah1.webp", review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim " },
-        // { name: "Jane Doe", role: "Entrepreneur", image: "/hannah2.jpg", review: "Faucibus venenatis felis id augue sit cursus." },
-    ];
-
     const [active, setActive] = useState(0);
 
     const goPrev = () => {
-        setActive((prev) => (prev - 1 + reviews.length) % reviews.length);
+        setActive((prev) => (prev - 1 + BRAND_LOGOS.length) % BRAND_LOGOS.length);
     };
 
     const goNext = () => {
-        setActive((prev) => (prev + 1) % reviews.length);
+        setActive((prev) => (prev + 1) % BRAND_LOGOS.length);
     };
 
-    const visible = () => {
-        const len = reviews.length;
-        const prev = (active - 1 + len) % len;
-        const next = (active + 1) % len;
-        return [
-            { review: reviews[prev], isCenter: false },
-            { review: reviews[active], isCenter: true },
-            { review: reviews[next], isCenter: false },
-        ];
+    useEffect(() => {
+        const interval = window.setInterval(() => {
+            setActive((prev) => (prev + 1) % BRAND_LOGOS.length);
+        }, 2000);
+
+        return () => window.clearInterval(interval);
+    }, []);
+
+    const getVisibleLogos = (count: number) => {
+        return Array.from({ length: count }, (_, index) => {
+            const logoIndex = (active + index) % BRAND_LOGOS.length;
+            return BRAND_LOGOS[logoIndex];
+        });
     };
 
     return (
-        <section className="w-full py-20 px-4 bg-[#fafbfc]">
+        <section className="w-full py-20 px-4 bg-white">
             <div className="container mx-auto max-w-7xl">
                 {/* HEADER */}
-                <div className="flex flex-col gap-4 items-center text-center mb-16 max-w-3xl mx-auto">
+                <div className="flex flex-col gap-4 items-center text-center mb-4 max-w-3xl mx-auto">
                     <div className="border-l-4 pl-4" style={{ borderColor: PRIMARY_BLUE }}>
                         <p className="text-sm md:text-base 2xl:text-lg font-semibold uppercase tracking-wide" style={{ color: GRAY_TAG }}>
                             WHAT CLIENTS SAY?
@@ -100,48 +65,64 @@ export default function ClientReviews() {
                     </p>
                 </div>
 
-                {/* CAROUSEL */}
-                <div className="relative flex items-center">
+                {/* LOGO CAROUSEL */}
+                <div className="relative flex items-center justify-center min-h-[360px] px-16 md:px-20">
                     <button
                         type="button"
-                        aria-label="Previous review"
-                        className="absolute left-0 top-1/2 -translate-y-1/2 z-30 p-2 rounded-full bg-white/80 shadow-md hover:bg-white transition pointer-events-auto"
+                        aria-label="Previous logo"
+                        className="absolute left-5 top-1/2 -translate-y-1/2 z-30 w-14 h-14 rounded-full border border-[#d6d6d6] bg-[#ececec] flex items-center justify-center hover:bg-white transition"
                         onClick={goPrev}
                     >
-                        <ChevronLeft size={36} color="#444" />
+                        <ChevronLeft size={30} color="#9f9f9f" />
                     </button>
                     <button
                         type="button"
-                        aria-label="Next review"
-                        className="absolute right-0 top-1/2 -translate-y-1/2 z-30 p-2 rounded-full bg-white/80 shadow-md hover:bg-white transition pointer-events-auto"
+                        aria-label="Next logo"
+                        className="absolute right-5 top-1/2 -translate-y-1/2 z-30 w-14 h-14 rounded-full border border-[#d6d6d6] bg-[#ececec] flex items-center justify-center hover:bg-white transition"
                         onClick={goNext}
                     >
-                        <ChevronRight size={36} color="#444" />
+                        <ChevronRight size={30} color="#9f9f9f" />
                     </button>
 
-                    <div className="flex justify-center items-stretch w-full gap-x-7">
-                        {/* Mobile: single card */}
-                        <div className="flex w-full justify-center md:hidden">
-                            <Card review={reviews[active]} isCenter />
-                        </div>
+                    <div className="flex w-full justify-center md:hidden gap-8 items-center">
+                        {getVisibleLogos(2).map((logo) => (
+                            <div key={logo.src} className="relative h-20 w-[120px]">
+                                <Image
+                                    src={logo.src}
+                                    alt={logo.name}
+                                    fill
+                                    className="object-contain"
+                                    sizes="120px"
+                                />
+                            </div>
+                        ))}
+                    </div>
 
-                        {/* Desktop: three-card carousel */}
-                        <div className="hidden md:flex w-full justify-center items-stretch gap-x-7">
-                            {visible().map(({ review, isCenter }, idx) => (
-                                <Card key={idx} review={review} isCenter={isCenter} />
-                            ))}
-                        </div>
+                    <div className="hidden md:flex w-full justify-center gap-20 lg:gap-24 items-center">
+                        {getVisibleLogos(4).map((logo) => (
+                            <div key={logo.src} className="relative h-32 w-[200px] lg:w-[220px]">
+                                <Image
+                                    src={logo.src}
+                                    alt={logo.name}
+                                    fill
+                                    className="object-contain"
+                                    sizes="(max-width: 1024px) 200px, 220px"
+                                />
+                            </div>
+                        ))}
                     </div>
                 </div>
 
                 {/* DOTS */}
-                <div className="flex justify-center gap-3 mt-2">
-                    {reviews.map((_, idx) => (
-                        <span
-                            key={idx}
+                <div className="flex justify-center gap-3 mt-7">
+                    {BRAND_LOGOS.map((logo, idx) => (
+                        <button
+                            key={logo.src}
+                            type="button"
                             className="w-2.5 h-2.5 rounded-full cursor-pointer transition-all"
                             style={{ backgroundColor: idx === active ? PRIMARY_BLUE : "#D1D5DB" }}
                             onClick={() => setActive(idx)}
+                            aria-label={`Go to ${logo.name}`}
                         />
                     ))}
                 </div>

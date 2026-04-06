@@ -1,11 +1,9 @@
-import Image from "next/image";
 import { colors } from "@/lib/colors";
 
 const auditCommittee = [
     {
         name: "Mrs. Huma Darugar",
         title: "Chairperson",
-        image: "/board-directors/huma-darugar-boardDir7.1.jpg",
         social: {
             facebook: "#",
             instagram: "#",
@@ -15,7 +13,6 @@ const auditCommittee = [
     {
         name: "Mr. Abdul Qadir Shiwani",
         title: "Member",
-        image: "/board-directors/qadir-shiwani-boardDir8.jpg",
         social: {
             facebook: "#",
             instagram: "#",
@@ -25,7 +22,6 @@ const auditCommittee = [
     {
         name: "Mr. Shamim Ahmed Khan",
         title: "Member",
-        image: "/board-directors/shamim-khan-boardDir9.jpg",
         social: {
             facebook: "#",
             instagram: "#",
@@ -38,7 +34,6 @@ const companySecretary = [
     {
         name: "Ms. Hina Ambreen",
         title: "Company Secretary",
-        image: "/board-directors/hina-ambreen-boardDir10.jpg",
         social: {
             facebook: "#",
             instagram: "#",
@@ -59,18 +54,7 @@ export default function Committee() {
                 <div className="flex justify-center mb-16 md:mb-20">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 max-w-5xl">
                         {auditCommittee.map((member, idx) => (
-                            <div key={idx} className="flex flex-col items-center">
-                                {/* Member Image */}
-                                <div className="w-full aspect-3/4 relative mb-4">
-                                    <Image
-                                        src={member.image}
-                                        alt={member.name}
-                                        fill
-                                        className="object-cover"
-                                    />
-                                </div>
-
-                                {/* Member Info */}
+                            <div key={idx} className="flex flex-col items-center justify-center py-3">
                                 <div className="flex flex-col items-center gap-1">
                                     <h3 className="text-lg md:text-xl font-semibold text-black text-center">
                                         {member.name}
@@ -123,18 +107,7 @@ export default function Committee() {
                 <div className="flex justify-center">
                     <div className="max-w-xs">
                         {companySecretary.map((member, idx) => (
-                            <div key={idx} className="flex flex-col items-center">
-                                {/* Member Image */}
-                                <div className="w-full aspect-3/4 relative mb-4">
-                                    <Image
-                                        src={member.image}
-                                        alt={member.name}
-                                        fill
-                                        className="object-cover"
-                                    />
-                                </div>
-
-                                {/* Member Info */}
+                            <div key={idx} className="flex flex-col items-center justify-center py-3">
                                 <div className="flex flex-col items-center gap-1">
                                     <h3 className="text-lg md:text-xl font-semibold text-black text-center">
                                         {member.name}
