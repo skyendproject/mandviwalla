@@ -1,93 +1,227 @@
-// Centralized product data for both product grid and product details pages
+// Centralized product data for both product grid and product details pages.
 
 export const products = [
   {
     id: 1,
-    title: "Open Top Plastic Drums",
-    desc: "Strong, reusable drums with removable lids for powders, pastes.",
-    img: "/products/product-1.png",
+    type: "open-top",
+    title: "Open Top Barrel 120 Litre (Blue)",
+    desc: "Open top barrel for convenient filling and emptying.",
+    img: "/products/orange-full.png",
     details: {
-      description: "Our Open Top Plastic Drums are designed for industries that require safe storage, easy filling, and convenient emptying of solids, semi-solids, and liquids. Built with High Molecular High-Density Polyethylene (HM-HDPE), these drums are durable, reusable, and resistant to chemicals & UV rays.",
+      description: "Open top barrel designed for convenient filling, emptying, and reconditioning.",
       features: [
-        "Wide open mouth for easy filling & discharge",
-        "Strong and reusable with long service life",
-        "Resistant to chemicals, corrosion, and UV exposure",
-        "Lightweight yet impact-resistant",
-        "Suitable for reconditioning & multiple uses"
+        "Wide open mouth for easy access",
+        "Durable and reusable construction",
+        "Suitable for industrial storage",
       ],
-      sizes: ["120 Liters", "150 Liters", "200 Liters", "210 Liters"],
-      images: [
-        "/products/product-1.png",
-        "/products/product-2.png",
-        "/products/product-3.png",
-        "/products/product-4.png"
-      ]
-    }
+      sizes: ["120 Litres"],
+      images: ["/products/orange-full.png", "/products/orange-zoomed.png", "/products/orange-closeup.png"],
+    },
   },
   {
     id: 2,
-    title: "Close Top Plastic Drums",
-    desc: "Strong, reusable drums with removable lids for powders, pastes.",
+    type: "open-top",
+    title: "Open Top Barrel 160 Litre (Blue)",
+    desc: "Open top barrel for convenient filling and emptying.",
     img: "/products/product-2.png",
     details: {
-      description: "Our Close Top Plastic Drums are ideal for secure storage and transport of liquids and semi-liquids. Made from high-quality HDPE, they are robust, leak-proof, and suitable for a wide range of industrial applications.",
+      description: "Open top barrel designed for convenient filling, emptying, and reconditioning.",
       features: [
-        "Leak-proof screw cap closure",
-        "Durable and impact-resistant",
-        "UV and chemical resistant",
-        "Stackable design for easy storage",
-        "Available in multiple sizes"
+        "Wide open mouth for easy access",
+        "Durable and reusable construction",
+        "Suitable for industrial storage",
       ],
-      sizes: ["60 Liters", "120 Liters", "200 Liters"],
-      images: [
-        "/products/product-2.png",
-        "/products/product-1.png",
-        "/products/product-3.png"
-      ]
-    }
+      sizes: ["160 Litres"],
+      images: ["/products/product-2.png"],
+    },
   },
   {
     id: 3,
-    title: "Jerrycans",
-    desc: "Compact, lightweight, and durable jerrycans for household.",
+    type: "close-top",
+    title: "Bungs",
+    desc: "Closure accessories for sealed drum applications.",
     img: "/products/product-3.png",
     details: {
-      description: "Our Jerrycans are designed for easy handling and safe storage of liquids. They are lightweight, durable, and come with secure caps to prevent leakage.",
+      description: "Closure accessories for sealed drum applications.",
       features: [
-        "Ergonomic handle for easy carrying",
-        "Secure screw cap",
-        "Stackable and space-saving",
-        "Suitable for chemicals, water, and more"
+        "Reliable sealing support",
+        "Suitable for drum closures",
+        "Industrial-grade accessory",
       ],
-      sizes: ["5 Liters", "10 Liters", "20 Liters"],
-      images: [
-        "/products/product-3.png",
-        "/products/product-2.png"
-      ]
-    }
+      sizes: ["Standard"],
+      images: ["/products/product-3.png"],
+    },
   },
   {
     id: 4,
-    title: "Open Top Plastic Drums",
-    desc: "Strong, reusable drums with removable lids for powders, pastes.",
+    type: "close-top",
+    title: "CLOSE TOP 260 LITRE (BLUE)",
+    desc: "New design close top barrel for industrial storage.",
     img: "/products/product-4.png",
     details: {
-      description: "Our Open Top Plastic Drums are designed for industries that require safe storage, easy filling, and convenient emptying of solids, semi-solids, and liquids. Built with High Molecular High-Density Polyethylene (HM-HDPE), these drums are durable, reusable, and resistant to chemicals & UV rays.",
+      description: "New design close top barrel for industrial storage.",
       features: [
-        "Wide open mouth for easy filling & discharge",
-        "Strong and reusable with long service life",
-        "Resistant to chemicals, corrosion, and UV exposure",
-        "Lightweight yet impact-resistant",
-        "Suitable for reconditioning & multiple uses"
+        "Secure close top construction",
+        "Durable and reusable",
+        "Designed for industrial handling",
       ],
-      sizes: ["120 Liters", "150 Liters", "200 Liters", "210 Liters"],
-      images: [
-        "/products/product-4.png",
-        "/products/product-1.png"
-      ]
-    }
-  }
-  // Add more products as needed
+      sizes: ["260 Litres"],
+      images: ["/products/product-4.png"],
+    },
+  },
+  {
+    id: 5,
+    type: "close-top",
+    title: "Close Top Barrel 210 Litre (Blue)",
+    desc: "Secure close top barrel for industrial storage.",
+    img: "/products/product-1.png",
+    details: {
+      description: "Close top barrel designed for safe containment and transport.",
+      features: [
+        "Secure close top construction",
+        "Reusable and impact resistant",
+        "Suitable for industrial storage",
+      ],
+      sizes: ["210 Litres"],
+      images: ["/products/product-1.png"],
+    },
+  },
+  {
+    id: 6,
+    type: "close-top",
+    title: "Close Top Barrel 210 Litre (Green)",
+    desc: "Secure close top barrel for industrial storage.",
+    img: "/products/product-2.png",
+    details: {
+      description: "Close top barrel designed for safe containment and transport.",
+      features: [
+        "Secure close top construction",
+        "Reusable and impact resistant",
+        "Suitable for industrial storage",
+      ],
+      sizes: ["210 Litres"],
+      images: ["/products/product-2.png"],
+    },
+  },
+  {
+    id: 7,
+    type: "close-top",
+    title: "Close Top Barrel 210 Litre (Grey)",
+    desc: "Secure close top barrel for industrial storage.",
+    img: "/products/product-3.png",
+    details: {
+      description: "Close top barrel designed for safe containment and transport.",
+      features: [
+        "Secure close top construction",
+        "Reusable and impact resistant",
+        "Suitable for industrial storage",
+      ],
+      sizes: ["210 Litres"],
+      images: ["/products/product-3.png"],
+    },
+  },
+  {
+    id: 8,
+    type: "close-top",
+    title: "Close Top Barrel 210 Litre (Natural)",
+    desc: "Secure close top barrel for industrial storage.",
+    img: "/products/product-4.png",
+    details: {
+      description: "Close top barrel designed for safe containment and transport.",
+      features: [
+        "Secure close top construction",
+        "Reusable and impact resistant",
+        "Suitable for industrial storage",
+      ],
+      sizes: ["210 Litres"],
+      images: ["/products/product-4.png"],
+    },
+  },
+  {
+    id: 9,
+    type: "close-top",
+    title: "Close Top Barrel 210 Litre (Orange)",
+    desc: "Secure close top barrel for industrial storage.",
+    img: "/products/orange-full.png",
+    details: {
+      description: "Close top barrel designed for safe containment and transport.",
+      features: [
+        "Secure close top construction",
+        "Reusable and impact resistant",
+        "Suitable for industrial storage",
+      ],
+      sizes: ["210 Litres"],
+      images: ["/products/orange-full.png"],
+    },
+  },
+  {
+    id: 10,
+    type: "close-top",
+    title: "Close Top Barrel 210 Litre (Red)",
+    desc: "Secure close top barrel for industrial storage.",
+    img: "/products/orange-closeup.png",
+    details: {
+      description: "Close top barrel designed for safe containment and transport.",
+      features: [
+        "Secure close top construction",
+        "Reusable and impact resistant",
+        "Suitable for industrial storage",
+      ],
+      sizes: ["210 Litres"],
+      images: ["/products/orange-closeup.png"],
+    },
+  },
+  {
+    id: 11,
+    type: "close-top",
+    title: "Close Top Barrel 260 Litre (Blue)",
+    desc: "Old design close top barrel for industrial storage.",
+    img: "/products/orange-zoomed.png",
+    details: {
+      description: "Old design close top barrel for industrial storage.",
+      features: [
+        "Secure close top construction",
+        "Reusable and impact resistant",
+        "Suitable for industrial storage",
+      ],
+      sizes: ["260 Litres"],
+      images: ["/products/orange-zoomed.png"],
+    },
+  },
+  {
+    id: 12,
+    type: "close-top",
+    title: "Plastic Sealing Caps",
+    desc: "Sealing caps for close top container applications.",
+    img: "/products/product-filter-1.png",
+    details: {
+      description: "Sealing caps for close top container applications.",
+      features: [
+        "Reliable sealing support",
+        "Used with close top containers",
+        "Lightweight and practical",
+      ],
+      sizes: ["Standard"],
+      images: ["/products/product-filter-1.png"],
+    },
+  },
+  {
+    id: 13,
+    type: "close-top",
+    title: "Steel Seal Caps",
+    desc: "Steel caps for secure sealing and closure.",
+    img: "/products/product-filter-3.png",
+    details: {
+      description: "Steel caps for secure sealing and closure.",
+      features: [
+        "Strong steel construction",
+        "Secure sealing support",
+        "Suitable for industrial use",
+      ],
+      sizes: ["Standard"],
+      images: ["/products/product-filter-3.png"],
+    },
+  },
 ];
 
 export default products;

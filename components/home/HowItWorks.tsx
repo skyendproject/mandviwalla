@@ -18,9 +18,9 @@ export default function HowItWorks() {
                     </h2>
 
                     {/* Description */}
-                    <p className="mb-4 block md:hidden text-left text-sm md:text-base leading-relaxed" style={{ color: colors.gray.text }}>
+                    {/* <p className="mb-4 block md:hidden text-left text-sm md:text-base leading-relaxed" style={{ color: colors.gray.text }}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
-                    </p>
+                    </p> */}
                 <div className="flex flex-col md:flex-row gap-0 md:gap-0 lg:gap-0 items-center">
 
 
@@ -62,9 +62,9 @@ export default function HowItWorks() {
                         </h2>
 
                         {/* Description */}
-                        <p className="hidden md:block text-xs sm:text-sm md:text-base leading-relaxed" style={{ color: colors.gray.text }}>
+                        {/* <p className="hidden md:block text-xs sm:text-sm md:text-base leading-relaxed" style={{ color: colors.gray.text }}>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
-                        </p>
+                        </p> */}
 
                         {/* Steps */}
                         <div className="flex flex-col gap-4 md:gap-6 mt-4">

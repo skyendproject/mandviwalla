@@ -49,7 +49,7 @@ export default function InvestorRelationCards() {
                         </div>
                         <div className="flex flex-col gap-4 p-6 flex-1">
                             <div className="font-semibold text-lg text-gray-900 truncate" title={doc.title}>{doc.title}</div>
-                            <div className="text-gray-600 text-sm line-clamp-2">{doc.description}</div>
+                            {/* <div className="text-gray-600 text-sm line-clamp-2">{doc.description}</div> */}
                             <a
                                 href={doc.button.href}
                                 className="mt-4 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md font-semibold text-white"
