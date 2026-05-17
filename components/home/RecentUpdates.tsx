@@ -90,9 +90,9 @@ export default function RecentUpdates() {
                                 {mainPost.title}
                             </h3>
 
-                            <p className="text-sm md:text-base 2xl:text-lg leading-relaxed" style={{ color: colors.gray.border }}>
+                            {/* <p className="text-sm md:text-base 2xl:text-lg leading-relaxed" style={{ color: colors.gray.border }}>
                                 {mainPost.description}
-                            </p>
+                            </p> */}
 
                             {/* Author and Date */}
                             <div className="flex items-center gap-3 md:gap-4 pt-1 flex-wrap">

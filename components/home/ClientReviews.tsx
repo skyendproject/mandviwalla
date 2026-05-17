@@ -60,9 +60,9 @@ export default function ClientReviews() {
                         </p>
                     </div>
                     <h2 className="text-3xl md:text-4xl font-bold">Satisfied Clients</h2>
-                    <p className="text-sm md:text-base leading-relaxed" style={{ color: GRAY_TEXT }}>
+                    {/* <p className="text-sm md:text-base leading-relaxed" style={{ color: GRAY_TEXT }}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
+                    </p> */}
                 </div>
 
                 {/* LOGO CAROUSEL */}

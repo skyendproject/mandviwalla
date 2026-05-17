@@ -81,9 +81,9 @@ export default function ServiceSection() {
                         We Ensure High-Quality Plastic Manufacturing
                     </h2>
 
-                    <p className="text-white/80 text-sm md:text-sm mt-3 text-center whitespace-normal max-w-2xl mx-auto">
+                    {/* <p className="text-white/80 text-sm md:text-sm mt-3 text-center whitespace-normal max-w-2xl mx-auto">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
-                    </p>
+                    </p> */}
                 </div>
 
                 {/* Left Containers - absolute */}

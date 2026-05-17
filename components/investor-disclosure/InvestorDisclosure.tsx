@@ -49,7 +49,7 @@ export default function InvestorDisclosure() {
                         <SemiCircularProgress value={-0.406} color="#FF7171" />
                         <div className="text-3xl font-bold text-gray-900 mt-[-18px]">-40.6%</div>
                         <div className="text-xl font-semibold text-gray-900 mt-2 mb-2">Mean Gender Pay Gap: -40.6%</div>
-                        <div className="text-gray-600 text-center text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</div>
+                        {/* <div className="text-gray-600 text-center text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</div> */}
                     </div>
                     {/* Gradient Circle */}
                     <div>
@@ -68,7 +68,7 @@ export default function InvestorDisclosure() {
                         <SemiCircularProgress value={0.1633} color="#1146F5" />
                         <div className="text-3xl font-bold text-gray-900 mt-[-18px]">16.33%</div>
                         <div className="text-xl font-semibold text-gray-900 mt-2 mb-2">Median Gender Pay Gap: 16.33%</div>
-                        <div className="text-gray-600 text-center text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</div>
+                        {/* <div className="text-gray-600 text-center text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</div> */}
                     </div>
                 </div>
             </div>

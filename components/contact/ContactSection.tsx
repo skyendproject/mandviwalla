@@ -35,7 +35,7 @@ export default function ContactSection() {
                     <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl 2xl:text-[42px] font-semibold mb-3 md:mb-2 leading-tight">
                         Don't Hesitate to Ask a Question.
                     </h2>
-                    <p className="text-gray-600 text-sm max-w-md">Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                    {/* <p className="text-gray-600 text-sm max-w-md">Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p> */}
                 </div>
                 <form className="flex flex-col gap-3 w-full max-w-md">
                     <input

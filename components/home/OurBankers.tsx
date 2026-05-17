@@ -54,9 +54,9 @@ const OurBankers = () => {
               </h3>
 
               {/* Description */}
-              <p className="text-base leading-relaxed" style={{ color: colors.gray.text }}>
+              {/* <p className="text-base leading-relaxed" style={{ color: colors.gray.text }}>
                 {banker.description}
-              </p>
+              </p> */}
             </div>
           ))}
         </div>

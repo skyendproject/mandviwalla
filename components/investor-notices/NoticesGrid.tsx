@@ -69,7 +69,7 @@ export default function NoticesGrid() {
               </div>
               <div className="flex flex-col gap-4 p-6 flex-1">
                 <div className="font-semibold text-lg text-gray-900 truncate" title={notice.title}>{notice.title}</div>
-                <div className="text-gray-600 text-sm line-clamp-2">{notice.description}</div>
+                {/* <div className="text-gray-600 text-sm line-clamp-2">{notice.description}</div> */}
                 <a
                   href="#"
                   className="mt-4 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md font-semibold text-white"
