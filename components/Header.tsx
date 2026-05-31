@@ -50,8 +50,8 @@ export default function Header() {
                     <div className="flex items-center gap-4">
                         <Link href="/" className="flex items-center">
                             <Image
-                                src="/assets/logo.png"
-                                width={68}
+                                src="/new-logo.jpg"
+                                width={78}
                                 height={100}
                                 alt="Mandviwalla-logo"
                             />
