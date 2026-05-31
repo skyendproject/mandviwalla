@@ -10,9 +10,9 @@ export default function AboutUs() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-center">
 
                 {/* Left Image */}
-                <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[430px] rounded-xl shadow-lg">
+                <div className="relative w-full h-[270px] sm:h-[320px] md:h-[370px] lg:h-[400px] rounded-xl shadow-lg">
                     <Image
-                        src="/assets/home-about.webp"
+                        src="/new-logo.jpg"
                         alt="About Us Image"
                         fill
                         className="object-cover rounded-xl"
