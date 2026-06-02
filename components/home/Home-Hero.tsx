@@ -97,7 +97,7 @@ export default function Hero() {
             {/* Dark overlay (optional, only over image, not over orange) */}
             <div
                 className="absolute inset-0 hero-image-clip"
-                style={{ backgroundColor: "rgba(0,0,0,0.4)", clipPath: "polygon(0 0, 100% 0, 100% 88%, 0 100%)" }}
+                style={{ backgroundColor: "rgba(0,0,0,0.2)", clipPath: "polygon(0 0, 100% 0, 100% 88%, 0 100%)" }}
             />
 
             {/* Bottom-right orange trim starting immediately after image */}
