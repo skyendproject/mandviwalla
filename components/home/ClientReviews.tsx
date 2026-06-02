@@ -11,7 +11,7 @@ const GRAY_TEXT = "#636363";
 
 const BRAND_LOGOS = [
     { name: "Reliance", src: "/assets/brand-logo/reliance.jpg" },
-    { name: "Hascol", src: "/assets/brand-logo/hascol-logo.jpg" },
+    // { name: "Hascol", src: "/assets/brand-logo/hascol-logo.jpg" },
     { name: "Act Polymers", src: "/assets/brand-logo/act-logo.jpg" },
     { name: "Matco Foods", src: "/assets/brand-logo/matco-logo.jpg" },
     { name: "Habib", src: "/assets/brand-logo/habib-logo.jpg" },
