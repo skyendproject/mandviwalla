@@ -1,5 +1,3 @@
-'use client'
-
 import AboveFooter from "@/components/AboveFooter";
 import Footer from "@/components/Footer";
 import AboutUs from "@/components/home/AboutUs";
@@ -11,6 +9,16 @@ import HowItWorks from "@/components/home/HowItWorks";
 import RecentUpdates from "@/components/home/RecentUpdates";
 import ServiceSection from "@/components/home/Services";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
+import { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+  title:
+    "Mandviwalla Mauser Plastic Industries | Pakistan's Leading Plastic Manufacturer",
+  description:
+    "Leading manufacturer of plastic industrial packaging solutions in Pakistan.",
+};
+
 
 export default function Home() {
   return (
@@ -23,7 +31,7 @@ export default function Home() {
       <HowItWorks />
       <BoardOfDirectors />
       <ClientReviews />
-      <RecentUpdates />
+      {/* <RecentUpdates /> */}
       <AboveFooter />
       <Footer />
     </div>

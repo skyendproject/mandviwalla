@@ -1,11 +1,19 @@
-'use client'
-
 import AboveFooter from "@/components/AboveFooter";
 import Hero from "@/components/company-information/Hero";
 import Footer from "@/components/Footer";
 import AnnualReports from "@/components/investor-information/AnnualReports";
 import InvestorFAQ from "@/components/investor-information/InvestorFAQ";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+    title: {
+        default: "About Us",
+        template: "%s | Mandviwalla Mauser Plastic Industries",
+    },
+    description:
+        "Explore the complete range of plastic packaging and industrial products offered by Mandviwalla Mauser Plastic Industries Limited.",
+
+};
 export default function CompanyInformation() {
     return (
         <div>

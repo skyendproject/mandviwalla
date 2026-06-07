@@ -1,11 +1,13 @@
-'use client'
-
-
 import AboveFooter from "@/components/AboveFooter";
 import Hero from "@/components/company-information/Hero";
 import ContactSection from "@/components/contact/ContactSection";
 import MapSection from "@/components/contact/MapSection";
 import Footer from "@/components/Footer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Contact",
+};
 
 export default function Page() {
     return (
@@ -17,8 +19,8 @@ export default function Page() {
                 path="Home"
 
             />
-                <ContactSection />
-                <MapSection />
+            <ContactSection />
+            <MapSection />
             <AboveFooter />
             <Footer />
         </>

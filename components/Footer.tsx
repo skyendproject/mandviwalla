@@ -149,7 +149,7 @@ export default function Footer({ variant = "blue" }: FooterProps) {
             {/* Copyright Bar */}
             <div className="w-full py-4 px-4 text-center" style={{ backgroundColor: colors.orange.dark }}>
                 <p className="text-white text-sm">
-                    © Copyright Insure 2023. All Rights Reserved. By <strong>Mandviwalla MAUSER Plastic Industries Limited</strong>
+                    © 2025 <strong>Mandviwalla Mauser Plastic Industries Limited.</strong> All Rights Reserved.
                 </p>
             </div>
         </footer>

@@ -4,22 +4,13 @@ import { colors } from "@/lib/colors";
 
 const contactData = [
     {
-        city: "Melbourne",
-        phone: "+(084) 456-123987",
-        email: "info@melbourne.com",
+        city: "Karachi",
+        phone: "+92 21-32441116-9, +92 21-32441276",
+        email: "info@mandviwalla.net",
         hours: "Mon - Sat: 09:00 - 17:00",
         closed: "Sunday Closed",
-        address: "99 King Street, Melbourne Park, Australia 3000",
-        location: "Melbourne 28292. AUS"
-    },
-    {
-        city: "Pekanbaru",
-        phone: "+(084) 456-123987",
-        email: "info@pekanbaru.com",
-        hours: "Mon - Sat: 09:00 - 17:00",
-        closed: "Sunday Closed",
-        address: "77 St. Jomblo Park, Pekanbaru 28292, ID",
-        location: "Pekanbaru 28292. ID"
+        address: "Mandviwalla Building, Old Queens Road, Karachi.",
+        location: "Karachi. Pak"
     },
 ];
 

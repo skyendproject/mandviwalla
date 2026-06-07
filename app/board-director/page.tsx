@@ -1,5 +1,3 @@
-'use client'
-
 import AboveFooter from "@/components/AboveFooter";
 import BoardDirectors from "@/components/board-director/BoardDirectors";
 import Committee from "@/components/board-director/Committee";
@@ -7,6 +5,11 @@ import CodeOfConductContent from "@/components/code-of-conduct-policy/CodeOfCond
 import Hero from "@/components/company-information/Hero";
 import Footer from "@/components/Footer";
 import OurBankers from "@/components/home/OurBankers";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Board Director",
+};
 
 export default function CompanyInformation() {
     return (

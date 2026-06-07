@@ -31,7 +31,7 @@ export default function CompanyInformationComponent() {
 
                 {/* Description */}
                 <p className="text-sm md:text-base text-center max-w-5xl mx-auto mb-12 md:mb-16 leading-relaxed" style={{ color: colors.gray.text }}>
-                    Innovative Solutions is a cutting-edge technology company that provides innovative solutions for businesses of all sizes. Founded in 2010, we are dedicated to helping our clients achieve their goals through our customized and effective technology solutions. With over a decade of experience, we have built a reputation for delivering high-quality services to our clients.
+                    Mandviwalla Mauser Plastic Industries Limited is a Public Limited Company established in 1988, with technical collaboration from Mauser Werke GmbH, Germany. Headquartered in Karachi, Pakistan, we are the country's pioneer in industrial blow-moulded plastic drums and a leading manufacturer of injection and blow-moulded plastic products across multiple sectors.
                 </p>
 
                 {/* Statistics */}
