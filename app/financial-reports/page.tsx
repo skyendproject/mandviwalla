@@ -1,10 +1,13 @@
-'use client'
-
 import AboveFooter from "@/components/AboveFooter";
 import Hero from "@/components/company-information/Hero";
 import About from "@/components/corporate-governance/About";
 import FinancialReports from "@/components/financial-reports/FinancialReports";
 import Footer from "@/components/Footer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Financial Report",
+};
 
 export default function CompanyInformation() {
     return (

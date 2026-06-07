@@ -1,9 +1,12 @@
-'use client'
-
 import AboveFooter from "@/components/AboveFooter";
 import Hero from "@/components/company-information/Hero";
 import Footer from "@/components/Footer";
 import ShareholdingStructure from "@/components/share-holding/ShareholdingStructure";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Share Holding",
+};
 
 export default function CompanyInformation() {
     return (

@@ -1,5 +1,3 @@
-'use client'
-
 import AboveFooter from "@/components/AboveFooter";
 import AuditorResponsibilities from "@/components/company-auditor/AuditorResponsibilities";
 import CompanyAuditor from "@/components/company-auditor/CompanyAuditor";
@@ -8,6 +6,11 @@ import CompanyInformationComponent from "@/components/company-information/Compan
 import CoreValues from "@/components/company-information/CoreValues";
 import Hero from "@/components/company-information/Hero";
 import Footer from "@/components/Footer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Company Auditor",
+};
 
 export default function CompanyInformation() {
     return (

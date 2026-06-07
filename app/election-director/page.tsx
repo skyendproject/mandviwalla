@@ -1,5 +1,3 @@
-'use client'
-
 import AboveFooter from "@/components/AboveFooter";
 import Hero from "@/components/company-information/Hero";
 import About from "@/components/corporate-governance/About";
@@ -7,6 +5,11 @@ import DirectorEligibility from "@/components/election-director/DirectorEligibil
 import ElectionProcessOverview from "@/components/election-director/ElectionProcessOverview";
 import RegulatoryCompliance from "@/components/election-director/RegulatoryCompliance";
 import Footer from "@/components/Footer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Election Director",
+};
 
 export default function CompanyInformation() {
     return (

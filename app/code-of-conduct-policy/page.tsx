@@ -1,9 +1,12 @@
-'use client'
-
 import AboveFooter from "@/components/AboveFooter";
 import CodeOfConductContent from "@/components/code-of-conduct-policy/CodeOfConductContent";
 import Hero from "@/components/company-information/Hero";
 import Footer from "@/components/Footer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Policy",
+};
 
 export default function CompanyInformation() {
     return (
