@@ -40,18 +40,18 @@ const frameworkItems = [
 
 export default function GovernanceFramework() {
     return (
-        <div className="w-full py-12 md:py-16 px-4 md:px-20" style={{ backgroundColor: colors.gray.lightgraybg}}>
+        <div className="w-full py-14 md:py-20 px-4 md:px-20" style={{ backgroundColor: colors.gray.lightgraybg}}>
             <div className="container mx-auto max-w-6xl">
                 {/* Section Label */}
                 <div className="flex items-center justify-center gap-3 mb-3">
                     <div className="w-0.5 h-8 md:h-6" style={{ backgroundColor: colors.primary.blue }}></div>
-                    <span className="text-sm md:text-base 2xl:text-lg" style={{ color: colors.gray.tagColor }}>
+                    <span className="text-sm md:text-base" style={{ color: colors.gray.tagColor }}>
                         Governance Framework
                     </span>
                 </div>
 
                 {/* Heading */}
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-4 text-center">
+                <h2 className="text-2xl md:text-3xl font-bold text-black mb-4 text-center">
                     Our Governance Framework
                 </h2>
 
@@ -65,7 +65,7 @@ export default function GovernanceFramework() {
                     {frameworkItems.map((item, idx) => (
                         <div
                             key={idx}
-                            className={`flex flex-col items-center text-center p-6 md:p-8 rounded-lg ${item.isBlue ? 'text-white' : 'bg-white text-black'
+                            className={`flex flex-col items-center text-center p-6 md:p-8 rounded-card shadow-card hover:shadow-card-hover hover:-translate-y-1 transition duration-300 ${item.isBlue ? 'text-white' : 'bg-white text-black'
                                 }`}
                             style={item.isBlue ? { backgroundColor: colors.primary.blue } : {}}
                         >

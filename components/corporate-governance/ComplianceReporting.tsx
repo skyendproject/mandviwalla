@@ -11,7 +11,7 @@ const standards = [
 
 export default function ComplianceReporting() {
     return (
-        <div className="w-full bg-white py-12 md:py-16 px-4 md:px-20">
+        <div className="w-full bg-white py-14 md:py-20 px-4 md:px-20">
             <div className="container mx-auto max-w-6xl">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
                     {/* Left - Image */}
@@ -21,7 +21,7 @@ export default function ComplianceReporting() {
                             alt="Compliance and Reporting"
                             width={570}
                             height={400}
-                            className="w-full h-auto object-cover rounded-lg"
+                            className="w-full h-auto object-cover rounded-card shadow-card"
                             quality={100}
                         />
                     </div>
@@ -31,13 +31,13 @@ export default function ComplianceReporting() {
                         {/* Section Label */}
                         <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
                             <div className="w-0.5 h-8 md:h-8" style={{ backgroundColor: colors.primary.blue }}></div>
-                            <span className="text-sm md:text-base 2xl:text-lg" style={{ color: colors.gray.tagColor }}>
+                            <span className="text-sm md:text-base" style={{ color: colors.gray.tagColor }}>
                                 Compliance & Reporting
                             </span>
                         </div>
 
                         {/* Heading */}
-                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-black">
+                        <h2 className="text-2xl md:text-3xl font-semibold text-black">
                             Compliance & Reporting Standards
                         </h2>
 

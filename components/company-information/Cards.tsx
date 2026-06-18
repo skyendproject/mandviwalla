@@ -58,17 +58,18 @@ const CardData = [
 
 const Cards = () => {
     return (
-        <div className="container mx-auto px-4 md:px-20 py-8 md:pb-12">
+        <section className="w-full bg-surface px-4 md:px-20 py-14 md:py-20">
+            <div className="container mx-auto">
             {/* Heading */}
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-8 md:mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">
                 Who We Are
             </h2>
 
             {/* Cards Grid */}
             <div className="flex justify-center">
-                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6 max-w-7xl">
+                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl w-full">
                     {CardData.map((card, idx) => (
-                        <div key={idx} className="flex flex-col items-center text-center gap-4">
+                        <div key={idx} className="flex flex-col items-center text-center gap-4 rounded-card border border-gray-200 bg-white shadow-card hover:shadow-card-hover hover:-translate-y-1 transition duration-300 p-6">
                             {/* Icon with blue background */}
                             <div
                                 className="flex items-center justify-center w-16 h-16 md:w-18 md:h-18 rounded-full p-3 md:p-4 text-white flex-shrink-0"
@@ -84,7 +85,8 @@ const Cards = () => {
                     ))}
                 </div>
             </div>
-        </div>
+            </div>
+        </section>
     );
 };
 

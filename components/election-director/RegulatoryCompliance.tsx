@@ -8,9 +8,9 @@ export default function RegulatoryCompliance() {
         <section className="w-full py-12 pb-0 px-4 md:px-0 bg-[#F6F6F6]">
             <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-4">
                 <div className="flex-1 flex flex-col justify-center mt-8 md:-mt-12">
-                    <div className="text-sm md:text-base 2xl:text-lg mb-1 border-l-2 pl-2 font-semibold " style={{ color: colors.gray.tagColor, borderColor: colors.primary.blue }}>Introduction</div>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl 2xl:text-[42px] font-bold mb-2">Regulatory Compliance</h2>
-                    <p className="text-gray-700 text-sm md:text-base 2xl:text-lg max-w-xl">
+                    <div className="text-sm md:text-base mb-1 border-l-2 pl-2 font-semibold " style={{ color: colors.gray.tagColor, borderColor: colors.primary.blue }}>Introduction</div>
+                    <h2 className="text-2xl md:text-3xl font-bold mb-2">Regulatory Compliance</h2>
+                    <p className="text-gray-700 text-sm md:text-base max-w-xl">
                         Ensuring all election processes and disclosures adhere to SECP and PSX regulations, providing transparency and accountability for all stakeholders.
                     </p>
                 </div>

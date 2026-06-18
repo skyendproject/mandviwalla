@@ -6,6 +6,7 @@ import baseProducts from "./product-details";
 import { useRouter } from "next/navigation";
 import { colors } from "@/lib/colors";
 import { ArrowRight } from "lucide-react";
+import SectionHeader from "@/components/ui/SectionHeader";
 
 
 export default function ProductOverview() {
@@ -34,7 +35,17 @@ export default function ProductOverview() {
     const router = useRouter();
 
     return (
-        <section className="w-full px-2 py-8 md:px-8">
+        <section className="w-full px-2 py-14 md:py-20 md:px-8">
+            {/* Intro */}
+            <SectionHeader
+                align="center"
+                eyebrow="Our Products"
+                title="Explore Our Product Range"
+                subtitle="Select a category to view our full lineup of industrial drums and closures."
+                titleClassName="font-bold"
+                className="mb-10 md:mb-12 max-w-2xl mx-auto"
+            />
+
             {/* Top Filter Images */}
             <div className={`flex flex-wrap justify-center mb-4 transition-all ${activeFilter ? "gap-4" : "gap-6 md:gap-10"}`}>
                 {filterImages.map((filter, idx) => {
@@ -47,7 +58,7 @@ export default function ProductOverview() {
                             <button
                                 type="button"
                                 onClick={() => setActiveFilter(filter.value)}
-                                className="mb-2 transition-transform rounded-lg shadow overflow-hidden flex items-center justify-center bg-white"
+                                className="mb-2 transition duration-300 rounded-card shadow-card hover:shadow-card-hover hover:-translate-y-1 overflow-hidden flex items-center justify-center bg-white"
                                 style={{ width: tileWidth, height: tileHeight }}
                             >
                                 <Image
@@ -81,12 +92,12 @@ export default function ProductOverview() {
             {/* Product Grid */}
             {activeFilter && (
                 <>
-                    <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-4xl 2xl:text-[42px] my-8 font-semibold">Reliable, Durable, Certified Products</h2>
+                    <h2 className="text-center text-2xl md:text-3xl my-8 font-semibold">Reliable, Durable, Certified Products</h2>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-6">
                         {visibleProducts.map((product) => {
                             const zoomed = product.type === "close-top" && zoomIds.has(product.id);
                             return (
-                                <div key={product.key} className="flex flex-col items-center bg-white rounded-lg shadow p-2 pt-4 pb-4">
+                                <div key={product.key} className="flex flex-col items-center bg-white rounded-card border border-gray-100 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition duration-300 p-3 pt-4 pb-4">
                                     <div className="mb-2 overflow-hidden flex items-center justify-center" style={{ width: 191.85, height: 257.01 }}>
                                         <Image
                                             src={product.img}

@@ -12,7 +12,7 @@ export default function MapSection() {
         allowFullScreen={false}
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-        className="rounded-lg shadow"
+        className="rounded-card shadow-card"
       ></iframe>
     </div>
   );
