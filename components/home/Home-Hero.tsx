@@ -111,9 +111,6 @@ export default function Hero() {
                     className="object-cover object-center"
                 />
             </div>
-            {/* Readability scrim — darkens the left where the text sits (neutral, not a brand color) */}
-            <div className="absolute inset-0 z-[5] pointer-events-none bg-gradient-to-r from-black/65 via-black/30 to-transparent" />
-
             {/* Bottom-right orange trim starting immediately after image */}
             <div className="absolute bottom-0 w-full h-[40%] clip-path-orange" style={{ backgroundColor: colors.orange.warm }} />
 
