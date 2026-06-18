@@ -144,29 +144,19 @@ export default function MobileHeader({ mobileMenuOpen, setMobileMenuOpen }: Mobi
             {/* Top nav - blue background */}
             <div style={{ backgroundColor: colors.primary.blue }}>
                 <div className="container mx-auto flex items-center justify-between gap-3 px-4 py-3 font-medium text-white">
-                    {/* Hamburger */}
-                    <button
-                        className="text-white shrink-0"
-                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                        aria-label="Open mobile menu"
-                    >
-                        <Menu size={24} />
-                    </button>
-
                     {/* Logo */}
-                    <Link href="/" className="flex items-center gap-2 min-w-0">
+                    <Link href="/" className="flex items-center shrink-0">
                         <Image
                             src="/new-logo.jpg"
                             width={36}
                             height={46}
                             alt="Mandviwalla MAUSER"
-                            className="rounded-sm shrink-0"
+                            className="rounded-sm"
                         />
-                        <span className="text-white text-xs font-semibold leading-tight whitespace-nowrap">
-                            Mandviwalla <span style={{ color: colors.orange.dark }}>MAUSER</span>
-                        </span>
                     </Link>
 
+                    {/* Right side: Contact + Hamburger */}
+                    <div className="flex items-center gap-3 shrink-0">
                     {/* Contact button */}
                     <Link
                         href='/contact-us'
@@ -180,6 +170,16 @@ export default function MobileHeader({ mobileMenuOpen, setMobileMenuOpen }: Mobi
                         </svg>
                         <span>CONTACT US</span>
                     </Link>
+
+                    {/* Hamburger */}
+                    <button
+                        className="text-white shrink-0"
+                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                        aria-label="Open mobile menu"
+                    >
+                        <Menu size={24} />
+                    </button>
+                    </div>
                 </div>
             </div>
 
