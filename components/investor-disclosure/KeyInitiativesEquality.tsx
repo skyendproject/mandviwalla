@@ -17,11 +17,11 @@ export default function KeyInitiativesEquality() {
             <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
                 {/* Left Content */}
                 <div className="flex-1 flex flex-col items-start justify-center max-w-xl">
-                    <div className="text-sm md:text-base 2xl:text-lgmb-1 border-l-2 pl-2 font-semibold" style={{ color: colors.gray.tagColor, borderColor: colors.primary.blue }}>Why Choose Us</div>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl 2xl:text-[42px] font-bold text-gray-900 mb-4">Key Initiatives Driving Equality</h2>
+                    <div className="text-sm md:text-base mb-1 border-l-2 pl-2 font-semibold" style={{ color: colors.gray.tagColor, borderColor: colors.primary.blue }}>Why Choose Us</div>
+                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Key Initiatives Driving Equality</h2>
                     <ul className="mb-8 space-y-3">
                         {initiatives.map((item, idx) => (
-                            <li key={idx} className="flex items-center gap-3 text-sm lg:text-base 2xl:text-lg text-gray-900">
+                            <li key={idx} className="flex items-center gap-3 text-sm md:text-base text-gray-900">
                                 <Check style={{ color: colors.blue.secondary }} />
                                 {item}
                             </li>
@@ -45,7 +45,7 @@ export default function KeyInitiativesEquality() {
                             src="/investor-disclosure-1.png"
                             alt="Document"
                             fill
-                            className="rounded-lg shadow-md"
+                            className="rounded-card shadow-card"
                             priority
                         />
                     </div>
@@ -58,14 +58,14 @@ export default function KeyInitiativesEquality() {
                             src="/investor-disclosure-2.png"
                             alt="Illustration"
                             fill
-                            className="object-contain rounded-lg shadow-lg"
+                            className="object-contain rounded-card shadow-card"
                             priority
                         />
                     </div>
                 </div>
             </div>
             <div className="text-center mt-24">
-                <div className="text-sm md:text-base 2xl:text-lg border-l-2 inline-block pl-2 mb-2 font-semibold" style={{ borderColor: colors.primary.blue, color:colors.gray.tagColor }}>
+                <div className="text-sm md:text-base border-l-2 inline-block pl-2 mb-2 font-semibold" style={{ borderColor: colors.primary.blue, color:colors.gray.tagColor }}>
                     Our Commitment
                 </div>
                 <p className="mx-auto text-base max-w-2xl text-gray-600">

@@ -46,10 +46,10 @@ export default function FinancialReports() {
         <section className="w-full py-8 pt-2 px-4 md:px-0 bg-white">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-10">
-                    <div className="text-sm md:text-base 2xl:text-lg mb-1 mt-12 border-l-2 inline-block pl-2 font-semibold" style={{ borderColor: colors.primary.blue, color: colors.gray.tagColor }}>
+                    <div className="text-sm md:text-base mb-1 mt-12 border-l-2 inline-block pl-2 font-semibold" style={{ borderColor: colors.primary.blue, color: colors.gray.tagColor }}>
                         Financial Reports
                     </div>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl 2xl:text-[42px]  font-bold text-gray-900 mb-2">
+                    <h2 className="text-2xl md:text-3xl  font-bold text-gray-900 mb-2">
                         Transparent, accurate, and timely financial disclosures.
                     </h2>
                     <p className="mx-auto text-base md:text-base max-w-3xl" style={{ color: colors.gray.text }}>
@@ -57,7 +57,7 @@ export default function FinancialReports() {
                     </p>
                 </div>
                 <div className="flex flex-col md:flex-row gap-8 items-start justify-center">
-                    <div className="flex-1 bg-[#F7F7F7] rounded-lg p-8 min-w-[340px] max-w-2xl">
+                    <div className="flex-1 bg-[#F7F7F7] rounded-card p-8 min-w-[340px] max-w-2xl">
                         {reports.map((report, idx) => (
                             <div key={idx} className="mb-8 last:mb-0">
                                 <div className="text-md font-semibold mb-2 border-l-2 pl-2" style={{ borderColor: colors.primary.blue }}>

@@ -52,7 +52,7 @@ export default function Committee() {
         <div className="w-full bg-white py-12 md:py-16 px-4 md:px-20">
             <div className="container mx-auto max-w-7xl">
                 {/* Audit Committee Section */}
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black text-center mb-10 md:mb-12">
+                <h2 className="text-2xl md:text-3xl font-bold text-black text-center mb-10 md:mb-12">
                     Audit Committee
                 </h2>
 
@@ -116,7 +116,7 @@ export default function Committee() {
                 </div>
 
                 {/* Company Secretary Section */}
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black text-center mb-10 md:mb-12">
+                <h2 className="text-2xl md:text-3xl font-bold text-black text-center mb-10 md:mb-12">
                     Company Secretary
                 </h2>
 

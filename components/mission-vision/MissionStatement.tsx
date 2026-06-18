@@ -15,7 +15,7 @@ const practices = [
 
 export default function MissionStatement() {
     return (
-        <section className="w-full py-12 md:py-16 px-4 md:px-20 bg-[#F6F6F6]">
+        <section className="w-full py-14 md:py-20 px-4 md:px-20 bg-[#F6F6F6]">
             <div className="container mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start lg:items-center">
                     {/* Left Content */}
@@ -23,13 +23,13 @@ export default function MissionStatement() {
                         {/* Label with blue line */}
                         <div className="flex items-center gap-3">
                             <div className="w-0.5 h-8 md:h-6" style={{ backgroundColor: colors.primary.blue }}></div>
-                            <span className="text-sm md:text-base 2xl:text-lg" style={{ color: colors.gray.tagColor }}>
+                            <span className="text-sm md:text-base" style={{ color: colors.gray.tagColor }}>
                                 Mission Statement
                             </span>
                         </div>
 
                         {/* Heading */}
-                        <h2 className="text-2xl md:text-4xl 2xl:text-[42px] font-semibold text-black">
+                        <h2 className="text-2xl md:text-3xl font-semibold text-black">
                             Mission Statement
                         </h2>
 
@@ -72,7 +72,7 @@ export default function MissionStatement() {
                     </div>
 
                     {/* Right Image */}
-                    <div className="relative w-full aspect-4/3 bg-gray-200 rounded-lg overflow-hidden">
+                    <div className="relative w-full aspect-4/3 bg-gray-200 rounded-card shadow-card overflow-hidden">
                         <Image
                             src="/mission-statement.jpg"
                             alt="Mission Statement"

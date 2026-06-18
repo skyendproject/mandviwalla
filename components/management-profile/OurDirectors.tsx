@@ -49,11 +49,11 @@ const OurDirectors = () => {
                 <div className="text-center mb-12">
                     <div className="flex items-center justify-center gap-2 mb-2">
                         <div className="w-0.5 h-5" style={{ backgroundColor: colors.primary.blue }}></div>
-                        <p className="text-sm md:text-base 2xl:text-lg  font-semibold" style={{ color: colors.gray.tagColor }}>
+                        <p className="text-sm md:text-base  font-semibold" style={{ color: colors.gray.tagColor }}>
                             OUR DIRECTORS
                         </p>
                     </div>
-                    <h2 className="text-2xl md:text-3xl xl:text-4xl 2xl:text-[42px] font-bold mb-4" style={{ color: colors.neutral.darkGray }}>
+                    <h2 className="text-2xl md:text-3xl font-bold mb-4" style={{ color: colors.neutral.darkGray }}>
                         Experienced Leadership Driving Operational Excellence
                     </h2>
                     <p className="text-base max-w-5xl mx-auto leading-relaxed" style={{ color: colors.gray.text }}>
@@ -64,7 +64,7 @@ const OurDirectors = () => {
                 {/* Directors Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
                     {directors.map((director, index) => (
-                        <div key={index} className="flex gap-4 p-4 rounded-lg border" style={{ borderColor: '#EAEAEA' }}>
+                        <div key={index} className="flex gap-4 p-4 rounded-card border" style={{ borderColor: '#EAEAEA' }}>
                             {/* Profile Image */}
                             <div className="flex-shrink-0">
                                 <div className="relative w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden">
@@ -95,7 +95,7 @@ const OurDirectors = () => {
 
                 {/* Bottom Section */}
                 <div className="text-center">
-                    <h3 className="text-2xl md:text-3xl xl:text-4xl 2xl:text-[42px] font font-bold mb-4 text-black">
+                    <h3 className="text-2xl md:text-3xl font font-bold mb-4 text-black">
                         Leadership Committed to Growth, Quality & Innovation
                     </h3>
                     <p className="text-base max-w-4xl mx-auto leading-snug" style={{ color: colors.gray.text }}>

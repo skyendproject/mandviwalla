@@ -14,8 +14,8 @@ export default function LegalAdvisor() {
         <section className="w-full py-8 md:py-12 lg:py-16 bg-white px-4 md:px-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
                 <div className="text-center mb-8">
-                    <div className="text-sm md:text-base 2xl:text-lg  mb-1 border-l-2 inline-block pl-2" style={{ color: colors.gray.tagColor, borderColor: colors.primary.blue }}>Legal Advisor</div>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl 2xl:text-[42px] font-bold mb-4">Trusted Legal Guidance & Corporate Compliance</h2>
+                    <div className="text-sm md:text-base  mb-1 border-l-2 inline-block pl-2" style={{ color: colors.gray.tagColor, borderColor: colors.primary.blue }}>Legal Advisor</div>
+                    <h2 className="text-2xl md:text-3xl font-bold mb-4">Trusted Legal Guidance & Corporate Compliance</h2>
                     <p className=" mx-auto text-base md:text-base" style={{ color: colors.gray.text }}>
                         At Mandviwalla Mauser Plastic Industries Limited (MMPL), ensuring full legal compliance and ethical corporate conduct is a top priority. Our external legal advisors are independent and experienced professionals, providing expert counsel in corporate law, regulatory compliance, and litigation. Their guidance supports our commitment to transparent governance, risk management, and long-term business sustainability.
                     </p>
@@ -26,14 +26,14 @@ export default function LegalAdvisor() {
                             src="/legal-advisor.jpg"
                             alt="Auditor"
                             fill
-                            className="object-cover rounded-lg"
+                            className="object-cover rounded-card"
                             priority
                         />
                         {/* Decorative blue squares */}
                         <div className="absolute bottom-0 left-0 w-8 h-8 bg-blue-700 rounded-tr-lg" />
                         <div className="absolute top-0 right-0 w-6 h-6 bg-blue-700 rounded-bl-lg" />
                     </div>
-                    <div className="flex-1 flex flex-col justify-center rounded-lg p-6 md:p-10" style={{ background: '#F9F9F9', minHeight: '280px' }}>
+                    <div className="flex-1 flex flex-col justify-center rounded-card p-6 md:p-10" style={{ background: '#F9F9F9', minHeight: '280px' }}>
                         <div className="text-lg font-semibold mb-2" style={{ color: colors.gray.tagColor }}>Current Legal Advisor:</div>
                         <div className="text-base font-semibold mb-4" style={{ color: colors.gray.tagColor }}>Mohsin Tayebaly & Co. (Advocates & Corporate Consultants)</div>
                         <div className="italic text-gray-700 text-base md:text-lg font-semibold leading-snug" style={{ color: colors.gray.text }}>
@@ -46,25 +46,25 @@ export default function LegalAdvisor() {
                 </div>
             </div>
 
-            <div className="text-center mb-8 mt-10 lg:mt-14 2xl:mt-16">
-                <div className="text-sm md:text-base 2xl:text-lg  mb-1 border-l-2 inline-block pl-2" style={{ color: colors.gray.tagColor, borderColor: colors.primary.blue }}>Commitment to Compliance</div>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl 2xl:text-[42px] font-bold mb-4">Ensuring Legal & Ethical Integrity</h2>
+            <div className="text-center mb-8 mt-10 lg:mt-14">
+                <div className="text-sm md:text-base  mb-1 border-l-2 inline-block pl-2" style={{ color: colors.gray.tagColor, borderColor: colors.primary.blue }}>Commitment to Compliance</div>
+                <h2 className="text-2xl md:text-3xl font-bold mb-4">Ensuring Legal & Ethical Integrity</h2>
                 <p className=" mx-auto text-base md:text-base" style={{ color: colors.gray.text }}>
                     MMPL ensures that all its legal dealings are fully compliant with applicable national and industry regulations. Our legal advisor helps us navigate complex corporate laws and regulatory environments, ensuring that decisions are made with full legal oversight and responsibility.
                 </p>
             </div>
 
-            <div className="container mx-auto max-w-5xl mt-10 lg:mt-14 2xl:mt-16 pt-8">
+            <div className="container mx-auto max-w-5xl mt-10 lg:mt-14 pt-8">
                 {/* Section Label */}
                 <div className="flex items-center justify-center gap-3 mb-3">
                     <div className="w-0.5 h-6 md:h-6" style={{ backgroundColor: colors.primary.blue }}></div>
-                    <span className="text-sm md:text-base 2xl:text-lg mb-1 inline-block" style={{ color: colors.gray.tagColor }}>
+                    <span className="text-sm md:text-base mb-1 inline-block" style={{ color: colors.gray.tagColor }}>
                         Legal Documents (Downloads / Resources)
                     </span>
                 </div>
 
                 {/* Heading */}
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-black text-center mb-10 md:mb-12">
+                <h2 className="text-2xl md:text-3xl font-semibold text-black text-center mb-10 md:mb-12">
                     Legal & Governance Documents
                 </h2>
 

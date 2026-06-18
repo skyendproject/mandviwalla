@@ -78,7 +78,7 @@ export default function FooterNavDropdowns() {
                         <Link
                             key={group.key}
                             href={group.href ?? "#"}
-                            className="text-sm xl:text-base 2xl:text-lg uppercase font-medium py-1 hover:translate-x-1 transition-transform inline-block w-fit"
+                            className="text-sm md:text-base uppercase font-medium py-1 hover:translate-x-1 transition-transform inline-block w-fit"
                         >
                             {group.label}
                         </Link>
@@ -93,7 +93,7 @@ export default function FooterNavDropdowns() {
                             className="flex items-center justify-between gap-3 w-full text-left py-1"
                             aria-expanded={isMainOpen}
                         >
-                            <span className="text-sm xl:text-base 2xl:text-lg uppercase font-medium">
+                            <span className="text-sm md:text-base uppercase font-medium">
                                 {group.label}
                             </span>
                             <ChevronDown
@@ -114,7 +114,7 @@ export default function FooterNavDropdowns() {
                                             <Link
                                                 key={sub.key}
                                                 href={sub.href ?? "#"}
-                                                className="text-sm xl:text-base 2xl:text-base uppercase opacity-90 hover:opacity-100 hover:translate-x-1 transition-transform py-1"
+                                                className="text-sm uppercase opacity-90 hover:opacity-100 hover:translate-x-1 transition-transform py-1"
                                             >
                                                 {sub.label}
                                             </Link>
@@ -129,7 +129,7 @@ export default function FooterNavDropdowns() {
                                                 className="flex items-center justify-between gap-3 w-full text-left py-1"
                                                 aria-expanded={isSubOpen}
                                             >
-                                                <span className="text-sm xl:text-base 2xl:text-base uppercase opacity-90">
+                                                <span className="text-sm uppercase opacity-90">
                                                     {sub.label}
                                                 </span>
                                                 <ChevronDown
@@ -145,7 +145,7 @@ export default function FooterNavDropdowns() {
                                                         <Link
                                                             key={leaf.href + leaf.label}
                                                             href={leaf.href}
-                                                            className="text-xs xl:text-sm 2xl:text-sm uppercase opacity-80 hover:opacity-100 hover:translate-x-1 transition-transform py-1"
+                                                            className="text-xs md:text-sm uppercase opacity-80 hover:opacity-100 hover:translate-x-1 transition-transform py-1"
                                                         >
                                                             {leaf.label}
                                                         </Link>

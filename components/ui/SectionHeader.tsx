@@ -40,7 +40,7 @@ export default function SectionHeader({
             )}
         >
             <span
-                className="border-l-4 pl-3 text-sm md:text-base xl:text-base 2xl:text-lg font-semibold uppercase tracking-wide"
+                className="border-l-4 pl-3 text-xs md:text-sm font-semibold uppercase tracking-wide"
                 style={{
                     borderColor: accentColor,
                     color: isLight ? colors.white : colors.gray.tagColor,
@@ -52,7 +52,7 @@ export default function SectionHeader({
 
             <h2
                 className={cn(
-                    "text-2xl md:text-3xl xl:text-3xl 2xl:text-4xl font-semibold leading-snug",
+                    "text-2xl md:text-3xl font-semibold leading-snug",
                     isLight ? "text-white" : "text-black",
                     titleClassName
                 )}
@@ -63,7 +63,7 @@ export default function SectionHeader({
             {subtitle ? (
                 <p
                     className={cn(
-                        "text-sm md:text-base xl:text-base 2xl:text-lg max-w-2xl",
+                        "text-sm md:text-base max-w-2xl",
                         isLight && "text-white/80"
                     )}
                     style={!isLight ? { color: colors.gray.text } : undefined}

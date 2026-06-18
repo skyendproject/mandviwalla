@@ -111,22 +111,25 @@ export default function Hero() {
                     className="object-cover object-center"
                 />
             </div>
+            {/* Readability scrim — darkens the left where the text sits (neutral, not a brand color) */}
+            <div className="absolute inset-0 z-[5] pointer-events-none bg-gradient-to-r from-black/65 via-black/30 to-transparent" />
+
             {/* Bottom-right orange trim starting immediately after image */}
             <div className="absolute bottom-0 w-full h-[40%] clip-path-orange" style={{ backgroundColor: colors.orange.warm }} />
 
             {/* Content */}
-            <div className="relative z-10 flex flex-col justify-center h-full max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 md:px-12 xl:px-16 2xl:px-16 text-white">
-                <span className="uppercase text-sm md:text-base xl:text-base 2xl:text-lg tracking-widest mb-2 xl:mb-3 border-l-2 pl-2" style={{ borderColor: colors.orange.dark }}>
+            <div className="relative z-10 flex flex-col justify-center h-full max-w-7xl mx-auto px-4 sm:px-6 md:px-12 text-white">
+                <span className="uppercase text-sm tracking-widest mb-2 xl:mb-3 border-l-2 pl-2" style={{ borderColor: colors.orange.dark }}>
                     RESHAPING THE FUTURE
                 </span>
                 <h1
-                    className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold leading-tight mb-3 md:mb-4 xl:mb-6 flex flex-col"
+                    className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-3 md:mb-4 xl:mb-6 flex flex-col"
                     style={{ fontFamily: '"EB Garamond", Garamond, "Times New Roman", serif' }}
                 >
-                    <span>Shaping the Future with Quality</span> 
+                    <span>Shaping the Future with Quality</span>
                     <span>Plastic Solutions</span>
                 </h1>
-                <p className="text-sm md:text-base lg:text-lg xl:text-lg 2xl:text-xl max-w-3xl xl:max-w-4xl 2xl:max-w-5xl mb-4 md:mb-6 xl:mb-8 leading-normal">
+                <p className="text-sm md:text-base max-w-3xl mb-4 md:mb-6 xl:mb-8 leading-normal">
                     Since 1988, Mandviwalla Mauser Plastic Industries Limited has been delivering world-class
                     injection and blow-moulded plastic products in Pakistan. Powered by German technology and
                     decades of expertise, we are the pioneers of 210-liter industrial drums and premium plastic
@@ -139,7 +142,7 @@ export default function Hero() {
                         href="/products"
                         bg={colors.primary.blue}
                         hoverBg={colors.orange.dark}
-                        className="px-4 sm:px-6 py-2 sm:py-3 text-sm md:text-base lg:text-base xl:text-base 2xl:text-lg"
+                        className="px-4 sm:px-6 py-2 sm:py-3 text-sm md:text-base"
                     >
                         <svg
                             width="25"
@@ -160,7 +163,7 @@ export default function Hero() {
                         href="/contact"
                         bg={colors.orange.dark}
                         hoverBg={colors.primary.blue}
-                        className="px-4 sm:px-6 py-2 sm:py-3 text-sm md:text-base lg:text-base xl:text-base 2xl:text-lg"
+                        className="px-4 sm:px-6 py-2 sm:py-3 text-sm md:text-base"
                     >
                         <svg
                             width="18"
