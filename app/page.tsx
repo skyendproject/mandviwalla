@@ -27,8 +27,8 @@ export default function Home() {
       <AboutUs />
       <Cards />
       <ServiceSection />
-      <WhyChooseUs />
       <HowItWorks />
+      <WhyChooseUs />
       <BoardOfDirectors />
       <ClientReviews />
       {/* <RecentUpdates /> */}
