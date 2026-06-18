@@ -24,7 +24,7 @@ export default function AboveFooter({ variant = "blue" }: AboveFooterProps) {
                 <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-6 xl:gap-10 text-center md:text-left">
                     <div className="flex flex-col gap-2 xl:gap-3">
                         {/* Heading */}
-                        <h2 className="text-2xl md:text-4xl xl:text-6xl 2xl:text-[64px] font-semibold" style={{ color: '#FFFFFF' }}>
+                        <h2 className="text-2xl md:text-4xl xl:text-4xl 2xl:text-[64px] font-semibold" style={{ color: '#FFFFFF' }}>
                             Pakistan's Trusted Plastic Manufacturer
                         </h2>
 

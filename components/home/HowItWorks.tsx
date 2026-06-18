@@ -99,7 +99,7 @@ export default function HowItWorks() {
                         </div>
 
                         {/* Heading */}
-                        <h2 className="hidden lg:block text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl 2xl:text-[64px] font-semibold text-black">
+                        <h2 className="hidden lg:block text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-[64px] font-semibold text-black">
                             How it Works
                         </h2>
 
@@ -119,7 +119,7 @@ export default function HowItWorks() {
                                     </svg>
                                 </div>
                                 <div className="flex-1">
-                                    <h3 className="text-lg lg:text-xl xl:text-3xl 2xl:text-4xl font-bold mb-1 md:mb-2 text-black">
+                                    <h3 className="text-lg lg:text-xl xl:text-2xl 2xl:text-4xl font-bold mb-1 md:mb-2 text-black">
                                         Product Design & Development
                                     </h3>
                                     <p className="text-sm md:text-base xl:text-xl 2xl:text-2xl" style={{ color: colors.gray.text }}>
@@ -139,7 +139,7 @@ export default function HowItWorks() {
 
                                 </div>
                                 <div className="flex-1">
-                                    <h3 className="text-lg lg:text-xl xl:text-3xl 2xl:text-4xl font-bold mb-1 md:mb-2 text-black">
+                                    <h3 className="text-lg lg:text-xl xl:text-2xl 2xl:text-4xl font-bold mb-1 md:mb-2 text-black">
                                         Manufacturing
                                     </h3>
                                     <p className="text-sm md:text-base xl:text-xl 2xl:text-2xl" style={{ color: colors.gray.text }}>
@@ -157,7 +157,7 @@ export default function HowItWorks() {
 
                                 </div>
                                 <div className="flex-1">
-                                    <h3 className="text-lg lg:text-xl xl:text-3xl 2xl:text-4xl font-bold mb-1 md:mb-2 text-black">
+                                    <h3 className="text-lg lg:text-xl xl:text-2xl 2xl:text-4xl font-bold mb-1 md:mb-2 text-black">
                                         Delivery & Support
                                     </h3>
                                     <p className="text-sm md:text-base xl:text-xl 2xl:text-2xl" style={{ color: colors.gray.text }}>

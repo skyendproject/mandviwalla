@@ -92,7 +92,7 @@ export default function ServiceSection() {
                         </span>
                     </p>
 
-                    <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-6xl 2xl:text-[64px] font-bold text-white mt-2 xl:mt-3">
+                    <h2 className="text-2xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-[64px] font-bold text-white mt-2 xl:mt-3">
                         We Ensure High-Quality Plastic Manufacturing
                     </h2>
 
@@ -201,7 +201,7 @@ export default function ServiceSection() {
                                         {card.icon}
                                     </div>
 
-                                    <h4 className={`text-lg md:text-xl xl:text-3xl 2xl:text-4xl font-semibold mb-2 xl:mb-3 ${isMiddle ? 'text-white' : ''}`}>
+                                    <h4 className={`text-lg md:text-xl xl:text-2xl 2xl:text-4xl font-semibold mb-2 xl:mb-3 ${isMiddle ? 'text-white' : ''}`}>
                                         {card.title}
                                     </h4>
 
