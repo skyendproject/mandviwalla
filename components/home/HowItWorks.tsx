@@ -1,43 +1,13 @@
 ﻿"use client";
 
-import { useEffect, useRef } from "react";
+import Image from "next/image";
 import { colors } from "@/lib/colors";
 import SectionHeader from "@/components/ui/SectionHeader";
 import Reveal from "@/components/ui/Reveal";
 
 export default function HowItWorks() {
-    const videoRef = useRef<HTMLVideoElement | null>(null);
-
-    useEffect(() => {
-        const video = videoRef.current;
-
-        if (!video) {
-            return;
-        }
-
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    video.play().catch(() => {
-                        // Autoplay can still be blocked in some browsers.
-                    });
-                    return;
-                }
-
-                video.pause();
-            },
-            { threshold: 0.35 }
-        );
-
-        observer.observe(video);
-
-        return () => {
-            observer.disconnect();
-        };
-    }, []);
-
     return (
-        <section className="w-full py-8 md:py-10 lg:py-12 xl:py-12 2xl:py-14 px-4 md:px-12 xl:px-16 2xl:px-20">
+        <section className="w-full pt-16 md:pt-20 lg:pt-24 xl:pt-28 2xl:pt-32 px-4 md:px-12 xl:px-16 2xl:px-20 bg-white">
             <div className="container mx-auto max-w-7xl">
                 {/* Step by Step Label (mobile + tablet) */}
                 <div className="lg:hidden flex justify-center mb-3">
@@ -60,26 +30,18 @@ export default function HowItWorks() {
                 <Reveal className="flex flex-col lg:flex-row gap-8 lg:gap-12 xl:gap-12 items-center lg:items-start">
 
 
-                    {/* Left Side - Video */}
+                    {/* Left Side - Image */}
                     <div className="relative flex w-full lg:w-1/2 justify-center lg:justify-end lg:items-start lg:-mt-8">
-                        <video
-                            ref={videoRef}
+                        <Image
+                            src="/how-it-works.jpeg"
+                            alt="How it Works"
                             width={570}
                             height={6045}
-                            className="block w-full h-auto lg:h-[440px] xl:h-[440px] 2xl:h-[480px] max-w-[360px] sm:max-w-[420px] md:max-w-[480px] lg:max-w-[400px] xl:max-w-[400px] 2xl:max-w-[440px] mx-auto lg:mx-0 relative z-10 object-cover"
-                            autoPlay
-                            muted
-                            loop
-                            playsInline
-                            preload="metadata"
-                            aria-label="How it Works"
-                        >
-                            <source src="/how-it-works.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
+                            className="block w-full h-auto lg:h-[500px] xl:h-[520px] 2xl:h-[560px] max-w-[360px] sm:max-w-[420px] md:max-w-[480px] lg:max-w-[440px] xl:max-w-[460px] 2xl:max-w-[500px] mx-auto lg:mx-0 relative z-10 object-contain"
+                        />
 
                         {/* Decorative Dot Grid - Bottom Left */}
-                        <div className="hidden absolute -bottom-10 left-12 md:grid grid-cols-6 gap-3.5 p-2 z-0 2xl:left-66">
+                        <div className="hidden absolute -bottom-10 left-40 md:grid grid-cols-6 gap-3.5 p-2 z-0 2xl:left-66">
                             {Array.from({ length: 36 }).map((_, index) => (
                                 <div
                                     key={index}

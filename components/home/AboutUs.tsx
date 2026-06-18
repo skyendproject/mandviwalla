@@ -12,12 +12,13 @@ export default function AboutUs() {
             <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-12 xl:gap-12 2xl:gap-16 items-center">
 
                 {/* Left Image */}
-                <div className="relative w-full h-[270px] sm:h-[320px] md:h-[370px] lg:h-[400px] xl:h-[400px] 2xl:h-[440px] rounded-xl shadow-lg">
+                <div className="relative w-full max-w-[480px] mx-auto h-[320px] sm:h-[380px] md:h-[440px] lg:h-[480px] xl:h-[500px] 2xl:h-[540px] rounded-xl shadow-lg">
                     <Image
-                        src="/new-logo.jpg"
+                        src="/why-choose-us.jpeg"
                         alt="About Us Image"
                         fill
                         className="object-cover rounded-xl"
+                        style={{ objectPosition: "center" }}
                     />
 
                     {/* Floating Blue Stats Box */}

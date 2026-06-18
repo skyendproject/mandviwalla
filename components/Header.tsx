@@ -5,11 +5,17 @@ import Link from "next/link";
 import { Facebook, Instagram, Linkedin, Phone, Mail, MapPin, Youtube, ChevronDown, Menu } from "lucide-react";
 import Image from "next/image";
 import { colors } from "@/lib/colors";
-import React, { useState, useState as useLocalState } from "react";
+import React, { useEffect, useState, useState as useLocalState } from "react";
+import { usePathname } from "next/navigation";
 import MobileHeader from "./header/MobileHeader";
 
 export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const pathname = usePathname();
+
+    useEffect(() => {
+        setMobileMenuOpen(false);
+    }, [pathname]);
 
     return (
         <header className="w-full border-b relative z-50">

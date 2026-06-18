@@ -7,10 +7,8 @@ import CtaButton from "@/components/ui/CtaButton";
 
 export default function Hero() {
     const images = [
-        "/assets/factory-drone.JPG",
-        "/assets/blue-greem-drone.JPG",
+        "/assets/drone-banner-shot.jpeg",
         "/assets/green-drone.JPG",
-        "/assets/blue-drone.JPG",
     ];
 
     const [activeImage, setActiveImage] = useState(0);
@@ -34,7 +32,7 @@ export default function Hero() {
                 setPrevImage(prev);
                 return (prev + 1) % images.length;
             });
-        }, 3000);
+        }, 4000);
 
         return () => clearInterval(id);
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -74,7 +72,7 @@ export default function Hero() {
 
     return (
         <section
-            className="relative w-full h-[80vh] md:h-[85vh] xl:h-[82vh] 2xl:h-[82vh]"
+            className="relative w-full h-[80vh] md:h-[85vh] xl:h-[82vh] 2xl:h-[82vh] overflow-hidden"
             onMouseEnter={() => setPaused(true)}
             onMouseLeave={() => setPaused(false)}
         >
@@ -87,17 +85,6 @@ export default function Hero() {
             />
             <div className="absolute inset-0 hero-image-clip">
                 <NextImage
-                    src={images[prevImage]}
-                    alt=""
-                    fill
-                    sizes="100vw"
-                    priority={prevImage === 0}
-                    fetchPriority={prevImage === 0 ? "high" : "auto"}
-                    className="object-cover object-center"
-                />
-            </div>
-            <div className={`absolute inset-0 hero-image-clip transition-opacity duration-500 ${fadeIn ? "opacity-100" : "opacity-0"}`}>
-                <NextImage
                     src={images[activeImage]}
                     alt=""
                     fill
@@ -107,7 +94,23 @@ export default function Hero() {
                     className="object-cover object-center"
                 />
             </div>
-
+            <div
+                className="absolute inset-0 hero-image-clip"
+                style={{
+                    transition: fadeIn ? "transform 1300ms cubic-bezier(0.7, 0, 0.3, 1)" : "none",
+                    transform: fadeIn ? "translateX(100%)" : "translateX(0)",
+                }}
+            >
+                <NextImage
+                    src={images[prevImage]}
+                    alt=""
+                    fill
+                    sizes="100vw"
+                    priority={prevImage === 0}
+                    fetchPriority={prevImage === 0 ? "high" : "auto"}
+                    className="object-cover object-center"
+                />
+            </div>
             {/* Gradient scrim — darker on the left so the headline stays legible over any image */}
             <div
                 className="absolute inset-0 hero-image-clip"

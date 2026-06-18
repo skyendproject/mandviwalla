@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { colors } from "@/lib/colors";
 import { Facebook, Instagram, Youtube, MapPin, Phone, Mail, ArrowRight } from "lucide-react";
+import FooterNavDropdowns from "./footer/FooterNavDropdowns";
 
 interface FooterProps {
     variant?: "blue" | "dark";
@@ -94,20 +95,7 @@ export default function Footer({ variant = "blue" }: FooterProps) {
                                 <span className="absolute bottom-0 left-0 h-0.5 w-[30%]" style={{ backgroundColor: colors.orange.dark }}></span>
                             </h4>
 
-                            <Link href="#" className="flex gap-3 items-center hover:translate-x-1 transition-transform">
-                                <ArrowRight size={18} style={{ color: colors.orange.dark }} />
-                                <span className="text-sm xl:text-base 2xl:text-lg">Injection Moulding Products</span>
-                            </Link>
-
-                            <Link href="#" className="flex gap-3 items-center hover:translate-x-1 transition-transform">
-                                <ArrowRight size={18} style={{ color: colors.orange.dark }} />
-                                <span className="text-sm xl:text-base 2xl:text-lg">Blow Moulding Products</span>
-                            </Link>
-
-                            <Link href="#" className="flex gap-3 items-center hover:translate-x-1 transition-transform">
-                                <ArrowRight size={18} style={{ color: colors.orange.dark }} />
-                                <span className="text-sm xl:text-base 2xl:text-lg">Custom Plastic Solutions</span>
-                            </Link>
+                            <FooterNavDropdowns />
                         </div>
 
                         {/* Additional Links */}
