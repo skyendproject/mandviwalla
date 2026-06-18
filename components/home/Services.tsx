@@ -4,6 +4,8 @@ import Image from "next/image";
 import { colors } from "@/lib/colors";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
+import SectionHeader from "@/components/ui/SectionHeader";
+import Reveal from "@/components/ui/Reveal";
 
 
 export default function ServiceSection() {
@@ -71,7 +73,7 @@ export default function ServiceSection() {
     ];
 
     return (
-        <section className="relative py-12 md:py-16 lg:py-20 xl:py-24 2xl:py-28 px-4 md:px-20 xl:px-24 2xl:px-32 overflow-hidden z-0" style={{ backgroundColor: colors.primary.blue }}>
+        <section className="relative py-12 md:py-16 lg:py-16 xl:py-16 2xl:py-20 px-4 md:px-12 xl:px-16 2xl:px-20 overflow-hidden z-0" style={{ backgroundColor: colors.primary.blue }}>
             {/* Background overlay */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full z-0 opacity-100 pointer-events-none">
                 <Image
@@ -85,21 +87,14 @@ export default function ServiceSection() {
             <div className="container mx-auto relative z-10 mt-4 md:mt-8">
 
                 {/* Heading */}
-                <div className="text-center mb-8 md:mb-12 xl:mb-16 relative z-10">
-                    <p className="text-white text-sm md:text-base xl:text-xl 2xl:text-2xl font-semibold">
-                        <span className="border-l-2 pl-2 inline-block" style={{ borderColor: colors.orange.dark }}>
-                            Our Services / Products
-                        </span>
-                    </p>
-
-                    <h2 className="text-2xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-[64px] font-bold text-white mt-2 xl:mt-3">
-                        We Ensure High-Quality Plastic Manufacturing
-                    </h2>
-
-                    {/* <p className="text-white/60 text-sm md:text-sm mt-3 text-center whitespace-normal max-w-2xl mx-auto">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
-                    </p> */}
-                </div>
+                <SectionHeader
+                    align="center"
+                    tone="light"
+                    eyebrow="Our Services / Products"
+                    title="We Ensure High-Quality Plastic Manufacturing"
+                    titleClassName="font-bold"
+                    className="mb-8 md:mb-12 xl:mb-16 relative z-10"
+                />
 
                 {/* Left Containers - absolute */}
                 <div className="absolute top-0 left-0 flex flex-col gap-12 z-0 opacity-60 md:opacity-100 pointer-events-none">
@@ -168,7 +163,7 @@ export default function ServiceSection() {
 
 
                     {/* SM: single card | MD+: all cards */}
-                    <div className="flex justify-center gap-8 md:gap-6 xl:gap-10 2xl:gap-14 md:flex-row">
+                    <Reveal className="flex justify-center gap-8 md:gap-6 xl:gap-8 2xl:gap-8 md:flex-row">
                         {cards.map((card, idx) => {
                             const isMiddle = idx === 1;
                             const cardBg = isMiddle ? colors.orange.dark : colors.white;
@@ -182,13 +177,13 @@ export default function ServiceSection() {
                                     key={idx}
                                     className={`
         relative rounded-lg
-        pt-14 xl:pt-16 2xl:pt-20 px-4 xl:px-6 2xl:px-8 pb-4 xl:pb-6
-        flex flex-col items-center text-center shadow-md
-        w-full max-w-[280px] xl:max-w-[340px] 2xl:max-w-[400px]
+        pt-14 xl:pt-14 2xl:pt-16 px-4 xl:px-5 2xl:px-6 pb-4 xl:pb-6
+        flex flex-col items-center text-center shadow-md transition duration-300 hover:-translate-y-1.5 hover:shadow-2xl
+        w-full max-w-[280px] xl:max-w-[300px] 2xl:max-w-[320px]
         h-[200px]
         md:h-[280px] md:min-h-[280px] md:max-h-[340px]
-        xl:h-[320px] xl:min-h-[320px] xl:max-h-[380px]
-        2xl:h-[360px] 2xl:min-h-[360px] 2xl:max-h-[420px]
+        xl:h-[300px] xl:min-h-[300px] xl:max-h-[340px]
+        2xl:h-[320px] 2xl:min-h-[320px] 2xl:max-h-[360px]
         ${isActiveOnMobile ? "block" : "hidden md:flex"}
     `}
                                     style={{ backgroundColor: cardBg }}
@@ -201,17 +196,17 @@ export default function ServiceSection() {
                                         {card.icon}
                                     </div>
 
-                                    <h4 className={`text-lg md:text-xl xl:text-2xl 2xl:text-4xl font-semibold mb-2 xl:mb-3 ${isMiddle ? 'text-white' : ''}`}>
+                                    <h4 className={`text-lg md:text-xl xl:text-xl 2xl:text-2xl font-semibold mb-2 xl:mb-3 ${isMiddle ? 'text-white' : ''}`}>
                                         {card.title}
                                     </h4>
 
-                                    <p className={`${textColor} text-sm md:text-base xl:text-xl 2xl:text-2xl leading-snug`}>
+                                    <p className={`${textColor} text-sm md:text-base xl:text-base 2xl:text-lg leading-snug`}>
                                         {card.description}
                                     </p>
                                 </div>
                             );
                         })}
-                    </div>
+                    </Reveal>
                 </div>
 
 
