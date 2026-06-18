@@ -108,10 +108,10 @@ export default function Hero() {
                 <span className="uppercase text-sm md:text-lg xl:text-2xl 2xl:text-3xl tracking-widest mb-2 xl:mb-3 border-l-2 pl-2" style={{ borderColor: colors.orange.dark }}>
                     PROTECT YOUR LIFE
                 </span>
-                <h1 className="text-3xl md:text-5xl lg:text-7xl xl:text-8xl 2xl:text-[96px] font-bold leading-tight mb-3 md:mb-4 xl:mb-6">
-                    Shaping the Future with Quality Plastic Solutions
+                <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-[96px] font-bold leading-tight mb-3 md:mb-4 xl:mb-6">
+                    Shaping the Future with<br className="hidden xl:block 2xl:hidden" /> Quality Plastic Solutions
                 </h1>
-                <p className="text-sm md:text-base lg:text-lg xl:text-2xl 2xl:text-3xl max-w-3xl xl:max-w-4xl 2xl:max-w-5xl mb-4 md:mb-6 xl:mb-8 leading-normal">
+                <p className="text-sm md:text-base lg:text-lg xl:text-[22px] 2xl:text-3xl max-w-3xl xl:max-w-4xl 2xl:max-w-5xl mb-4 md:mb-6 xl:mb-8 leading-normal">
                     Since 1988, Mandviwalla Mauser Plastic Industries Limited has been delivering world-class
                     injection and blow-moulded plastic products in Pakistan. Powered by German technology and
                     decades of expertise, we are the pioneers of 210-liter industrial drums and premium plastic

@@ -56,9 +56,9 @@ export default function Header() {
                                 alt="Mandviwalla-logo"
                             />
                         </Link>
-                        <div className="flex flex-col text-base sm:text-lg lg:text-[22px] xl:text-2xl 2xl:text-3xl">
+                        <div className="flex flex-col text-base sm:text-lg lg:text-[22px] xl:text-xl 2xl:text-3xl">
                             <h2 className="font-bold">Mandviwalla <span style={{ color: colors.orange.dark }}>MAUSER</span></h2>
-                            <h3 className="text-sm sm:text-base lg:text-[22px] xl:text-2xl 2xl:text-3xl">Plastic Industries Limited</h3>
+                            <h3 className="text-sm sm:text-base lg:text-[22px] xl:text-xl 2xl:text-3xl">Plastic Industries Limited</h3>
                         </div>
                     </div>
                     {/* Right Section: Contact + Address */}

@@ -40,7 +40,7 @@ export default function BoardOfDirectors() {
                     </div>
 
                     {/* Heading */}
-                    <h2 className="text-2xl md:text-3xl xl:text-6xl 2xl:text-[64px] font-semibold text-black">
+                    <h2 className="text-2xl md:text-3xl xl:text-4xl 2xl:text-[64px] font-semibold text-black">
                         Meet Our Cheif Executive Officer
                     </h2>
 
@@ -62,7 +62,7 @@ export default function BoardOfDirectors() {
                                 {/* Left Side - Text and Social Icons */}
                                 <div className="flex flex-col justify-center items-center p-4 sm:p-6 gap-0 lg:gap-6">
                                     <div className="text-center">
-                                        <h3 className="text-lg md:text-xl xl:text-4xl 2xl:text-5xl font-semibold text-black mb-1 sm:mb-2">
+                                        <h3 className="text-lg md:text-xl xl:text-3xl 2xl:text-5xl font-semibold text-black mb-1 sm:mb-2">
                                             {director.name}
                                         </h3>
                                         <p className="text-xs sm:text-sm md:text-base xl:text-xl 2xl:text-2xl mb-3 sm:mb-6" style={{ color: colors.gray.light }}>

@@ -53,7 +53,7 @@ export default function AboutUs() {
                         About Us
                     </h4>
 
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-6xl 2xl:text-[64px] font-semibold mb-3 md:mb-4 xl:mb-5 leading-snug">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-[64px] font-semibold mb-3 md:mb-4 xl:mb-5 leading-snug">
                         Who We Are
                     </h2>
 

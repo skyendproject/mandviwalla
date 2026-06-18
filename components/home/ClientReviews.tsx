@@ -59,7 +59,7 @@ export default function ClientReviews() {
                             WHAT CLIENTS SAY?
                         </p>
                     </div>
-                    <h2 className="text-3xl md:text-4xl xl:text-6xl 2xl:text-[64px] font-bold">Satisfied Clients</h2>
+                    <h2 className="text-3xl md:text-4xl xl:text-4xl 2xl:text-[64px] font-bold">Satisfied Clients</h2>
                     {/* <p className="text-sm md:text-base leading-relaxed" style={{ color: GRAY_TEXT }}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </p> */}

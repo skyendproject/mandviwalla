@@ -18,7 +18,7 @@ export default function WhyChooseUs() {
                             Why Choose Us?
                         </span>
                     </p>
-                    <h2 className="text-2xl md:text-4xl xl:text-6xl font-bold 2xl:text-[64px]" style={{ fontFamily: "var(--font-maven)" }}>
+                    <h2 className="text-2xl md:text-4xl xl:text-4xl font-bold 2xl:text-[64px]" style={{ fontFamily: "var(--font-maven)" }}>
                         Why Partner With Us?
                     </h2>
                 </div>
@@ -29,14 +29,14 @@ export default function WhyChooseUs() {
                     {/* LEFT CONTENT - Desktop */}
                     <div className="hidden md:flex flex-col justify-between text-right w-1/3 pr-8 lg:pr-16 xl:pr-20 h-[460px] xl:h-[540px] 2xl:h-[600px]">
                         <div className="pt-10 xl:pt-12">
-                            <h3 className="text-lg lg:text-xl 2xl:text-4xl xl:text-3xl font-semibold mb-1 xl:mb-2">Sustainable Practices</h3>
+                            <h3 className="text-lg lg:text-xl 2xl:text-4xl xl:text-2xl font-semibold mb-1 xl:mb-2">Sustainable Practices</h3>
                             <p className="text-sm xl:text-lg 2xl:text-xl text-gray-600">
                                 Reusable, eco-friendly packaging solutions.
                             </p>
                         </div>
 
                         <div className="pb-10 xl:pb-12">
-                            <h3 className="text-lg lg:text-xl 2xl:text-4xl xl:text-3xl font-semibold mb-1 xl:mb-2">Customer Commitment</h3>
+                            <h3 className="text-lg lg:text-xl 2xl:text-4xl xl:text-2xl font-semibold mb-1 xl:mb-2">Customer Commitment</h3>
                             <p className="text-sm xl:text-lg 2xl:text-xl text-gray-600">
                                 On-time delivery & after-sales support.
                             </p>
@@ -131,14 +131,14 @@ export default function WhyChooseUs() {
                     {/* RIGHT CONTENT - Desktop */}
                     <div className="hidden md:flex flex-col justify-between text-left w-1/3 pl-8 lg:pl-16 xl:pl-20 h-[460px] xl:h-[540px] 2xl:h-[600px]">
                         <div className="pt-10 xl:pt-12">
-                            <h3 className="text-lg lg:text-xl 2xl:text-4xl xl:text-3xl font-semibold mb-1 xl:mb-2">Certified Quality</h3>
+                            <h3 className="text-lg lg:text-xl 2xl:text-4xl xl:text-2xl font-semibold mb-1 xl:mb-2">Certified Quality</h3>
                             <p className="text-sm xl:text-lg 2xl:text-xl text-gray-600">
                                 UN-approved and internationally tested packaging.
                             </p>
                         </div>
 
                         <div className="pb-10 xl:pb-12">
-                            <h3 className="text-lg lg:text-xl 2xl:text-4xl xl:text-3xl font-semibold mb-1 xl:mb-2">35+ Years Experience</h3>
+                            <h3 className="text-lg lg:text-xl 2xl:text-4xl xl:text-2xl font-semibold mb-1 xl:mb-2">35+ Years Experience</h3>
                             <p className="text-sm xl:text-lg 2xl:text-xl text-gray-600">
                                 Trusted heritage since 1988.
                             </p>

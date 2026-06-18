@@ -29,7 +29,7 @@ export default function Footer({ variant = "blue" }: FooterProps) {
                                 />
                             </div>
                             <div className="flex flex-col gap-1">
-                                <h3 className="text-lg xl:text-2xl 2xl:text-3xl font-bold">
+                                <h3 className="text-lg xl:text-xl 2xl:text-3xl font-bold">
                                     Mandviwalla <span style={{ color: colors.orange.dark }}>MAUSER</span>
                                 </h3>
                                 <p className="text-sm xl:text-lg 2xl:text-xl">Plastic Industries Limited</p>
@@ -51,7 +51,7 @@ export default function Footer({ variant = "blue" }: FooterProps) {
 
                         {/* Contact Info */}
                         <div className="flex flex-col gap-4">
-                            <h4 className="text-lg xl:text-2xl 2xl:text-3xl font-bold mb-2 pb-2 relative">
+                            <h4 className="text-lg xl:text-xl 2xl:text-3xl font-bold mb-2 pb-2 relative">
                                 Contact Info
                                 <span className="absolute bottom-0 left-0 h-0.5 w-[30%]" style={{ backgroundColor: colors.orange.dark }}></span>
                             </h4>
@@ -89,7 +89,7 @@ export default function Footer({ variant = "blue" }: FooterProps) {
 
                         {/* Our Services */}
                         <div className="flex flex-col gap-4">
-                            <h4 className="text-lg xl:text-2xl 2xl:text-3xl font-bold mb-2 pb-2 relative">
+                            <h4 className="text-lg xl:text-xl 2xl:text-3xl font-bold mb-2 pb-2 relative">
                                 Our Services
                                 <span className="absolute bottom-0 left-0 h-0.5 w-[30%]" style={{ backgroundColor: colors.orange.dark }}></span>
                             </h4>
@@ -112,7 +112,7 @@ export default function Footer({ variant = "blue" }: FooterProps) {
 
                         {/* Additional Links */}
                         <div className="flex flex-col gap-4">
-                            <h4 className="text-lg xl:text-2xl 2xl:text-3xl font-bold mb-2 pb-2 relative">
+                            <h4 className="text-lg xl:text-xl 2xl:text-3xl font-bold mb-2 pb-2 relative">
                                 Additional Links
                                 <span className="absolute bottom-0 left-0 h-0.5 w-[30%]" style={{ backgroundColor: colors.orange.dark }}></span>
                             </h4>
