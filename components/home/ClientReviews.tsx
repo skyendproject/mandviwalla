@@ -3,11 +3,11 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import SectionHeader from "@/components/ui/SectionHeader";
+import Reveal from "@/components/ui/Reveal";
 
 // COLORS
 const PRIMARY_BLUE = "#1338BE";
-const GRAY_TAG = "#727272";
-const GRAY_TEXT = "#636363";
 
 const BRAND_LOGOS = [
     { name: "Reliance", src: "/assets/brand-logo/reliance.jpg" },
@@ -25,6 +25,7 @@ const BRAND_LOGOS = [
 
 export default function ClientReviews() {
     const [active, setActive] = useState(0);
+    const [paused, setPaused] = useState(false);
 
     const goPrev = () => {
         setActive((prev) => (prev - 1 + BRAND_LOGOS.length) % BRAND_LOGOS.length);
@@ -35,12 +36,14 @@ export default function ClientReviews() {
     };
 
     useEffect(() => {
+        if (paused) return;
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
         const interval = window.setInterval(() => {
             setActive((prev) => (prev + 1) % BRAND_LOGOS.length);
-        }, 2000);
+        }, 3500);
 
         return () => window.clearInterval(interval);
-    }, []);
+    }, [paused]);
 
     const getVisibleLogos = (count: number) => {
         return Array.from({ length: count }, (_, index) => {
@@ -50,23 +53,25 @@ export default function ClientReviews() {
     };
 
     return (
-        <section className="w-full py-8 md:py-10 lg:py-12 xl:py-14 2xl:py-16 px-4 md:px-12 xl:px-24 2xl:px-32 bg-white">
-            <div className="container mx-auto max-w-7xl xl:max-w-[1400px] 2xl:max-w-[1600px]">
+        <section className="w-full py-8 md:py-10 lg:py-12 xl:py-12 2xl:py-14 px-4 md:px-12 xl:px-16 2xl:px-20 bg-white">
+            <div className="container mx-auto max-w-7xl">
                 {/* HEADER */}
-                <div className="flex flex-col gap-4 items-center text-center mb-4 xl:mb-8 max-w-3xl xl:max-w-4xl mx-auto">
-                    <div className="border-l-4 pl-4" style={{ borderColor: PRIMARY_BLUE }}>
-                        <p className="text-sm md:text-base xl:text-xl 2xl:text-2xl font-semibold uppercase tracking-wide" style={{ color: GRAY_TAG }}>
-                            WHAT CLIENTS SAY?
-                        </p>
-                    </div>
-                    <h2 className="text-3xl md:text-4xl xl:text-4xl 2xl:text-[64px] font-bold">Satisfied Clients</h2>
-                    {/* <p className="text-sm md:text-base leading-relaxed" style={{ color: GRAY_TEXT }}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p> */}
-                </div>
+                <SectionHeader
+                    align="center"
+                    eyebrow="Trusted By"
+                    title="Our Clients & Partners"
+                    accentColor={PRIMARY_BLUE}
+                    titleClassName="font-bold"
+                    className="mb-4 xl:mb-8 max-w-3xl xl:max-w-4xl mx-auto"
+                />
 
                 {/* LOGO CAROUSEL */}
-                <div className="relative flex items-center justify-center min-h-[200px] md:min-h-[220px] xl:min-h-[260px] 2xl:min-h-[300px] mt-6 md:mt-8 px-16 md:px-20 xl:px-24">
+                <Reveal>
+                <div
+                    className="relative flex items-center justify-center min-h-[200px] md:min-h-[220px] xl:min-h-[220px] 2xl:min-h-[240px] mt-6 md:mt-8 px-16 md:px-20 xl:px-24"
+                    onMouseEnter={() => setPaused(true)}
+                    onMouseLeave={() => setPaused(false)}
+                >
                     <button
                         type="button"
                         aria-label="Previous logo"
@@ -98,20 +103,21 @@ export default function ClientReviews() {
                         ))}
                     </div>
 
-                    <div className="hidden md:flex w-full justify-center gap-16 lg:gap-20 xl:gap-24 2xl:gap-28 items-center">
+                    <div className="hidden md:flex w-full justify-center gap-16 lg:gap-20 xl:gap-20 2xl:gap-24 items-center">
                         {getVisibleLogos(4).map((logo) => (
-                            <div key={logo.src} className="relative h-40 lg:h-44 xl:h-52 2xl:h-60 w-[260px] lg:w-[300px] xl:w-[340px] 2xl:w-[380px]">
+                            <div key={logo.src} className="group relative h-40 lg:h-44 xl:h-44 2xl:h-48 w-[260px] lg:w-[300px] xl:w-[300px] 2xl:w-[320px]">
                                 <Image
                                     src={logo.src}
                                     alt={logo.name}
                                     fill
-                                    className="object-contain"
+                                    className="object-contain grayscale opacity-80 transition duration-300 group-hover:grayscale-0 group-hover:opacity-100"
                                     sizes="(max-width: 1024px) 260px, (max-width: 1280px) 300px, (max-width: 1536px) 340px, 380px"
                                 />
                             </div>
                         ))}
                     </div>
                 </div>
+                </Reveal>
 
                 {/* DOTS */}
                 <div className="flex justify-center gap-3 mt-4 md:mt-5">
