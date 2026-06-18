@@ -111,15 +111,6 @@ export default function Hero() {
                     className="object-cover object-center"
                 />
             </div>
-            {/* Gradient scrim — darker on the left so the headline stays legible over any image */}
-            <div
-                className="absolute inset-0 hero-image-clip"
-                style={{
-                    background: "linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 45%, rgba(0,0,0,0.1) 100%)",
-                    clipPath: "polygon(0 0, 100% 0, 100% 88%, 0 100%)",
-                }}
-            />
-
             {/* Bottom-right orange trim starting immediately after image */}
             <div className="absolute bottom-0 w-full h-[40%] clip-path-orange" style={{ backgroundColor: colors.orange.warm }} />
 

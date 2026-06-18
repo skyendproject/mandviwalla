@@ -143,20 +143,34 @@ export default function MobileHeader({ mobileMenuOpen, setMobileMenuOpen }: Mobi
 
             {/* Top nav - blue background */}
             <div style={{ backgroundColor: colors.primary.blue }}>
-                <div className="container mx-auto flex items-center justify-between gap-4 px-4 py-3 font-medium text-white">
+                <div className="container mx-auto flex items-center justify-between gap-3 px-4 py-3 font-medium text-white">
                     {/* Hamburger */}
                     <button
-                        className="text-white"
+                        className="text-white shrink-0"
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                         aria-label="Open mobile menu"
                     >
                         <Menu size={24} />
                     </button>
 
+                    {/* Logo */}
+                    <Link href="/" className="flex items-center gap-2 min-w-0">
+                        <Image
+                            src="/new-logo.jpg"
+                            width={36}
+                            height={46}
+                            alt="Mandviwalla MAUSER"
+                            className="rounded-sm shrink-0"
+                        />
+                        <span className="text-white text-xs font-semibold leading-tight whitespace-nowrap">
+                            Mandviwalla <span style={{ color: colors.orange.dark }}>MAUSER</span>
+                        </span>
+                    </Link>
+
                     {/* Contact button */}
                     <Link
                         href='/contact-us'
-                        className="inline-flex items-center gap-2 font-semibold px-3 py-2 min-w-[140px] max-w-[220px] justify-center rounded-md transition"
+                        className="inline-flex items-center gap-2 font-semibold px-3 py-2 justify-center rounded-md transition shrink-0 text-xs sm:text-sm"
                         style={{ backgroundColor: colors.orange.dark, color: colors.primary.blue }}
                         onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.orange.warm}
                         onMouseLeave={(e) => e.currentTarget.style.backgroundColor = colors.orange.dark}
