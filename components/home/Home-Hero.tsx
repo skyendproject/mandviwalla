@@ -117,10 +117,14 @@ export default function Hero() {
             {/* Content */}
             <div className="relative z-10 flex flex-col justify-center h-full max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 md:px-12 xl:px-16 2xl:px-16 text-white">
                 <span className="uppercase text-sm md:text-base xl:text-base 2xl:text-lg tracking-widest mb-2 xl:mb-3 border-l-2 pl-2" style={{ borderColor: colors.orange.dark }}>
-                    PROTECT YOUR LIFE
+                    RESHAPING THE FUTURE
                 </span>
-                <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-6xl font-bold leading-tight mb-3 md:mb-4 xl:mb-6">
-                    Shaping the Future with Quality Plastic Solutions
+                <h1
+                    className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold leading-tight mb-3 md:mb-4 xl:mb-6 flex flex-col"
+                    style={{ fontFamily: '"EB Garamond", Garamond, "Times New Roman", serif' }}
+                >
+                    <span>Shaping the Future with Quality</span> 
+                    <span>Plastic Solutions</span>
                 </h1>
                 <p className="text-sm md:text-base lg:text-lg xl:text-lg 2xl:text-xl max-w-3xl xl:max-w-4xl 2xl:max-w-5xl mb-4 md:mb-6 xl:mb-8 leading-normal">
                     Since 1988, Mandviwalla Mauser Plastic Industries Limited has been delivering world-class
