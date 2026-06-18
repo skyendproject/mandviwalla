@@ -14,14 +14,14 @@ export default function Header() {
     return (
         <header className="w-full border-b relative z-50">
             {/* Top Strip (hidden on mobile) */}
-            <div className="hidden md:block w-full text-white text-sm py-2 px-4 md:px-20" style={{ backgroundColor: colors.orange.dark }}>
+            <div className="hidden lg:block w-full text-white text-sm py-2 px-4 md:px-20" style={{ backgroundColor: colors.orange.dark }}>
                 <div className="container mx-auto flex justify-between items-center">
-                    <p className="text-sm lg:text-base">
+                    <p className="text-sm lg:text-base xl:text-lg 2xl:text-xl">
                         Welcome to <strong>Mandviwalla MAUSER</strong> Plastic Industries Limited company,
                         We're here to help you
                     </p>
                     <div className="flex items-center gap-4 md:gap-6 ml-auto md:ml-0">
-                        <div className="flex gap-4 md:gap-6 font-semibold">
+                        <div className="flex gap-4 md:gap-6 font-semibold text-sm lg:text-base xl:text-lg 2xl:text-xl">
                             <Link href="#" className="hover:text-white/80 md:border-l md:pl-2">FAQ's</Link>
                             <Link href="#" className="hover:text-white/80 border-l pl-2">Career</Link>
                         </div>
@@ -44,7 +44,7 @@ export default function Header() {
             </div>
 
             {/* Middle Logo + Details (hidden on mobile) */}
-            <div className="hidden md:block w-full py-1 bg-white border-b px-4 md:px-20">
+            <div className="hidden lg:block w-full py-1 bg-white border-b px-4 md:px-20">
                 <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
                     {/* Left Section: Logo + Company Name */}
                     <div className="flex items-center gap-4">
@@ -56,9 +56,9 @@ export default function Header() {
                                 alt="Mandviwalla-logo"
                             />
                         </Link>
-                        <div className="flex flex-col text-base sm:text-lg lg:text-[22px]">
+                        <div className="flex flex-col text-base sm:text-lg lg:text-[22px] xl:text-2xl 2xl:text-3xl">
                             <h2 className="font-bold">Mandviwalla <span style={{ color: colors.orange.dark }}>MAUSER</span></h2>
-                            <h3 className="text-sm sm:text-base lg:text-[22px]">Plastic Industries Limited</h3>
+                            <h3 className="text-sm sm:text-base lg:text-[22px] xl:text-2xl 2xl:text-3xl">Plastic Industries Limited</h3>
                         </div>
                     </div>
                     {/* Right Section: Contact + Address */}
@@ -69,8 +69,8 @@ export default function Header() {
                                 <path opacity="0.989" fillRule="evenodd" clipRule="evenodd" d="M6.37814 0.0119188C7.21512 -0.0645876 7.89252 0.227225 8.4104 0.88735C9.85061 2.84937 11.1012 4.93373 12.1622 7.14043C12.3347 7.56389 12.4494 8.00161 12.5062 8.45358C12.482 8.78656 12.3882 9.09921 12.2248 9.39154C11.5027 10.1762 10.721 10.8953 9.87987 11.5489C11.4082 15.7348 14.2638 18.6008 18.4466 20.1468C18.9255 19.6157 19.3944 19.0738 19.8535 18.521C20.2936 17.9521 20.8668 17.6186 21.5731 17.5205C22.5927 17.7181 23.5515 18.0828 24.4496 18.6148C26.0841 19.5622 27.6682 20.5836 29.2019 21.6788C30.0434 22.3886 30.2205 23.2327 29.7334 24.2113C28.8522 25.3844 27.8413 26.437 26.7007 27.3692C25.5109 28.3914 24.2187 29.2668 22.8237 29.9954C21.779 30.0284 20.7577 29.8825 19.7597 29.5577C17.2957 28.7634 15.003 27.6378 12.8813 26.1811C7.88745 22.7301 4.06267 18.2799 1.40694 12.8307C0.759163 11.3668 0.300606 9.84514 0.031267 8.26599C-0.0104223 7.91162 -0.0104223 7.55732 0.031267 7.20296C1.41542 4.6507 3.21839 2.43085 5.44018 0.543431C5.73845 0.332014 6.05111 0.154846 6.37814 0.0119188Z" fill={colors.orange.dark} />
                             </svg>
                             <div className="flex flex-col leading-tight">
-                                <span className="font-semibold text-base lg:text-lg">+92 21-32441116-9</span>
-                                <span className="text-[#999999] text-sm lg:text-base">info@mandviwalla.net</span>
+                                <span className="font-semibold text-base lg:text-lg xl:text-xl 2xl:text-2xl">+92 21-32441116-9</span>
+                                <span className="text-[#999999] text-sm lg:text-base xl:text-lg 2xl:text-xl">info@mandviwalla.net</span>
                             </div>
                         </div>
                         {/* Address */}
@@ -90,10 +90,10 @@ export default function Header() {
             {/* Navbar */}
             <nav className="w-full relative" style={{ backgroundColor: colors.primary.blue }}>
                 <div className="flex container mx-auto px-2 md:px-20">
-                    <div className="container mx-auto flex items-center justify-between md:justify-center gap-10 px-4 md:px-20 font-medium text-white">
+                    <div className="container mx-auto flex items-center justify-between lg:justify-center gap-10 px-4 md:px-20 font-medium text-white">
 
                         {/* Desktop Navigation */}
-                        <div className="hidden md:flex items-center gap-10 py-4">
+                        <div className="hidden lg:flex items-center gap-10 py-4">
                             {/* HOME */}
                             <Link href="/" className="hover:text-gray-200 uppercase transition" onMouseEnter={(e) => e.currentTarget.style.color = colors.primary.orange} onMouseLeave={(e) => e.currentTarget.style.color = 'white'}>
                                 Home
@@ -244,7 +244,7 @@ export default function Header() {
                     {/* Contact Us Button - Always Visible */}
                     <Link
                         href='/contact-us'
-                        className="hidden md:flex items-center gap-2 font-semibold px-3 py-2 transition min-w-[180px] max-w-[280px] justify-center text-center"
+                        className="hidden lg:flex items-center gap-2 font-semibold px-3 py-2 transition min-w-[180px] max-w-[280px] justify-center text-center"
                         style={{ backgroundColor: colors.orange.dark, color: colors.primary.blue }}
                         onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.orange.warm}
                         onMouseLeave={(e) => e.currentTarget.style.backgroundColor = colors.orange.dark}

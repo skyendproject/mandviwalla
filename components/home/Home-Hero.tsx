@@ -63,7 +63,7 @@ export default function Hero() {
     }, [activeImage]);
 
     return (
-        <section className="relative w-full h-[80vh] md:h-[90vh] mb-24">
+        <section className="relative w-full h-[80vh] md:h-[90vh] xl:h-[92vh] 2xl:h-[88vh]">
             <div
                 className="absolute inset-0 hero-image-clip"
                 style={{
@@ -104,14 +104,14 @@ export default function Hero() {
             <div className="absolute bottom-0 w-full h-[40%] clip-path-orange" style={{ backgroundColor: colors.orange.warm }} />
 
             {/* Content */}
-            <div className="relative z-10 flex flex-col justify-center h-full max-w-6xl mx-auto px-4 sm:px-6 md:px-12 text-white">
-                <span className="uppercase text-sm md:text-lg tracking-widest mb-2 border-l-2 pl-2" style={{ borderColor: colors.orange.dark }}>
+            <div className="relative z-10 flex flex-col justify-center h-full max-w-6xl xl:max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-12 xl:px-16 2xl:px-20 text-white">
+                <span className="uppercase text-sm md:text-lg xl:text-2xl 2xl:text-3xl tracking-widest mb-2 xl:mb-3 border-l-2 pl-2" style={{ borderColor: colors.orange.dark }}>
                     PROTECT YOUR LIFE
                 </span>
-                <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold leading-tight mb-3 md:mb-4">
+                <h1 className="text-3xl md:text-5xl lg:text-7xl xl:text-8xl 2xl:text-[96px] font-bold leading-tight mb-3 md:mb-4 xl:mb-6">
                     Shaping the Future with Quality Plastic Solutions
                 </h1>
-                <p className="text-sm md:text-base max-w-3xl mb-4 md:mb-6 leading-normal">
+                <p className="text-sm md:text-base lg:text-lg xl:text-2xl 2xl:text-3xl max-w-3xl xl:max-w-4xl 2xl:max-w-5xl mb-4 md:mb-6 xl:mb-8 leading-normal">
                     Since 1988, Mandviwalla Mauser Plastic Industries Limited has been delivering world-class
                     injection and blow-moulded plastic products in Pakistan. Powered by German technology and
                     decades of expertise, we are the pioneers of 210-liter industrial drums and premium plastic
@@ -119,10 +119,10 @@ export default function Hero() {
                 </p>
 
                 {/* Buttons */}
-                <div className="flex flex-row gap-3 md:gap-4">
+                <div className="flex flex-row gap-3 md:gap-4 xl:gap-5">
                     <Link
                         href="/products"
-                        className="px-4 sm:px-6 py-2 sm:py-3 text-white font-semibold rounded transition flex items-center justify-center gap-2 text-sm md:text-base"
+                        className="px-4 sm:px-6 xl:px-8 py-2 sm:py-3 xl:py-4 text-white font-semibold rounded transition flex items-center justify-center gap-2 text-sm md:text-base lg:text-lg xl:text-2xl 2xl:text-3xl"
                         style={{ backgroundColor: colors.primary.blue }}
                         onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.orange.dark}
                         onMouseLeave={(e) => e.currentTarget.style.backgroundColor = colors.primary.blue}
@@ -144,7 +144,7 @@ export default function Hero() {
 
                     <Link
                         href="/contact"
-                        className="px-4 sm:px-6 py-2 sm:py-3 text-white font-semibold rounded transition flex items-center justify-center gap-2 text-sm md:text-base"
+                        className="px-4 sm:px-6 xl:px-8 py-2 sm:py-3 xl:py-4 text-white font-semibold rounded transition flex items-center justify-center gap-2 text-sm md:text-base lg:text-lg xl:text-2xl 2xl:text-3xl"
                         style={{ backgroundColor: colors.orange.dark }}
                         onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.primary.blue}
                         onMouseLeave={(e) => e.currentTarget.style.backgroundColor = colors.orange.dark}
