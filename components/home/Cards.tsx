@@ -2,6 +2,7 @@
 
 import React from "react";
 import { colors } from "@/lib/colors";
+import Reveal from "@/components/ui/Reveal";
 
 const CardData = [
     {
@@ -50,22 +51,22 @@ const CardData = [
 
 const Cards = () => {
     return (
-        <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-32 py-12 md:py-16 lg:py-20 xl:py-24 2xl:py-28 flex justify-center">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-12 xl:gap-16 2xl:gap-20 max-w-2xl md:max-w-4xl lg:max-w-6xl xl:max-w-7xl 2xl:max-w-[1500px] w-full">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-16 xl:px-16 2xl:px-20 py-12 md:py-16 lg:py-16 xl:py-16 2xl:py-20 flex justify-center">
+            <Reveal className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-8 xl:gap-8 2xl:gap-10 max-w-2xl md:max-w-4xl lg:max-w-6xl xl:max-w-6xl 2xl:max-w-7xl w-full">
                 {CardData.map((card, idx) => (
-                    <div key={idx} className="flex items-start lg:items-center gap-4 sm:gap-5 md:gap-6 lg:gap-5 xl:gap-6 2xl:gap-7">
+                    <div key={idx} className="group flex items-start lg:items-center gap-4 sm:gap-5 md:gap-6 lg:gap-5 xl:gap-6 2xl:gap-7 bg-white rounded-2xl border border-[#E9E9E9] p-5 md:p-6 xl:p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-[#d7e0ee]">
                         {/* Icon with blue background */}
-                        <div className="flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-20 lg:h-20 xl:w-24 xl:h-24 2xl:w-28 2xl:h-28 rounded-full p-4 sm:p-5 md:p-6 lg:p-5 xl:p-6 text-white flex-shrink-0" style={{ backgroundColor: colors.primary.blue }}>
+                        <div className="flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-20 lg:h-20 xl:w-20 xl:h-20 2xl:w-24 2xl:h-24 rounded-full p-4 sm:p-5 md:p-6 lg:p-5 xl:p-5 text-white flex-shrink-0 transition-transform duration-300 group-hover:scale-105" style={{ backgroundColor: colors.primary.blue }}>
                             {card.svg}
                         </div>
                         {/* Content with limited width */}
                         <div className="flex flex-col flex-1 min-w-0">
-                            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-xl xl:text-2xl 2xl:text-4xl font-semibold">{card.title}</h2>
-                            <p className="text-sm sm:text-base md:text-lg lg:text-base xl:text-xl 2xl:text-2xl text-[#666666] mt-1 sm:mt-2 md:mt-2 lg:mt-2 xl:mt-3">{card.text}</p>
+                            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-xl xl:text-xl 2xl:text-2xl font-semibold">{card.title}</h2>
+                            <p className="text-sm sm:text-base md:text-lg lg:text-base xl:text-base 2xl:text-lg text-[#666666] mt-1 sm:mt-2 md:mt-2 lg:mt-2 xl:mt-3">{card.text}</p>
                         </div>
                     </div>
                 ))}
-            </div>
+            </Reveal>
         </div>
 
     );

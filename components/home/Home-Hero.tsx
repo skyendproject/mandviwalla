@@ -1,10 +1,9 @@
 "use client";
 
-import Head from "next/head";
 import NextImage from "next/image";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { colors } from "@/lib/colors";
+import CtaButton from "@/components/ui/CtaButton";
 
 export default function Hero() {
     const images = [
@@ -17,9 +16,19 @@ export default function Hero() {
     const [activeImage, setActiveImage] = useState(0);
     const [prevImage, setPrevImage] = useState(0);
     const [fadeIn, setFadeIn] = useState(true);
+    const [paused, setPaused] = useState(false);
+
+    const goTo = (index: number) => {
+        setActiveImage((prev) => {
+            if (prev === index) return prev;
+            setPrevImage(prev);
+            return index;
+        });
+    };
 
     useEffect(() => {
-        if (images.length <= 1) return;
+        if (images.length <= 1 || paused) return;
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
         const id = setInterval(() => {
             setActiveImage((prev) => {
                 setPrevImage(prev);
@@ -28,7 +37,8 @@ export default function Hero() {
         }, 3000);
 
         return () => clearInterval(id);
-    }, []);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [paused]);
 
     useEffect(() => {
         if (images.length <= 1) return;
@@ -63,7 +73,11 @@ export default function Hero() {
     }, [activeImage]);
 
     return (
-        <section className="relative w-full h-[80vh] md:h-[90vh] xl:h-[92vh] 2xl:h-[88vh]">
+        <section
+            className="relative w-full h-[80vh] md:h-[85vh] xl:h-[82vh] 2xl:h-[82vh]"
+            onMouseEnter={() => setPaused(true)}
+            onMouseLeave={() => setPaused(false)}
+        >
             <div
                 className="absolute inset-0 hero-image-clip"
                 style={{
@@ -94,24 +108,27 @@ export default function Hero() {
                 />
             </div>
 
-            {/* Dark overlay (optional, only over image, not over orange) */}
+            {/* Gradient scrim — darker on the left so the headline stays legible over any image */}
             <div
                 className="absolute inset-0 hero-image-clip"
-                style={{ backgroundColor: "rgba(0,0,0,0.2)", clipPath: "polygon(0 0, 100% 0, 100% 88%, 0 100%)" }}
+                style={{
+                    background: "linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 45%, rgba(0,0,0,0.1) 100%)",
+                    clipPath: "polygon(0 0, 100% 0, 100% 88%, 0 100%)",
+                }}
             />
 
             {/* Bottom-right orange trim starting immediately after image */}
             <div className="absolute bottom-0 w-full h-[40%] clip-path-orange" style={{ backgroundColor: colors.orange.warm }} />
 
             {/* Content */}
-            <div className="relative z-10 flex flex-col justify-center h-full max-w-6xl xl:max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-12 xl:px-16 2xl:px-20 text-white">
-                <span className="uppercase text-sm md:text-lg xl:text-2xl 2xl:text-3xl tracking-widest mb-2 xl:mb-3 border-l-2 pl-2" style={{ borderColor: colors.orange.dark }}>
+            <div className="relative z-10 flex flex-col justify-center h-full max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 md:px-12 xl:px-16 2xl:px-16 text-white">
+                <span className="uppercase text-sm md:text-base xl:text-base 2xl:text-lg tracking-widest mb-2 xl:mb-3 border-l-2 pl-2" style={{ borderColor: colors.orange.dark }}>
                     PROTECT YOUR LIFE
                 </span>
-                <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-[96px] font-bold leading-tight mb-3 md:mb-4 xl:mb-6">
-                    Shaping the Future with<br className="hidden xl:block 2xl:hidden" /> Quality Plastic Solutions
+                <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-6xl font-bold leading-tight mb-3 md:mb-4 xl:mb-6">
+                    Shaping the Future with Quality Plastic Solutions
                 </h1>
-                <p className="text-sm md:text-base lg:text-lg xl:text-[22px] 2xl:text-3xl max-w-3xl xl:max-w-4xl 2xl:max-w-5xl mb-4 md:mb-6 xl:mb-8 leading-normal">
+                <p className="text-sm md:text-base lg:text-lg xl:text-lg 2xl:text-xl max-w-3xl xl:max-w-4xl 2xl:max-w-5xl mb-4 md:mb-6 xl:mb-8 leading-normal">
                     Since 1988, Mandviwalla Mauser Plastic Industries Limited has been delivering world-class
                     injection and blow-moulded plastic products in Pakistan. Powered by German technology and
                     decades of expertise, we are the pioneers of 210-liter industrial drums and premium plastic
@@ -120,12 +137,11 @@ export default function Hero() {
 
                 {/* Buttons */}
                 <div className="flex flex-row gap-3 md:gap-4 xl:gap-5">
-                    <Link
+                    <CtaButton
                         href="/products"
-                        className="px-4 sm:px-6 xl:px-8 py-2 sm:py-3 xl:py-4 text-white font-semibold rounded transition flex items-center justify-center gap-2 text-sm md:text-base lg:text-lg xl:text-2xl 2xl:text-3xl"
-                        style={{ backgroundColor: colors.primary.blue }}
-                        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.orange.dark}
-                        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = colors.primary.blue}
+                        bg={colors.primary.blue}
+                        hoverBg={colors.orange.dark}
+                        className="px-4 sm:px-6 py-2 sm:py-3 text-sm md:text-base lg:text-base xl:text-base 2xl:text-lg"
                     >
                         <svg
                             width="25"
@@ -140,14 +156,13 @@ export default function Hero() {
                             />
                         </svg>
                         Explore Products
-                    </Link>
+                    </CtaButton>
 
-                    <Link
+                    <CtaButton
                         href="/contact"
-                        className="px-4 sm:px-6 xl:px-8 py-2 sm:py-3 xl:py-4 text-white font-semibold rounded transition flex items-center justify-center gap-2 text-sm md:text-base lg:text-lg xl:text-2xl 2xl:text-3xl"
-                        style={{ backgroundColor: colors.orange.dark }}
-                        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.primary.blue}
-                        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = colors.orange.dark}
+                        bg={colors.orange.dark}
+                        hoverBg={colors.primary.blue}
+                        className="px-4 sm:px-6 py-2 sm:py-3 text-sm md:text-base lg:text-base xl:text-base 2xl:text-lg"
                     >
                         <svg
                             width="18"
@@ -162,7 +177,22 @@ export default function Hero() {
                             />
                         </svg>
                         Contact Us
-                    </Link>
+                    </CtaButton>
+                </div>
+
+                {/* Carousel indicator dots */}
+                <div className="mt-6 md:mt-8 flex gap-2.5" role="tablist" aria-label="Hero slides">
+                    {images.map((_, i) => (
+                        <button
+                            key={i}
+                            type="button"
+                            role="tab"
+                            aria-label={`Go to slide ${i + 1}`}
+                            aria-selected={i === activeImage}
+                            onClick={() => goTo(i)}
+                            className={`h-2 rounded-full transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent ${i === activeImage ? "w-7 bg-white" : "w-2 bg-white/50 hover:bg-white/80"}`}
+                        />
+                    ))}
                 </div>
             </div>
 
