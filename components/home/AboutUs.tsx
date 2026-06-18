@@ -3,14 +3,16 @@
 import { Check, Facebook, Instagram, Twitter } from "lucide-react";
 import Image from "next/image";
 import { colors } from "@/lib/colors";
+import SectionHeader from "@/components/ui/SectionHeader";
+import Reveal from "@/components/ui/Reveal";
 
 export default function AboutUs() {
     return (
-        <section className="w-full py-12 md:py-16 lg:py-20 xl:py-24 2xl:py-28 bg-white px-4 md:px-20 xl:px-24 2xl:px-32">
-            <div className="max-w-7xl xl:max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-20 xl:gap-24 2xl:gap-28 items-center">
+        <section className="w-full py-12 md:py-16 lg:py-16 xl:py-16 2xl:py-20 bg-white px-4 md:px-12 xl:px-16 2xl:px-20">
+            <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-12 xl:gap-12 2xl:gap-16 items-center">
 
                 {/* Left Image */}
-                <div className="relative w-full h-[270px] sm:h-[320px] md:h-[370px] lg:h-[400px] xl:h-[480px] 2xl:h-[560px] rounded-xl shadow-lg">
+                <div className="relative w-full h-[270px] sm:h-[320px] md:h-[370px] lg:h-[400px] xl:h-[400px] 2xl:h-[440px] rounded-xl shadow-lg">
                     <Image
                         src="/new-logo.jpg"
                         alt="About Us Image"
@@ -27,17 +29,17 @@ export default function AboutUs() {
         p-3 sm:p-4 
         shadow-xl 
         w-[150px] sm:w-[180px]
-        md:w-[200px] lg:w-[220px] xl:w-[260px] 2xl:w-[300px]
+        md:w-[200px] lg:w-[220px] xl:w-[220px] 2xl:w-[240px]
         z-10
     "
                         style={{ backgroundColor: colors.primary.blue }}
                     >
                         <div className="flex items-center gap-2">
-                            <span className="text-3xl sm:text-4xl md:text-5xl xl:text-7xl 2xl:text-8xl font-bold leading-none">
+                            <span className="text-3xl sm:text-4xl md:text-5xl xl:text-5xl 2xl:text-6xl font-bold leading-none">
                                 36
                             </span>
 
-                            <div className="flex flex-col text-xs sm:text-sm md:text-base xl:text-xl 2xl:text-2xl uppercase tracking-wide leading-tight">
+                            <div className="flex flex-col text-xs sm:text-sm md:text-base xl:text-base 2xl:text-lg uppercase tracking-wide leading-tight">
                                 <span>Years</span>
                                 <span>of</span>
                                 <span>Experience</span>
@@ -49,15 +51,13 @@ export default function AboutUs() {
 
                 {/* Right Content */}
                 <div className="relative">
-                    <h4 className="text-sm md:text-base xl:text-xl 2xl:text-2xl tracking-widest border-l-2 pl-2 mb-2 xl:mb-3 font-semibold" style={{ borderColor: colors.orange.dark, fontFamily: 'var(--font-lato)', color: colors.gray.tagColor }}>
-                        About Us
-                    </h4>
+                    <SectionHeader
+                        eyebrow="About Us"
+                        title="Who We Are"
+                        className="mb-3 md:mb-4 xl:mb-5"
+                    />
 
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-[64px] font-semibold mb-3 md:mb-4 xl:mb-5 leading-snug">
-                        Who We Are
-                    </h2>
-
-                    <p className="text-[#666666] leading-relaxed mb-4 md:mb-6 xl:mb-8 text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">
+                    <p className="text-[#666666] leading-relaxed mb-4 md:mb-6 xl:mb-8 text-sm md:text-base lg:text-lg xl:text-lg 2xl:text-xl">
                         Mandviwalla Mauser Plastic Industries Limited is Pakistan’s leading manufacturer of injection
                         and blow-moulded plastic products, with technical collaboration from Mauser Werke, Germany.
                         With decades of experience, advanced technology, and a strong commitment to quality, we serve
@@ -75,7 +75,7 @@ export default function AboutUs() {
                         ].map((item, index) => (
                             <li key={index} className="flex items-start gap-2 md:gap-3">
                                 <Check className="w-4 h-4 md:w-5 md:h-5 xl:w-6 xl:h-6 mt-0.5 md:mt-1 flex-shrink-0" strokeWidth={2.5} style={{ color: colors.orange.dark }} />
-                                <span className="text-[#666666] text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">{item}</span>
+                                <span className="text-[#666666] text-sm md:text-base lg:text-lg xl:text-lg 2xl:text-xl">{item}</span>
                             </li>
                         ))}
                     </ul>
@@ -99,7 +99,7 @@ export default function AboutUs() {
 
                 </div>
 
-            </div>
+            </Reveal>
         </section>
     );
 }
