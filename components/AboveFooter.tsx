@@ -17,19 +17,19 @@ export default function AboveFooter({ variant = "blue" }: AboveFooterProps) {
 
     return (
         <section
-            className="w-full py-16 md:py-20 lg:py-24 px-4 h-[252px]"
+            className="w-full py-12 md:py-16 lg:py-20 xl:py-24 2xl:py-28 px-4 md:px-12 xl:px-24 2xl:px-32"
             style={{ background: gradientBg }}
         >
-            <div className="container mx-auto max-w-6xl">
-                <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-6 text-center md:text-left">
-                    <div className="flex flex-col gap-2">
+            <div className="container mx-auto max-w-6xl xl:max-w-[1400px] 2xl:max-w-[1600px]">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-6 xl:gap-10 text-center md:text-left">
+                    <div className="flex flex-col gap-2 xl:gap-3">
                         {/* Heading */}
-                        <h2 className="text-2xl md:text-4xl 2xl:text-[42px] font-semibold" style={{ color: '#FFFFFF' }}>
+                        <h2 className="text-2xl md:text-4xl xl:text-6xl 2xl:text-[64px] font-semibold" style={{ color: '#FFFFFF' }}>
                             Pakistan's Trusted Plastic Manufacturer
                         </h2>
 
                         {/* Description */}
-                        <p className="text-sm font-normal md:text-md lg:text-md" style={{ color: '#FFFFFF' }}>
+                        <p className="text-sm font-normal md:text-md lg:text-md xl:text-xl 2xl:text-2xl" style={{ color: '#FFFFFF' }}>
                             Get durable, innovative, and high-quality plastic solutions with MMPL.
                         </p>
                     </div>
@@ -37,7 +37,7 @@ export default function AboveFooter({ variant = "blue" }: AboveFooterProps) {
                     {/* Contact Us Button */}
                     <Link
                         href="/contact"
-                        className="px-4 sm:px-6 py-2 sm:py-3 text-white font-semibold rounded transition flex items-center justify-center gap-2 text-sm md:text-base whitespace-nowrap self-center md:self-auto"
+                        className="px-4 sm:px-6 xl:px-8 py-2 sm:py-3 xl:py-4 text-white font-semibold rounded transition flex items-center justify-center gap-2 text-sm md:text-base xl:text-xl 2xl:text-2xl whitespace-nowrap self-center md:self-auto"
                         style={{ backgroundColor: btnColor }}
                         onMouseEnter={(e) => e.currentTarget.style.backgroundColor = btnHoverColor}
                         onMouseLeave={(e) => e.currentTarget.style.backgroundColor = btnColor}

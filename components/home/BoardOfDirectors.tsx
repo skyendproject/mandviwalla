@@ -26,26 +26,26 @@ export default function BoardOfDirectors() {
     ];
 
     return (
-        <section className="w-full py-12 md:py-16 lg:py-20 px-4 md:px-">
-            <div className="container mx-auto">
+        <section className="w-full py-8 md:py-10 lg:py-12 xl:py-14 2xl:py-16 px-4 md:px-20 xl:px-24 2xl:px-32">
+            <div className="container mx-auto max-w-7xl xl:max-w-[1400px] 2xl:max-w-[1600px]">
 
                 {/* Header Section */}
-                <div className="flex flex-col gap-4 mb-8 md:mb-12 items-center text-center max-w-3xl mx-auto">
+                <div className="flex flex-col gap-4 mb-8 md:mb-12 xl:mb-16 items-center text-center max-w-4xl xl:max-w-5xl mx-auto">
 
                     {/* Label */}
                     <div className="border-l-4 pl-4" style={{ borderColor: colors.orange.dark }}>
-                        <p className="text-sm md:text-base 2xl:text-lg font-semibold uppercase" style={{ color: colors.gray.tagColor }}>
+                        <p className="text-sm md:text-base xl:text-xl 2xl:text-2xl font-semibold uppercase" style={{ color: colors.gray.tagColor }}>
                             OUR Leadership
                         </p>
                     </div>
 
                     {/* Heading */}
-                    <h2 className="text-2xl md:text-3xl xl:text-4xl 2xl:text-[42px] font-semibold text-black">
+                    <h2 className="text-2xl md:text-3xl xl:text-6xl 2xl:text-[64px] font-semibold text-black">
                         Meet Our Cheif Executive Officer
                     </h2>
 
                     {/* Description */}
-                    <p className="text-xs sm:text-sm md:text-base leading-relaxed -mt-3 md:mt-0" style={{ color: colors.gray.text }}>
+                    <p className="text-xs sm:text-sm md:text-base xl:text-xl 2xl:text-2xl leading-relaxed -mt-3 md:mt-0" style={{ color: colors.gray.text }}>
                         Profile of CEO
                     </p>
                 </div>
@@ -62,10 +62,10 @@ export default function BoardOfDirectors() {
                                 {/* Left Side - Text and Social Icons */}
                                 <div className="flex flex-col justify-center items-center p-4 sm:p-6 gap-0 lg:gap-6">
                                     <div className="text-center">
-                                        <h3 className="text-lg md:text-xl xl:text-xl 2xl:text-2xl font-semibold text-black mb-1 sm:mb-2">
+                                        <h3 className="text-lg md:text-xl xl:text-4xl 2xl:text-5xl font-semibold text-black mb-1 sm:mb-2">
                                             {director.name}
                                         </h3>
-                                        <p className="text-xs sm:text-sm md:text-base mb-3 sm:mb-6" style={{ color: colors.gray.light }}>
+                                        <p className="text-xs sm:text-sm md:text-base xl:text-xl 2xl:text-2xl mb-3 sm:mb-6" style={{ color: colors.gray.light }}>
                                             {director.role}
                                         </p>
                                     </div>
@@ -100,7 +100,7 @@ export default function BoardOfDirectors() {
 
                                 {/* Right Side - Image */}
                                 <div className="p-4">
-                                    <div className="relative w-full aspect-[3/4] md:aspect-auto md:w-[241.83px] md:h-[259.51px] lg:h-[300px] ">
+                                    <div className="relative w-full aspect-[3/4] md:aspect-auto md:w-[241.83px] md:h-[259.51px] lg:h-[300px] xl:w-[320px] xl:h-[380px] 2xl:w-[380px] 2xl:h-[440px] ">
                                         <Image
                                             src={director.image}
                                             alt={director.name}

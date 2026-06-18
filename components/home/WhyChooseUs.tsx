@@ -5,12 +5,12 @@ import { colors } from "@/lib/colors";
 
 export default function WhyChooseUs() {
     return (
-        <section className="w-full py-20 px-4 md:px-20 bg-white">
+        <section className="w-full py-12 md:py-16 lg:py-20 xl:py-24 2xl:py-28 px-4 md:px-20 xl:px-24 2xl:px-32 bg-white">
             <div className="container mx-auto">
 
                 {/* Heading */}
-                <div className="text-center mb-16">
-                    <p className="text-sm md:text-base 2xl:text-lg mb-2 font-semibold" style={{ fontFamily: "var(--font-lato)" }}>
+                <div className="text-center mb-16 xl:mb-20">
+                    <p className="text-sm md:text-base xl:text-xl 2xl:text-2xl mb-2 font-semibold" style={{ fontFamily: "var(--font-lato)" }}>
                         <span
                             className="inline-block border-l-2 pl-2"
                             style={{ borderColor: colors.primary.orange ,color: colors.gray.tagColor }}
@@ -18,33 +18,33 @@ export default function WhyChooseUs() {
                             Why Choose Us?
                         </span>
                     </p>
-                    <h2 className="text-2xl md:text-4xl font-bold 2xl:text-[42px]" style={{ fontFamily: "var(--font-maven)" }}>
+                    <h2 className="text-2xl md:text-4xl xl:text-6xl font-bold 2xl:text-[64px]" style={{ fontFamily: "var(--font-maven)" }}>
                         Why Partner With Us?
                     </h2>
                 </div>
 
                 {/* Main Layout */}
-                <div className="relative flex flex-col md:flex-row justify-center items-center md:items-start max-w-6xl mx-auto gap-8 md:gap-0">
+                <div className="relative flex flex-col md:flex-row justify-center items-center md:items-start max-w-6xl xl:max-w-[1400px] 2xl:max-w-[1600px] mx-auto gap-8 md:gap-0">
 
                     {/* LEFT CONTENT - Desktop */}
-                    <div className="hidden md:flex flex-col justify-between text-right w-1/3 pr-8 lg:pr-16 h-[460px]">
-                        <div className="pt-10">
-                            <h3 className="text-lg lg:text-xl 2xl:text-2xl font-semibold mb-1">Sustainable Practices</h3>
-                            <p className="text-sm text-gray-600">
+                    <div className="hidden md:flex flex-col justify-between text-right w-1/3 pr-8 lg:pr-16 xl:pr-20 h-[460px] xl:h-[540px] 2xl:h-[600px]">
+                        <div className="pt-10 xl:pt-12">
+                            <h3 className="text-lg lg:text-xl 2xl:text-4xl xl:text-3xl font-semibold mb-1 xl:mb-2">Sustainable Practices</h3>
+                            <p className="text-sm xl:text-lg 2xl:text-xl text-gray-600">
                                 Reusable, eco-friendly packaging solutions.
                             </p>
                         </div>
 
-                        <div className="pb-10">
-                            <h3 className="text-lg lg:text-xl 2xl:text-2xl font-semibold mb-1">Customer Commitment</h3>
-                            <p className="text-sm text-gray-600">
+                        <div className="pb-10 xl:pb-12">
+                            <h3 className="text-lg lg:text-xl 2xl:text-4xl xl:text-3xl font-semibold mb-1 xl:mb-2">Customer Commitment</h3>
+                            <p className="text-sm xl:text-lg 2xl:text-xl text-gray-600">
                                 On-time delivery & after-sales support.
                             </p>
                         </div>
                     </div>
 
                     {/* CENTER IMAGE */}
-                    <div className="relative w-[280px] h-[380px] sm:w-[320px] sm:h-[420px] md:w-[360px] md:h-[460px] flex-shrink-0">
+                    <div className="relative w-[280px] h-[380px] sm:w-[320px] sm:h-[420px] md:w-[360px] md:h-[460px] xl:w-[440px] xl:h-[540px] 2xl:w-[500px] 2xl:h-[600px] flex-shrink-0">
                         <Image
                             src="/why-choose-us.webp"
                             alt="Partnership"
@@ -53,7 +53,7 @@ export default function WhyChooseUs() {
                         />
 
                         {/* LEFT ICONS */}
-                        <div className="absolute top-10 left-0 -translate-x-1/2 w-16 h-16 bg-[#ECF0F1] flex items-center justify-center shadow">
+                        <div className="absolute top-10 left-0 -translate-x-1/2 w-16 h-16 xl:w-20 xl:h-20 2xl:w-24 2xl:h-24 bg-[#ECF0F1] flex items-center justify-center shadow">
                             <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M3.1739 40.1302H14.0435" stroke="#7A7A7A" strokeWidth="2" strokeMiterlimit="10" strokeLinejoin="round" />
                                 <path d="M10.7826 45.5649H21.6522" stroke="#7A7A7A" strokeWidth="2" strokeMiterlimit="10" strokeLinejoin="round" />
@@ -68,7 +68,7 @@ export default function WhyChooseUs() {
                             </svg>
                         </div>
 
-                        <div className="absolute bottom-10 left-0 -translate-x-1/2 w-16 h-16 bg-[#ECF0F1] flex items-center justify-center shadow">
+                        <div className="absolute bottom-10 left-0 -translate-x-1/2 w-16 h-16 xl:w-20 xl:h-20 2xl:w-24 2xl:h-24 bg-[#ECF0F1] flex items-center justify-center shadow">
                             <svg width="53" height="52" viewBox="0 0 53 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M15.2174 45.5649H13.0435" stroke="#7A7A7A" strokeWidth="2" strokeMiterlimit="10" strokeLinejoin="round" />
                                 <path d="M14.1304 50.9998C17.132 50.9998 19.5652 48.5666 19.5652 45.565C19.5652 42.5635 17.132 40.1302 14.1304 40.1302C11.1289 40.1302 8.69566 42.5635 8.69566 45.565C8.69566 48.5666 11.1289 50.9998 14.1304 50.9998Z" stroke="#7A7A7A" strokeWidth="2" strokeMiterlimit="10" strokeLinejoin="round" />
@@ -91,7 +91,7 @@ export default function WhyChooseUs() {
 
                         {/* RIGHT ICONS */}
                         <div
-                            className="absolute top-10 right-0 translate-x-1/2 w-16 h-16 flex items-center justify-center shadow"
+                            className="absolute top-10 right-0 translate-x-1/2 w-16 h-16 xl:w-20 xl:h-20 2xl:w-24 2xl:h-24 flex items-center justify-center shadow"
                             style={{ backgroundColor: colors.primary.blue }}
                         >
                             <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -129,17 +129,17 @@ export default function WhyChooseUs() {
                     </div>
 
                     {/* RIGHT CONTENT - Desktop */}
-                    <div className="hidden md:flex flex-col justify-between text-left w-1/3 pl-8 lg:pl-16 h-[460px]">
-                        <div className="pt-10">
-                            <h3 className="text-lg lg:text-xl 2xl:text-2xl font-semibold mb-1">Certified Quality</h3>
-                            <p className="text-sm text-gray-600">
+                    <div className="hidden md:flex flex-col justify-between text-left w-1/3 pl-8 lg:pl-16 xl:pl-20 h-[460px] xl:h-[540px] 2xl:h-[600px]">
+                        <div className="pt-10 xl:pt-12">
+                            <h3 className="text-lg lg:text-xl 2xl:text-4xl xl:text-3xl font-semibold mb-1 xl:mb-2">Certified Quality</h3>
+                            <p className="text-sm xl:text-lg 2xl:text-xl text-gray-600">
                                 UN-approved and internationally tested packaging.
                             </p>
                         </div>
 
-                        <div className="pb-10">
-                            <h3 className="text-lg lg:text-xl 2xl:text-2xl font-semibold mb-1">35+ Years Experience</h3>
-                            <p className="text-sm text-gray-600">
+                        <div className="pb-10 xl:pb-12">
+                            <h3 className="text-lg lg:text-xl 2xl:text-4xl xl:text-3xl font-semibold mb-1 xl:mb-2">35+ Years Experience</h3>
+                            <p className="text-sm xl:text-lg 2xl:text-xl text-gray-600">
                                 Trusted heritage since 1988.
                             </p>
                         </div>
