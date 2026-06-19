@@ -33,7 +33,7 @@ export default function HowItWorks() {
                     {/* Left Side - Image */}
                     <div className="relative flex w-full lg:w-1/2 justify-center lg:justify-end lg:items-start lg:-mt-8">
                         <Image
-                            src="/how-it-works.webp"
+                            src="/how-it-works.jpeg"
                             alt="How it Works"
                             width={570}
                             height={645}
