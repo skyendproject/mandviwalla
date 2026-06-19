@@ -18,19 +18,19 @@ export default function AboveFooter({ variant = "blue" }: AboveFooterProps) {
 
     return (
         <section
-            className="w-full py-12 md:py-16 lg:py-16 xl:py-16 2xl:py-20 px-4 md:px-12 xl:px-16 2xl:px-20"
+            className="w-full py-12 md:py-16 px-4 md:px-8 lg:px-12"
             style={{ background: gradientBg }}
         >
-            <div className="container mx-auto max-w-6xl xl:max-w-7xl">
+            <div className="container mx-auto max-w-7xl">
                 <Reveal className="flex flex-col md:flex-row md:justify-between md:items-center gap-6 xl:gap-10 text-center md:text-left">
                     <div className="flex flex-col gap-2 xl:gap-3">
                         {/* Heading */}
-                        <h2 className="text-2xl md:text-3xl xl:text-3xl 2xl:text-4xl font-semibold" style={{ color: '#FFFFFF' }}>
+                        <h2 className="text-2xl md:text-3xl font-semibold" style={{ color: '#FFFFFF' }}>
                             Pakistan's Trusted Plastic Manufacturer
                         </h2>
 
                         {/* Description */}
-                        <p className="text-sm font-normal md:text-base lg:text-base xl:text-lg 2xl:text-xl" style={{ color: '#FFFFFF' }}>
+                        <p className="text-sm font-normal md:text-base" style={{ color: '#FFFFFF' }}>
                             Get durable, innovative, and high-quality plastic solutions with MMPL.
                         </p>
                     </div>
@@ -40,7 +40,7 @@ export default function AboveFooter({ variant = "blue" }: AboveFooterProps) {
                         href="/contact"
                         bg={btnColor}
                         hoverBg={btnHoverColor}
-                        className="px-4 sm:px-6 py-2 sm:py-3 text-sm md:text-base xl:text-base 2xl:text-lg whitespace-nowrap self-center md:self-auto"
+                        className="px-4 sm:px-6 py-2 sm:py-3 text-sm md:text-base whitespace-nowrap self-center md:self-auto"
                     >
                         <svg
                             width="18"

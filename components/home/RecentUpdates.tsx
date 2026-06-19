@@ -45,13 +45,13 @@ export default function RecentUpdates() {
                     <div className="flex flex-col gap-2">
                         {/* Label */}
                         <div className="border-l-4 pl-3" style={{ borderColor: colors.primary.blue }}>
-                            <p className="text-sm md:text-base 2xl:text-lg font-semibold" style={{ color: colors.gray.tagColor }}>
+                            <p className="text-sm md:text-base font-semibold" style={{ color: colors.gray.tagColor }}>
                                 Our News and Blogs
                             </p>
                         </div>
 
                         {/* Heading */}
-                        <h2 className="text-2xl md:text-3xl xl:text-4xl 2xl:text-[42px] font-semibold text-black">
+                        <h2 className="text-2xl md:text-3xl font-semibold text-black">
                             Recently Updated
                         </h2>
                     </div>
@@ -86,11 +86,11 @@ export default function RecentUpdates() {
 
                         {/* Content */}
                         <div className="flex flex-col gap-3">
-                            <h3 className="text-lg xl:text-xl 2xl:text-2xl font-bold text-black leading-snug">
+                            <h3 className="text-lg md:text-xl font-bold text-black leading-snug">
                                 {mainPost.title}
                             </h3>
 
-                            {/* <p className="text-sm md:text-base 2xl:text-lg leading-relaxed" style={{ color: colors.gray.border }}>
+                            {/* <p className="text-sm md:text-base leading-relaxed" style={{ color: colors.gray.border }}>
                                 {mainPost.description}
                             </p> */}
 

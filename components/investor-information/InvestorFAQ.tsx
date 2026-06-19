@@ -35,8 +35,8 @@ export default function InvestorFAQ() {
     <section className="w-full py-8 md:py-12 lg:py-16 bg-white px-4 md:px-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
         <div className="text-center mb-8">
-          <div className="text-sm md:text-base 2xl:text-lg mb-1 border-l-2 inline-block pl-2 font-semibold" style={{ color: colors.gray.tagColor, borderColor: colors.primary.blue }}>Investor Information</div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl 2xl:text-[42px] font-bold text-gray-900 mb-2">Reliable. Transparent. Investor-Focused.</h2>
+          <div className="text-sm md:text-base mb-1 border-l-2 inline-block pl-2 font-semibold" style={{ color: colors.gray.tagColor, borderColor: colors.primary.blue }}>Investor Information</div>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Reliable. Transparent. Investor-Focused.</h2>
           <p className="mx-auto text-base md:text-base" style={{ color: colors.gray.text }}>
             Mandviwalla Mauser Plastic Industries Limited (MMPL) is committed to maintaining the highest standards of transparency, disclosure, and corporate governance. This Investor Information hub offers shareholders and stakeholders quick access to all essential financial, regulatory, and governance-related documents.
           </p>
@@ -46,8 +46,8 @@ export default function InvestorFAQ() {
         </div>
         <div className="flex flex-col md:flex-row items-center justify-center mt-20">
           <div className="flex-1 min-w-0 flex flex-col justify-center">
-            <div className="mb-4 text-sm md:text-base 2xl:text-lg border-l-2 pl-2 font-semibold" style={{ color: colors.gray.tagColor, borderColor: colors.primary.blue }}>General Question</div>
-            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl 2xl:text-[42px]font-bold mb-4">Frequently Asked Questions</h3>
+            <div className="mb-4 text-sm md:text-base border-l-2 pl-2 font-semibold" style={{ color: colors.gray.tagColor, borderColor: colors.primary.blue }}>General Question</div>
+            <h3 className="text-2xl md:text-3xlfont-bold mb-4">Frequently Asked Questions</h3>
             {/* <p className="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p> */}
             <div className="mb-4">
               <div className="px-4 py-3 text-[#12AAEB] font-medium cursor-pointer bg-[#F6F6F6] rounded-md mb-6">
@@ -79,12 +79,12 @@ export default function InvestorFAQ() {
             </div>
           </div>
           <div className="flex-1 min-w-0 flex items-center justify-center">
-            <div className="relative w-[470px] h-[551px] rounded-lg overflow-hidden flex items-center justify-center">
+            <div className="relative w-[470px] h-[551px] rounded-card overflow-hidden flex items-center justify-center">
               <Image
                 src="/investor-info-FAQ.jpg"
                 alt="Investor FAQ"
                 fill
-                className="object-cover rounded-lg"
+                className="object-cover rounded-card"
                 priority
               />
             </div>

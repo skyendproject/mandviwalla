@@ -35,17 +35,17 @@ export default function InvestorDisclosure() {
         <section className="w-full py-12 px-4 md:px-0 bg-white">
             <div className="max-w-5xl mx-auto">
                 <div className="text-center mb-6">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl 2xl:text-[42px] font-bold mb-2">Gender Pay Gap Disclosure</h2>
+                    <h2 className="text-2xl md:text-3xl font-bold mb-2">Gender Pay Gap Disclosure</h2>
                     <p className="mx-auto text-base max-w-5xl text-gray-600 mb-2">
                         At Mandviwalla Mauser Plastic Industries Limited (MMPL), we are deeply committed to gender equality and women’s empowerment, in alignment with Sustainable Development Goal (SDG) 5. We foster a workplace culture built on dignity, respect, and fairness for all employees.
                     </p>
-                    <div className="text-md 2xl:text-lg text-gray-900 border-l-2 inline-block pl-2 mb-2" style={{ borderColor: '#0A84FF' }}>
+                    <div className="text-sm md:text-base text-gray-900 border-l-2 inline-block pl-2 mb-2" style={{ borderColor: '#0A84FF' }}>
                         Pay Gap Statement (Half Year Ended: December 31, 2024)
                     </div>
                 </div>
                 <div className="flex flex-col md:flex-row items-center justify-center gap-12 relative">
                     {/* Left Box */}
-                    <div className="flex-1 max-w-md bg-[#F6F6F6] rounded-lg p-8 flex flex-col items-center shadow-inner">
+                    <div className="flex-1 max-w-md bg-[#F6F6F6] rounded-card p-8 flex flex-col items-center shadow-inner">
                         <SemiCircularProgress value={-0.406} color="#FF7171" />
                         <div className="text-3xl font-bold text-gray-900 mt-[-18px]">-40.6%</div>
                         <div className="text-xl font-semibold text-gray-900 mt-2 mb-2">Mean Gender Pay Gap: -40.6%</div>
@@ -64,7 +64,7 @@ export default function InvestorDisclosure() {
                         }} />
                     </div>
                     {/* Right Box */}
-                    <div className="flex-1 max-w-md bg-[#F6F6F6] rounded-lg p-8 flex flex-col items-center shadow-inner">
+                    <div className="flex-1 max-w-md bg-[#F6F6F6] rounded-card p-8 flex flex-col items-center shadow-inner">
                         <SemiCircularProgress value={0.1633} color="#1146F5" />
                         <div className="text-3xl font-bold text-gray-900 mt-[-18px]">16.33%</div>
                         <div className="text-xl font-semibold text-gray-900 mt-2 mb-2">Median Gender Pay Gap: 16.33%</div>

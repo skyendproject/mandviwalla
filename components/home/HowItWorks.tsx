@@ -7,7 +7,7 @@ import Reveal from "@/components/ui/Reveal";
 
 export default function HowItWorks() {
     return (
-        <section className="w-full pt-16 md:pt-20 lg:pt-24 xl:pt-28 2xl:pt-32 px-4 md:px-12 xl:px-16 2xl:px-20 bg-white">
+        <section className="w-full py-14 md:py-20 px-4 md:px-12 bg-white">
             <div className="container mx-auto max-w-7xl">
                 {/* Step by Step Label (mobile + tablet) */}
                 <div className="lg:hidden flex justify-center mb-3">
@@ -19,7 +19,7 @@ export default function HowItWorks() {
                 </div>
 
                 {/* Heading (mobile + tablet) */}
-                <h2 className="mb-6 block lg:hidden text-center text-2xl sm:text-3xl md:text-4xl font-semibold text-black">
+                <h2 className="mb-6 block lg:hidden text-center text-2xl md:text-3xl font-semibold text-black">
                     How it Works
                 </h2>
 
@@ -27,17 +27,18 @@ export default function HowItWorks() {
                 {/* <p className="mb-4 block md:hidden text-left text-sm md:text-base leading-relaxed" style={{ color: colors.gray.text }}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
                     </p> */}
-                <Reveal className="flex flex-col lg:flex-row gap-8 lg:gap-12 xl:gap-12 items-center lg:items-start">
+                <Reveal className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center lg:items-start">
 
 
                     {/* Left Side - Image */}
                     <div className="relative flex w-full lg:w-1/2 justify-center lg:justify-end lg:items-start lg:-mt-8">
                         <Image
-                            src="/how-it-works.jpeg"
+                            src="/how-it-works.webp"
                             alt="How it Works"
                             width={570}
-                            height={6045}
-                            className="block w-full h-auto lg:h-[500px] xl:h-[520px] 2xl:h-[560px] max-w-[360px] sm:max-w-[420px] md:max-w-[480px] lg:max-w-[440px] xl:max-w-[460px] 2xl:max-w-[500px] mx-auto lg:mx-0 relative z-10 object-contain"
+                            height={645}
+                            sizes="(max-width: 1024px) 480px, 460px"
+                            className="block w-full h-auto lg:h-[500px] xl:h-[520px] 2xl:h-[560px] max-w-[360px] sm:max-w-[420px] md:max-w-[480px] lg:max-w-[440px] xl:max-w-[460px] 2xl:max-w-[500px] mx-auto lg:mx-0 relative z-10 object-contain rounded-card"
                         />
 
                         {/* Decorative Dot Grid - Bottom Left */}
@@ -79,10 +80,10 @@ export default function HowItWorks() {
                                     </svg>
                                 </div>
                                 <div className="flex-1">
-                                    <h3 className="text-lg lg:text-xl xl:text-base 2xl:text-lg font-bold mb-1 md:mb-2 text-black">
+                                    <h3 className="text-lg md:text-xl font-bold mb-1 md:mb-2 text-black">
                                         Product Design & Development
                                     </h3>
-                                    <p className="text-sm md:text-base xl:text-base 2xl:text-lg" style={{ color: colors.gray.text }}>
+                                    <p className="text-sm md:text-base" style={{ color: colors.gray.text }}>
                                         Built with German expertise & R&D focus.
                                     </p>
                                 </div>
@@ -99,10 +100,10 @@ export default function HowItWorks() {
 
                                 </div>
                                 <div className="flex-1">
-                                    <h3 className="text-lg lg:text-xl xl:text-base 2xl:text-lg font-bold mb-1 md:mb-2 text-black">
+                                    <h3 className="text-lg md:text-xl font-bold mb-1 md:mb-2 text-black">
                                         Manufacturing
                                     </h3>
-                                    <p className="text-sm md:text-base xl:text-base 2xl:text-lg" style={{ color: colors.gray.text }}>
+                                    <p className="text-sm md:text-base" style={{ color: colors.gray.text }}>
                                         State-of-the-art injection & blow moulding facilities.
                                     </p>
                                 </div>
@@ -117,10 +118,10 @@ export default function HowItWorks() {
 
                                 </div>
                                 <div className="flex-1">
-                                    <h3 className="text-lg lg:text-xl xl:text-base 2xl:text-lg font-bold mb-1 md:mb-2 text-black">
+                                    <h3 className="text-lg md:text-xl font-bold mb-1 md:mb-2 text-black">
                                         Delivery & Support
                                     </h3>
-                                    <p className="text-sm md:text-base xl:text-base 2xl:text-lg" style={{ color: colors.gray.text }}>
+                                    <p className="text-sm md:text-base" style={{ color: colors.gray.text }}>
                                         On-time delivery with complete after-sales service.
                                     </p>
                                 </div>

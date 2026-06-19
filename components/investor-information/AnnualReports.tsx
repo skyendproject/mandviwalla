@@ -16,18 +16,18 @@ export default function AnnualReports() {
     return (
         <section className="w-full py-12 px-4 md:px-0 bg-[#F6F6F6]">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20">
-                <div className="relative w-[420px] h-[340px] rounded-lg overflow-hidden shrink-0 bg-white">
+                <div className="relative w-[420px] h-[340px] rounded-card overflow-hidden shrink-0 bg-white">
                     <Image
                         src="/annual-report.jpg"
                         alt="Annual Reports"
                         fill
-                        className="object-cover rounded-lg"
+                        className="object-cover rounded-card"
                         priority
                     />
                 </div>
                 <div className="flex-1 flex flex-col justify-center items-start max-w-xl">
-                    <div className="text-sm md:text-base 2xl:text-lg mb-1 border-l-2 pl-2" style={{ color: colors.gray.tagColor, borderColor: colors.primary.blue }}>Annual Reports</div>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl 2xl:text-[42px] font-bold text-gray-900 mb-2">Annual Reports</h2>
+                    <div className="text-sm md:text-base mb-1 border-l-2 pl-2" style={{ color: colors.gray.tagColor, borderColor: colors.primary.blue }}>Annual Reports</div>
+                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Annual Reports</h2>
                     <p className="text-gray-700 mb-4 text-base md:text-base">
                         Access complete annual performance reports, audited financial statements, and director reports.<br />
                         <span className="font-semibold">Available Years:</span>
@@ -47,13 +47,13 @@ export default function AnnualReports() {
                 {/* Section Label */}
                 <div className="flex items-center justify-center gap-3 mb-3">
                     <div className="w-0.5 h-6 md:h-6" style={{ backgroundColor: colors.primary.blue }}></div>
-                    <span className="text-sm md:text-base 2xl:text-lgext-lg" style={{ color: colors.gray.tagColor }}>
+                    <span className="text-sm md:text-base" style={{ color: colors.gray.tagColor }}>
                         Key Investor Documents
                     </span>
                 </div>
 
                 {/* Heading */}
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl 2xl:text-[42px] font-semibold text-black text-center mb-10 md:mb-8">
+                <h2 className="text-2xl md:text-3xl font-semibold text-black text-center mb-10 md:mb-8">
                     Key Investor Documents
                 </h2>
 

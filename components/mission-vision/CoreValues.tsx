@@ -57,13 +57,13 @@ export default function CoreValues() {
                 {/* Label with blue line */}
                 <div className="flex items-center justify-start md:justify-center gap-3 mb-2">
                     <div className="w-0.5 h-8 md:h-6" style={{ backgroundColor: colors.primary.blue }}></div>
-                    <span className="text-sm md:text-base 2xl:text-lg" style={{ color: colors.gray.tagColor }}>
+                    <span className="text-sm md:text-base" style={{ color: colors.gray.tagColor }}>
                         Core Values
                     </span>
                 </div>
 
                 {/* Heading */}
-                <h2 className="text-2xl md:text-4xl 2xl:text-[42px] font-semibold text-black text-left md:text-center mb-12 md:mb-16">
+                <h2 className="text-2xl md:text-3xl font-semibold text-black text-left md:text-center mb-12 md:mb-16">
                     Core Values
                 </h2>
 
@@ -81,7 +81,7 @@ export default function CoreValues() {
 
                             {/* Content */}
                             <div className="flex flex-col gap-2 flex-1">
-                                <h3 className="text-lg md:text-xl lg:text-2xl font-semibold text-black">
+                                <h3 className="text-lg md:text-xl font-semibold text-black">
                                     {goal.title}
                                 </h3>
                                 <p className="text-sm md:text-base text-justify" style={{ color: colors.gray.text }}>

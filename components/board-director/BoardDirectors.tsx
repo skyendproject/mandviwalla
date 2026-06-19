@@ -100,13 +100,13 @@ export default function BoardDirectors() {
                 {/* Section Label */}
                 <div className="flex items-center justify-center gap-3 mb-3">
                     <div className="w-0.5 h-6 md:h-6" style={{ backgroundColor: colors.primary.blue }}></div>
-                    <span className="text-sm md:text-base 2xl:text-lg  font-semibold" style={{ color: colors.gray.tagColor }}>
+                    <span className="text-sm md:text-base  font-semibold" style={{ color: colors.gray.tagColor }}>
                         OUR DIRECTORS
                     </span>
                 </div>
 
                 {/* Heading */}
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black text-center mb-4">
+                <h2 className="text-2xl md:text-3xl font-bold text-black text-center mb-4">
                     Board of Directors
                 </h2>
 
