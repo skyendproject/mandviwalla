@@ -1,30 +1,52 @@
 "use client";
 
 import Link from "next/link";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { colors } from "@/lib/colors";
 
-type SubLink = { href: string; label: string };
-type SubGroup = { key: string; label: string; href?: string; children?: SubLink[] };
-type NavGroup = { key: string; label: string; href?: string; children?: SubGroup[] };
+type Leaf = { href: string; label: string };
+type Item =
+    | { kind: "link"; href: string; label: string }
+    | { kind: "dropdown"; key: string; label: string; href?: string; children: Leaf[] };
 
-const GROUPS: NavGroup[] = [
-    { key: "home", label: "Home", href: "/" },
+type Section = {
+    key: string;
+    heading: string;
+    items: Item[];
+};
+
+const SECTIONS: Section[] = [
     {
-        key: "profile",
-        label: "Profile",
-        children: [
-            { key: "company-information", label: "Company Information", href: "/company-information" },
-            { key: "mission-vision", label: "Mission & Vision", href: "/mission-vision" },
-            { key: "code-of-conduct-policy", label: "Code of Conduct Policy", href: "/code-of-conduct-policy" },
+        key: "who-we-are",
+        heading: "Who We Are",
+        items: [
+            { kind: "link", href: "/about", label: "About Us" },
+            {
+                kind: "dropdown",
+                key: "company-profile",
+                label: "Company Profile",
+                children: [
+                    { href: "/company-information", label: "Company Information" },
+                    { href: "/mission-vision", label: "Mission & Vision" },
+                    { href: "/code-of-conduct-policy", label: "Code of Conduct Policy" },
+                ],
+            },
         ],
     },
     {
-        key: "corporate",
-        label: "Corporate",
-        children: [
+        key: "products-services",
+        heading: "Products & Services",
+        items: [
+            { kind: "link", href: "/products", label: "Our Products" },
+        ],
+    },
+    {
+        key: "corporate-governance",
+        heading: "Corporate Governance",
+        items: [
             {
+                kind: "dropdown",
                 key: "governance",
                 label: "Governance",
                 children: [
@@ -37,7 +59,8 @@ const GROUPS: NavGroup[] = [
                 ],
             },
             {
-                key: "investor",
+                kind: "dropdown",
+                key: "investor-relation",
                 label: "Investor Relation",
                 children: [
                     { href: "/investor-relation", label: "Investor Relation" },
@@ -48,118 +71,86 @@ const GROUPS: NavGroup[] = [
                     { href: "/investor-notices", label: "Notices" },
                 ],
             },
-            { key: "election-director", label: "Election of Director", href: "/election-director" },
+            { kind: "link", href: "/election-director", label: "Election of Director" },
         ],
     },
-    { key: "products", label: "Products", href: "/products" },
+    {
+        key: "support",
+        heading: "Support",
+        items: [
+            { kind: "link", href: "/faqs", label: "FAQs" },
+            { kind: "link", href: "/contact-us", label: "Contact Us" },
+        ],
+    },
 ];
 
 export default function FooterNavDropdowns() {
-    const [openMain, setOpenMain] = useState<string | null>(null);
-    const [openSub, setOpenSub] = useState<string | null>(null);
-
-    const toggleMain = (key: string) => {
-        setOpenMain((prev) => (prev === key ? null : key));
-        setOpenSub(null);
-    };
-
-    const toggleSub = (key: string) => {
-        setOpenSub((prev) => (prev === key ? null : key));
-    };
+    const [open, setOpen] = useState<string | null>(null);
 
     return (
-        <div className="flex flex-col gap-1">
-            {GROUPS.map((group) => {
-                const hasChildren = !!group.children?.length;
-                const isMainOpen = openMain === group.key;
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 w-full">
+            {SECTIONS.map((section) => (
+                <div key={section.key} className="flex flex-col gap-3">
+                    <h4 className="text-lg xl:text-xl 2xl:text-2xl font-bold mb-2 pb-2 relative">
+                        {section.heading}
+                        <span
+                            className="absolute bottom-0 left-0 h-0.5 w-[30%]"
+                            style={{ backgroundColor: colors.orange.dark }}
+                        />
+                    </h4>
 
-                if (!hasChildren) {
-                    return (
-                        <Link
-                            key={group.key}
-                            href={group.href ?? "#"}
-                            className="text-sm xl:text-base 2xl:text-lg uppercase font-medium py-1 hover:translate-x-1 transition-transform inline-block w-fit"
-                        >
-                            {group.label}
-                        </Link>
-                    );
-                }
+                    {section.items.map((item) => {
+                        if (item.kind === "link") {
+                            return (
+                                <Link
+                                    key={item.href + item.label}
+                                    href={item.href}
+                                    className="flex gap-3 items-center hover:translate-x-1 transition-transform"
+                                >
+                                    <ArrowRight size={18} style={{ color: colors.orange.dark }} />
+                                    <span className="text-sm xl:text-base 2xl:text-lg">{item.label}</span>
+                                </Link>
+                            );
+                        }
 
-                return (
-                    <div key={group.key} className="flex flex-col">
-                        <button
-                            type="button"
-                            onClick={() => toggleMain(group.key)}
-                            className="flex items-center justify-between gap-3 w-full text-left py-1"
-                            aria-expanded={isMainOpen}
-                        >
-                            <span className="text-sm xl:text-base 2xl:text-lg uppercase font-medium">
-                                {group.label}
-                            </span>
-                            <ChevronDown
-                                size={16}
-                                className={`transition-transform duration-200 ${isMainOpen ? "rotate-180" : ""}`}
-                                style={{ color: colors.orange.dark }}
-                            />
-                        </button>
+                        const isOpen = open === item.key;
+                        return (
+                            <div key={item.key} className="flex flex-col">
+                                <button
+                                    type="button"
+                                    onClick={() => setOpen(isOpen ? null : item.key)}
+                                    className="flex items-center justify-between gap-2 w-full text-left"
+                                    aria-expanded={isOpen}
+                                >
+                                    <span className="flex items-center gap-3">
+                                        <ArrowRight size={18} style={{ color: colors.orange.dark }} />
+                                        <span className="text-sm xl:text-base 2xl:text-lg">{item.label}</span>
+                                    </span>
+                                    <ChevronDown
+                                        size={16}
+                                        className={`transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+                                        style={{ color: colors.orange.dark }}
+                                    />
+                                </button>
 
-                        {isMainOpen && (
-                            <div className="flex flex-col pl-3 mt-1 border-l border-white/20">
-                                {group.children!.map((sub) => {
-                                    const hasSubChildren = !!sub.children?.length;
-                                    const isSubOpen = openSub === sub.key;
-
-                                    if (!hasSubChildren) {
-                                        return (
+                                {isOpen && (
+                                    <div className="flex flex-col gap-2 pl-7 mt-2 border-l border-white/20 ml-2">
+                                        {item.children.map((leaf) => (
                                             <Link
-                                                key={sub.key}
-                                                href={sub.href ?? "#"}
-                                                className="text-sm xl:text-base 2xl:text-base uppercase opacity-90 hover:opacity-100 hover:translate-x-1 transition-transform py-1"
+                                                key={leaf.href + leaf.label}
+                                                href={leaf.href}
+                                                className="text-xs xl:text-sm 2xl:text-base opacity-90 hover:opacity-100 hover:translate-x-1 transition-transform py-0.5"
                                             >
-                                                {sub.label}
+                                                {leaf.label}
                                             </Link>
-                                        );
-                                    }
-
-                                    return (
-                                        <div key={sub.key} className="flex flex-col">
-                                            <button
-                                                type="button"
-                                                onClick={() => toggleSub(sub.key)}
-                                                className="flex items-center justify-between gap-3 w-full text-left py-1"
-                                                aria-expanded={isSubOpen}
-                                            >
-                                                <span className="text-sm xl:text-base 2xl:text-base uppercase opacity-90">
-                                                    {sub.label}
-                                                </span>
-                                                <ChevronDown
-                                                    size={14}
-                                                    className={`transition-transform duration-200 ${isSubOpen ? "rotate-180" : ""}`}
-                                                    style={{ color: colors.orange.dark }}
-                                                />
-                                            </button>
-
-                                            {isSubOpen && (
-                                                <div className="flex flex-col pl-3 border-l border-white/15">
-                                                    {sub.children!.map((leaf) => (
-                                                        <Link
-                                                            key={leaf.href + leaf.label}
-                                                            href={leaf.href}
-                                                            className="text-xs xl:text-sm 2xl:text-sm uppercase opacity-80 hover:opacity-100 hover:translate-x-1 transition-transform py-1"
-                                                        >
-                                                            {leaf.label}
-                                                        </Link>
-                                                    ))}
-                                                </div>
-                                            )}
-                                        </div>
-                                    );
-                                })}
+                                        ))}
+                                    </div>
+                                )}
                             </div>
-                        )}
-                    </div>
-                );
-            })}
+                        );
+                    })}
+                </div>
+            ))}
         </div>
     );
 }
