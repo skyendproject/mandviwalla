@@ -16,10 +16,10 @@ export default function Footer({ variant = "blue" }: FooterProps) {
             {/* Main Footer */}
             <div className="w-full py-12 md:py-16 xl:py-16 2xl:py-20 px-4 md:px-12 xl:px-16 2xl:px-20" style={{ backgroundColor: bgColor }}>
                 <div className="container mx-auto max-w-7xl">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 lg:gap-12 xl:gap-12 text-white">
+                    <div className="grid grid-cols-1 lg:grid-cols-6 gap-8 md:gap-10 lg:gap-12 xl:gap-12 text-white">
 
                         {/* Logo and Company Info */}
-                        <div className="flex flex-col gap-6">
+                        <div className="flex flex-col gap-6 lg:col-span-1">
                             <div className="flex items-center gap-3">
                                 <Image
                                     src="/assets/logo.png"
@@ -51,7 +51,7 @@ export default function Footer({ variant = "blue" }: FooterProps) {
                         </div>
 
                         {/* Contact Info */}
-                        <div className="flex flex-col gap-4">
+                        <div className="flex flex-col gap-4 lg:col-span-1">
                             <h4 className="text-lg xl:text-xl 2xl:text-2xl font-bold mb-2 pb-2 relative">
                                 Contact Info
                                 <span className="absolute bottom-0 left-0 h-0.5 w-[30%]" style={{ backgroundColor: colors.orange.dark }}></span>
@@ -88,47 +88,9 @@ export default function Footer({ variant = "blue" }: FooterProps) {
                             </div>
                         </div>
 
-                        {/* Our Services */}
-                        <div className="flex flex-col gap-4">
-                            <h4 className="text-lg xl:text-xl 2xl:text-2xl font-bold mb-2 pb-2 relative">
-                                Our Services
-                                <span className="absolute bottom-0 left-0 h-0.5 w-[30%]" style={{ backgroundColor: colors.orange.dark }}></span>
-                            </h4>
-
+                        {/* Footer Sections */}
+                        <div className="lg:col-span-4">
                             <FooterNavDropdowns />
-                        </div>
-
-                        {/* Additional Links */}
-                        <div className="flex flex-col gap-4">
-                            <h4 className="text-lg xl:text-xl 2xl:text-2xl font-bold mb-2 pb-2 relative">
-                                Additional Links
-                                <span className="absolute bottom-0 left-0 h-0.5 w-[30%]" style={{ backgroundColor: colors.orange.dark }}></span>
-                            </h4>
-
-                            <Link href="#" className="flex gap-3 items-center hover:translate-x-1 transition-transform">
-                                <ArrowRight size={18} style={{ color: colors.orange.dark }} />
-                                <span className="text-sm xl:text-base 2xl:text-lg">About Us</span>
-                            </Link>
-
-                            <Link href="#" className="flex gap-3 items-center hover:translate-x-1 transition-transform">
-                                <ArrowRight size={18} style={{ color: colors.orange.dark }} />
-                                <span className="text-sm xl:text-base 2xl:text-lg">Our Products</span>
-                            </Link>
-
-                            <Link href="#" className="flex gap-3 items-center hover:translate-x-1 transition-transform">
-                                <ArrowRight size={18} style={{ color: colors.orange.dark }} />
-                                <span className="text-sm xl:text-base 2xl:text-lg">Election of Director</span>
-                            </Link>
-
-                            <Link href="#" className="flex gap-3 items-center hover:translate-x-1 transition-transform">
-                                <ArrowRight size={18} style={{ color: colors.orange.dark }} />
-                                <span className="text-sm xl:text-base 2xl:text-lg">FAQ's</span>
-                            </Link>
-
-                            <Link href="#" className="flex gap-3 items-center hover:translate-x-1 transition-transform">
-                                <ArrowRight size={18} style={{ color: colors.orange.dark }} />
-                                <span className="text-sm xl:text-base 2xl:text-lg">Contact Us</span>
-                            </Link>
                         </div>
                     </div>
                 </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import NextImage from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { colors } from "@/lib/colors";
 import CtaButton from "@/components/ui/CtaButton";
 
@@ -12,26 +12,19 @@ export default function Hero() {
     ];
 
     const [activeImage, setActiveImage] = useState(0);
-    const [prevImage, setPrevImage] = useState(0);
     const [fadeIn, setFadeIn] = useState(true);
     const [paused, setPaused] = useState(false);
+    const prevImage = (activeImage - 1 + images.length) % images.length;
 
     const goTo = (index: number) => {
-        setActiveImage((prev) => {
-            if (prev === index) return prev;
-            setPrevImage(prev);
-            return index;
-        });
+        setActiveImage((prev) => (prev === index ? prev : index));
     };
 
     useEffect(() => {
         if (images.length <= 1 || paused) return;
         if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
         const id = setInterval(() => {
-            setActiveImage((prev) => {
-                setPrevImage(prev);
-                return (prev + 1) % images.length;
-            });
+            setActiveImage((prev) => (prev + 1) % images.length);
         }, 4000);
 
         return () => clearInterval(id);
@@ -64,7 +57,7 @@ export default function Hero() {
         return () => window.clearTimeout(timeoutId);
     }, [activeImage, images]);
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         setFadeIn(false);
         const raf = requestAnimationFrame(() => setFadeIn(true));
         return () => cancelAnimationFrame(raf);
