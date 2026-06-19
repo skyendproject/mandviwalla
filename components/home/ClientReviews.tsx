@@ -110,7 +110,7 @@ export default function ClientReviews() {
     };
 
     return (
-        <section className="w-full py-8 md:py-10 lg:py-12 xl:py-12 2xl:py-14 px-4 md:px-12 xl:px-16 2xl:px-20 bg-white">
+        <section className="w-full py-14 md:py-20 px-4 md:px-12 bg-surface">
             <div className="container mx-auto max-w-7xl">
                 <SectionHeader
                     align="center"

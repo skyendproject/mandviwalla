@@ -12,18 +12,18 @@ const resources = [
 
 export default function GovernanceResources() {
     return (
-        <div className="w-full bg-gray-50 py-12 md:py-16 px-4 md:px-20">
+        <div className="w-full bg-gray-50 py-14 md:py-20 px-4 md:px-20">
             <div className="container mx-auto max-w-5xl">
                 {/* Section Label */}
                 <div className="flex items-center justify-center gap-3 mb-3">
                     <div className="w-0.5 h-8 md:h-6" style={{ backgroundColor: colors.primary.blue }}></div>
-                    <span className="text-sm md:text-base 2xl:text-lg" style={{ color: colors.gray.tagColor }}>
+                    <span className="text-sm md:text-base" style={{ color: colors.gray.tagColor }}>
                         Governance Documents
                     </span>
                 </div>
 
                 {/* Heading */}
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-black text-center mb-10 md:mb-12">
+                <h2 className="text-2xl md:text-3xl font-semibold text-black text-center mb-10 md:mb-12">
                     Corporate Governance Resources
                 </h2>
 

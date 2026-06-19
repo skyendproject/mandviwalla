@@ -41,6 +41,28 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+  /* --- Design system additions (brand-consistent; no brand-hue changes) --- */
+  /* Soft neutral band used to separate stacked white sections */
+  --color-surface: #F6F7FB;
+  --color-surface-2: #EEF1F8;
+
+  /* Brand hues + soft tints for icon chips / badges (derived, not new brand colors) */
+  --color-brand-blue: #1338BE;
+  --color-brand-blue-soft: #EAEEFC;
+  --color-brand-orange: #F28500;
+  --color-brand-orange-soft: #FFF1E0;
+
+  /* Text */
+  --color-ink: #1A1A1A;
+  --color-ink-muted: #666666;
+
+  /* One card corner radius for the whole site */
+  --radius-card: 1rem;
+
+  /* Consistent elevation: resting + hover */
+  --shadow-card: 0 1px 2px rgba(16, 24, 40, 0.04), 0 8px 24px rgba(16, 24, 40, 0.06);
+  --shadow-card-hover: 0 12px 32px rgba(16, 24, 40, 0.12), 0 4px 12px rgba(16, 24, 40, 0.08);
 }
 
 :root {

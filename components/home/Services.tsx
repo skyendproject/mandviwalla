@@ -73,7 +73,7 @@ export default function ServiceSection() {
     ];
 
     return (
-        <section className="relative py-12 md:py-16 lg:py-16 xl:py-16 2xl:py-20 px-4 md:px-12 xl:px-16 2xl:px-20 overflow-hidden z-0" style={{ backgroundColor: colors.primary.blue }}>
+        <section className="relative py-14 md:py-20 px-4 md:px-12 overflow-hidden z-0" style={{ backgroundColor: colors.primary.blue }}>
             {/* Background overlay */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full z-0 opacity-100 pointer-events-none">
                 <Image
@@ -93,7 +93,7 @@ export default function ServiceSection() {
                     eyebrow="Our Services / Products"
                     title="We Ensure High-Quality Plastic Manufacturing"
                     titleClassName="font-bold"
-                    className="mb-8 md:mb-12 xl:mb-16 relative z-10"
+                    className="mb-8 md:mb-12 relative z-10"
                 />
 
                 {/* Left Containers - absolute */}
@@ -176,9 +176,9 @@ export default function ServiceSection() {
                                 <div
                                     key={idx}
                                     className={`
-        relative rounded-lg
-        pt-14 xl:pt-14 2xl:pt-16 px-4 xl:px-5 2xl:px-6 pb-4 xl:pb-6
-        flex flex-col items-center text-center shadow-md transition duration-300 hover:-translate-y-1.5 hover:shadow-2xl
+        relative rounded-card
+        pt-14 px-4 xl:px-5 2xl:px-6 pb-4 xl:pb-6
+        flex flex-col items-center text-center shadow-card transition duration-300 hover:-translate-y-1.5 hover:shadow-card-hover
         w-full max-w-[280px] xl:max-w-[300px] 2xl:max-w-[320px]
         h-[200px]
         md:h-[280px] md:min-h-[280px] md:max-h-[340px]
@@ -196,11 +196,11 @@ export default function ServiceSection() {
                                         {card.icon}
                                     </div>
 
-                                    <h4 className={`text-lg md:text-xl xl:text-xl 2xl:text-2xl font-semibold mb-2 xl:mb-3 ${isMiddle ? 'text-white' : ''}`}>
+                                    <h4 className={`text-lg md:text-xl font-semibold mb-2 xl:mb-3 ${isMiddle ? 'text-white' : ''}`}>
                                         {card.title}
                                     </h4>
 
-                                    <p className={`${textColor} text-sm md:text-base xl:text-base 2xl:text-lg leading-snug`}>
+                                    <p className={`${textColor} text-sm md:text-base leading-snug`}>
                                         {card.description}
                                     </p>
                                 </div>

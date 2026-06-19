@@ -11,11 +11,11 @@ const aims = [
 
 export default function VisionStatement() {
     return (
-        <section className="w-full py-12 md:py-16 px-4 md:px-20 bg-white">
+        <section className="w-full py-14 md:py-20 px-4 md:px-20 bg-white">
             <div className="container mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24 items-center">
                     {/* Left Image */}
-                    <div className="relative w-full h-auto md:w-[570px] md:h-[400px] bg-blue-600 rounded-lg overflow-hidden order-2 lg:order-1">
+                    <div className="relative w-full h-auto md:w-[570px] md:h-[400px] bg-blue-600 rounded-card shadow-card overflow-hidden order-2 lg:order-1">
                         <Image
                             src="/vision-statement.jpg"
                             alt="Vision Statement"
@@ -29,18 +29,18 @@ export default function VisionStatement() {
                         {/* Label with blue line */}
                         <div className="flex items-center gap-3">
                             <div className="w-0.5 h-8 md:h-6" style={{ backgroundColor: colors.primary.blue }}></div>
-                            <span className="text-sm md:text-base 2xl:text-lg" style={{ color: colors.gray.tagColor }}>
+                            <span className="text-sm md:text-base" style={{ color: colors.gray.tagColor }}>
                                 Vision Statement
                             </span>
                         </div>
 
                         {/* Heading */}
-                        <h2 className="text-2xl md:text-4xl 2xl:text-[42px] font-semibold text-black">
+                        <h2 className="text-2xl md:text-3xl font-semibold text-black">
                             Vision Statement
                         </h2>
 
                         {/* Description */}
-                        <p className="text-base md:text-md" style={{ color: colors.gray.text }}>
+                        <p className="text-base" style={{ color: colors.gray.text }}>
                             Our vision is to expand and diversify into sectors where high-quality plastic products are limited or unavailable.
                             <br />
                             We aim to:
@@ -55,7 +55,7 @@ export default function VisionStatement() {
                                         style={{ color: colors.primary.blue }}
                                         strokeWidth={3}
                                     />
-                                    <span className="text-base md:text-md" style={{ color: colors.gray.text }}>
+                                    <span className="text-base" style={{ color: colors.gray.text }}>
                                         {aim}
                                     </span>
                                 </div>
@@ -63,7 +63,7 @@ export default function VisionStatement() {
                         </div>
 
                         {/* Closing paragraph */}
-                        <p className="text-base md:text-md" style={{ color: colors.gray.text }}>
+                        <p className="text-base" style={{ color: colors.gray.text }}>
                             We strive to bridge industry gaps with reliable, sustainable, and advanced plastic manufacturing solutions.
                         </p>
                     </div>

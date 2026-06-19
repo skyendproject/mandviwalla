@@ -24,24 +24,24 @@ export default function AuditorResponsibilities() {
         <section className="w-full py-8 md:py-12 lg:py-16 bg-white px-4 md:px-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
                 <div className="text-center mb-8">
-                    <div className="text-sm md:text-base 2xl:text-lg  mb-1 border-l-2 border-blue-700 inline-block pl-2" style={{ color: colors.gray.tagColor }}>
+                    <div className="text-sm md:text-base  mb-1 border-l-2 border-blue-700 inline-block pl-2" style={{ color: colors.gray.tagColor }}>
                         Auditor Responsibility Summary
                     </div>
-                    <h2 className="text-2xl md:text-3xl xl:text-4xl 2xl:text-[42px] font-bold text-gray-900 mb-2">
+                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
                         Role & Responsibilities of the Auditor
                     </h2>
                 </div>
                 <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-                    <div className="relative flex items-center justify-center w-[494px] h-[454px] max-w-full rounded-lg overflow-hidden bg-white">
+                    <div className="relative flex items-center justify-center w-[494px] h-[454px] max-w-full rounded-card overflow-hidden bg-white">
                         <Image
                             src="/auditor-responsibility.jpg"
                             alt="Auditor Desk"
                             fill
-                            className="object-cover rounded-lg"
+                            className="object-cover rounded-card"
                             priority
                         />
                     </div>
-                    <div className="flex-1 flex flex-col justify-center h-[454px] rounded-lg p-6 md:p-4">
+                    <div className="flex-1 flex flex-col justify-center h-[454px] rounded-card p-6 md:p-4">
                         <ul className="space-y-5 mb-4">
                             {responsibilities.map((item, idx) => (
                                 <li key={idx} className="flex items-start gap-4">
@@ -66,13 +66,13 @@ export default function AuditorResponsibilities() {
                 {/* Section Label */}
                 <div className="flex items-center justify-center gap-3 mb-3">
                     <div className="w-0.5 h-8 md:h-8" style={{ backgroundColor: colors.primary.blue }}></div>
-                    <span className="text-sm md:text-base 2xl:text-lg  font-semibold" style={{borderColor: colors.primary.blue ,color: colors.gray.tagColor }}>
+                    <span className="text-sm md:text-base  font-semibold" style={{borderColor: colors.primary.blue ,color: colors.gray.tagColor }}>
                         Audit-Related Documents
                     </span>
                 </div>
 
                 {/* Heading */}
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-black text-center mb-10 md:mb-12">
+                <h2 className="text-2xl md:text-3xl font-semibold text-black text-center mb-10 md:mb-12">
                     Audit-Related Documents
                 </h2>
 

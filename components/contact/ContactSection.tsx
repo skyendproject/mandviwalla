@@ -16,14 +16,15 @@ const contactData = [
 
 export default function ContactSection() {
     return (
-        <section className="w-full container max-w-5xl py-12 md:py-16 px-4 mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 bg-white relative z-20">
+        <section className="w-full py-14 md:py-20 px-4 bg-surface relative z-20">
+            <div className="container max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 bg-white rounded-card shadow-card border border-gray-200 p-6 md:p-10">
             {/* Left: Form */}
             <div className="">
                 <div className="mb-4">
-                    <h4 className="text-sm md:text-base 2xl:text-lg tracking-widest border-l-2 pl-2 mb-2 font-semibold" style={{ borderColor: colors.primary.blue, fontFamily: 'var(--font-lato)', color: colors.gray.tagColor }}>
+                    <h4 className="text-sm md:text-base tracking-widest border-l-2 pl-2 mb-2 font-semibold" style={{ borderColor: colors.primary.blue, fontFamily: 'var(--font-lato)', color: colors.gray.tagColor }}>
                         Get In Touch
                     </h4>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl 2xl:text-[42px] font-semibold mb-3 md:mb-2 leading-tight">
+                    <h2 className="text-2xl md:text-3xl font-semibold mb-3 md:mb-2 leading-tight">
                         Don't Hesitate to Ask a Question.
                     </h2>
                     {/* <p className="text-gray-600 text-sm max-w-md">Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p> */}
@@ -63,7 +64,7 @@ export default function ContactSection() {
             </div>
             {/* Right: Info */}
             <div className="flex flex-col">
-                <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl 2xl:text-[42px] font-semibold mb-4 mt-10">Contact Info</h3>
+                <h3 className="text-2xl md:text-3xl font-semibold mb-4 mt-10">Contact Info</h3>
                 <div className="flex flex-col gap-6 w-full max-w-sm">
                     {contactData.map((loc, idx) => (
                         <div key={idx}>
@@ -98,6 +99,7 @@ export default function ContactSection() {
                         </div>
                     ))}
                 </div>
+            </div>
             </div>
         </section>
     );

@@ -77,7 +77,7 @@ export default function ProductDetailClient({ product, related }: { product: any
         {/* Related Products */}
         <div className="max-w-5xl w-full mt-8">
           <div className="flex justify-between items-center mb-4">
-            <h2 className="text-lg lg:text-3xl xl:text-4xl 2xl:text-[42px] font-semibold">Related Product</h2>
+            <h2 className="text-2xl md:text-3xl font-semibold">Related Product</h2>
             <button className="text-xs lg:text-sm xl:text-base font-semibold border-b-2 border-black">View All</button>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">

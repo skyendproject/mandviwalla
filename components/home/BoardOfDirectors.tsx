@@ -21,7 +21,7 @@ export default function BoardOfDirectors() {
     ];
 
     return (
-        <section className="w-full py-8 md:py-10 lg:py-12 xl:py-12 2xl:py-14 px-4 md:px-12 xl:px-16 2xl:px-20">
+        <section className="w-full py-14 md:py-20 px-4 md:px-12">
             <div className="container mx-auto max-w-7xl">
 
                 {/* Header */}
@@ -30,12 +30,12 @@ export default function BoardOfDirectors() {
                     eyebrow="Our Leadership"
                     title="Meet Our Chief Executive Officer"
                     subtitle="The leadership steering Mandviwalla Mauser's vision and growth."
-                    className="mb-8 md:mb-12 xl:mb-16"
+                    className="mb-8 md:mb-12"
                 />
 
                 {/* CEO Profile */}
                 <Reveal className="max-w-3xl mx-auto">
-                    <div className="group flex flex-col sm:flex-row items-center gap-6 sm:gap-8 bg-white rounded-2xl border border-[#E9E9E9] shadow-sm p-6 sm:p-8 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+                    <div className="group flex flex-col sm:flex-row items-center gap-6 sm:gap-8 bg-white rounded-card border border-[#E9E9E9] shadow-card p-6 sm:p-8 transition duration-300 hover:-translate-y-1 hover:shadow-card-hover">
                         {/* Portrait */}
                         <div className="relative w-44 h-52 sm:w-48 sm:h-56 xl:w-52 xl:h-64 flex-shrink-0 overflow-hidden rounded-xl">
                             <Image
@@ -49,17 +49,17 @@ export default function BoardOfDirectors() {
 
                         {/* Content */}
                         <div className="text-center sm:text-left">
-                            <h3 className="text-xl md:text-2xl xl:text-2xl 2xl:text-3xl font-semibold text-black mb-1">
+                            <h3 className="text-xl md:text-2xl font-semibold text-black mb-1">
                                 {director.name}
                             </h3>
                             <p
-                                className="text-sm md:text-base xl:text-base 2xl:text-lg font-medium mb-3"
+                                className="text-sm md:text-base font-medium mb-3"
                                 style={{ color: colors.primary.orange }}
                             >
                                 {director.role}
                             </p>
                             <p
-                                className="text-sm md:text-base xl:text-base 2xl:text-lg leading-relaxed"
+                                className="text-sm md:text-base leading-relaxed"
                                 style={{ color: colors.gray.text }}
                             >
                                 {director.bio}
