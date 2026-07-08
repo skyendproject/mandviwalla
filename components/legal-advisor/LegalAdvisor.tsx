@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { colors } from "@/lib/colors";
 
 const resources = [
@@ -17,30 +16,31 @@ export default function LegalAdvisor() {
                     <div className="text-sm md:text-base  mb-1 border-l-2 inline-block pl-2" style={{ color: colors.gray.tagColor, borderColor: colors.primary.blue }}>Legal Advisor</div>
                     <h2 className="text-2xl md:text-3xl font-bold mb-4">Trusted Legal Guidance & Corporate Compliance</h2>
                     <p className=" mx-auto text-base md:text-base" style={{ color: colors.gray.text }}>
-                        At Mandviwalla Mauser Plastic Industries Limited (MMPL), ensuring full legal compliance and ethical corporate conduct is a top priority. Our external legal advisors are independent and experienced professionals, providing expert counsel in corporate law, regulatory compliance, and litigation. Their guidance supports our commitment to transparent governance, risk management, and long-term business sustainability.
+                        At MandviWalla Mauser Plastic Limited Industries(MWMP), ensuring full legal compliance and ethical corporate conduct is a top priority. Our external legal advisors are independent and experienced professionals, providing expert counsel in corporate law, regulatory compliance, and litigation. Their guidance supports our commitment to transparent governance, risk management, and long-term business sustainability.
                     </p>
                 </div>
-                <div className="flex flex-col md:flex-row items-stretch mt-20">
-                    <div className="relative w-full max-w-xs h-64 md:h-72 shrink-0 md:h-auto flex-1 md:max-w-md" style={{ minHeight: '280px' }}>
-                        <Image
-                            src="/legal-advisor.jpg"
-                            alt="Auditor"
-                            fill
-                            className="object-cover rounded-card"
-                            priority
-                        />
-                        {/* Decorative blue squares */}
-                        <div className="absolute bottom-0 left-0 w-8 h-8 bg-blue-700 rounded-tr-lg" />
-                        <div className="absolute top-0 right-0 w-6 h-6 bg-blue-700 rounded-bl-lg" />
-                    </div>
-                    <div className="flex-1 flex flex-col justify-center rounded-card p-6 md:p-10" style={{ background: '#F9F9F9', minHeight: '280px' }}>
-                        <div className="text-lg font-semibold mb-2" style={{ color: colors.gray.tagColor }}>Current Legal Advisor:</div>
-                        <div className="text-base font-semibold mb-4" style={{ color: colors.gray.tagColor }}>Mohsin Tayebaly & Co. (Advocates & Corporate Consultants)</div>
-                        <div className="italic text-gray-700 text-base md:text-lg font-semibold leading-snug" style={{ color: colors.gray.text }}>
-                            Specializes in corporate law, regulatory compliance, contract drafting, and corporate governance advisory
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-20">
+                    {/* Legal Advisor */}
+                    <div className="relative flex flex-col justify-center rounded-card p-6 md:p-10 border-l-4" style={{ background: '#F9F9F9', borderColor: colors.primary.blue, minHeight: '280px' }}>
+                        <div className="text-sm md:text-base font-semibold mb-2 uppercase tracking-wide" style={{ color: colors.gray.tagColor }}>Legal Advisor</div>
+                        <div className="text-xl md:text-2xl font-bold mb-3 text-black">
+                            Tasawur Ali Hashmi
                         </div>
-                        <div className="italic text-gray-700 text-base md:text-lg font-semibold leading-snug mt-12" style={{ color: colors.gray.text }}>
-                            Provides legal representation in corporate filings, AGM matters, and regulatory proceedings
+                        <div className="text-base font-semibold mb-4" style={{ color: colors.primary.blue }}>Advocate</div>
+                        <div className="italic text-base md:text-lg leading-snug" style={{ color: colors.gray.text }}>
+                            Provides legal representation and advisory on litigation, contract matters, and general legal affairs of the Company.
+                        </div>
+                    </div>
+
+                    {/* Corporate Advisor */}
+                    <div className="relative flex flex-col justify-center rounded-card p-6 md:p-10 border-l-4" style={{ background: '#F9F9F9', borderColor: colors.primary.blue, minHeight: '280px' }}>
+                        <div className="text-sm md:text-base font-semibold mb-2 uppercase tracking-wide" style={{ color: colors.gray.tagColor }}>Corporate Advisor</div>
+                        <div className="text-xl md:text-2xl font-bold mb-3 text-black">
+                            M/S Hussain Advisors
+                        </div>
+                        <div className="text-base font-semibold mb-4" style={{ color: colors.primary.blue }}>Islamabad</div>
+                        <div className="italic text-base md:text-lg leading-snug" style={{ color: colors.gray.text }}>
+                            Provides corporate advisory services covering regulatory compliance, corporate filings, AGM matters, and corporate governance.
                         </div>
                     </div>
                 </div>
@@ -50,7 +50,7 @@ export default function LegalAdvisor() {
                 <div className="text-sm md:text-base  mb-1 border-l-2 inline-block pl-2" style={{ color: colors.gray.tagColor, borderColor: colors.primary.blue }}>Commitment to Compliance</div>
                 <h2 className="text-2xl md:text-3xl font-bold mb-4">Ensuring Legal & Ethical Integrity</h2>
                 <p className=" mx-auto text-base md:text-base" style={{ color: colors.gray.text }}>
-                    MMPL ensures that all its legal dealings are fully compliant with applicable national and industry regulations. Our legal advisor helps us navigate complex corporate laws and regulatory environments, ensuring that decisions are made with full legal oversight and responsibility.
+                    MWMP ensures that all its legal dealings are fully compliant with applicable national and industry regulations. Our legal advisor helps us navigate complex corporate laws and regulatory environments, ensuring that decisions are made with full legal oversight and responsibility.
                 </p>
             </div>
 

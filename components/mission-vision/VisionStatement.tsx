@@ -1,13 +1,5 @@
 import Image from "next/image";
 import { colors } from "@/lib/colors";
-import { Check } from "lucide-react";
-
-const aims = [
-    "Introduce innovative product lines",
-    "Maintain international quality benchmarks",
-    "Enhance global and national recognition of our brand",
-    "Continuously improve operations by identifying areas of growth"
-];
 
 export default function VisionStatement() {
     return (
@@ -40,31 +32,8 @@ export default function VisionStatement() {
                         </h2>
 
                         {/* Description */}
-                        <p className="text-base" style={{ color: colors.gray.text }}>
-                            Our vision is to expand and diversify into sectors where high-quality plastic products are limited or unavailable.
-                            <br />
-                            We aim to:
-                        </p>
-
-                        {/* Checklist */}
-                        <div className="flex flex-col gap-2 md:gap-2.5">
-                            {aims.map((aim, idx) => (
-                                <div key={idx} className="flex items-start gap-3">
-                                    <Check 
-                                        className="w-5 h-5 md:w-6 md:h-6 shrink-0 mt-0.5" 
-                                        style={{ color: colors.primary.blue }}
-                                        strokeWidth={3}
-                                    />
-                                    <span className="text-base" style={{ color: colors.gray.text }}>
-                                        {aim}
-                                    </span>
-                                </div>
-                            ))}
-                        </div>
-
-                        {/* Closing paragraph */}
-                        <p className="text-base" style={{ color: colors.gray.text }}>
-                            We strive to bridge industry gaps with reliable, sustainable, and advanced plastic manufacturing solutions.
+                        <p className="text-base text-justify" style={{ color: colors.gray.text }}>
+                            To diversify and expand in other related sectors where quality plastic products are not available and fill the gaps in these fields. Increase awareness of our Company and the international quality standards being met nationally and internationally. Further improve whenever possible and identify areas which can be better managed.
                         </p>
                     </div>
                 </div>

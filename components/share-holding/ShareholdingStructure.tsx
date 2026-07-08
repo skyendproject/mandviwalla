@@ -18,7 +18,7 @@ const ShareholdingStructure = () => {
                         Transparent Shareholding Structure
                     </h2>
                     <p className="text-base max-w-5xl mx-auto leading-snug" style={{ color: colors.gray.text }}>
-                        Mandviwalla Mauser Plastic Industries Limited (MMPIL) maintains complete transparency in its shareholding structure in compliance with regulatory requirements. The following table represents the pattern of shareholding as of 31 June 2021, categorized based on the number of shares held by shareholders across different ranges.
+                        MandviWalla Mauser Plastic Limited Industries(MWMP) maintains complete transparency in its shareholding structure in compliance with regulatory requirements. The following table represents the pattern of shareholding as of 31 June 2021, categorized based on the number of shares held by shareholders across different ranges.
                     </p>
                 </div>
 
@@ -39,13 +39,13 @@ const ShareholdingStructure = () => {
                 </div>
 
                 {/* Document Image */}
+                {/* PDF Viewer */}
                 <div className="w-full max-w-5xl mx-auto">
-                    <div className="relative w-full" style={{ aspectRatio: '16/9' }}>
-                        <Image
-                            src="/shareholding-file.png"
-                            alt="Shareholding Pattern Document"
-                            fill
-                            className="object-contain"
+                    <div className="w-full h-[500px] rounded-lg overflow-hidden shadow-lg border border-gray-200">
+                        <iframe
+                            src="/shareholding-pattern.pdf#zoom=75&navpanes=0&toolbar=1"
+                            title="Shareholding Pattern Document"
+                            className="w-full h-full"
                         />
                     </div>
                 </div>

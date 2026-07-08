@@ -5,18 +5,32 @@ import { colors } from '@/lib/colors';
 const OurBankers = () => {
   const bankers = [
     {
-      name: 'Habib Metropolitan Bank Limited',
-      logo: '/habib-bank.png',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.',
-      width: 190,
+      name: 'United Bank Limited',
+      logo: '/ubl-bank.png',
+      description: '',
+      width: 220,
       height: 95
     },
     {
-      name: 'SILK Bank Limited',
-      logo: '/silk-bank.png',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.',
-      width: 378,
-      height: 88
+      name: 'Meezan Bank',
+      logo: '/meezan-bank.png',
+      description: '',
+      width: 220,
+      height: 95
+    },
+    {
+      name: 'Bank Al Habib',
+      logo: '/bank-al-habib.jpeg',
+      description: '',
+      width: 220,
+      height: 95
+    },
+    {
+      name: 'Soneri Bank',
+      logo: '/soneri-bank.jpeg',
+      description: '',
+      width: 220,
+      height: 95
     }
   ];
 
@@ -29,7 +43,7 @@ const OurBankers = () => {
         </h2>
 
         {/* Bankers Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {bankers.map((banker, index) => (
             <div
               key={index}

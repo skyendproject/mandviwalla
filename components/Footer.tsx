@@ -99,7 +99,7 @@ export default function Footer({ variant = "blue" }: FooterProps) {
             {/* Copyright Bar */}
             <div className="w-full py-4 px-4 text-center" style={{ backgroundColor: colors.orange.dark }}>
                 <p className="text-white text-sm md:text-base">
-                    © 2025 <strong>Mandviwalla Mauser Plastic Industries Limited.</strong> All Rights Reserved.
+                    © 2025 <strong>MandviWalla Mauser Plastic Limited Industries(MWMP).</strong> All Rights Reserved.
                 </p>
             </div>
         </footer>

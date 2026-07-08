@@ -11,8 +11,8 @@ const goalsData = [
             </svg>
 
         ),
-        title: "Continuous Improvement",
-        description: "We innovate and improve constantly, driven by responsibility and dedication."
+        title: "Continuous Improvement & Innovation",
+        description: "Striving for continuous improvement and innovation with commitment and responsibility."
     },
     {
         icon: (
@@ -22,7 +22,7 @@ const goalsData = [
 
         ),
         title: "Respect & Courtesy",
-        description: "We treat all stakeholders with fairness, competence, and professionalism."
+        description: "Treating stakeholders with respect, courtesy and competence."
     },
     {
         icon: (
@@ -32,7 +32,7 @@ const goalsData = [
 
         ),
         title: "Integrity",
-        description: "We maintain high ethical standards in every decision and action."
+        description: "Practicing highest personal and professional integrity."
     },
     {
         icon: (
@@ -46,7 +46,16 @@ const goalsData = [
 
         ),
         title: "Teamwork & Transparency",
-        description: "We encourage open communication, trust, and mutual support throughout the organization."
+        description: "Maintaining teamwork, trust and support, with open and candid communication."
+    },
+    {
+        icon: (
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+        ),
+        title: "Cost Consciousness",
+        description: "Ensuring cost consciousness in all decisions and operations."
     }
 ];
 

@@ -13,8 +13,8 @@ export default function CompanyInformation() {
         <div>
             <Hero
                 imagePath="/legal-advisor-hero.jpg"
-                heading="Legal Advisor"
-                breadcrumbPath="Legal Advisor"
+                heading="Legal Support"
+                breadcrumbPath="Legal Support"
                 path="Governance"
 
             />

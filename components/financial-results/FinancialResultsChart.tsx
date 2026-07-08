@@ -41,7 +41,7 @@ export default function FinancialResultsChart() {
                     <div className="text-sm md:text-base mb-1 border-l-2 inline-block pl-2 font-semibold" style={{ color: colors.gray.tagColor, borderColor: colors.primary.blue }}>Financial Results</div>
                     <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Financial Results</h2>
                     <p className="mx-auto text-base md:text-base max-w-4xl" style={{ color: colors.gray.text }}>
-                        Performance snapshots, key indicators, and year-wise financial highlights of Mandviwalla MAUSER Plastic Industries Limited.<br />
+                        Performance snapshots, key indicators, and year-wise financial highlights of MandviWalla Mauser Plastic Limited Industries(MWMP).<br />
                         These results provide stakeholders a clear overview of the Company’s profitability, liquidity, and operational strength.
                     </p>
                 </div>

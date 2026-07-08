@@ -7,20 +7,20 @@ import { Download } from "lucide-react";
 const documents = [
     {
         image: "/investor-relation1.png",
-        title: "PUCAR-PSX-Corporate-Breifing-Session-2023-2024",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore...",
+        title: "Corporate Briefing Presentation 2023-2024",
+        description: "",
         button: {
-            label: "GENDER–PAY–GAP–PDF.PDF",
-            href: "#"
+            label: "corporate-briefing",
+            href: "/Corporate briefing presentation 2023-2024.pdf"
         }
     },
     {
         image: "/investor-relation2.png",
-        title: "Notice-of-Annual-General-Meeting-2023-24",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore...",
+        title: "Corporate Briefing Notice",
+        description: "",
         button: {
-            label: "GENDER–PAY–GAP–PDF.PDF",
-            href: "#"
+            label: "corporate-briefing",
+            href: "/Corporate briefing notice..pdf"
         }
     }
 ];
@@ -32,7 +32,7 @@ export default function InvestorRelationCards() {
                 <div className="text-sm md:text-base mb-1 inline-block border-l-2 pl-2" style={{ color: colors.gray.tagColor, borderColor: colors.primary.blue}}>Pay Gap Statement (Half Year Ended: December 31, 2024)</div>
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Transparent. Compliant. Accessible.</h2>
                 <p className=" mx-auto text-base md:text-base" style={{ color: colors.gray.text }}>
-                    Mandviwalla MAUSER Plastic Industries Limited (MMPL) is committed to delivering timely, accurate, and transparent information to its shareholders, analysts, and the investment community. We ensure full compliance with PSX and SECP disclosure requirements.
+                    MandviWalla Mauser Plastic Limited Industries(MWMP) is committed to delivering timely, accurate, and transparent information to its shareholders, analysts, and the investment community. We ensure full compliance with PSX and SECP disclosure requirements.
                 </p>
             </div>
             <div className="flex flex-col md:flex-row justify-center items-start mt-4">

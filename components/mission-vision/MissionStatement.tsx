@@ -2,16 +2,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { colors } from "@/lib/colors";
-import { Check } from "lucide-react";
-
-const practices = [
-    "Product research & development",
-    "Manufacturing technology",
-    "Operations management",
-    "Materials and procurement processes",
-    "Financial systems",
-    "Information management"
-];
 
 export default function MissionStatement() {
     return (
@@ -34,27 +24,9 @@ export default function MissionStatement() {
                         </h2>
 
                         {/* Description */}
-                        <p className="text-base md:text-lg" style={{ color: colors.gray.text }}>
-                            Our mission is to exceed customer expectations by producing high-quality plastic products with efficiency, precision, and consistency.
-                            <br />
-                            We achieve this by adopting international best practices across:
+                        <p className="text-base md:text-lg text-justify" style={{ color: colors.gray.text }}>
+                            Our mission is to exceed the expectations of our customers in producing, with efficiency, quality plastic products, employing international best practices and applying an integrated approach to product research and development, manufacturing technology, operations management, material procurement, financial management and information system.
                         </p>
-
-                        {/* Checklist */}
-                        <div className="flex flex-col gap-2 md:gap-2.5">
-                            {practices.map((practice, idx) => (
-                                <div key={idx} className="flex items-start gap-3">
-                                    <Check
-                                        className="w-5 h-5 md:w-6 md:h-6 shrink-0 mt-0.5"
-                                        style={{ color: colors.primary.blue }}
-                                        strokeWidth={3}
-                                    />
-                                    <span className="text-base md:text-lg" style={{ color: colors.gray.text }}>
-                                        {practice}
-                                    </span>
-                                </div>
-                            ))}
-                        </div>
 
                         {/* Button */}
                         <Link
