@@ -11,7 +11,7 @@ export default function CompanyAuditor() {
                     <div className="text-sm md:text-base  mb-1 border-l-2 border-blue-700 inline-block pl-2" style={{ color: colors.gray.tagColor}}>Auditors of the Company</div>
                     <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Independent Audit & Financial Transparency</h2>
                     <p className=" mx-auto text-base md:text-base" style={{ color: colors.gray.text }}>
-                        Mandviwalla Mauser Plastic Industries Limited (MMPL) is committed to maintaining the highest standards of financial transparency, accountability, and regulatory compliance. To ensure the integrity and accuracy of our financial reporting, the company appoints independent external auditors who conduct annual audits in accordance with the applicable auditing and accounting standards.
+                        MandviWalla Mauser Plastic Limited Industries(MWMP) is committed to maintaining the highest standards of financial transparency, accountability, and regulatory compliance. To ensure the integrity and accuracy of our financial reporting, the company appoints independent external auditors who conduct annual audits in accordance with the applicable auditing and accounting standards.
                     </p>
                     <p className="mx-auto mt-2 text-base md:text-base" style={{ color: colors.gray.text }}>
                         Our external auditors provide unbiased oversight of our financial statements, internal controls, and compliance frameworks.

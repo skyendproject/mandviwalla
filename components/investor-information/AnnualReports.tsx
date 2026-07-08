@@ -15,7 +15,7 @@ const resources = [
 export default function AnnualReports() {
     return (
         <section className="w-full py-12 px-4 md:px-0 bg-[#F6F6F6]">
-            <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20">
+            {/* <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20">
                 <div className="relative w-[420px] h-[340px] rounded-card overflow-hidden shrink-0 bg-white">
                     <Image
                         src="/annual-report.jpg"
@@ -41,7 +41,7 @@ export default function AnnualReports() {
                         ))}
                     </ul>
                 </div>
-            </div>
+            </div> */}
 
             <div className="container mx-auto max-w-5xl mt-20">
                 {/* Section Label */}

@@ -57,7 +57,7 @@ const OurDirectors = () => {
                         Experienced Leadership Driving Operational Excellence
                     </h2>
                     <p className="text-base max-w-5xl mx-auto leading-relaxed" style={{ color: colors.gray.text }}>
-                        Habib Islamic Mauser Plastic Industries Limited (HIMPL) is led by a highly skilled and experienced management team responsible for ensuring operational efficiency, quality manufacturing, financial discipline, and strategic growth. Each member of our leadership team brings decades of experience in manufacturing, engineering, operations, supply chain, finance, and corporate governance. Their combined expertise ensures that PIC company maintains the highest performance-driven, packaging solutions.
+                        MandviWalla Mauser Plastic Limited Industries(MWMP)is led by a highly skilled and experienced management team responsible for ensuring operational efficiency, quality manufacturing, financial discipline, and strategic growth. Each member of our leadership team brings decades of experience in manufacturing, engineering, operations, supply chain, finance, and corporate governance. Their combined expertise ensures that PIC company maintains the highest performance-driven, packaging solutions.
                     </p>
                 </div>
 

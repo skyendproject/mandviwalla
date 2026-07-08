@@ -47,7 +47,7 @@ const directors = [
         }
     },
     {
-        name: "Mr. Naeem Ahmad",
+        name: "Mrs. Huma Darugar",
         title: "Director",
         social: {
             facebook: "#",
@@ -56,7 +56,7 @@ const directors = [
         }
     },
     {
-        name: "Mrs. Huma Dinapur",
+        name: "Mr. Naseer Ahmed",
         title: "Director",
         social: {
             facebook: "#",
@@ -64,33 +64,6 @@ const directors = [
             youtube: "#"
         }
     },
-    {
-        name: "Mr. Abdul Qadir Shiwani",
-        title: "Chief Executive / Director",
-        social: {
-            facebook: "#",
-            linkedin: "#",
-            youtube: "#"
-        }
-    },
-    {
-        name: "Mariron Hon",
-        title: "Chief Executive / Director",
-        social: {
-            facebook: "#",
-            linkedin: "#",
-            youtube: "#"
-        }
-    },
-    {
-        name: "Azeem Mandviwalla",
-        title: "Chief Executive / Director",
-        social: {
-            facebook: "#",
-            linkedin: "#",
-            youtube: "#"
-        }
-    }
 ];
 
 export default function BoardDirectors() {
@@ -112,7 +85,7 @@ export default function BoardDirectors() {
 
                 {/* Description */}
                 <p className="text-sm md:text-base text-center mb-10 md:mb-12 max-w-4xl mx-auto" style={{ color: colors.gray.text }}>
-                    At Mandviwalla Mauser Private Industries Limited, our leadership team drives innovation, sustainability, and long-term growth. Guided by deep industry and operational knowledge, the Board ensures that every decision reflects our values and stakeholders.
+                    At MandviWalla Mauser Plastic Limited Industries(MWMP), our leadership team drives innovation, sustainability, and long-term growth. Guided by deep industry and operational knowledge, the Board ensures that every decision reflects our values and stakeholders.
                 </p>
 
                 {/* Directors Grid */}

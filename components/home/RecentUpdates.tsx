@@ -5,7 +5,7 @@ import { Calendar, ChevronRight } from "lucide-react";
 export default function RecentUpdates() {
     const mainPost = {
         image: "/container-recent.webp",
-        title: "MANDVIWALA MAUSER PLASTIC INDUSTRIES MAUSER PLASTIC INDUSTRIES MANDVIWALA...",
+        title: "MANDVIWALA Mauser PLASTIC INDUSTRIES Mauser PLASTIC INDUSTRIES MANDVIWALA...",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         author: {
             name: "JOEL CAIRNS",
@@ -17,22 +17,22 @@ export default function RecentUpdates() {
     const sideBlogs = [
         {
             image: "/recent-blog-recent1.webp",
-            title: "MANDVIWALA MAUSER PLASTIC...",
+            title: "MANDVIWALA Mauser PLASTIC...",
             description: "Lorem ipsum dolor sit amet, consectetur..."
         },
         {
             image: "/recent-blog-recent2.webp",
-            title: "MANDVIWALA MAUSER PLASTIC...",
+            title: "MANDVIWALA Mauser PLASTIC...",
             description: "Lorem ipsum dolor sit amet, consectetur..."
         },
         {
             image: "/assets/home-banner.webp",
-            title: "MANDVIWALA MAUSER PLASTIC...",
+            title: "MANDVIWALA Mauser PLASTIC...",
             description: "Lorem ipsum dolor sit amet, consectetur..."
         },
         {
             image: "/azeem-mandviwalla.webp",
-            title: "MANDVIWALA MAUSER PLASTIC...",
+            title: "MANDVIWALA Mauser PLASTIC...",
             description: "Lorem ipsum dolor sit amet, consectetur..."
         }
     ];

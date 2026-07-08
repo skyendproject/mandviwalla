@@ -57,7 +57,7 @@ export default function AboutUs() {
                     </h2>
 
                     <p className="text-[#666666] leading-snug mb-6 text-base">
-                        Mandviwalla Mauser Plastic Industries Limited is Pakistan’s leading manufacturer of injection
+                        MandviWalla Mauser Plastic Limited Industries(MWMP) is Pakistan’s leading manufacturer of injection
                         and blow-moulded plastic products, with technical collaboration from Mauser Werke, Germany.
                         With decades of experience, advanced technology, and a strong commitment to quality, we serve
                         diverse industries including chemicals, food & beverages, pharmaceuticals, agriculture, and

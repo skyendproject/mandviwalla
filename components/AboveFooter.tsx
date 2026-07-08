@@ -31,7 +31,7 @@ export default function AboveFooter({ variant = "blue" }: AboveFooterProps) {
 
                         {/* Description */}
                         <p className="text-sm font-normal md:text-base" style={{ color: '#FFFFFF' }}>
-                            Get durable, innovative, and high-quality plastic solutions with MMPL.
+                            Get durable, innovative, and high-quality plastic solutions with MWMP.
                         </p>
                     </div>
 

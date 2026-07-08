@@ -11,8 +11,8 @@ const goalsData = [
             </svg>
 
         ),
-        title: "Customer Satisfaction",
-        description: "Deliver premium-quality products, ensure timely deliveries, and provide dependable after-sales support."
+        title: "Achieving Customer Satisfaction",
+        description: "Manufacturing quality products, timely management of deliveries and after sales support."
     },
     {
         icon: (
@@ -21,8 +21,8 @@ const goalsData = [
             </svg>
 
         ),
-        title: "Market Expansion",
-        description: "Explore new national and international markets while strengthening our product research and development capabilities."
+        title: "Ensuring Quality Manufacturing",
+        description: "Producing highest quality of plastic products at competitive prices."
     },
     {
         icon: (
@@ -31,8 +31,8 @@ const goalsData = [
             </svg>
 
         ),
-        title: "Quality Manufacturing",
-        description: "Produce world-class plastic products at competitive prices through advanced technology and strict quality control."
+        title: "Expanding Customer Base",
+        description: "Exploring new national and international markets and understanding product research and development in plastic products as well as our own market requirement."
     },
     {
         icon: (
@@ -45,8 +45,8 @@ const goalsData = [
 
 
         ),
-        title: "Efficient Resource Management",
-        description: "Optimize human, financial, technical, and infrastructural resources to maximize value for customers and stakeholders."
+        title: "Ensuring Efficient Resource Management",
+        description: "Managing human, financial, technical and infrastructural resources to support the above strategic goals and to ensure highest possible value addition to stakeholders."
     }
 ];
 

@@ -120,7 +120,7 @@ export default function Header() {
         opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50" style={{ backgroundColor: colors.primary.blue }}>
 
                                     <Link href="/company-information" className="block px-4 py-2 transition" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
-                                        Company Information
+                                        Company Profile
                                     </Link>
                                     <Link href="/mission-vision" className="block px-4 py-2 transition" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
                                         Mission & Vision
@@ -167,7 +167,7 @@ export default function Header() {
                                             </li>
                                             <li>
                                                 <Link href="management-profile" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
-                                                    Management Profile
+                                                    Parent Company
                                                 </Link>
                                             </li>
                                             <li>
@@ -182,7 +182,7 @@ export default function Header() {
                                             </li>
                                             <li>
                                                 <Link href="legal-advisor" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
-                                                    Legal Advisor
+                                                    Legal Support
                                                 </Link>
                                             </li>
                                         </ul>

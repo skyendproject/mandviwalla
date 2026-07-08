@@ -52,7 +52,7 @@ export default function NoticesGrid() {
           <h2 className="text-2xl md:text-3xl font-bold mb-2">Notices & Announcements</h2>
           <p className="mx-auto text-sm md:text-base max-w-4xl" style={{ color: colors.gray.text }}>
             Timely corporate notices, regulatory disclosures and shareholder announcements.<br />
-            Short links: Mandviwalla MAUSER Plastic Industries Limited posts all statutory notices, AGM/EGM invitations, corporate briefings and other regulatory announcements here. Use the filters to find notices by news type or status.
+            Short links: MandviWalla Mauser Plastic Limited Industries(MWMP) posts all statutory notices, AGM/EGM invitations, corporate briefings and other regulatory announcements here. Use the filters to find notices by news type or status.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

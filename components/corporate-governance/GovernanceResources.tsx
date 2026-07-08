@@ -2,11 +2,11 @@ import { Download } from "lucide-react";
 import { colors } from "@/lib/colors";
 
 const resources = [
-    { title: "CODE OF CONDUCT (PDF)", href: "#" },
+    // { title: "CODE OF CONDUCT (PDF)", href: "#" },
     { title: "GOVERNANCE FRAMEWORK (PDF)", href: "#" },
     { title: "ANNUAL REPORT (PDF)", href: "#" },
-    { title: "CODE OF CONDUCT (PDF)", href: "#" },
-    { title: "CODE OF CONDUCT (PDF)", href: "#" },
+    // { title: "CODE OF CONDUCT (PDF)", href: "#" },
+    // { title: "CODE OF CONDUCT (PDF)", href: "#" },
     { title: "GOVERNANCE ELECTION (PDF)", href: "#" }
 ];
 

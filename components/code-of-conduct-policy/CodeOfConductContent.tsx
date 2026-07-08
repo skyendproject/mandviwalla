@@ -2,97 +2,104 @@ import { colors } from "@/lib/colors";
 
 const sections = [
     {
-        title: "Introduction and Application",
+        title: "I. Introduction and Application",
         content: [
             {
-                heading: "Code of Ethical Foundation",
-                text: "Every MMPL employee and those representing us should conduct themselves in an ethical way. We adhere to the tenets of being caring and compassionate to all human beings, honesty in all dealings, being respectful of everyone's culture, role, responsibility, and contribution, and seeking to honor the fundamental humanity of everyone we work with and encounter in our day-to-day work."
+                heading: "A. Core Ethical Foundation",
+                text: "MandviWalla Mauser Plastic Industries Limited (MWMP) is founded on a strong ethical framework. This Code of Conduct (CoC) serves as a comprehensive guide for the ethical and professional behavior required of all personnel. The Code ensures that all business activities are carried out with the highest standards of integrity, transparency, and accountability."
             },
             {
-                heading: "Scope and Applicability",
-                text: "This code applies to everyone at all:",
+                heading: "B. Scope and Applicability",
+                text: "This Code applies universally to all:",
                 list: [
-                    "Associates (including Accountants), and Consultants",
-                    "Directors (including Non-Executive Directors)",
-                    "Management and key senior personnel of MMM or partner companies",
-                    "Third parties doing business with us on our behalf",
-                    "The Code is accessible to all, and everyone is expected to read and apply its principles. More importantly, everyone should be accountable to the values that we exemplify."
+                    "Directors (Executive, Non-Executive, and Independent).",
+                    "Senior Management Officers.",
+                    "All employees of MWMP, regardless of contract status or location.",
+                    "Consultants, agents, and representatives acting on behalf of the Company."
+                ],
+                footer: "Any breach of this Code constitutes a serious violation and may lead to disciplinary action, including termination of employment or appointment."
+            }
+        ]
+    },
+    {
+        title: "II. Integrity in Business and Financial Dealings",
+        content: [
+            {
+                heading: "A. Compliance with Laws and Regulations",
+                text: "All personnel must comply with all applicable national, local, and international trade laws, rules, regulations, and requirements, including the Companies Act, 2017, and the Listed Companies (Code of Corporate Governance) Regulation, 2019 (CCGR 2019)."
+            },
+            {
+                heading: "B. Financial Integrity and Reporting",
+                text: "MWMP mandates accurate and truthful financial reporting in accordance with recognized accounting standards. Falsification of financial records, banking information, or any other corporate document is strictly prohibited. The Company maintains reliable records and reports for full transparency."
+            },
+            {
+                heading: "C. Anti-Corruption and Anti-Bribery",
+                text: "MWMP maintains a zero-tolerance policy against corruption in any form, including the offering or acceptance of gifts, entertainment, or personal favors that could improperly influence or be perceived to influence business decisions. Personnel must not offer or accept bribes or unlawful incentives in dealings with business partners or government officials."
+            },
+            {
+                heading: "D. Fair Competition",
+                text: "The Company must conduct all business activities in rigorous accordance with all applicable anti-trust and unfair competition laws."
+            }
+        ]
+    },
+    {
+        title: "III. Conflicts of Interest and Securities Trading",
+        content: [
+            {
+                heading: "A. Conflicts of Interest (COI)",
+                text: "All employees and Directors must actively avoid actual or perceived conflicts of interest and are expected to act solely in the best interest of MWMP, maintaining transparency in all professional dealings.",
+                footer: "Every Director of the Company who is in any way interested in any contract or arrangement to be entered into by the Company is required to disclose the nature of his concern or interest to the Board and shall not take part in the discussion or decision-making process related to that matter."
+            },
+            {
+                heading: "B. Insider Trading and Confidentiality",
+                text: "MWMP strictly prohibits the misuse of unpublished price-sensitive information.",
+                list: [
+                    "Prohibition on Dealing: No person associated with the Company may deal in securities of MWMP on the basis of any unpublished price-sensitive information (insider knowledge), either on their own behalf or on behalf of any other person.",
+                    "Prohibition on Tipping: No person shall communicate or counsel any other person to deal in securities based on such information, except when required in the ordinary course of business or under any law."
+                ]
+            },
+            {
+                heading: "C. Protection of Confidential Information",
+                text: "Employees are required to maintain strict confidentiality over proprietary, technical, financial, customer, and employee data unless disclosure is duly authorized or legally required. This obligation continues even after the Director's term or employee's service is terminated."
+            }
+        ]
+    },
+    {
+        title: "IV. Social, Labor, and Environmental Responsibility",
+        content: [
+            {
+                heading: "A. Workplace Environment and Human Rights",
+                text: "MWMP is committed to guaranteeing a safe and respectful workplace.",
+                list: [
+                    "Non-Discrimination and Harassment: The Company selects and treats employees equally and does not discriminate based on race, color, national origin, ethnic origin, gender, religion, political beliefs, sexual orientation, disability, age, or any other personal characteristic unrelated to job performance. Sexual harassment or any harsh and inhumane treatment, mental or physical coercion, or abuse are strictly prohibited.",
+                    "Labor Standards: MWMP complies with all applicable laws on working hours, wages, and benefits. There is an absolute prohibition on the use of child labor, forced labor, slave labor, or any other type of involuntary labor. The rights of employees to freedom of association shall be respected.",
+                    "Health, Safety, and Environment (HSE): The Company is committed to conducting business in a manner that protects public and occupational health, the environment, and ensures employee safety. MWMP strives to minimize accidents, reduce emissions, cut waste, and conserve energy."
+                ]
+            },
+            {
+                heading: "B. Responsible Supply Chain and Manufacturing",
+                text: "Given the nature of the plastics industry, MWMP has specific ethical requirements for its supply chain:",
+                list: [
+                    "Conflict Minerals: The Company prohibits the sourcing or purchase of \"conflict minerals\" (including tin, tantalum, tungsten, or gold) that directly or indirectly benefit armed groups in the Democratic Republic of the Congo and adjoining countries.",
+                    "Sanctioned Entities: MWMP commits not to use suppliers or service providers located in countries subject to international economic sanctions (e.g., those imposed by the United Nations, United States, or European Union)."
                 ]
             }
         ]
     },
     {
-        title: "Integrity in Business and Financial Dealings",
+        title: "V. Reporting Violations and Compliance",
         content: [
             {
-                heading: "Regulations Compliance and Reputation",
-                text: "All associates and suppliers shall be faithful to comply to all local laws and local rules, laws, regulatory, and requirements relating the companies do, and The company should conduct by legal matters in such a manner that it does not get associated with illegal behaviors, no crime, or improprieties."
+                heading: "A. Duty to Report",
+                text: "All personnel have a responsibility to seek guidance and report any suggestion(s) and observation(s) or concerns about potential misconduct, ethical issues, or violations of this Code."
             },
             {
-                heading: "Anti-Corruption and Briberies",
-                text: "MMPL prohibits any form of corrupt behavior-including bribes, kickbacks or any other method intended to undermine our integrity. Employees of MMPL are strictly required from doing such practices either making willingly or under any form. We also require that representatives of MMPL who contact directly on our behalf in our business, should be compliance of anti-bribery and anti-corruption policies."
+                heading: "B. Whistleblowing Mechanism",
+                text: "MWMP shall establish a formal, confidential, and anonymous Whistleblowing Policy to enable employees, suppliers, and third parties to report grievances, concerns, or potentially unlawful activities, including violations of this Code or fraud against shareholders."
             },
             {
-                heading: "Integrity of Records and Books",
-                text: "MMPL produces in accordance to the highest standards and laws, including the handling of all records and all other information shall be truthful, timely and appropriate. We commit to provide our stakeholders, and the public at large, with financial records and information reliable and precise and these which accurately describe the financial situation and the performance of all MMPL business units and activities."
-            },
-            {
-                heading: "Fair Competition",
-                text: "Companies conduct themselves in business with fairness towards competitors in all aspects and does not use fraud and corruption."
-            }
-        ]
-    },
-    {
-        title: "Conflicts of Interest and Securities Trading",
-        content: [
-            {
-                heading: "Conflicts of Interest (COI)",
-                text: "A Conflict of Interest emerges when an individual's personal interests might conflict or be perceived to clash with the interests of MMPL or when there is chance for personal interests to be put above MMPL's interest. All employees and representatives should get out from any situation of conflict between their own and MMPL interests and should make known to the proper authorities whenever they discover such a situation or fact when it likely happens or exists during their working period. To maintain MMPL."
-            },
-            {
-                heading: "Insider Trading and Confidentiality",
-                list: [
-                    "A Position or Owning: The material non-public information that you know about MMPL or suppliers or clients or other third parties, cannot be the basis of your investment in such companies and should not share this with any other party including family, friends or business partners.",
-                    "Confidentiality: Any confidential information relating to the MMPL or any of its partner companies, to which employees, contractors or agents working with the company become privy, must be conserved and held in the strictest confidence and only used for business purposes of the company itself.",
-                ]
-            },
-            {
-                heading: "Protection of Confidential Information",
-                text: "All employees and business associates of MMPL are expected to safeguard confidential company information, and against unauthorized use or disclosure. After leaving MMPL or at any time requested to be returned all confidential information."
-            }
-        ]
-    },
-    {
-        title: "Social, Labor, and Environmental Responsibility",
-        content: [
-            {
-                heading: "Workplace Environment and Human Rights",
-                text: "MMPL is obligated to creating an environment of inclusiveness that facilitates dignity and trust. We promote initiatives where each employee matters and has an adequate setting at work, both mentally, physical, culturally, safe, secure and harmoniously so that they can operate optimally. We respect fundamental human rights of our employees; prohibit forced or child labor. MMPL does not discriminate anyone based on gender, race, ethnicity, religion, disability, age or any other protected reason that otherwise and we will conduct ourselves based on the principles of the UN Global Compact."
-            },
-            {
-                heading: "Community Impact (CSR) and Manufacturing",
-                text: "MMPL takes Corporate Social Responsibility (CSR) and manufacturing seriously, and how the manufacturing that MMPL does in addition to where being responsible of the community our operations contribute are key in ensuring sustainable operations; how we impact our larger stakeholders economically, socially, ecologically, and ethically. MMPL aims to continue to develop new forms of sustainable packaging, MMPL does so in genuine to maintain sustainability contributions to reduce our carbon footprint if applicable, and in other future sustainability activities. Life Skills improvement."
-            },
-            {
-                heading: "Protection of Confidential Information",
-                text: "All employees and business associates of MMPL are expected to safeguard confidential company information, and against unauthorized use or disclosure. After leaving MMPL or at any time requested to be returned all confidential information."
-            }
-        ]
-    },
-    {
-        title: "Reporting Violations and Compliance",
-        content: [
-            {
-                heading: "Duty to Report",
-                text: "Everyone with knowledge or reasonable or even premature, who cannot take dispositions and interventions on instances where potential compliance violations, ethical issues or other concerning events happen should be reported to their direct supervisor."
-            },
-            {
-                heading: "Non-Retaliation Mechanism",
-                text: "MMPL encourages the reporting of violations and ensures it in good faith and in most transparent fashion for all those who report concerns without any retribution. Anyone who files a report in good faith will be protected and protected from the threat of any retaliation for reporting."
-            },
-            {
-                heading: "Policy Violations Disclosure",
-                text: "Violations of this code can be punished with employees discipline action (such as termination) and will also influence the termination of business partnerships, professional sanctions, or prosecution."
+                heading: "C. Policy Prohibiting Retaliation",
+                text: "The Whistleblowing Policy must contain a mandatory, unequivocal anti-retaliation clause. No employee shall be discharged, demoted, suspended, harassed, or otherwise discriminated against for filing a complaint or exercising their rights under the CoC or the Whistleblowing Policy."
             }
         ]
     }
@@ -134,6 +141,11 @@ export default function CodeOfConductContent() {
                                                     </li>
                                                 ))}
                                             </ul>
+                                        )}
+                                        {item.footer && (
+                                            <p className="text-sm md:text-base text-justify leading-snug" style={{ color: colors.gray.text }}>
+                                                {item.footer}
+                                            </p>
                                         )}
                                     </div>
                                 ))}

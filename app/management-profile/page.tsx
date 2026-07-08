@@ -13,8 +13,8 @@ export default function ManagementProfile() {
         <div>
             <Hero
                 imagePath="/management-profile.jpg"
-                heading="Management Profile"
-                breadcrumbPath="Management Profile"
+                heading="Parent Company"
+                breadcrumbPath="Parent Company"
                 path="Governance"
             />
             <OurDirectors />

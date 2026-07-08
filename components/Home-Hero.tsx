@@ -32,7 +32,7 @@ export default function Hero() {
                     Shaping the Future with Quality Plastic Solutions
                 </h1>
                 <p className="text-sm md:text-base max-w-3xl mb-6">
-                    Since 1988, Mandviwalla Mauser Plastic Industries Limited has been delivering world-class
+                    Since 1988, MandviWalla Mauser Plastic Limited Industries(MWMP) Limited has been delivering world-class
                     injection and blow-moulded plastic products in Pakistan. Powered by German technology and
                     decades of expertise, we are the pioneers of 210-liter industrial drums and premium plastic
                     solutions.

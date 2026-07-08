@@ -57,7 +57,7 @@ export default function GovernanceFramework() {
 
                 {/* Description */}
                 <p className="text-sm md:text-base mb-10 md:mb-12 text-center" style={{ color: colors.gray.text }}>
-                    MMPL's governance system is structured to ensure efficient supervision, strategic oversight, and ethical management of the company.
+                    MWMP's governance system is structured to ensure efficient supervision, strategic oversight, and ethical management of the company.
                 </p>
 
                 {/* Cards Grid */}

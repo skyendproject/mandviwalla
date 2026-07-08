@@ -43,7 +43,7 @@ export default function ComplianceReporting() {
 
                         {/* Description */}
                         <p className="text-sm md:text-base text-justify leading-relaxed" style={{ color: colors.gray.text }}>
-                            Mandviwalla Mauser adheres to strict compliance standards related to:                        </p>
+                            MandviWalla Mauser adheres to strict compliance standards related to:                        </p>
 
                         {/* Standards List */}
                         <ul className="flex flex-col gap-2 md:gap-2.5 pl-4 md:pl-6">
