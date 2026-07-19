@@ -13,9 +13,9 @@ const responsibilities = [
 ];
 
 const resources = [
-    { title: "Audited Financial Statements (PDF)", href: "#" },
-    { title: "Auditor’s Report (PDF)", href: "#" },
-    { title: "Annual Report – Audit Section (PDF)", href: "#" },
+    // { title: "Audited Financial Statements (PDF)", href: "#" },
+    { title: "Auditor’s Report (PDF)", href: "/company-auditor.pdf" },
+    // { title: "Annual Report – Audit Section (PDF)", href: "#" },
 ];
 
 
@@ -67,7 +67,7 @@ export default function AuditorResponsibilities() {
                 <div className="flex items-center justify-center gap-3 mb-3">
                     <div className="w-0.5 h-8" style={{ backgroundColor: colors.primary.blue }}></div>
                     <span className="text-sm md:text-base font-semibold" style={{ color: colors.gray.tagColor }}>
-                        Annual Report – Pages 40/41
+                        Annual Report
                     </span>
                 </div>
                 <h2 className="text-2xl md:text-3xl font-semibold text-black text-center mb-10">
@@ -169,7 +169,7 @@ export default function AuditorResponsibilities() {
                 {/* Section Label */}
                 <div className="flex items-center justify-center gap-3 mb-3">
                     <div className="w-0.5 h-8 md:h-8" style={{ backgroundColor: colors.primary.blue }}></div>
-                    <span className="text-sm md:text-base  font-semibold" style={{borderColor: colors.primary.blue ,color: colors.gray.tagColor }}>
+                    <span className="text-sm md:text-base  font-semibold" style={{ borderColor: colors.primary.blue, color: colors.gray.tagColor }}>
                         Audit-Related Documents
                     </span>
                 </div>
@@ -180,11 +180,12 @@ export default function AuditorResponsibilities() {
                 </h2>
 
                 {/* Resources Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                <div className="flex justify-center">
                     {resources.map((resource, idx) => (
                         <a
                             key={idx}
                             href={resource.href}
+                            download
                             className="flex items-center justify-center gap-3 px-6 py-3.5 rounded-md text-white font-medium text-sm md:text-base transition-all hover:opacity-90"
                             style={{ backgroundColor: colors.primary.blue }}
                         >

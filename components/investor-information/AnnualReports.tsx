@@ -1,20 +1,16 @@
 "use client";
-
-import Image from "next/image";
 import { colors } from "@/lib/colors";
-import { Check } from "lucide-react";
 
 const years = [2024, 2023, 2022, 2021];
 
 const resources = [
-    { title: "Half-Yearly & Quarterly Reports", href: "#" },
-    { title: "Half-Yearly Reports", href: "#" },
-    { title: "Quarterly Financial Statements", href: "#" },
+    { title: "Half-Yearly Report - December 2025", href: "/investor-information-december25.pdf" },
+    { title: "Half-Yearly Report - December 2024", href: "/investor-information-december24.pdf" },
 ];
 
 export default function AnnualReports() {
     return (
-        <section className="w-full py-12 px-4 md:px-0 bg-[#F6F6F6]">
+        <section className="w-full pb-12 pt-4 px-4 md:px-0 bg-[#F6F6F6]">
             {/* <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20">
                 <div className="relative w-[420px] h-[340px] rounded-card overflow-hidden shrink-0 bg-white">
                     <Image
@@ -58,16 +54,20 @@ export default function AnnualReports() {
                 </h2>
 
                 {/* Resources Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                <div className="flex flex-wrap justify-center gap-4 md:gap-6">
                     {resources.map((resource, idx) => (
                         <a
                             key={idx}
                             href={resource.href}
-                            className="flex items-center justify-center gap-3 px-6 py-3.5 rounded-md text-white font-medium text-sm md:text-base transition-all hover:opacity-90"
+                            download
+                            className="inline-flex items-center justify-center gap-3 px-6 py-3.5 rounded-md text-white font-medium text-sm md:text-base transition-all hover:opacity-90"
                             style={{ backgroundColor: colors.primary.blue }}
                         >
                             <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 23.375H19.25V20.625H0M19.25 8.25H13.75V0H5.5V8.25H0L9.625 17.875L19.25 8.25Z" fill="white" />
+                                <path
+                                    d="M0 23.375H19.25V20.625H0M19.25 8.25H13.75V0H5.5V8.25H0L9.625 17.875L19.25 8.25Z"
+                                    fill="white"
+                                />
                             </svg>
                             <span className="text-sm">{resource.title}</span>
                         </a>

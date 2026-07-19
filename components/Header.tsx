@@ -119,7 +119,7 @@ export default function Header() {
                                 <div className="absolute left-0 mt-2 w-64 text-white shadow-lg rounded-md uppercase 
         opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50" style={{ backgroundColor: colors.primary.blue }}>
 
-                                    <Link href="/company-information" className="block px-4 py-2 transition" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                    <Link href="/company-profile" className="block px-4 py-2 transition" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
                                         Company Profile
                                     </Link>
                                     <Link href="/mission-vision" className="block px-4 py-2 transition" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
@@ -166,7 +166,7 @@ export default function Header() {
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="management-profile" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                <Link href="parent-company" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
                                                     Parent Company
                                                 </Link>
                                             </li>

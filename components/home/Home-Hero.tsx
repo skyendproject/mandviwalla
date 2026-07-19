@@ -7,8 +7,8 @@ import CtaButton from "@/components/ui/CtaButton";
 
 export default function Hero() {
     const images = [
-        "/assets/drone-banner-shot.jpeg",
-        "/assets/green-drone.JPG",
+        "/assets/banner-image-1.jpeg",
+        "/assets/banner-image-2.jpeg",
     ];
 
     const [activeImage, setActiveImage] = useState(0);
