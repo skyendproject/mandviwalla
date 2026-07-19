@@ -54,38 +54,40 @@ export default function LegalAdvisor() {
                 </p>
             </div>
 
-            <div className="container mx-auto max-w-5xl mt-10 lg:mt-14 pt-8">
-                {/* Section Label */}
-                <div className="flex items-center justify-center gap-3 mb-3">
-                    <div className="w-0.5 h-6 md:h-6" style={{ backgroundColor: colors.primary.blue }}></div>
-                    <span className="text-sm md:text-base mb-1 inline-block" style={{ color: colors.gray.tagColor }}>
-                        Legal Documents (Downloads / Resources)
-                    </span>
-                </div>
 
-                {/* Heading */}
-                <h2 className="text-2xl md:text-3xl font-semibold text-black text-center mb-10 md:mb-12">
-                    Legal & Governance Documents
-                </h2>
-
-                {/* Resources Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-                    {resources.map((resource, idx) => (
-                        <a
-                            key={idx}
-                            href={resource.href}
-                            className="flex items-center justify-center gap-3 px-6 py-3.5 rounded-md text-white font-medium text-sm md:text-base transition-all hover:opacity-90"
-                            style={{ backgroundColor: colors.primary.blue }}
-                        >
-                            <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 23.375H19.25V20.625H0M19.25 8.25H13.75V0H5.5V8.25H0L9.625 17.875L19.25 8.25Z" fill="white" />
-                            </svg>
-                            <span className="text-sm">{resource.title}</span>
-                        </a>
-                    ))}
-                </div>
-            </div>
 
         </section>
     );
 }
+
+            // <div className="container mx-auto max-w-5xl mt-10 lg:mt-14 pt-8">
+            //     {/* Section Label */}
+            //     <div className="flex items-center justify-center gap-3 mb-3">
+            //         <div className="w-0.5 h-6 md:h-6" style={{ backgroundColor: colors.primary.blue }}></div>
+            //         <span className="text-sm md:text-base mb-1 inline-block" style={{ color: colors.gray.tagColor }}>
+            //             Legal Documents (Downloads / Resources)
+            //         </span>
+            //     </div>
+
+            //     {/* Heading */}
+            //     <h2 className="text-2xl md:text-3xl font-semibold text-black text-center mb-10 md:mb-12">
+            //         Legal & Governance Documents
+            //     </h2>
+
+            //     {/* Resources Grid */}
+            //     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+            //         {resources.map((resource, idx) => (
+            //             <a
+            //                 key={idx}
+            //                 href={resource.href}
+            //                 className="flex items-center justify-center gap-3 px-6 py-3.5 rounded-md text-white font-medium text-sm md:text-base transition-all hover:opacity-90"
+            //                 style={{ backgroundColor: colors.primary.blue }}
+            //             >
+            //                 <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            //                     <path d="M0 23.375H19.25V20.625H0M19.25 8.25H13.75V0H5.5V8.25H0L9.625 17.875L19.25 8.25Z" fill="white" />
+            //                 </svg>
+            //                 <span className="text-sm">{resource.title}</span>
+            //             </a>
+            //         ))}
+            //     </div>
+            // </div>

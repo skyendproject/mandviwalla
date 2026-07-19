@@ -48,7 +48,7 @@ const directors = [
     },
     {
         name: "Mrs. Huma Darugar",
-        title: "Director",
+        title: "Female Director",
         social: {
             facebook: "#",
             linkedin: "#",
@@ -57,7 +57,7 @@ const directors = [
     },
     {
         name: "Mr. Naseer Ahmed",
-        title: "Director",
+        title: "Independent Director",
         social: {
             facebook: "#",
             linkedin: "#",

@@ -2,8 +2,8 @@ import { colors } from "@/lib/colors";
 
 const auditCommittee = [
     {
-        name: "Mrs. Huma Darugar",
-        title: "Chairperson",
+        name: "Mr. Naseer Ahmed",
+        title: "Chairman",
         social: {
             facebook: "#",
             instagram: "#",
@@ -11,7 +11,7 @@ const auditCommittee = [
         }
     },
     {
-        name: "Mr. Abdul Qadir Shiwani",
+        name: "Mr. Tariq Mehmood",
         title: "Member",
         social: {
             facebook: "#",

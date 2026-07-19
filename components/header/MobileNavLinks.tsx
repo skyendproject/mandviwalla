@@ -47,7 +47,7 @@ export default function MobileNavLinks({ onClose }: MobileNavLinksProps) {
             {openDropdown === "profile" && (
                 <div className="bg-blue-900/80">
                     <Link href="/company-information" onClick={onClose} className="block px-8 py-2 hover:bg-white/10 uppercase">
-                        Company Information
+                        Company Profile
                     </Link>
                     <Link href="/mission-vision" onClick={onClose} className="block px-8 py-2 hover:bg-white/10 uppercase">
                         Mission & Vision
@@ -91,7 +91,7 @@ export default function MobileNavLinks({ onClose }: MobileNavLinksProps) {
                             {[
                                 ["corporate-governance", "Corporate Governance"],
                                 ["board-director", "Board Of Director"],
-                                ["management-profile", "Management Profile"],
+                                ["parent-company", "Parent Company"],
                                 ["share-holding", "Share Holding Pattern"],
                                 ["company-auditor", "Auditor Of The Company"],
                                 ["legal-advisor", "Legal Advisor"],

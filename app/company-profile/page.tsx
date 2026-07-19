@@ -15,8 +15,8 @@ export default function CompanyInformation() {
         <div>
             <Hero
                 imagePath="/company-information.jpg"
-                heading="Company Information"
-                breadcrumbPath="Company Information"
+                heading="Company Profile"
+                breadcrumbPath="Company Profile"
                 path="Profile"
 
             />

@@ -3,11 +3,11 @@ import { colors } from "@/lib/colors";
 
 const resources = [
     // { title: "CODE OF CONDUCT (PDF)", href: "#" },
-    { title: "GOVERNANCE FRAMEWORK (PDF)", href: "#" },
-    { title: "ANNUAL REPORT (PDF)", href: "#" },
+    { title: "GOVERNANCE FRAMEWORK (PDF)", href: "/corporate-governance.pdf" },
+    // { title: "ANNUAL REPORT (PDF)", href: "#" },
     // { title: "CODE OF CONDUCT (PDF)", href: "#" },
     // { title: "CODE OF CONDUCT (PDF)", href: "#" },
-    { title: "GOVERNANCE ELECTION (PDF)", href: "#" }
+    // { title: "GOVERNANCE ELECTION (PDF)", href: "#" }
 ];
 
 export default function GovernanceResources() {
@@ -28,11 +28,12 @@ export default function GovernanceResources() {
                 </h2>
 
                 {/* Resources Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                <div className="flex justify-center">
                     {resources.map((resource, idx) => (
                         <a
                             key={idx}
                             href={resource.href}
+                            download
                             className="flex items-center justify-center gap-3 px-6 py-3.5 rounded-md text-white font-medium text-sm md:text-base transition-all hover:opacity-90"
                             style={{ backgroundColor: colors.primary.blue }}
                         >

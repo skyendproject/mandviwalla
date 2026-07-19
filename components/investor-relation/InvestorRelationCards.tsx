@@ -11,16 +11,25 @@ const documents = [
         description: "",
         button: {
             label: "corporate-briefing",
-            href: "/Corporate briefing presentation 2023-2024.pdf"
+            href: "/Corporate-briefing-presentation-2023-2024.pdf"
         }
     },
     {
         image: "/investor-relation2.png",
-        title: "Corporate Briefing Notice",
+        title: "Corporate Briefing Notice 2023-2024",
         description: "",
         button: {
             label: "corporate-briefing",
-            href: "/Corporate briefing notice..pdf"
+            href: "/Corporate-briefing-notice.pdf"
+        }
+    },
+    {
+        image: "/investor-relation2.png",
+        title: "Corporate Briefing Notice 2025-2026",
+        description: "",
+        button: {
+            label: "corporate-briefing",
+            href: "/Corporate-briefing-notice-2025.pdf"
         }
     }
 ];

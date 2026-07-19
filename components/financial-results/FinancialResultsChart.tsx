@@ -25,11 +25,11 @@ const data = [
 
 
 const resources = [
-    { title: "Annual Results (PDF)", href: "#" },
-    { title: "Quarterly Results (PDF)", href: "#" },
-    { title: "Half-Yearly Results (PDF)", href: "#" },
-    { title: "Ratio Analysis Sheet (PDF)", href: "#" },
-    { title: "Summary Results (PDF)", href: "#" },
+    { title: "Q1 – March 2026 Results (PDF)", href: "/financial-result-march26.pdf" },
+    { title: "Q3 – September 2025 Results (PDF)", href: "/financial-result-september25.pdf" },
+    { title: "Q1 – March 2025 Results (PDF)", href: "/financial-result-march25.pdf" },
+    { title: "Q4 – December 2024 Results (PDF)", href: "/financial-result-december24.pdf" },
+    { title: "Q3 – September 2024 Results (PDF)", href: "/financial-result-september24.pdf" },
 ];
 
 
@@ -106,6 +106,7 @@ export default function FinancialResultsChart() {
                         <a
                             key={idx}
                             href={resource.href}
+                            download
                             className="flex items-center justify-center gap-3 px-6 py-3.5 rounded-md text-white font-medium text-sm md:text-base transition-all hover:opacity-90"
                             style={{ backgroundColor: colors.primary.blue }}
                         >

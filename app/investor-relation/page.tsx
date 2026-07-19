@@ -5,7 +5,7 @@ import InvestorRelationCards from "@/components/investor-relation/InvestorRelati
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Investor Relation",
+    title: "Investor Relation",
 };
 
 export default function CompanyInformation() {
@@ -16,7 +16,6 @@ export default function CompanyInformation() {
                 heading="Investor Relation"
                 breadcrumbPath=""
                 path="Investor Relation"
-
             />
             <InvestorRelationCards />
             <AboveFooter />
