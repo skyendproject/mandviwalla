@@ -6,12 +6,21 @@ import { Download } from "lucide-react";
 
 const documents = [
     {
-        image: "/investor-relation1.png",
+        image: "/assets/corporate-briefing-presentation-2023-2024.png",
         title: "Corporate Briefing Presentation 2023-2024",
         description: "",
         button: {
-            label: "corporate-briefing",
+            label: "Ppt 2023-2024",
             href: "/Corporate-briefing-presentation-2023-2024.pdf"
+        }
+    },
+    {
+        image: "/assets/corporate-briefing-presentation-2024-2025.png",
+        title: "Corporate Briefing Presentation 2024-2025",
+        description: "",
+        button: {
+            label: "Ppt 2024-2025",
+            href: "/Corporate-briefing-presentation-2024-2025.pdf"
         }
     },
     {
@@ -19,7 +28,7 @@ const documents = [
         title: "Corporate Briefing Notice 2023-2024",
         description: "",
         button: {
-            label: "corporate-briefing",
+            label: "Corporate Briefing",
             href: "/Corporate-briefing-notice.pdf"
         }
     },
@@ -28,7 +37,7 @@ const documents = [
         title: "Corporate Briefing Notice 2025-2026",
         description: "",
         button: {
-            label: "corporate-briefing",
+            label: "Corporate Briefing",
             href: "/Corporate-briefing-notice-2025.pdf"
         }
     }
