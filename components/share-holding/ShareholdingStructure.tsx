@@ -38,16 +38,19 @@ const ShareholdingStructure = () => {
                     </p>
                 </div>
 
-                {/* Document Image */}
-                {/* PDF Viewer */}
-                <div className="w-full max-w-5xl mx-auto">
-                    <div className="w-full h-[500px] rounded-lg overflow-hidden shadow-lg border border-gray-200">
-                        <iframe
-                            src="/shareholding-pattern.pdf#zoom=75&navpanes=0&toolbar=1"
-                            title="Shareholding Pattern Document"
-                            className="w-full h-full"
-                        />
-                    </div>
+                {/* Download Button */}
+                <div className="flex justify-center mt-8">
+                    <a
+                        href="/shareholding-pattern.pdf"
+                        download
+                        className="flex items-center justify-center gap-3 px-6 py-3.5 rounded-md text-white font-medium text-sm md:text-base transition-all hover:opacity-90"
+                        style={{ backgroundColor: colors.primary.blue }}
+                    >
+                        <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 23.375H19.25V20.625H0M19.25 8.25H13.75V0H5.5V8.25H0L9.625 17.875L19.25 8.25Z" fill="white" />
+                        </svg>
+                        <span>Shareholding Pattern (PDF)</span>
+                    </a>
                 </div>
             </div>
         </section>

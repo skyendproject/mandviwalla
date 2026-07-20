@@ -7,8 +7,9 @@ import CtaButton from "@/components/ui/CtaButton";
 
 export default function Hero() {
     const images = [
-        "/assets/banner-image-1.jpeg",
+        "/assets/banner-image-1.png",
         "/assets/banner-image-2.jpeg",
+        "/assets/banner-image-3.png",
     ];
 
     const [activeImage, setActiveImage] = useState(0);
@@ -119,7 +120,7 @@ export default function Hero() {
                     <span>Shaping the Future with Quality</span>
                     <span>Plastic Solutions</span>
                 </h1>
-                <p className="text-sm md:text-base max-w-3xl mb-4 md:mb-6 xl:mb-8 leading-normal">
+                <p className="text-sm md:text-base lg:text-lg max-w-3xl mb-4 md:mb-6 xl:mb-8 leading-normal font-bold">
                     Since 1988, MandviWalla Mauser Plastic Limited Industries(MWMP) has been delivering world-class
                     injection and blow-moulded plastic products in Pakistan. Powered by German technology and
                     decades of expertise, we are the pioneers of 210-liter industrial drums and premium plastic

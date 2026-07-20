@@ -3,7 +3,7 @@ import { colors } from "@/lib/colors";
 
 const resources = [
     // { title: "CODE OF CONDUCT (PDF)", href: "#" },
-    { title: "GOVERNANCE FRAMEWORK (PDF)", href: "/corporate-governance.pdf" },
+    { title: "Governance Framework", href: "/corporate-governance.pdf" },
     // { title: "ANNUAL REPORT (PDF)", href: "#" },
     // { title: "CODE OF CONDUCT (PDF)", href: "#" },
     // { title: "CODE OF CONDUCT (PDF)", href: "#" },
