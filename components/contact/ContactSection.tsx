@@ -1,5 +1,6 @@
-import React from "react";
-import { Mail, MapPin, Phone } from "lucide-react";
+"use client";
+
+import React, { useState } from "react";
 import { colors } from "@/lib/colors";
 
 const contactData = [
@@ -15,6 +16,47 @@ const contactData = [
 ];
 
 export default function ContactSection() {
+    const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+    const [errorMsg, setErrorMsg] = useState("");
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        const form = e.currentTarget;
+        const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
+        if (!accessKey) {
+            setStatus("error");
+            setErrorMsg("Form is not configured. Please set NEXT_PUBLIC_WEB3FORMS_KEY.");
+            return;
+        }
+
+        const data = new FormData(form);
+        data.append("access_key", accessKey);
+        data.append("from_name", "Mandviwalla Website");
+        data.append("subject", `Contact query from ${(data.get("name") as string) || "website"}`);
+        const email = data.get("email");
+        if (typeof email === "string" && email) data.append("replyto", email);
+
+        setStatus("sending");
+        setErrorMsg("");
+        try {
+            const res = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: data,
+            });
+            const json = await res.json();
+            if (json.success) {
+                setStatus("sent");
+                form.reset();
+            } else {
+                setStatus("error");
+                setErrorMsg(json.message || "Something went wrong. Please try again.");
+            }
+        } catch {
+            setStatus("error");
+            setErrorMsg("Network error. Please try again.");
+        }
+    };
+
     return (
         <section className="w-full py-14 md:py-20 px-4 bg-surface relative z-20">
             <div className="container max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 bg-white rounded-card shadow-card border border-gray-200 p-6 md:p-10">
@@ -27,40 +69,55 @@ export default function ContactSection() {
                     <h2 className="text-2xl md:text-3xl font-semibold mb-3 md:mb-2 leading-tight">
                         Don't Hesitate to Ask a Question.
                     </h2>
-                    {/* <p className="text-gray-600 text-sm max-w-md">Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p> */}
                 </div>
-                <form className="flex flex-col gap-3 w-full max-w-md">
+                <form className="flex flex-col gap-3 w-full max-w-md" onSubmit={handleSubmit}>
                     <input
                         type="text"
+                        name="name"
                         placeholder="Your Name.."
                         className="border border-[#999999] bg-[#F6F6F6] rounded px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-200"
                         required
                     />
                     <input
                         type="email"
+                        name="email"
                         placeholder="Email Address.."
                         className="border border-[#999999] bg-[#F6F6F6] rounded px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-200"
                         required
                     />
                     <input
                         type="text"
+                        name="user_subject"
                         placeholder="Subject.."
                         className="border border-[#999999] bg-[#F6F6F6] rounded px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-200"
                         required
                     />
                     <textarea
+                        name="message"
                         placeholder="Your Message.."
                         className="border border-[#999999] bg-[#F6F6F6] rounded px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-200 min-h-[100px]"
                         required
                     />
+
+                    {/* honeypot */}
+                    <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
+
+                    {status === "sent" && (
+                        <p className="text-green-700 text-sm">Thanks! Your message has been sent.</p>
+                    )}
+                    {status === "error" && (
+                        <p className="text-red-700 text-sm">{errorMsg}</p>
+                    )}
+
+                    <button
+                        type="submit"
+                        disabled={status === "sending"}
+                        className="text-white font-semibold text-sm rounded px-6 py-2 mt-2 hover:bg-blue-900 transition disabled:opacity-70 self-start"
+                        style={{ backgroundColor: colors.primary.blue }}
+                    >
+                        {status === "sending" ? "SENDING..." : "SEND MESSAGES"}
+                    </button>
                 </form>
-                <button
-                    type="submit"
-                    className="text-white font-semibold text-sm rounded px-6 py-2 mt-2 hover:bg-blue-900 transition"
-                    style={{ backgroundColor: colors.primary.blue }}
-                >
-                    SEND MESSAGES
-                </button>
             </div>
             {/* Right: Info */}
             <div className="flex flex-col">
