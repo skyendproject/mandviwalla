@@ -17,6 +17,9 @@ export default function Header() {
         setMobileMenuOpen(false);
     }, [pathname]);
 
+    // Home page renders its own overlay header inside the hero section.
+    if (pathname === "/") return null;
+
     return (
         <header className="w-full border-b relative z-50">
             {/* Top Strip (hidden on mobile) */}
