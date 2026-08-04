@@ -34,7 +34,7 @@ const SLIDES: Slide[] = [
         tabLabel: "HERITAGE",
     },
     {
-        src: "/assets/hero/hero-drums-1.jpeg",
+        src: "/assets/hero/hero-drums-2.jpeg",
         kicker: "Powered by German Technology",
         title: (
             <>
@@ -48,7 +48,7 @@ const SLIDES: Slide[] = [
         tabLabel: "TECHNOLOGY",
     },
     {
-        src: "/assets/hero/hero-drums-1.jpeg",
+        src: "/assets/hero/hero-drums-3.jpeg",
         kicker: "Pioneers of the 210-Litre Drum",
         title: (
             <>
