@@ -95,6 +95,7 @@ export default function MobileNavLinks({ onClose }: MobileNavLinksProps) {
                                 ["share-holding", "Share Holding Pattern"],
                                 ["company-auditor", "Auditor Of The Company"],
                                 ["legal-advisor", "Legal Advisor"],
+                                ["tax-consultant", "Tax Consultant"],
                             ].map(([href, label]) => (
                                 <Link
                                     key={href}
@@ -124,7 +125,7 @@ export default function MobileNavLinks({ onClose }: MobileNavLinksProps) {
                     {openSubDropdown === "investor" && (
                         <div className="bg-blue-900/70">
                             {[
-                                ["investor-relation", "Investor Relation"],
+                                ["corporate-briefing-session", "Corporate Briefing Session"],
                                 ["investor-information", "Investor Information"],
                                 ["financial-reports", "Financial Reports"],
                                 ["financial-results", "Financial Results"],

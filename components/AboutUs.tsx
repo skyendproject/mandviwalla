@@ -1,6 +1,6 @@
 "use client";
 
-import { Check, Facebook, Instagram, Twitter } from "lucide-react";
+import { Check } from "lucide-react";
 import Image from "next/image";
 
 export default function AboutUs() {
@@ -57,7 +57,7 @@ export default function AboutUs() {
                     </h2>
 
                     <p className="text-[#666666] leading-snug mb-6 text-base">
-                        MandviWalla Mauser Plastic Limited Industries(MWMP) is Pakistan’s leading manufacturer of injection
+                        Mandviwalla Mauser Plastic Limited (MWMP) is Pakistan’s leading manufacturer of injection
                         and blow-moulded plastic products, with technical collaboration from Mauser Werke, Germany.
                         With decades of experience, advanced technology, and a strong commitment to quality, we serve
                         diverse industries including chemicals, food & beverages, pharmaceuticals, agriculture, and
@@ -78,23 +78,6 @@ export default function AboutUs() {
                             </li>
                         ))}
                     </ul>
-
-                    {/* Social Icons */}
-                    <div className="absolute -bottom-5 right-0 flex items-center gap-3 mt-12">
-
-                        <div className="border border-[#A7A7A7] rounded-full p-2 cursor-pointer hover:bg-gray-100 transition">
-                            <Twitter className="w-5 h-5 text-[#A7A7A7]" />
-                        </div>
-
-                        <div className="border border-[#A7A7A7] rounded-full p-2 cursor-pointer hover:bg-gray-100 transition">
-                            <Facebook className="w-5 h-5 text-[#A7A7A7]" />
-                        </div>
-
-                        <div className="border border-[#A7A7A7] rounded-full p-2 cursor-pointer hover:bg-gray-100 transition">
-                            <Instagram className="w-5 h-5 text-[#A7A7A7]" />
-                        </div>
-
-                    </div>
 
                 </div>
 

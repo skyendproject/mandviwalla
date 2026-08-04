@@ -37,7 +37,7 @@ export default function InvestorDisclosure() {
                 <div className="text-center mb-6">
                     <h2 className="text-2xl md:text-3xl font-bold mb-2">Gender Pay Gap Disclosure</h2>
                     <p className="mx-auto text-base max-w-5xl text-gray-600 mb-2">
-                        At MandviWalla Mauser Plastic Limited Industries(MWMP), we are deeply committed to gender equality and women’s empowerment, in alignment with Sustainable Development Goal (SDG) 5. We foster a workplace culture built on dignity, respect, and fairness for all employees.
+                        At Mandviwalla Mauser Plastic Limited (MWMP), we are deeply committed to gender equality and women’s empowerment, in alignment with Sustainable Development Goal (SDG) 5. We foster a workplace culture built on dignity, respect, and fairness for all employees.
                     </p>
                     <div className="text-sm md:text-base text-gray-900 border-l-2 inline-block pl-2 mb-2" style={{ borderColor: '#0A84FF' }}>
                         Pay Gap Statement (Half Year Ended: December 31, 2024)

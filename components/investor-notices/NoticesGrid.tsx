@@ -46,7 +46,7 @@ export default function NoticesGrid() {
                     <p className="mx-auto text-sm md:text-base max-w-4xl" style={{ color: colors.gray.text }}>
                         Timely corporate notices, regulatory disclosures and shareholder announcements.
                         <br />
-                        MandviWalla Mauser Plastic Limited Industries (MWMP) posts all statutory notices,
+                        Mandviwalla Mauser Plastic Limited (MWMP) posts all statutory notices,
                         AGM/EGM invitations, corporate briefings and other regulatory announcements here.
                     </p>
                 </div>

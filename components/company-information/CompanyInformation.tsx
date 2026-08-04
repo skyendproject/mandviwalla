@@ -31,7 +31,7 @@ export default function CompanyInformationComponent() {
 
                 {/* Description */}
                 <p className="text-sm md:text-base text-center max-w-5xl mx-auto mb-12 md:mb-16 leading-relaxed" style={{ color: colors.gray.text }}>
-                    MandviWalla Mauser Plastic Limited Industries(MWMP) is a Public Limited Company established in 1988, with technical collaboration from Mauser Werke GmbH, Germany. Headquartered in Karachi, Pakistan, we are the country's pioneer in industrial blow-moulded plastic drums and a leading manufacturer of injection and blow-moulded plastic products across multiple sectors.
+                    Mandviwalla Mauser Plastic Limited (MWMP) is a Public Limited Company established in 1988, with technical collaboration from Mauser Werke GmbH, Germany. Headquartered in Karachi, Pakistan, we are the country's pioneer in industrial blow-moulded plastic drums and a leading manufacturer of injection and blow-moulded plastic products across multiple sectors.
                 </p>
 
                 {/* Statistics */}

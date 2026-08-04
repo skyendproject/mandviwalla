@@ -1,6 +1,4 @@
 import Image from "next/image";
-import type { CSSProperties } from "react";
-import { Facebook, Instagram, Linkedin } from "lucide-react";
 import { colors } from "@/lib/colors";
 import SectionHeader from "@/components/ui/SectionHeader";
 import Reveal from "@/components/ui/Reveal";
@@ -13,12 +11,6 @@ export default function BoardOfDirectors() {
         // TODO: confirm or replace with approved CEO bio copy.
         bio: "Leading Mandviwalla Mauser with a focus on quality, innovation, and lasting partnerships — building on decades of German-backed manufacturing expertise since 1988.",
     };
-
-    const socials = [
-        { label: "LinkedIn", href: "#", Icon: Linkedin, color: colors.primary.blue },
-        { label: "Facebook", href: "#", Icon: Facebook, color: colors.primary.blue },
-        { label: "Instagram", href: "#", Icon: Instagram, color: colors.primary.orange },
-    ];
 
     return (
         <section className="w-full py-14 md:py-20 px-4 md:px-12">
@@ -65,20 +57,6 @@ export default function BoardOfDirectors() {
                                 {director.bio}
                             </p>
 
-                            {/* Socials */}
-                            <div className="flex gap-3 justify-center sm:justify-start mt-5">
-                                {socials.map(({ label, href, Icon, color }) => (
-                                    <a
-                                        key={label}
-                                        href={href}
-                                        aria-label={label}
-                                        style={{ "--soc": color } as CSSProperties}
-                                        className="grid place-items-center w-9 h-9 rounded-full border border-[#D9D9D9] text-[#888888] transition-colors hover:text-white hover:border-transparent hover:bg-[var(--soc)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--soc)] focus-visible:ring-offset-2"
-                                    >
-                                        <Icon className="w-4 h-4" />
-                                    </a>
-                                ))}
-                            </div>
                         </div>
                     </div>
                 </Reveal>

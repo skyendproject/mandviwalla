@@ -41,7 +41,7 @@ export default function FinancialResultsChart() {
                     <div className="text-sm md:text-base mb-1 border-l-2 inline-block pl-2 font-semibold" style={{ color: colors.gray.tagColor, borderColor: colors.primary.blue }}>Financial Results</div>
                     <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Financial Results</h2>
                     <p className="mx-auto text-base md:text-base max-w-4xl" style={{ color: colors.gray.text }}>
-                        Performance snapshots, key indicators, and year-wise financial highlights of MandviWalla Mauser Plastic Limited Industries(MWMP).<br />
+                        Performance snapshots, key indicators, and year-wise financial highlights of Mandviwalla Mauser Plastic Limited (MWMP).<br />
                         These results provide stakeholders a clear overview of the Company’s profitability, liquidity, and operational strength.
                     </p>
                 </div>
@@ -77,14 +77,14 @@ export default function FinancialResultsChart() {
                 </div>
             </div>
 
-            <div className="max-w-5xl mx-auto mt-24">
+            {/* <div className="max-w-5xl mx-auto mt-24">
                 <Image src="/financial-results-summary.png"
                     alt="Summary"
                     width={1052}
                     height={1069}
                     className="border border-[#8F8F8F91]"
                 />
-            </div>
+            </div> */}
 
             <div className="container mx-auto max-w-5xl mt-20">
                 {/* Section Label */}

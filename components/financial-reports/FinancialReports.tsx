@@ -78,7 +78,7 @@ export default function FinancialReports() {
                         Transparent, accurate, and timely financial disclosures.
                     </h2>
                     <p className="mx-auto text-base md:text-base max-w-3xl" style={{ color: colors.gray.text }}>
-                        MandviWalla Mauser Plastic Limited Industries(MWMP) ensures complete compliance with PSX & SECP reporting standards by publishing audited annual financial statements and quarterly reports for investor review.
+                        Mandviwalla Mauser Plastic Limited (MWMP) ensures complete compliance with PSX & SECP reporting standards by publishing audited annual financial statements and quarterly reports for investor review.
                     </p>
                 </div>
                 <div className="flex flex-col md:flex-row gap-8 items-start justify-center">

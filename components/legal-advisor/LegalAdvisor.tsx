@@ -16,7 +16,7 @@ export default function LegalAdvisor() {
                     <div className="text-sm md:text-base  mb-1 border-l-2 inline-block pl-2" style={{ color: colors.gray.tagColor, borderColor: colors.primary.blue }}>Legal Advisor</div>
                     <h2 className="text-2xl md:text-3xl font-bold mb-4">Trusted Legal Guidance & Corporate Compliance</h2>
                     <p className=" mx-auto text-base md:text-base" style={{ color: colors.gray.text }}>
-                        At MandviWalla Mauser Plastic Limited Industries(MWMP), ensuring full legal compliance and ethical corporate conduct is a top priority. Our external legal advisors are independent and experienced professionals, providing expert counsel in corporate law, regulatory compliance, and litigation. Their guidance supports our commitment to transparent governance, risk management, and long-term business sustainability.
+                        At Mandviwalla Mauser Plastic Limited (MWMP), ensuring full legal compliance and ethical corporate conduct is a top priority. Our external legal advisors are independent and experienced professionals, providing expert counsel in corporate law, regulatory compliance, and litigation. Their guidance supports our commitment to transparent governance, risk management, and long-term business sustainability.
                     </p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-20">

@@ -18,7 +18,7 @@ const ShareholdingStructure = () => {
                         Transparent Shareholding Structure
                     </h2>
                     <p className="text-base max-w-5xl mx-auto leading-snug" style={{ color: colors.gray.text }}>
-                        MandviWalla Mauser Plastic Limited Industries(MWMP) maintains complete transparency in its shareholding structure in compliance with regulatory requirements. The following table represents the pattern of shareholding as of 31 June 2021, categorized based on the number of shares held by shareholders across different ranges.
+                        Mandviwalla Mauser Plastic Limited (MWMP) maintains complete transparency in its shareholding structure in compliance with regulatory requirements. The following table represents the pattern of shareholding as of 31 June 2021, categorized based on the number of shares held by shareholders across different ranges.
                     </p>
                 </div>
 
