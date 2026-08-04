@@ -1,16 +1,26 @@
 "use client";
 
 import Image from "next/image";
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import baseProducts from "./product-details";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { colors } from "@/lib/colors";
 import { ArrowRight } from "lucide-react";
 import SectionHeader from "@/components/ui/SectionHeader";
 
 
 export default function ProductOverview() {
-    const [activeFilter, setActiveFilter] = useState<"all" | "open-top" | "close-top" | null>(null);
+    const router = useRouter();
+    const searchParams = useSearchParams();
+    const typeParam = searchParams?.get("type");
+    const activeFilter: "open-top" | "close-top" | null =
+        typeParam === "open-top" || typeParam === "close-top" ? typeParam : null;
+
+    const setActiveFilter = (value: "open-top" | "close-top") => {
+        const params = new URLSearchParams(searchParams?.toString() ?? "");
+        params.set("type", value);
+        router.replace(`/products?${params.toString()}`, { scroll: false });
+    };
 
     const filterImages: Array<{ src: string; label: string; value: "open-top" | "close-top" }> = [
         {
@@ -27,12 +37,9 @@ export default function ProductOverview() {
     const visibleProducts = useMemo(() => {
         if (!activeFilter) return [];
         return baseProducts
-            .filter((product) => activeFilter === "all" || product.type === activeFilter)
+            .filter((product) => product.type === activeFilter)
             .map((product) => ({ ...product, key: product.id }));
     }, [activeFilter]);
-
-    const zoomIds = new Set([3, 5, 6, 7]);
-    const router = useRouter();
 
     return (
         <section className="w-full px-2 py-14 md:py-20 md:px-8">
@@ -71,8 +78,6 @@ export default function ProductOverview() {
                                         width: tileWidth,
                                         height: tileHeight,
                                         opacity: isSelected || enlarged ? 1 : 0.88,
-                                        transform: filter.value === "close-top" ? "scale(1.35)" : "scale(1)",
-                                        transformOrigin: "center",
                                     }}
                                 />
                             </button>
@@ -95,7 +100,6 @@ export default function ProductOverview() {
                     <h2 className="text-center text-2xl md:text-3xl my-8 font-semibold">Reliable, Durable, Certified Products</h2>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-6">
                         {visibleProducts.map((product) => {
-                            const zoomed = product.type === "close-top" && zoomIds.has(product.id);
                             return (
                                 <div key={product.key} className="flex flex-col items-center bg-white rounded-card border border-gray-100 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition duration-300 p-3 pt-4 pb-4">
                                     <div className="mb-2 overflow-hidden flex items-center justify-center" style={{ width: 191.85, height: 257.01 }}>
@@ -108,8 +112,6 @@ export default function ProductOverview() {
                                             style={{
                                                 width: 191.85,
                                                 height: 257.01,
-                                                transform: zoomed ? "scale(1.35)" : "scale(1)",
-                                                transformOrigin: "center",
                                             }}
                                         />
                                     </div>
