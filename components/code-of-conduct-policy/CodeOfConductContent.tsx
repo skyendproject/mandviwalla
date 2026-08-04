@@ -6,7 +6,7 @@ const sections = [
         content: [
             {
                 heading: "A. Core Ethical Foundation",
-                text: "MandviWalla Mauser Plastic Industries Limited (MWMP) is founded on a strong ethical framework. This Code of Conduct (CoC) serves as a comprehensive guide for the ethical and professional behavior required of all personnel. The Code ensures that all business activities are carried out with the highest standards of integrity, transparency, and accountability."
+                text: "Mandviwalla Mauser Plastic Limited (MWMP) is founded on a strong ethical framework. This Code of Conduct (CoC) serves as a comprehensive guide for the ethical and professional behavior required of all personnel. The Code ensures that all business activities are carried out with the highest standards of integrity, transparency, and accountability."
             },
             {
                 heading: "B. Scope and Applicability",

@@ -64,7 +64,7 @@ const CORPORATE_GOVERNANCE: Section = {
             key: "investor-relation",
             label: "Investor Relation",
             children: [
-                { href: "/investor-relation", label: "Investor Relation" },
+                { href: "/corporate-briefing-session", label: "Corporate Briefing Session" },
                 { href: "/investor-information", label: "Investor Information" },
                 { href: "/financial-reports", label: "Financial Reports" },
                 { href: "/financial-results", label: "Financial Results" },

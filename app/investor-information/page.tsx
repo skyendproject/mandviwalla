@@ -91,7 +91,7 @@ export default function CompanyInformation() {
                     </div>
                 </div>
             </section>
-            <AnnualReports />
+            {/* <AnnualReports /> */}
 
 
             <AboveFooter />

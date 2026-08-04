@@ -23,7 +23,7 @@ export default function CompanyInformation() {
             <About />
             <GovernanceFramework />
             <ComplianceReporting />
-            <GovernanceResources />
+            {/* <GovernanceResources /> */}
             <AboveFooter />
             <Footer />
         </div>

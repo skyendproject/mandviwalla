@@ -10,7 +10,7 @@ const documents = [
         title: "Corporate Briefing Presentation 2023-2024",
         description: "",
         button: {
-            label: "Ppt 2023-2024",
+            label: "2022-2024",
             href: "/Corporate-briefing-presentation-2023-2024.pdf"
         }
     },
@@ -19,7 +19,7 @@ const documents = [
         title: "Corporate Briefing Presentation 2024-2025",
         description: "",
         button: {
-            label: "Ppt 2024-2025",
+            label: "2024-2025",
             href: "/Corporate-briefing-presentation-2024-2025.pdf"
         }
     },
@@ -47,10 +47,10 @@ export default function InvestorRelationCards() {
     return (
         <div className="w-full py-8 md:py-12 lg:py-16 bg-white px-4 md:px-20">
             <div className="text-center mb-16">
-                <div className="text-sm md:text-base mb-1 inline-block border-l-2 pl-2" style={{ color: colors.gray.tagColor, borderColor: colors.primary.blue}}>Pay Gap Statement (Half Year Ended: December 31, 2024)</div>
+                {/* <div className="text-sm md:text-base mb-1 inline-block border-l-2 pl-2" style={{ color: colors.gray.tagColor, borderColor: colors.primary.blue}}>Pay Gap Statement (Half Year Ended: December 31, 2024)</div> */}
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Transparent. Compliant. Accessible.</h2>
                 <p className=" mx-auto text-base md:text-base" style={{ color: colors.gray.text }}>
-                    MandviWalla Mauser Plastic Limited Industries(MWMP) is committed to delivering timely, accurate, and transparent information to its shareholders, analysts, and the investment community. We ensure full compliance with PSX and SECP disclosure requirements.
+                    Mandviwalla Mauser Plastic Limited (MWMP) is committed to delivering timely, accurate, and transparent information to its shareholders, analysts, and the investment community. We ensure full compliance with PSX and SECP disclosure requirements.
                 </p>
             </div>
             <div className="flex flex-col md:flex-row justify-center items-start mt-4">

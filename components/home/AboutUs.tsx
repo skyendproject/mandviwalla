@@ -1,6 +1,6 @@
 "use client";
 
-import { Check, Facebook, Instagram, Twitter } from "lucide-react";
+import { Check } from "lucide-react";
 import Image from "next/image";
 import { colors } from "@/lib/colors";
 import SectionHeader from "@/components/ui/SectionHeader";
@@ -59,7 +59,7 @@ export default function AboutUs() {
                     />
 
                     <p className="text-[#666666] leading-relaxed mb-4 md:mb-6 xl:mb-8 text-sm md:text-base">
-                        MandviWalla Mauser Plastic Limited Industries(MWMP) is Pakistan’s leading manufacturer of injection
+                        Mandviwalla Mauser Plastic Limited (MWMP) is Pakistan’s leading manufacturer of injection
                         and blow-moulded plastic products, with technical collaboration from Mauser Werke, Germany.
                         With decades of experience, advanced technology, and a strong commitment to quality, we serve
                         diverse industries including chemicals, food & beverages, pharmaceuticals, agriculture, and
@@ -80,23 +80,6 @@ export default function AboutUs() {
                             </li>
                         ))}
                     </ul>
-
-                    {/* Social Icons */}
-                    <div className="relative md:absolute -bottom-5 right-0 flex items-center justify-center md:justify-end gap-3 mt-6 md:mt-12">
-
-                        <div className="border border-[#A7A7A7] rounded-full p-1.5 md:p-2 cursor-pointer hover:bg-gray-100 transition">
-                            <Twitter className="w-4 h-4 md:w-5 md:h-5 text-[#A7A7A7]" />
-                        </div>
-
-                        <div className="border border-[#A7A7A7] rounded-full p-1.5 md:p-2 cursor-pointer hover:bg-gray-100 transition">
-                            <Facebook className="w-4 h-4 md:w-5 md:h-5 text-[#A7A7A7]" />
-                        </div>
-
-                        <div className="border border-[#A7A7A7] rounded-full p-1.5 md:p-2 cursor-pointer hover:bg-gray-100 transition">
-                            <Instagram className="w-4 h-4 md:w-5 md:h-5 text-[#A7A7A7]" />
-                        </div>
-
-                    </div>
 
                 </div>
 

@@ -20,7 +20,7 @@ type Slide = {
 
 const SLIDES: Slide[] = [
     {
-        src: "/assets/hero/hero-drums.jpg",
+        src: "/assets/hero/hero-drums-1.jpeg",
         kicker: "Since 1988 · Karachi, Pakistan",
         title: (
             <>
@@ -34,7 +34,7 @@ const SLIDES: Slide[] = [
         tabLabel: "HERITAGE",
     },
     {
-        src: "/assets/hero/hero-factory.jpg",
+        src: "/assets/hero/hero-drums-1.jpeg",
         kicker: "Powered by German Technology",
         title: (
             <>
@@ -48,7 +48,7 @@ const SLIDES: Slide[] = [
         tabLabel: "TECHNOLOGY",
     },
     {
-        src: "/assets/hero/hero-rows.jpg",
+        src: "/assets/hero/hero-drums-1.jpeg",
         kicker: "Pioneers of the 210-Litre Drum",
         title: (
             <>
@@ -120,7 +120,7 @@ export default function Hero() {
             {/* background slides */}
             {SLIDES.map((s, i) => (
                 <div
-                    key={s.src}
+                    key={i}
                     className={`hero-slide absolute inset-0 ${i === current ? "is-active" : ""} ${i % 2 === 1 ? "alt" : ""}`}
                     aria-hidden={i !== current}
                 >
@@ -188,6 +188,7 @@ export default function Hero() {
                                     <li><Link href="/share-holding" className="hero-dd-item">Share Holding Pattern</Link></li>
                                     <li><Link href="/company-auditor" className="hero-dd-item">Auditor of the Company</Link></li>
                                     <li><Link href="/legal-advisor" className="hero-dd-item">Legal Support</Link></li>
+                                    <li><Link href="/tax-consultant" className="hero-dd-item">Tax Consultant</Link></li>
                                 </ul>
                             </li>
 
@@ -198,7 +199,7 @@ export default function Hero() {
                                     <span className="hero-nested-caret">‹</span>
                                 </span>
                                 <ul className="hero-dd hero-sub-panel absolute top-0 right-full w-64 list-none">
-                                    <li><Link href="/investor-relation" className="hero-dd-item">Investor Relation</Link></li>
+                                    <li><Link href="/corporate-briefing-session" className="hero-dd-item">Corporate Briefing Session</Link></li>
                                     <li><Link href="/investor-information" className="hero-dd-item">Investor Information</Link></li>
                                     <li><Link href="/financial-reports" className="hero-dd-item">Financial Reports</Link></li>
                                     <li><Link href="/financial-results" className="hero-dd-item">Financial Results</Link></li>
@@ -365,11 +366,13 @@ export default function Hero() {
                     padding: 22px clamp(24px, 4.5vw, 72px);
                 }
                 .hero-nav-link {
-                    color: rgba(245,247,255,.72);
+                    color: #ffffff;
                     text-decoration: none;
+                    font-family: var(--font-lato), sans-serif;
                     font-size: 14px;
-                    font-weight: 500;
-                    letter-spacing: .4px;
+                    font-weight: 700;
+                    letter-spacing: .5px;
+                    text-transform: uppercase;
                     position: relative;
                     transition: color .3s;
                     background: transparent;

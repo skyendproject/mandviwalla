@@ -38,7 +38,7 @@ export default function InvestorFAQ() {
           <div className="text-sm md:text-base mb-1 border-l-2 inline-block pl-2 font-semibold" style={{ color: colors.gray.tagColor, borderColor: colors.primary.blue }}>Investor Information</div>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Reliable. Transparent. Investor-Focused.</h2>
           <p className="mx-auto text-base md:text-base" style={{ color: colors.gray.text }}>
-            MandviWalla Mauser Plastic Limited Industries(MWMP) is committed to maintaining the highest standards of transparency, disclosure, and corporate governance. This Investor Information hub offers shareholders and stakeholders quick access to all essential financial, regulatory, and governance-related documents.
+            Mandviwalla Mauser Plastic Limited (MWMP) is committed to maintaining the highest standards of transparency, disclosure, and corporate governance. This Investor Information hub offers shareholders and stakeholders quick access to all essential financial, regulatory, and governance-related documents.
           </p>
           <p className="mx-auto text-base md:text-base mt-4" style={{ color: colors.gray.text }}>
             MWMP ensures timely and accurate dissemination of information as per the requirements of the Companies Act, 2017 and PSX Rule Book. This page consolidates all investor-relevant reports, notices, financial data, and regulatory filings in a structured and accessible manner.

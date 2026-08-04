@@ -10,7 +10,7 @@ export default function About() {
                 
                 <div className="flex flex-col gap-4 text-sm md:text-base" style={{ color: colors.gray.text }}>
                     <p className="text-justify md:text-center leading-relaxed">
-                        MandviWalla Mauser Plastic Limited Industries(MWMP) is committed to providing the highest standards of corporate governance, transparency, and ethical management. Our governance framework ensures fairness, accountability, and responsible decision-making across all levels of the organization.
+                        Mandviwalla Mauser Plastic Limited (MWMP) is committed to providing the highest standards of corporate governance, transparency, and ethical management. Our governance framework ensures fairness, accountability, and responsible decision-making across all levels of the organization.
                     </p>
                     
                     <p className="text-justify md:text-center leading-relaxed">

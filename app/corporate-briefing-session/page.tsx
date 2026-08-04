@@ -5,7 +5,7 @@ import InvestorRelationCards from "@/components/investor-relation/InvestorRelati
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Investor Relation",
+    title: "Corporate Briefing Session",
 };
 
 export default function CompanyInformation() {
@@ -13,9 +13,9 @@ export default function CompanyInformation() {
         <div>
             <Hero
                 imagePath="/investor-relation.jpg"
-                heading="Investor Relation"
+                heading="Corporate Briefing Session"
                 breadcrumbPath=""
-                path="Investor Relation"
+                path="Corporate Briefing Session"
             />
             <InvestorRelationCards />
             <AboveFooter />
