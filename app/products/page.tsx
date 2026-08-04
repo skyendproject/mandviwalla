@@ -2,6 +2,7 @@ import AboveFooter from "@/components/AboveFooter";
 import Hero from "@/components/company-information/Hero";
 import Footer from "@/components/Footer";
 import ProductOverview from "@/components/products/ProductOverview";
+import { Suspense } from "react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -23,7 +24,9 @@ export default function CompanyInformation() {
                 breadcrumbPath="Products"
                 path="Home"
             />
-            <ProductOverview />
+            <Suspense fallback={null}>
+                <ProductOverview />
+            </Suspense>
             <AboveFooter />
             <Footer />
         </div>
