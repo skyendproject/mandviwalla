@@ -23,9 +23,9 @@ const SLIDES: Slide[] = [
         src: "/assets/hero/hero-drums-1.jpeg",
         kicker: "Since 1988 · Karachi, Pakistan",
         title: (
-            <>
+            <div className="uppercase">
                 Shaping the <span className="hero-accent">Future</span> of Plastic Manufacturing
-            </>
+            </div>
         ),
         lede:
             "Three decades of world-class injection and blow-moulded plastic products — engineered in Pakistan, trusted by industry across the region.",
@@ -37,9 +37,9 @@ const SLIDES: Slide[] = [
         src: "/assets/hero/hero-drums-2.jpeg",
         kicker: "Powered by German Technology",
         title: (
-            <>
+            <div className="uppercase">
                 Precision Moulding, <span className="hero-accent">World-Class</span> Output
-            </>
+            </div>
         ),
         lede:
             "State-of-the-art German machinery and decades of process expertise deliver consistency, strength and finish — batch after batch.",
@@ -51,9 +51,9 @@ const SLIDES: Slide[] = [
         src: "/assets/hero/hero-drums-3.jpeg",
         kicker: "Pioneers of the 210-Litre Drum",
         title: (
-            <>
+            <div className="uppercase">
                 Pakistan&apos;s Trusted <span className="hero-accent">Industrial</span> Drums
-            </>
+            </div>
         ),
         lede:
             "From the iconic 210-litre industrial drum to premium custom mouldings — built to perform, certified to last, delivered at scale.",

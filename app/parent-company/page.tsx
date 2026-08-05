@@ -27,9 +27,9 @@ export default function ParentCompany() {
                         <Image
                             src="/assets/meskay-&-femtee.jpeg"
                             alt="Meskay & Femtee Trading Company"
-                            width={720}
-                            height={330}
-                            className="h-auto w-full max-w-[560px]"
+                            width={400}
+                            height={90}
+                            className="h-auto w-full max-w-[320px]"
                             priority
                         />
                     </div>

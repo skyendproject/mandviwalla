@@ -89,6 +89,30 @@ export default function CompanyInformation() {
                             </a>
                         </div>
                     </div>
+
+                    <div className="mt-4 w-full overflow-hidden rounded-card border border-gray-200 shadow-sm">
+                        <iframe
+                            src="https://www.google.com/maps?q=THK+Group,+Plot+No.+32-C,+Jami+Commercial+Street+2,+DHA+Phase+VII,+Karachi&output=embed"
+                            width="100%"
+                            height="320"
+                            style={{ border: 0 }}
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            title="THK Associates (Pvt.) Limited - Location"
+                            allowFullScreen
+                        />
+                        <div className="px-4 py-2 text-sm">
+                            <a
+                                href="https://www.google.com/maps/place/THK+Group/@24.8305607,67.0729565,17z/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="underline"
+                                style={{ color: colors.orange.dark }}
+                            >
+                                View larger map
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </section>
             {/* <AnnualReports /> */}

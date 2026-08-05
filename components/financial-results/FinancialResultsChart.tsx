@@ -25,11 +25,11 @@ const data = [
 
 
 const resources = [
-    { title: "Q1 – March 2026 Results (PDF)", href: "/financial-result-march26.pdf" },
-    { title: "Q3 – September 2025 Results (PDF)", href: "/financial-result-september25.pdf" },
-    { title: "Q1 – March 2025 Results (PDF)", href: "/financial-result-march25.pdf" },
-    { title: "Q4 – December 2024 Results (PDF)", href: "/financial-result-december24.pdf" },
-    { title: "Q3 – September 2024 Results (PDF)", href: "/financial-result-september24.pdf" },
+    { title: "Q3 – March 2026 Results (PDF)", href: "/financial-result-march26.pdf" },
+    { title: "Q1 – September 2025 Results (PDF)", href: "/financial-result-september25.pdf" },
+    { title: "Q3 – March 2025 Results (PDF)", href: "/financial-result-march25.pdf" },
+    { title: "Q2 – December 2024 Results (PDF)", href: "/financial-result-december24.pdf" },
+    { title: "Q1 – September 2024 Results (PDF)", href: "/financial-result-september24.pdf" },
 ];
 
 
