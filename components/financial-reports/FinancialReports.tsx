@@ -32,25 +32,25 @@ const annualReports: ReportGroup[] = [
 
 const quarterlyReports: ReportGroup[] = [
     {
-        year: "Q1 2025",
+        year: "Q3 2025 (March)",
         files: [
             { label: "QUARTERLY REPORT MARCH 2025 (PDF)", href: "/quarterly-report-march25.pdf" },
         ],
     },
     {
-        year: "Q4 2024",
+        year: "Q1 2025 (September)",
         files: [
             { label: "QUARTERLY REPORT SEPTEMBER 2024 (PDF)", href: "/quarterly-report-september24.pdf" },
         ],
     },
     {
-        year: "Q3 2024",
+        year: "Q1 2024 (August)",
         files: [
             { label: "QUARTERLY REPORT AUGUST 2024 (PDF)", href: "/quarterly-report-august24.pdf" },
         ],
     },
     {
-        year: "Q4 2023",
+        year: "Q1 2024 (September)",
         files: [
             { label: "QUARTERLY REPORT SEPTEMBER 2023 (PDF)", href: "/quarterly-report-september23.pdf" },
         ],
