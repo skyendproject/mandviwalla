@@ -37,9 +37,9 @@ export default function ServiceSection() {
                 <path d="M30.5 9.97797V51.0214" stroke="white" strokeWidth="2" strokeMiterlimit="10" strokeLinejoin="round" />
             </svg>
             ,
-            title: "Injection Moulding Products",
+            title: "Blow Moulding Products",
             description:
-                "Automotive parts, rubbermaid items, plastic chairs, poultry equipment, household items, appliance components, battery containers.",
+                "210/250 Litres industrial Plastic Drums with latest technology.",
         },
         {
             icon: <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -66,9 +66,9 @@ export default function ServiceSection() {
                 <path d="M26.0869 36.8695H38.0434" stroke="white" strokeWidth="2" strokeMiterlimit="10" strokeLinejoin="round" />
             </svg>
             ,
-            title: "Blow Moulding Products",
+            title: "Injection Moulding Products",
             description:
-                "210-liter industrial plastic drums manufactured with German technology under patented designs.",
+                "Industrial crate for food, logistic and textile industries. Agriculture tray, industrial closure.",
         },
     ];
 

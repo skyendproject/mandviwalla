@@ -37,7 +37,7 @@ export default function AboutUs() {
                     >
                         <div className="flex items-center gap-2">
                             <span className="text-3xl sm:text-4xl md:text-5xl font-bold leading-none">
-                                36
+                                37
                             </span>
 
                             <div className="flex flex-col text-xs sm:text-sm md:text-base uppercase tracking-wide leading-tight">
@@ -59,11 +59,11 @@ export default function AboutUs() {
                     />
 
                     <p className="text-[#666666] leading-relaxed mb-4 md:mb-6 xl:mb-8 text-sm md:text-base">
-                        Mandviwalla Mauser Plastic Limited (MWMP) is Pakistan’s leading manufacturer of injection
-                        and blow-moulded plastic products, with technical collaboration from Mauser Werke, Germany.
-                        With decades of experience, advanced technology, and a strong commitment to quality, we serve
-                        diverse industries including chemicals, food & beverages, pharmaceuticals, agriculture, and
-                        household goods.
+                        Mandviwalla Mauser Plastic Industries Limited (MMPIL) is Pakistan’s leading manufacturer of
+                        blow-moulded and injection plastic products, with technical collaboration from Mauser Werke,
+                        Germany. With decades of experience, advanced technology, and a strong commitment to quality,
+                        we serve diverse industries including lubricant oil, ethanol, industrial chemical, food and
+                        beverages, pharmaceuticals and agriculture products.
                     </p>
 
                     {/* List */}
@@ -71,8 +71,8 @@ export default function AboutUs() {
                         {[
                             "Established in 1988 as a Public Limited Company",
                             "Technical collaboration with Mauser Werke, Germany",
-                            "Pioneer of industrial blow-moulded drums in Pakistan",
-                            "Wide range of injection moulded & blow moulded products"
+                            "Pioneer of 210 Litre and 250 Litre L-Ring drums in Pakistan",
+                            "Wide range of injection-moulded and blow-moulded products"
                         ].map((item, index) => (
                             <li key={index} className="flex items-start gap-2 md:gap-3">
                                 <Check className="w-4 h-4 md:w-5 md:h-5 mt-0.5 md:mt-1 flex-shrink-0" strokeWidth={2.5} style={{ color: colors.orange.dark }} />

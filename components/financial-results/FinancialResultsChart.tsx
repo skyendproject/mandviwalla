@@ -1,35 +1,14 @@
 "use client";
 
 import { colors } from "@/lib/colors";
-import { Info } from "lucide-react";
-import Image from "next/image";
-import {
-    LineChart,
-    Line,
-    XAxis,
-    YAxis,
-    CartesianGrid,
-    Tooltip,
-    ResponsiveContainer,
-    Dot,
-} from "recharts";
-
-const data = [
-    { name: "Jan", value: 20 },
-    { name: "Feb", value: 15 },
-    { name: "Mar", value: 45 },
-    { name: "Apr", value: 70 },
-    { name: "Mai", value: 60 },
-    { name: "Jun", value: 30 },
-];
-
 
 const resources = [
     { title: "Q3 – March 2026 Results (PDF)", href: "/financial-result-march26.pdf" },
+    { title: "Q2 – December 2025 Results (PDF)", href: "/financial-result-december25.pdf" },
     { title: "Q1 – September 2025 Results (PDF)", href: "/financial-result-september25.pdf" },
-    { title: "Q3 – March 2025 Results (PDF)", href: "/financial-result-march25.pdf" },
-    { title: "Q2 – December 2024 Results (PDF)", href: "/financial-result-december24.pdf" },
-    { title: "Q1 – September 2024 Results (PDF)", href: "/financial-result-september24.pdf" },
+    // { title: "Q3 – March 2025 Results (PDF)", href: "/financial-result-march25.pdf" },
+    // { title: "Q2 – December 2024 Results (PDF)", href: "/financial-result-december24.pdf" },
+    // { title: "Q1 – September 2024 Results (PDF)", href: "/financial-result-september24.pdf" },
 ];
 
 
@@ -41,50 +20,11 @@ export default function FinancialResultsChart() {
                     <div className="text-sm md:text-base mb-1 border-l-2 inline-block pl-2 font-semibold" style={{ color: colors.gray.tagColor, borderColor: colors.primary.blue }}>Financial Results</div>
                     <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Financial Results</h2>
                     <p className="mx-auto text-base md:text-base max-w-4xl" style={{ color: colors.gray.text }}>
-                        Performance snapshots, key indicators, and year-wise financial highlights of Mandviwalla Mauser Plastic Limited (MWMP).<br />
+                        Performance snapshots, key indicators, and year-wise financial highlights of Mandviwalla Mauser Plastic Industries Limited (MMPIL).<br />
                         These results provide stakeholders a clear overview of the Company’s profitability, liquidity, and operational strength.
                     </p>
                 </div>
-                <div className="bg-white rounded-md border border-[#8F8F8F91] mx-auto max-w-5xl">
-                    <div className="flex items-start justify-between px-8 pt-8 pb-4">
-                        <div>
-                            <div className="text-2xl md:text-3xl font-bold mb-2">FY 2023–2024 (Latest)</div>
-                            <div className="text-2xl md:text-3xl font-semibold" style={{ color: colors.primary.blue }}>5.987,37</div>
-                        </div>
-                        <div className="mt-2">
-                            <Info size={22} className="text-gray-400" />
-                        </div>
-                    </div>
-                    <div className="border-t border-gray-200" />
-                    <div className="px-8 py-6">
-                        <ResponsiveContainer width="100%" height={260}>
-                            <LineChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
-                                <CartesianGrid stroke="#E5E7EB" strokeDasharray="3 3" />
-                                <XAxis dataKey="name" tick={{ fontSize: 16 }} axisLine={false} tickLine={false} />
-                                <YAxis tick={{ fontSize: 16 }} axisLine={false} tickLine={false} domain={[0, 100]} />
-                                <Tooltip />
-                                <Line
-                                    type="monotone"
-                                    dataKey="value"
-                                    stroke={colors.primary.orange}
-                                    strokeWidth={2.5}
-                                    dot={{ r: 4, fill: colors.primary.blue, stroke: colors.primary.orange, strokeWidth: 2 }}
-                                    activeDot={{ r: 6, fill: colors.primary.orange, stroke: colors.primary.blue, strokeWidth: 2 }}
-                                />
-                            </LineChart>
-                        </ResponsiveContainer>
-                    </div>
-                </div>
             </div>
-
-            {/* <div className="max-w-5xl mx-auto mt-24">
-                <Image src="/financial-results-summary.png"
-                    alt="Summary"
-                    width={1052}
-                    height={1069}
-                    className="border border-[#8F8F8F91]"
-                />
-            </div> */}
 
             <div className="container mx-auto max-w-5xl mt-20">
                 {/* Section Label */}

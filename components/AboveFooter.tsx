@@ -26,7 +26,7 @@ export default function AboveFooter({ variant = "blue" }: AboveFooterProps) {
                     <div className="flex flex-col gap-2 xl:gap-3">
                         {/* Heading */}
                         <h2 className="text-2xl md:text-3xl font-semibold" style={{ color: '#FFFFFF' }}>
-                            Pakistan's Trusted Plastic Manufacturer
+                            Pakistan's Trusted Plastic Rigid Packaging Manufacturer
                         </h2>
 
                         {/* Description */}

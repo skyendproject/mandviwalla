@@ -2,7 +2,6 @@
 
 import { colors } from "@/lib/colors";
 import Image from "next/image";
-import { Check } from "lucide-react";
 
 const responsibilities = [
     "Identify and assess the risks of material misstatement of the financial statements, whether due to fraud or error, and design and perform audit procedures responsive to those risks.",
@@ -10,12 +9,6 @@ const responsibilities = [
     "Evaluate the appropriateness of accounting policies used and the reasonableness of accounting estimates and related disclosures made by management.",
     "Conclude on the appropriateness of management’s use of the going concern basis of accounting and, based on the audit evidence obtained, whether a material uncertainty exists.",
     "Evaluate the overall presentation, structure and content of the financial statements, including the disclosures, and whether they represent the underlying transactions and events in a manner that achieves fair presentation."
-];
-
-const resources = [
-    // { title: "Audited Financial Statements (PDF)", href: "#" },
-    { title: "Auditor’s Report (PDF)", href: "/company-auditor.pdf" },
-    // { title: "Annual Report – Audit Section (PDF)", href: "#" },
 ];
 
 
@@ -59,142 +52,6 @@ export default function AuditorResponsibilities() {
                             Their oversight strengthens investor confidence and ensures the company’s financial integrity.
                         </div>
                     </div>
-                </div>
-            </div>
-
-            {/* Annual Report Excerpt - Pages 40/41 */}
-            <div className="container mx-auto max-w-5xl mt-20 px-4">
-                <div className="flex items-center justify-center gap-3 mb-3">
-                    <div className="w-0.5 h-8" style={{ backgroundColor: colors.primary.blue }}></div>
-                    <span className="text-sm md:text-base font-semibold" style={{ color: colors.gray.tagColor }}>
-                        Annual Report
-                    </span>
-                </div>
-                <h2 className="text-2xl md:text-3xl font-semibold text-black text-center mb-10">
-                    Auditor’s Responsibilities for the Audit of the Financial Statements
-                </h2>
-
-                <div className="flex flex-col gap-8 text-sm md:text-base text-justify leading-relaxed" style={{ color: colors.gray.text }}>
-                    <div>
-                        <h3 className="text-lg md:text-xl font-semibold text-black mb-2">Material Uncertainty Relating to Going Concern</h3>
-                        <p>
-                            The financial statements for the year ended June 30, 2025 have been prepared on going concern assumption. The Company accumulated losses amounting to Rs 285.078 million (2023 Rs 346.302 million) as on June 30, 2025. These conditions, along with other matters as set forth in note 1.1 indicate the existence of material uncertainty which may cast significant doubt about the company’s ability to continue as going concern therefore the company may be unable to realize its asset and discharge its liabilities in the normal course of the business. Our opinion is not modified in respect of this matter.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h3 className="text-lg md:text-xl font-semibold text-black mb-2">Key Audit Matters</h3>
-                        <p className="mb-3">
-                            Key audit matters are those matters that, in our professional judgment, were of most significance in our audit of the financial statements of the current year. These matters were addressed in the context of our audit of the financial statements as a whole, and in forming our opinion thereon, and we do not provide a separate opinion on these matters.
-                        </p>
-                        <p>
-                            In addition to the matters described in Basis for Qualified Opinion section and in the Material Uncertainty Related to Going Concern Section we have determined the matters described below to be the key audit matters to be communicated in our report:
-                        </p>
-
-                        <div className="mt-4 border rounded-md overflow-x-auto" style={{ borderColor: '#E5E7EB' }}>
-                            <table className="w-full text-sm">
-                                <thead>
-                                    <tr className="bg-gray-100 text-left">
-                                        <th className="p-3 border-b" style={{ borderColor: '#E5E7EB' }}>S No</th>
-                                        <th className="p-3 border-b" style={{ borderColor: '#E5E7EB' }}>Key audit matter</th>
-                                        <th className="p-3 border-b" style={{ borderColor: '#E5E7EB' }}>How the matter was addressed in our audit</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr className="align-top">
-                                        <td className="p-3 border-b" style={{ borderColor: '#E5E7EB' }}>1</td>
-                                        <td className="p-3 border-b" style={{ borderColor: '#E5E7EB' }}>
-                                            <p className="font-semibold mb-2 text-black">Revenue Recognition</p>
-                                            <p className="mb-2">Refer 4.12 and note 23 to the financial statements.</p>
-                                            <p className="mb-2">The company is engaged in the production and sale of Plastic Barrels. The company recognized gross revenue of Rs. 1,317 million.</p>
-                                            <p>We considered revenue recognition as a key audit matter due to the revenue being one of the key performance indicators of the company. Large number of revenue transactions with a large number of customers majorly in Karachi, inherent risk of material misstatements.</p>
-                                        </td>
-                                        <td className="p-3 border-b" style={{ borderColor: '#E5E7EB' }}>
-                                            <p className="mb-2">Our audit procedures in relation to the matter, amongst others, included:</p>
-                                            <ul className="list-disc pl-5 space-y-2">
-                                                <li>Understood and evaluated management controls over revenue and checked their validation;</li>
-                                                <li>Performed verification of sample of revenue transactions with underlying documentation including dispatch documents and sales invoices;</li>
-                                                <li>Performed cut-off procedures on sample basis to ensure revenue has been recognized in the correct period;</li>
-                                                <li>Performed recalculation of sales incentive as per company’s policy on test basis;</li>
-                                                <li>Performed analytical procedures to analyze variation in the price and quantity sold during the year;</li>
-                                                <li>Tested journal entries relating to revenue recognized during the year based on identified risk criteria; and</li>
-                                                <li>Assessed the appropriateness of disclosures made in the financial statements related to revenue.</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h3 className="text-lg md:text-xl font-semibold text-black mb-2">Information Other than the Financial Statements and Auditor’s Report Thereon</h3>
-                        <p className="mb-3">
-                            Management is responsible for the other information. The other information comprises the information included in the annual report, but does not include the financial statements and our auditor’s report thereon.
-                        </p>
-                        <p className="mb-3">
-                            Our opinion on the financial statements does not cover the other information and we do not express any form of assurance conclusion thereon.
-                        </p>
-                        <p className="mb-3">
-                            In connection with our audit of the financial statements, our responsibility is to read the other information and, in doing so, consider whether the other information is materially inconsistent with the financial statements or our knowledge obtained in the audit or otherwise appears to be materially misstated.
-                        </p>
-                        <p>
-                            If, based on the work we have performed, we conclude that there is a material misstatement of this other information, we are required to report that fact. We have nothing to report in this regard.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h3 className="text-lg md:text-xl font-semibold text-black mb-2">Responsibilities of Management and Board of Directors for the Financial Statements</h3>
-                        <p className="mb-3">
-                            Management is responsible for the preparation and fair presentation of the financial statements in accordance with the accounting and reporting standards as applicable in Pakistan and the requirements of Companies Act, 2017 (XIX of 2017) and for such internal control as management determines is necessary to enable the preparation of financial statements that are free from material misstatement, whether due to fraud or error.
-                        </p>
-                        <p className="mb-3">
-                            In preparing the financial statements, management is responsible for assessing the Company’s ability to continue as a going concern, disclosing, as applicable, matters related to going concern and using the going concern basis of accounting unless management either intends to liquidate the Company or to cease operations, or has no realistic alternative but to do so.
-                        </p>
-                        <p>
-                            Board of Directors are responsible for overseeing the Company’s financial reporting process.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h3 className="text-lg md:text-xl font-semibold text-black mb-2">Auditor’s Responsibilities for the Audit of the Financial Statements</h3>
-                        <p>
-                            Our objectives are to obtain reasonable assurance about whether the financial statements as a whole are free from material misstatement, whether due to fraud or error, and to issue an auditor’s report that includes our opinion. Reasonable assurance is a high level of assurance, but is not a guarantee that an audit conducted in accordance with ISAs as applicable in Pakistan will always detect a material misstatement when it exists. Misstatements can arise from fraud or error and are considered material if, individually or in the aggregate, they could reasonably be expected to influence the economic decisions of users taken on the basis of these financial statements.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div className="container mx-auto max-w-5xl mt-20">
-                {/* Section Label */}
-                <div className="flex items-center justify-center gap-3 mb-3">
-                    <div className="w-0.5 h-8 md:h-8" style={{ backgroundColor: colors.primary.blue }}></div>
-                    <span className="text-sm md:text-base  font-semibold" style={{ borderColor: colors.primary.blue, color: colors.gray.tagColor }}>
-                        Audit-Related Documents
-                    </span>
-                </div>
-
-                {/* Heading */}
-                <h2 className="text-2xl md:text-3xl font-semibold text-black text-center mb-10 md:mb-12">
-                    Audit-Related Documents
-                </h2>
-
-                {/* Resources Grid */}
-                <div className="flex justify-center">
-                    {resources.map((resource, idx) => (
-                        <a
-                            key={idx}
-                            href={resource.href}
-                            download
-                            className="flex items-center justify-center gap-3 px-6 py-3.5 rounded-md text-white font-medium text-sm md:text-base transition-all hover:opacity-90"
-                            style={{ backgroundColor: colors.primary.blue }}
-                        >
-                            <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 23.375H19.25V20.625H0M19.25 8.25H13.75V0H5.5V8.25H0L9.625 17.875L19.25 8.25Z" fill="white" />
-                            </svg>
-                            <span className="text-sm">{resource.title}</span>
-                        </a>
-                    ))}
                 </div>
             </div>
         </section>

@@ -16,7 +16,7 @@ const CardData = [
             </svg>
         ),
         title: "Quality Manufacturing",
-        text: "Advanced German technology ensures durable, reliable, and internationally compliant plastic products."
+        text: "Advanced European technology ensures durable, reliable, and internationally compliant plastic products."
     },
     {
         svg: (
@@ -25,7 +25,7 @@ const CardData = [
             </svg>
         ),
         title: "Industry Expertise",
-        text: "Over 35 years of excellence in injection and blow moulding for industrial, automotive, household, and textile sectors."
+        text: "Over 37 years of excellence in blow moulding and injection for industrial, food, chemical and textile sectors."
     },
     {
         svg: (

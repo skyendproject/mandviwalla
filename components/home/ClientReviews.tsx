@@ -14,7 +14,7 @@ const BRAND_LOGOS = [
     { name: "Matco Foods", src: "/assets/brand-logo/matco-logo.jpg" },
     { name: "Habib", src: "/assets/brand-logo/habib-logo.jpg" },
     { name: "IMG 1346 ARPL", src: "/assets/brand-logo/IMG1346ARPL.jpg" },
-    { name: "OG", src: "/assets/brand-logo/og-logo.jpg" },
+    { name: "OG", src: "/assets/brand-logo/lucky-core-logo.jpg" },
     { name: "Oleo", src: "/assets/brand-logo/oleo-logo.jpg" },
     { name: "PG", src: "/assets/brand-logo/pg-logo.jpg" },
     { name: "Prime", src: "/assets/brand-logo/prime-logo.jpg" },
@@ -164,7 +164,7 @@ export default function ClientReviews() {
                                             alt={logo.name}
                                             fill
                                             sizes="(max-width: 768px) 140px, (max-width: 1024px) 200px, 240px"
-                                            className="object-contain grayscale opacity-80 transition duration-300 hover:grayscale-0 hover:opacity-100"
+                                            className="object-contain"
                                             unoptimized
                                         />
                                     </div>

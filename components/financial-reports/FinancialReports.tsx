@@ -11,19 +11,25 @@ type ReportGroup = {
 
 const annualReports: ReportGroup[] = [
     {
-        year: "2023–2024",
+        year: "2025",
+        files: [
+            { label: "ANNUAL REPORT 2025 (PDF)", href: "/annual-report-2025.pdf" },
+        ],
+    },
+    {
+        year: "2024",
         files: [
             { label: "ANNUAL REPORT 2024 (PDF)", href: "/annual-report-2024.pdf" },
         ],
     },
     {
-        year: "2022–2023",
+        year: "2023",
         files: [
             { label: "ANNUAL REPORT 2023 (PDF)", href: "/annual-report-2023.pdf" },
         ],
     },
     {
-        year: "2021–2022",
+        year: "2022",
         files: [
             { label: "ANNUAL REPORT 2022 (PDF)", href: "/annual-report-2022.pdf" },
         ],
@@ -32,29 +38,35 @@ const annualReports: ReportGroup[] = [
 
 const quarterlyReports: ReportGroup[] = [
     {
-        year: "Q3 2025 (March)",
+        year: "Q3 2026 (March)",
         files: [
-            { label: "QUARTERLY REPORT MARCH 2025 (PDF)", href: "/quarterly-report-march25.pdf" },
+            { label: "QUARTERLY REPORT MARCH 2026 (PDF)", href: "/quarterly-report-march26.pdf" },
+        ],
+    },
+    {
+        year: "Q2 2025 (December)",
+        files: [
+            { label: "QUARTERLY REPORT DECEMBER 2025 (PDF)", href: "/quarterly-report-december25.pdf" },
         ],
     },
     {
         year: "Q1 2025 (September)",
         files: [
-            { label: "QUARTERLY REPORT SEPTEMBER 2024 (PDF)", href: "/quarterly-report-september24.pdf" },
+            { label: "QUARTERLY REPORT SEPTEMBER 2025 (PDF)", href: "/quarterly-report-september25.pdf" },
         ],
     },
-    {
-        year: "Q1 2024 (August)",
-        files: [
-            { label: "QUARTERLY REPORT AUGUST 2024 (PDF)", href: "/quarterly-report-august24.pdf" },
-        ],
-    },
-    {
-        year: "Q1 2024 (September)",
-        files: [
-            { label: "QUARTERLY REPORT SEPTEMBER 2023 (PDF)", href: "/quarterly-report-september23.pdf" },
-        ],
-    },
+    // {
+    //     year: "Q1 2024 (August)",
+    //     files: [
+    //         { label: "QUARTERLY REPORT AUGUST 2024 (PDF)", href: "/quarterly-report-august24.pdf" },
+    //     ],
+    // },
+    // {
+    //     year: "Q1 2024 (September)",
+    //     files: [
+    //         { label: "QUARTERLY REPORT SEPTEMBER 2023 (PDF)", href: "/quarterly-report-september23.pdf" },
+    //     ],
+    // },
 ];
 
 const menu = [
@@ -78,7 +90,7 @@ export default function FinancialReports() {
                         Transparent, accurate, and timely financial disclosures.
                     </h2>
                     <p className="mx-auto text-base md:text-base max-w-3xl" style={{ color: colors.gray.text }}>
-                        Mandviwalla Mauser Plastic Limited (MWMP) ensures complete compliance with PSX & SECP reporting standards by publishing audited annual financial statements and quarterly reports for investor review.
+                        Mandviwalla Mauser Plastic Industries Limited (MMPIL) ensures complete compliance with PSX & SECP reporting standards by publishing audited annual financial statements and quarterly reports for investor review.
                     </p>
                 </div>
                 <div className="flex flex-col md:flex-row gap-8 items-start justify-center">
