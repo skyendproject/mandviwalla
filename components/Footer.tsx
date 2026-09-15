@@ -50,7 +50,7 @@ export default function Footer({ variant = "blue" }: FooterProps) {
                                         <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0 mt-1">
                                             <path d="M6.33573 14.6629C7.84256 12.7772 11.2792 8.20679 11.2792 5.63959C11.2792 2.52607 8.75312 0 5.63959 0C2.52607 0 0 2.52607 0 5.63959C0 8.20679 3.43663 12.7772 4.94346 14.6629C5.30474 15.1124 5.97445 15.1124 6.33573 14.6629ZM5.63959 3.75973C6.13817 3.75973 6.61632 3.95779 6.96886 4.31033C7.3214 4.66287 7.51946 5.14102 7.51946 5.63959C7.51946 6.13817 7.3214 6.61632 6.96886 6.96886C6.61632 7.3214 6.13817 7.51946 5.63959 7.51946C5.14102 7.51946 4.66287 7.3214 4.31033 6.96886C3.95779 6.61632 3.75973 6.13817 3.75973 5.63959C3.75973 5.14102 3.95779 4.66287 4.31033 4.31033C4.66287 3.95779 5.14102 3.75973 5.63959 3.75973Z" fill="#F28500" />
                                         </svg>
-                                        <p className="text-sm md:text-base whitespace-nowrap">Mandviwalla Building, Old Queens Road, Karachi</p>
+                                        <p className="text-sm md:text-base whitespace-nowrap">Mandviwalla Building, Old Queens Road, Karachi, Pakistan</p>
                                     </div>
 
                                     <div className="flex gap-2 items-center">
@@ -154,7 +154,7 @@ export default function Footer({ variant = "blue" }: FooterProps) {
             {/* Copyright Bar */}
             <div className="w-full py-4 px-4 text-center" style={{ backgroundColor: colors.orange.dark }}>
                 <p className="text-white text-sm md:text-base">
-                    © 2025 <strong>Mandviwalla Mauser Plastic Limited (MWMP).</strong> All Rights Reserved.
+                    © 2025 <strong>Mandviwalla Mauser Plastic Industries Limited (MMPIL).</strong> All Rights Reserved.
                 </p>
             </div>
         </footer>

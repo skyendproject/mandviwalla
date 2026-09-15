@@ -28,7 +28,7 @@ const SLIDES: Slide[] = [
             </div>
         ),
         lede:
-            "Three decades of world-class injection and blow-moulded plastic products — engineered in Pakistan, trusted by industry across the region.",
+            "Over 37 years of world-class injection- and blow-moulded plastic products — engineered in Pakistan, trusted by industry across the region.",
         primary: { href: "/products", label: "Explore Products" },
         secondary: { href: "/contact-us", label: "Contact Us" },
         tabLabel: "HERITAGE",

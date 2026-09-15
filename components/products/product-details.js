@@ -50,6 +50,28 @@ export const products = [
   },
   {
     id: 3,
+    type: "open-top",
+    title: "160L Open Top Drum with Clamp – Blue",
+    desc: "Open top drum with clamp closure for a secure, reusable seal.",
+    img: "/assets/products/160l-open-top-blue-clamp-1.jpg",
+    details: {
+      description:
+        "160-litre open top drum with a metal clamp closure — combining the wide-mouth access of an open top with a tight, reusable seal for solids, semi-solids and viscous materials.",
+      features: [
+        "Wide open mouth for easy filling and emptying",
+        "Metal clamp ring for a secure, reusable seal",
+        "Durable and impact-resistant construction",
+        "Suitable for industrial storage and reconditioning",
+      ],
+      sizes: ["160 Litres"],
+      images: [
+        "/assets/products/160l-open-top-blue-clamp-1.jpg",
+        "/assets/products/160l-open-top-blue-clamp-2.jpg",
+      ],
+    },
+  },
+  {
+    id: 4,
     type: "close-top",
     title: "210L L Ring Close Top Drum – Blue",
     desc: "L-ring close top drum for secure containment and transport.",
@@ -72,7 +94,7 @@ export const products = [
     },
   },
   {
-    id: 4,
+    id: 5,
     type: "close-top",
     title: "210L L Ring Close Top Drum – Grey",
     desc: "L-ring close top drum for secure containment and transport.",
@@ -94,7 +116,7 @@ export const products = [
     },
   },
   {
-    id: 5,
+    id: 6,
     type: "close-top",
     title: "210L L Ring Close Top Drum – Orange",
     desc: "L-ring close top drum for secure containment and transport.",
@@ -116,7 +138,7 @@ export const products = [
     },
   },
   {
-    id: 6,
+    id: 7,
     type: "close-top",
     title: "210L XL Ring Close Top Drum – Blue",
     desc: "XL-ring close top drum for heavy-duty industrial containment.",
@@ -138,7 +160,7 @@ export const products = [
     },
   },
   {
-    id: 7,
+    id: 8,
     type: "close-top",
     title: "210L XL Ring Close Top Drum – Green",
     desc: "XL-ring close top drum for heavy-duty industrial containment.",
@@ -162,7 +184,7 @@ export const products = [
     },
   },
   {
-    id: 8,
+    id: 9,
     type: "close-top",
     title: "210L XL Ring Close Top Drum – Red",
     desc: "XL-ring close top drum for heavy-duty industrial containment.",
@@ -184,7 +206,7 @@ export const products = [
     },
   },
   {
-    id: 9,
+    id: 10,
     type: "close-top",
     title: "250L L Ring Drum – Blue (Ethanol)",
     desc: "250L L-ring close top drum for ethanol and industrial liquid storage.",
@@ -206,7 +228,7 @@ export const products = [
     },
   },
   {
-    id: 10,
+    id: 11,
     type: "close-top",
     title: "260L XL Ring Drum – Blue (Ethanol, UN Approved)",
     desc: "260L XL-ring UN-approved close top drum for ethanol and hazardous liquids.",
@@ -224,6 +246,29 @@ export const products = [
         "/assets/products/260l-xl-ring-ethanol-un-blue-1.jpg",
         "/assets/products/260l-xl-ring-ethanol-un-blue-2.jpg",
         "/assets/products/260l-xl-ring-ethanol-un-blue-3.jpg",
+      ],
+    },
+  },
+  {
+    id: 12,
+    type: "close-top",
+    title: "220L Plastic Oil Drum",
+    desc: "220L close top plastic drum for lubricant oil and related materials.",
+    img: "/assets/products/220l-close-top-brown-oil-1.jpg",
+    details: {
+      description:
+        "220-litre close top plastic drum built for the safe storage and transport of lubricant oil and related industrial materials.",
+      features: [
+        "Close top construction for a secure, leak-resistant seal",
+        "Designed for lubricant oil and related liquids",
+        "Durable, reusable and impact-resistant body",
+        "Suitable for industrial storage and transport",
+      ],
+      sizes: ["220 Litres"],
+      images: [
+        "/assets/products/220l-close-top-brown-oil-1.jpg",
+        "/assets/products/220l-close-top-brown-oil-2.jpg",
+        "/assets/products/220l-close-top-brown-oil-3.jpg",
       ],
     },
   },

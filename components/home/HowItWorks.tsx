@@ -81,10 +81,10 @@ export default function HowItWorks() {
                                 </div>
                                 <div className="flex-1">
                                     <h3 className="text-lg md:text-xl font-bold mb-1 md:mb-2 text-black">
-                                        Product Design & Development
+                                        In-house Product and Development
                                     </h3>
                                     <p className="text-sm md:text-base" style={{ color: colors.gray.text }}>
-                                        Built with German expertise & R&D focus.
+                                        In-house facilities for product design and R&D focus.
                                     </p>
                                 </div>
                             </div>

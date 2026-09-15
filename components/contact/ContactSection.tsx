@@ -8,10 +8,10 @@ const contactData = [
         city: "Karachi",
         phone: "+92 21-32441116-9, +92 21-32441276",
         email: "info@mandviwalla.net",
-        hours: "Mon - Sat: 09:00 - 17:00",
-        closed: "Sunday Closed",
-        address: "Mandviwalla Building, Old Queens Road, Karachi.",
-        location: "Karachi. Pak"
+        hours: "Mon–Sat: 09:00–17:00",
+        closed: "Sunday: Closed",
+        address: "Mandviwalla Building, Old Queens Road, Karachi, Pakistan.",
+        location: ""
     },
 ];
 
@@ -150,7 +150,7 @@ export default function ContactSection() {
                                 </svg>
                                 <div className="flex flex-col">
                                     <span>{loc.address}</span>
-                                    <span style={{ color: colors.gray.light }}>{loc.location}</span>
+                                    {loc.location && <span style={{ color: colors.gray.light }}>{loc.location}</span>}
                                 </div>
                             </div>
                         </div>

@@ -37,7 +37,7 @@ const FEATURES: { title: string; text: string; icon: ReactNode }[] = [
     },
     {
         title: "Certified Quality",
-        text: "UN-approved and internationally tested packaging.",
+        text: "UN-approved and Halal Certificate Packaging.",
         icon: (
             <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2.08696 25.9998C1.3913 24.3259 1 22.4889 1 20.565C1 12.7607 7.32609 6.43457 15.1304 6.43457C22.9348 6.43457 29.2609 12.7607 29.2609 20.565C29.2609 28.3694 22.9348 34.6954 15.1304 34.6954C10.7609 34.6954 6.8587 32.7063 4.26087 29.5976" stroke="white" strokeWidth="2" strokeMiterlimit="10" strokeLinejoin="round" />
@@ -60,7 +60,7 @@ const FEATURES: { title: string; text: string; icon: ReactNode }[] = [
     },
     {
         title: "Customer Commitment",
-        text: "On-time delivery & after-sales support.",
+        text: "Our corporate operations follow ISO 9001:2015 standards.",
         icon: (
             <svg viewBox="0 0 53 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.2174 45.5649H13.0435" stroke="white" strokeWidth="2" strokeMiterlimit="10" strokeLinejoin="round" />
