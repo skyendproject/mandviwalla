@@ -19,7 +19,7 @@ export default function CompanyInformation() {
     return (
         <div>
             <Hero
-                imagePath="/assets/home-banner.jpg"
+                imagePath="/assets/banner-image-2.jpeg"
                 heading="Products"
                 breadcrumbPath="Products"
                 path="Home"
