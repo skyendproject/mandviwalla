@@ -11,7 +11,7 @@ interface HeroProps {
 
 export default function Hero({ imagePath, heading, breadcrumbPath, imageAlt, path }: HeroProps) {
     return (
-        <section className="relative w-full h-48 md:h-[260px] overflow-hidden">
+        <section className="relative w-full h-48 md:h-[260px] xl:h-[390px] overflow-hidden">
             {/* Background Image */}
             <Image
                 src={imagePath}
