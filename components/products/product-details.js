@@ -272,6 +272,98 @@ export const products = [
       ],
     },
   },
+  {
+    id: 13,
+    type: "close-top",
+    title: "220L Plastic Oil Drum – Blue",
+    desc: "220L close top plastic drum for lubricant oil and related materials.",
+    img: "/assets/products/220l-close-top-blue-oil-1.jpg",
+    details: {
+      description:
+        "220-litre close top plastic drum built for the safe storage and transport of lubricant oil and related industrial materials.",
+      features: [
+        "Close top construction for a secure, leak-resistant seal",
+        "Designed for lubricant oil and related liquids",
+        "Durable, reusable and impact-resistant body",
+        "Suitable for industrial storage and transport",
+      ],
+      sizes: ["220 Litres"],
+      images: [
+        "/assets/products/220l-close-top-blue-oil-1.jpg",
+        "/assets/products/220l-close-top-blue-oil-2.jpg",
+        "/assets/products/220l-close-top-blue-oil-3.jpg",
+      ],
+    },
+  },
+  {
+    id: 14,
+    type: "close-top",
+    title: "220L Plastic Oil Drum – Green",
+    desc: "220L close top plastic drum for lubricant oil and related materials.",
+    img: "/assets/products/220l-close-top-green-oil-1.jpg",
+    details: {
+      description:
+        "220-litre close top plastic drum built for the safe storage and transport of lubricant oil and related industrial materials.",
+      features: [
+        "Close top construction for a secure, leak-resistant seal",
+        "Designed for lubricant oil and related liquids",
+        "Durable, reusable and impact-resistant body",
+        "Suitable for industrial storage and transport",
+      ],
+      sizes: ["220 Litres"],
+      images: [
+        "/assets/products/220l-close-top-green-oil-1.jpg",
+        "/assets/products/220l-close-top-green-oil-2.jpg",
+        "/assets/products/220l-close-top-green-oil-3.jpg",
+      ],
+    },
+  },
+  {
+    id: 15,
+    type: "close-top",
+    title: "220L Plastic Oil Drum – Red",
+    desc: "220L close top plastic drum for lubricant oil and related materials.",
+    img: "/assets/products/220l-close-top-red-oil-1.jpg",
+    details: {
+      description:
+        "220-litre close top plastic drum built for the safe storage and transport of lubricant oil and related industrial materials.",
+      features: [
+        "Close top construction for a secure, leak-resistant seal",
+        "Designed for lubricant oil and related liquids",
+        "Durable, reusable and impact-resistant body",
+        "Suitable for industrial storage and transport",
+      ],
+      sizes: ["220 Litres"],
+      images: [
+        "/assets/products/220l-close-top-red-oil-1.jpg",
+        "/assets/products/220l-close-top-red-oil-2.jpg",
+        "/assets/products/220l-close-top-red-oil-3.jpg",
+      ],
+    },
+  },
+  {
+    id: 16,
+    type: "close-top",
+    title: "220L Plastic Oil Drum – Orange",
+    desc: "220L close top plastic drum for lubricant oil and related materials.",
+    img: "/assets/products/220l-close-top-orange-oil-1.jpg",
+    details: {
+      description:
+        "220-litre close top plastic drum built for the safe storage and transport of lubricant oil and related industrial materials.",
+      features: [
+        "Close top construction for a secure, leak-resistant seal",
+        "Designed for lubricant oil and related liquids",
+        "Durable, reusable and impact-resistant body",
+        "Suitable for industrial storage and transport",
+      ],
+      sizes: ["220 Litres"],
+      images: [
+        "/assets/products/220l-close-top-orange-oil-1.jpg",
+        "/assets/products/220l-close-top-orange-oil-2.jpg",
+        "/assets/products/220l-close-top-orange-oil-4.jpg",
+      ],
+    },
+  },
 ];
 
 export default products;
