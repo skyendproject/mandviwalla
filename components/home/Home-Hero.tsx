@@ -48,7 +48,7 @@ const SLIDES: Slide[] = [
         tabLabel: "TECHNOLOGY",
     },
     {
-        src: "/assets/hero/hero-drums-3.jpeg",
+        src: "/assets/banner-image-2.jpeg",
         kicker: "Pioneers of the 210-Litre Drum",
         title: (
             <div className="uppercase">
