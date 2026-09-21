@@ -20,7 +20,7 @@ type Slide = {
 
 const SLIDES: Slide[] = [
     {
-        src: "/assets/hero/hero-drums-1.jpeg",
+        src: "/assets/hero/hero-drums-1.webp",
         kicker: "Since 1988 · Karachi, Pakistan",
         title: (
             <div className="uppercase">
@@ -34,7 +34,7 @@ const SLIDES: Slide[] = [
         tabLabel: "HERITAGE",
     },
     {
-        src: "/assets/hero/hero-drums-2.jpeg",
+        src: "/assets/hero/hero-drums-2.webp",
         kicker: "Powered by German Technology",
         title: (
             <div className="uppercase">
@@ -48,7 +48,7 @@ const SLIDES: Slide[] = [
         tabLabel: "TECHNOLOGY",
     },
     {
-        src: "/assets/banner-image-2.jpeg",
+        src: "/assets/banner-image-2.webp",
         kicker: "Pioneers of the 210-Litre Drum",
         title: (
             <div className="uppercase">
