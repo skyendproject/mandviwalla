@@ -16,7 +16,7 @@ const BRAND_LOGOS = [
     { name: "IMG 1346 ARPL", src: "/assets/brand-logo/IMG1346ARPL.jpg" },
     { name: "OG", src: "/assets/brand-logo/lucky-core-logo.jpg" },
     { name: "Oleo", src: "/assets/brand-logo/oleo-logo.jpg" },
-    { name: "PG", src: "/assets/brand-logo/pg-logo.jpg" },
+    // { name: "PG", src: "/assets/brand-logo/pg-logo.jpg" },
     { name: "Prime", src: "/assets/brand-logo/prime-logo.jpg" },
     { name: "Tufail", src: "/assets/brand-logo/tufail-logo.jpg" },
 ];
