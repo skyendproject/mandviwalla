@@ -252,7 +252,7 @@ export const products = [
   {
     id: 12,
     type: "close-top",
-    title: "220L Plastic Oil Drum",
+    title: "220L XL Ring Oil Drum - Brown",
     desc: "220L close top plastic drum for lubricant oil and related materials.",
     img: "/assets/products/220l-close-top-brown-oil-1.jpg",
     details: {
@@ -275,7 +275,7 @@ export const products = [
   {
     id: 13,
     type: "close-top",
-    title: "220L XL Ring Oil drum – Blue",
+    title: "220L XL Ring Oil Drum – Blue",
     desc: "220L close top plastic drum for lubricant oil and related materials.",
     img: "/assets/products/220l-close-top-blue-oil-1.jpg",
     details: {
@@ -298,7 +298,7 @@ export const products = [
   {
     id: 14,
     type: "close-top",
-    title: "220L XL Ring Oil drum – Green",
+    title: "220L XL Ring Oil Drum – Green",
     desc: "220L close top plastic drum for lubricant oil and related materials.",
     img: "/assets/products/220l-close-top-green-oil-1.jpg",
     details: {
@@ -321,7 +321,7 @@ export const products = [
   {
     id: 15,
     type: "close-top",
-    title: "220L XL Ring Oil drum – Red",
+    title: "220L XL Ring Oil Drum – Red",
     desc: "220L close top plastic drum for lubricant oil and related materials.",
     img: "/assets/products/220l-close-top-red-oil-1.jpg",
     details: {
@@ -344,7 +344,7 @@ export const products = [
   {
     id: 16,
     type: "close-top",
-    title: "220L XL Ring Oil drum – Orange",
+    title: "220L XL Ring Oil Drum – Orange",
     desc: "220L close top plastic drum for lubricant oil and related materials.",
     img: "/assets/products/220l-close-top-orange-oil-1.jpg",
     details: {
