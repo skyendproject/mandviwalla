@@ -60,12 +60,9 @@ export default function ProductOverview() {
                     const enlarged = !activeFilter;
                     const tileWidth = enlarged ? 360 : 237;
                     const tileHeight = enlarged ? 374 : 246.31;
-                    // After a type is selected, put close-top before open-top on mobile only.
-                    const mobileOrderClass = activeFilter
-                        ? filter.value === "close-top"
-                            ? "order-1 md:order-none"
-                            : "order-2 md:order-none"
-                        : "";
+                    // On mobile, always show close-top before open-top; desktop keeps source order.
+                    const mobileOrderClass =
+                        filter.value === "close-top" ? "order-1 md:order-none" : "order-2 md:order-none";
                     return (
                         <div key={idx} className={`flex flex-col items-center ${mobileOrderClass}`}>
                             <button
