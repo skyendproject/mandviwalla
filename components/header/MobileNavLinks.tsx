@@ -46,7 +46,7 @@ export default function MobileNavLinks({ onClose }: MobileNavLinksProps) {
 
             {openDropdown === "profile" && (
                 <div className="bg-blue-900/80">
-                    <Link href="/company-information" onClick={onClose} className="block px-8 py-2 hover:bg-white/10 uppercase">
+                    <Link href="/company-profile" onClick={onClose} className="block px-8 py-2 hover:bg-white/10 uppercase">
                         Company Profile
                     </Link>
                     <Link href="/mission-vision" onClick={onClose} className="block px-8 py-2 hover:bg-white/10 uppercase">
