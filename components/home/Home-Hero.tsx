@@ -157,64 +157,64 @@ export default function Hero() {
                 </Link>
 
                 <nav className="hero-nav flex items-center gap-8">
-                    <Link href="/" className="hero-nav-link">Home</Link>
+                    <Link href="/" className="hero-nav-link uppercase">Home</Link>
 
                     <div className="relative group hero-menu">
-                        <button className="hero-nav-link inline-flex items-center gap-1">
+                        <button className="hero-nav-link inline-flex items-center gap-1 uppercase">
                             Profile <ChevronDown size={14} className="hero-caret" />
                         </button>
                         <div className="hero-dd hero-dd-panel absolute left-0 top-full w-60">
-                            <Link href="/company-profile" className="hero-dd-item">Company Profile</Link>
-                            <Link href="/mission-vision" className="hero-dd-item">Mission &amp; Vision</Link>
-                            <Link href="/code-of-conduct-policy" className="hero-dd-item">Code of Conduct</Link>
+                            <Link href="/company-profile" className="hero-dd-item uppercase">Company Profile</Link>
+                            <Link href="/mission-vision" className="hero-dd-item uppercase">Mission &amp; Vision</Link>
+                            <Link href="/code-of-conduct-policy" className="hero-dd-item uppercase">Code of Conduct</Link>
                         </div>
                     </div>
 
                     <div className="relative group hero-menu">
-                        <button className="hero-nav-link inline-flex items-center gap-1">
+                        <button className="hero-nav-link inline-flex items-center gap-1 uppercase">
                             Corporate <ChevronDown size={14} className="hero-caret" />
                         </button>
                         <ul className="hero-dd hero-dd-panel absolute right-0 top-full w-60 list-none">
                             {/* Governance (nested) */}
                             <li className="relative hero-sub-wrap">
-                                <span className="hero-dd-item hero-dd-parent flex items-center justify-between">
+                                <span className="hero-dd-item hero-dd-parent flex items-center justify-between uppercase">
                                     <span>Governance</span>
                                     <span className="hero-nested-caret">‹</span>
                                 </span>
                                 <ul className="hero-dd hero-sub-panel absolute top-0 right-full w-64 list-none">
-                                    <li><Link href="/corporate-governance" className="hero-dd-item">Corporate Governance</Link></li>
-                                    <li><Link href="/board-director" className="hero-dd-item">Board of Director</Link></li>
-                                    <li><Link href="/parent-company" className="hero-dd-item">Parent Company</Link></li>
-                                    <li><Link href="/share-holding" className="hero-dd-item">Share Holding Pattern</Link></li>
-                                    <li><Link href="/company-auditor" className="hero-dd-item">Auditor of the Company</Link></li>
-                                    <li><Link href="/legal-advisor" className="hero-dd-item">Legal Support</Link></li>
-                                    <li><Link href="/tax-consultant" className="hero-dd-item">Tax Consultant</Link></li>
+                                    <li><Link href="/corporate-governance" className="hero-dd-item uppercase">Corporate Governance</Link></li>
+                                    <li><Link href="/board-director" className="hero-dd-item uppercase">Board of Director</Link></li>
+                                    <li><Link href="/parent-company" className="hero-dd-item uppercase">Parent Company</Link></li>
+                                    <li><Link href="/share-holding" className="hero-dd-item uppercase">Share Holding Pattern</Link></li>
+                                    <li><Link href="/company-auditor" className="hero-dd-item uppercase">Auditor of the Company</Link></li>
+                                    <li><Link href="/legal-advisor" className="hero-dd-item uppercase">Legal Support</Link></li>
+                                    <li><Link href="/tax-consultant" className="hero-dd-item uppercase">Tax Consultant</Link></li>
                                 </ul>
                             </li>
 
                             {/* Investor Relation (nested) */}
                             <li className="relative hero-sub-wrap">
-                                <span className="hero-dd-item hero-dd-parent flex items-center justify-between">
+                                <span className="hero-dd-item hero-dd-parent flex items-center justify-between uppercase">
                                     <span>Investor Relation</span>
                                     <span className="hero-nested-caret">‹</span>
                                 </span>
                                 <ul className="hero-dd hero-sub-panel absolute top-0 right-full w-64 list-none">
-                                    <li><Link href="/corporate-briefing-session" className="hero-dd-item">Corporate Briefing Session</Link></li>
-                                    <li><Link href="/investor-information" className="hero-dd-item">Investor Information</Link></li>
-                                    <li><Link href="/financial-reports" className="hero-dd-item">Financial Reports</Link></li>
-                                    <li><Link href="/financial-results" className="hero-dd-item">Financial Results</Link></li>
-                                    <li><Link href="/investor-disclosure" className="hero-dd-item">Gender Pay Gap Disclosure</Link></li>
-                                    <li><Link href="/investor-notices" className="hero-dd-item">Notices</Link></li>
+                                    <li><Link href="/corporate-briefing-session" className="hero-dd-item uppercase">Corporate Briefing Session</Link></li>
+                                    <li><Link href="/investor-information" className="hero-dd-item uppercase">Investor Information</Link></li>
+                                    <li><Link href="/financial-reports" className="hero-dd-item uppercase">Financial Reports</Link></li>
+                                    <li><Link href="/financial-results" className="hero-dd-item uppercase">Financial Results</Link></li>
+                                    <li><Link href="/investor-disclosure" className="hero-dd-item uppercase">Gender Pay Gap Disclosure</Link></li>
+                                    <li><Link href="/investor-notices" className="hero-dd-item uppercase">Notices</Link></li>
                                 </ul>
                             </li>
 
-                            <li><Link href="/election-director" className="hero-dd-item">Election of Director</Link></li>
+                            <li><Link href="/election-director" className="hero-dd-item uppercase">Election of Director</Link></li>
                         </ul>
                     </div>
 
-                    <Link href="/products" className="hero-nav-link">Products</Link>
+                    <Link href="/products" className="hero-nav-link uppercase">Products</Link>
 
-                    <Link href="/contact-us" className="hero-cta">Contact Us</Link>
+                    <Link href="/contact-us" className="hero-cta uppercase">Contact Us</Link>
                 </nav>
             </header>
 
