@@ -30,19 +30,24 @@ export default function HowItWorks() {
                 <Reveal className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center lg:items-start">
 
 
-                    {/* Left Side - Image */}
                     <div className="relative flex w-full lg:w-1/2 justify-center lg:justify-end lg:items-start lg:-mt-8">
-                        <Image
-                            src="/how-it-works.jpeg"
-                            alt="How it Works"
-                            width={570}
-                            height={645}
-                            sizes="(max-width: 1024px) 480px, 460px"
-                            className="block w-full h-auto lg:h-[500px] xl:h-[520px] 2xl:h-[560px] max-w-[360px] sm:max-w-[420px] md:max-w-[480px] lg:max-w-[440px] xl:max-w-[460px] 2xl:max-w-[500px] mx-auto lg:mx-0 relative z-10 object-contain rounded-card"
-                        />
+
+                        {/* Video Wrapper */}
+                        <div className="relative z-10 w-full max-w-[360px] sm:max-w-[420px] md:max-w-[480px] lg:max-w-[440px] xl:max-w-[460px] 2xl:max-w-[500px] overflow-hidden rounded-2xl">
+                            <video
+                                src="/how-it-works-vid.mp4"
+                                autoPlay
+                                muted
+                                loop
+                                playsInline
+                                preload="metadata"
+                                aria-label="How it Works"
+                                className="block w-full h-auto lg:h-[500px] xl:h-[520px] 2xl:h-[560px] object-contain"
+                            />
+                        </div>
 
                         {/* Decorative Dot Grid - Bottom Left */}
-                        <div className="hidden absolute -bottom-10 left-40 md:grid grid-cols-6 gap-3.5 p-2 z-0 2xl:left-66">
+                        <div className="hidden md:grid absolute -bottom-10 left-15 grid-cols-6 gap-3.5 p-2 z-0">
                             {Array.from({ length: 36 }).map((_, index) => (
                                 <div
                                     key={index}
@@ -51,8 +56,9 @@ export default function HowItWorks() {
                                 />
                             ))}
                         </div>
-                    </div>
 
+                    </div>
+                    
                     {/* Right Side - Content */}
                     <div className="w-full lg:w-1/2 flex flex-col gap-4 max-w-[560px] lg:max-w-none mx-auto lg:mx-0">
 

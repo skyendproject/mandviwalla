@@ -132,9 +132,9 @@ export default function WhyChooseUs() {
                     </div>
 
                     {/* CENTER IMAGE */}
-                    <div className="relative w-[320px] h-[440px] lg:w-[360px] lg:h-[480px] xl:w-[400px] xl:h-[500px] flex-shrink-0 rounded-card overflow-hidden shadow-card">
+                    <div className="relative w-[320px] h-[490px] lg:w-[360px] lg:h-[530px] xl:w-[400px] xl:h-[550px] flex-shrink-0 rounded-card overflow-hidden shadow-card">
                         <Image
-                            src="/drum-moulding.jpeg"
+                            src="/why-partner.jpeg"
                             alt="Partnership"
                             fill
                             sizes="(max-width: 1280px) 360px, 400px"

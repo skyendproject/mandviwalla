@@ -5,7 +5,7 @@ const directors = [
     { name: "Mr. Azeem H. Mandviwalla", title: "Chief Executive Officer" },
     { name: "Mr. Shamim Ahmed Khan", title: "Director" },
     { name: "Mr. S. Asghar Ali", title: "Director" },
-    { name: "Mr. Tariq Mehmood", title: "Director" },
+    { name: "Mr. Shahid Tawawalla", title: "Director" },
     { name: "Mrs. Huma Darugar", title: "Female Director" },
     { name: "Mr. Naseer Ahmed", title: "Independent Director" },
 ];

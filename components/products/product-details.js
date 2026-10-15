@@ -25,33 +25,33 @@ export const products = [
       ],
     },
   },
-  {
-    id: 2,
-    type: "open-top",
-    title: "160L Open Top Drum – Blue",
-    desc: "Open top drum with wide mouth for easy filling, emptying and reconditioning.",
-    img: "/assets/products/160l-open-top-blue-1.jpg",
-    details: {
-      description:
-        "160-litre open top drum designed for convenient filling, emptying and reconditioning across industrial storage applications.",
-      features: [
-        "Wide open mouth for easy access",
-        "Durable and reusable construction",
-        "Suitable for industrial storage",
-      ],
-      sizes: ["160 Litres"],
-      images: [
-        "/assets/products/160l-open-top-blue-1.jpg",
-        "/assets/products/160l-open-top-blue-2.jpg",
-        "/assets/products/160l-open-top-blue-3.jpg",
-        // "/assets/products/160l-open-top-blue-4.jpg",
-      ],
-    },
-  },
+  // {
+  //   id: 2,
+  //   type: "open-top",
+  //   title: "160L Open Top Drum – Blue",
+  //   desc: "Open top drum with wide mouth for easy filling, emptying and reconditioning.",
+  //   img: "/assets/products/160l-open-top-blue-1.jpg",
+  //   details: {
+  //     description:
+  //       "160-litre open top drum designed for convenient filling, emptying and reconditioning across industrial storage applications.",
+  //     features: [
+  //       "Wide open mouth for easy access",
+  //       "Durable and reusable construction",
+  //       "Suitable for industrial storage",
+  //     ],
+  //     sizes: ["160 Litres"],
+  //     images: [
+  //       "/assets/products/160l-open-top-blue-1.jpg",
+  //       "/assets/products/160l-open-top-blue-2.jpg",
+  //       "/assets/products/160l-open-top-blue-3.jpg",
+  //       // "/assets/products/160l-open-top-blue-4.jpg",
+  //     ],
+  //   },
+  // },
   {
     id: 3,
     type: "open-top",
-    title: "160L Open Top Drum with Clamp – Blue",
+    title: "160L Open Top Drum – Blue",
     desc: "Open top drum with clamp closure for a secure, reusable seal.",
     img: "/assets/products/160l-open-top-blue-clamp-1.jpg",
     details: {
@@ -159,52 +159,52 @@ export const products = [
       ],
     },
   },
-  {
-    id: 8,
-    type: "close-top",
-    title: "210L XL Ring Close Top Drum – Green",
-    desc: "XL-ring close top drum for heavy-duty industrial containment.",
-    img: "/assets/products/210l-xl-ring-close-top-green-1.jpg",
-    details: {
-      description:
-        "210-litre XL-ring close top drum offering a reinforced closure for heavy-duty industrial containment and transport.",
-      features: [
-        "Reinforced XL-ring close top",
-        "Heavy-duty impact resistant body",
-        "Suitable for demanding industrial use",
-      ],
-      sizes: ["210 Litres"],
-      images: [
-        "/assets/products/210l-xl-ring-close-top-green-1.jpg",
-        "/assets/products/210l-xl-ring-close-top-green-2.jpg",
-        // "/assets/products/210l-xl-ring-close-top-green-3.jpg",
-        // "/assets/products/210l-xl-ring-close-top-green-4.jpg",
-        "/assets/products/210l-xl-ring-close-top-green-5.jpg",
-      ],
-    },
-  },
-  {
-    id: 9,
-    type: "close-top",
-    title: "210L XL Ring Close Top Drum – Red",
-    desc: "XL-ring close top drum for heavy-duty industrial containment.",
-    img: "/assets/products/210l-xl-ring-close-top-red-1.jpg",
-    details: {
-      description:
-        "210-litre XL-ring close top drum offering a reinforced closure for heavy-duty industrial containment and transport.",
-      features: [
-        "Reinforced XL-ring close top",
-        "Heavy-duty impact resistant body",
-        "Suitable for demanding industrial use",
-      ],
-      sizes: ["210 Litres"],
-      images: [
-        "/assets/products/210l-xl-ring-close-top-red-1.jpg",
-        "/assets/products/210l-xl-ring-close-top-red-2.jpg",
-        "/assets/products/210l-xl-ring-close-top-red-3.jpg",
-      ],
-    },
-  },
+  // {
+  //   id: 8,
+  //   type: "close-top",
+  //   title: "210L XL Ring Close Top Drum – Green",
+  //   desc: "XL-ring close top drum for heavy-duty industrial containment.",
+  //   img: "/assets/products/210l-xl-ring-close-top-green-1.jpg",
+  //   details: {
+  //     description:
+  //       "210-litre XL-ring close top drum offering a reinforced closure for heavy-duty industrial containment and transport.",
+  //     features: [
+  //       "Reinforced XL-ring close top",
+  //       "Heavy-duty impact resistant body",
+  //       "Suitable for demanding industrial use",
+  //     ],
+  //     sizes: ["210 Litres"],
+  //     images: [
+  //       "/assets/products/210l-xl-ring-close-top-green-1.jpg",
+  //       "/assets/products/210l-xl-ring-close-top-green-2.jpg",
+  //       // "/assets/products/210l-xl-ring-close-top-green-3.jpg",
+  //       // "/assets/products/210l-xl-ring-close-top-green-4.jpg",
+  //       "/assets/products/210l-xl-ring-close-top-green-5.jpg",
+  //     ],
+  //   },
+  // },
+  // {
+  //   id: 9,
+  //   type: "close-top",
+  //   title: "210L XL Ring Close Top Drum – Red",
+  //   desc: "XL-ring close top drum for heavy-duty industrial containment.",
+  //   img: "/assets/products/210l-xl-ring-close-top-red-1.jpg",
+  //   details: {
+  //     description:
+  //       "210-litre XL-ring close top drum offering a reinforced closure for heavy-duty industrial containment and transport.",
+  //     features: [
+  //       "Reinforced XL-ring close top",
+  //       "Heavy-duty impact resistant body",
+  //       "Suitable for demanding industrial use",
+  //     ],
+  //     sizes: ["210 Litres"],
+  //     images: [
+  //       "/assets/products/210l-xl-ring-close-top-red-1.jpg",
+  //       "/assets/products/210l-xl-ring-close-top-red-2.jpg",
+  //       "/assets/products/210l-xl-ring-close-top-red-3.jpg",
+  //     ],
+  //   },
+  // },
   {
     id: 10,
     type: "close-top",

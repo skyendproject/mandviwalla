@@ -24,16 +24,17 @@ export default function ProductOverview() {
 
     const filterImages: Array<{ src: string; label: string; value: "open-top" | "close-top" }> = [
         {
-            src: baseProducts.find((p) => p.type === "open-top")?.img ?? "/products/open-top-1.png",
-            label: "OPEN TOP PLASTIC DRUMS",
-            value: "open-top",
-        },
-        {
             src: baseProducts.find((p) => p.type === "close-top")?.img ?? "/products/blue-1.png",
             label: "CLOSE TOP PLASTIC DRUMS",
             value: "close-top",
         },
+        {
+            src: baseProducts.find((p) => p.type === "open-top")?.img ?? "/products/open-top-1.png",
+            label: "OPEN TOP PLASTIC DRUMS",
+            value: "open-top",
+        },
     ];
+
     const visibleProducts = useMemo(() => {
         if (!activeFilter) return [];
         return baseProducts
@@ -60,11 +61,8 @@ export default function ProductOverview() {
                     const enlarged = !activeFilter;
                     const tileWidth = enlarged ? 360 : 237;
                     const tileHeight = enlarged ? 374 : 246.31;
-                    // On mobile, always show close-top before open-top; desktop keeps source order.
-                    const mobileOrderClass =
-                        filter.value === "close-top" ? "order-1 md:order-none" : "order-2 md:order-none";
                     return (
-                        <div key={idx} className={`flex flex-col items-center ${mobileOrderClass}`}>
+                        <div key={filter.value} className="flex flex-col items-center">
                             <button
                                 type="button"
                                 onClick={() => setActiveFilter(filter.value)}
