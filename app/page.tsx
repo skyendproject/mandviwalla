@@ -27,7 +27,7 @@ export default function Home() {
       <ServiceSection />
       <HowItWorks />
       <WhyChooseUs />
-      <ClientReviews />
+      {/* <ClientReviews /> */}
       <AboveFooter />
       <Footer />
     </div>
