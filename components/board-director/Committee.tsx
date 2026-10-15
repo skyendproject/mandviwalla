@@ -2,7 +2,7 @@ import { colors } from "@/lib/colors";
 
 const auditCommittee = [
     { name: "Mr. Naseer Ahmed", title: "Chairman" },
-    { name: "Mr. Shahid Tawawalla", title: "Member" },
+    { name: "Mr. Shahid Tawawala", title: "Member" },
     { name: "Mr. Shamim Ahmed Khan", title: "Member" },
 ];
 

@@ -157,16 +157,36 @@ export default function WhyChooseUs() {
                 </Reveal>
 
                 {/* Mobile: clean vertical list */}
-                <div className="md:hidden mt-2 space-y-8 max-w-md mx-auto">
-                    {FEATURES.map((f) => (
-                        <div key={f.title} className="flex items-start gap-4">
-                            <IconChip size="sm">{f.icon}</IconChip>
-                            <div>
-                                <h3 className="text-lg font-semibold mb-1">{f.title}</h3>
-                                <p className="text-sm text-gray-600">{f.text}</p>
+                {/* Mobile: image followed by a clean vertical list */}
+                <div className="md:hidden mt-2 max-w-md mx-auto">
+                    {/* Center image */}
+                    <div className="relative w-full h-[540px] sm:h-[400px] rounded-card overflow-hidden shadow-card mb-8">
+                        <Image
+                            src="/why-partner.jpeg"
+                            alt="Partnership"
+                            fill
+                            sizes="(max-width: 640px) 100vw, 448px"
+                            className="object-cover"
+                            priority
+                        />
+                    </div>
+
+                    {/* Features list */}
+                    <div className="space-y-8">
+                        {FEATURES.map((f) => (
+                            <div key={f.title} className="flex items-start gap-4">
+                                <IconChip size="sm">{f.icon}</IconChip>
+                                <div>
+                                    <h3 className="text-lg font-semibold mb-1">
+                                        {f.title}
+                                    </h3>
+                                    <p className="text-sm text-gray-600">
+                                        {f.text}
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>
