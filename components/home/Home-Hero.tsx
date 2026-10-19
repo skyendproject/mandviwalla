@@ -208,7 +208,7 @@ export default function Hero() {
                                 </ul>
                             </li>
 
-                            <li><Link href="/election-director" className="hero-dd-item uppercase">Election of Director</Link></li>
+                            {/* <li><Link href="/election-director" className="hero-dd-item uppercase">Election of Director</Link></li> */}
                         </ul>
                     </div>
 

@@ -72,7 +72,7 @@ const CORPORATE_GOVERNANCE: Section = {
                 { href: "/investor-notices", label: "Notices" },
             ],
         },
-        { kind: "link", href: "/election-director", label: "Election of Director" },
+        // { kind: "link", href: "/election-director", label: "Election of Director" },
     ],
 };
 

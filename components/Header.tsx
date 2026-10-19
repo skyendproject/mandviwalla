@@ -243,11 +243,11 @@ export default function Header() {
                                     </li>
 
                                     {/* ELECTION OF DIRECTOR */}
-                                    <li>
+                                    {/* <li>
                                         <Link href="/election-director" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
                                             ELECTION OF DIRECTOR
                                         </Link>
-                                    </li>
+                                    </li> */}
                                 </ul>
                             </div>
 

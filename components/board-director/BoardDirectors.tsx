@@ -2,7 +2,7 @@ import { colors } from "@/lib/colors";
 
 const directors = [
     { name: "Mr. Abdul Qadir Shiwani", title: "Chairman" },
-    { name: "Mr. Azeem H. Mandviwalla", title: "Chief Executive Officer" },
+    { name: "Mr. Azeem H. Mandviwalla", title: "CEO/Director" },
     { name: "Mr. Shamim Ahmed Khan", title: "Director" },
     { name: "Mr. S. Asghar Ali", title: "Director" },
     { name: "Mr. Shahid Tawawala", title: "Director" },

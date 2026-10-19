@@ -144,13 +144,13 @@ export default function MobileNavLinks({ onClose }: MobileNavLinksProps) {
                         </div>
                     )}
 
-                    <Link
+                    {/* <Link
                         href="/election-director"
                         onClick={onClose}
                         className="block px-8 py-2 hover:bg-white/10 uppercase"
                     >
                         Election of Director
-                    </Link>
+                    </Link> */}
                 </div>
             )}
 
