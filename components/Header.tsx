@@ -153,7 +153,7 @@ export default function Header() {
 
                                     {/* GOVERNANCE */}
                                     <li className="relative group/govern">
-                                        <Link href="/corporate/governance" className="flex justify-between items-center px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                        <Link href="/corporate/corporate-governance" className="flex justify-between items-center px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
                                             GOVERNANCE
                                             <ChevronDown size={14} className="ml-2" />
                                         </Link>
