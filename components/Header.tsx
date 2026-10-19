@@ -153,7 +153,7 @@ export default function Header() {
 
                                     {/* GOVERNANCE */}
                                     <li className="relative group/govern">
-                                        <Link href="/corporate/corporate-governance" className="flex justify-between items-center px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                        <Link href="/corporate-governance" className="flex justify-between items-center px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
                                             GOVERNANCE
                                             <ChevronDown size={14} className="ml-2" />
                                         </Link>
@@ -162,32 +162,32 @@ export default function Header() {
                                         <ul className="absolute top-0 left-full mt-0 w-72 text-white shadow-lg rounded-md 
           opacity-0 invisible group-hover/govern:opacity-100 group-hover/govern:visible transition-all" style={{ backgroundColor: colors.primary.blue }}>
                                             <li>
-                                                <Link href="corporate-governance" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                <Link href="/corporate-governance" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
                                                     Corporate Governance
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="board-director" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                <Link href="/board-director" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
                                                     Board Of Director
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="parent-company" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                <Link href="/parent-company" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
                                                     Parent Company
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="share-holding" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                <Link href="/share-holding" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
                                                     Share Holding Pattern
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="company-auditor" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                <Link href="/company-auditor" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
                                                     Auditor Of The Company
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="legal-advisor" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+                                                <Link href="/legal-advisor" className="block px-4 py-2 transition uppercase" onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.blue.primary} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
                                                     Legal Support
                                                 </Link>
                                             </li>
