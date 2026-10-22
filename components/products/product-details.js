@@ -67,6 +67,7 @@ export const products = [
       images: [
         "/assets/products/160l-open-top-blue-clamp-1.jpg",
         "/assets/products/160l-open-top-blue-clamp-2.jpg",
+        "/assets/products/160l-open-top-blue-clamp-3.jpeg",
       ],
     },
   },
